@@ -44,9 +44,9 @@ async function fill(page: Page) {
   await expect(page.getByRole('button', {name:'Connect to terminal'})).toBeEnabled();
 }
 
-test('login defaults investor and clears transient password after one send', async ({page}) => {
+test('login defaults master and clears transient password after one send', async ({page}) => {
   await bridge(page, 'auth-failed');
-  await expect(page.getByRole('button', {name:/Investor/})).toHaveAttribute('aria-pressed','true');
+  await expect(page.getByRole('button', {name:'Master', exact:true})).toHaveAttribute('aria-pressed','true');
   await fill(page); await page.getByRole('button', {name:'Connect to terminal'}).click();
   await expect(page.getByRole('alert')).toContainText('Login or password rejected');
   await expect(page.getByLabel('Password', {exact:true})).toBeFocused();
@@ -77,11 +77,11 @@ test('master mode warning remains explicit', async ({page}) => {
   await fill(page); await page.getByRole('button',{name:'Connect to terminal'}).click();
   await expect(page.locator('.master-banner')).toContainText('Trading-capable session. ORACLE still never trades.');
 });
-test('saved profile screen and new profile resets Investor', async ({page}) => {
-  await bridge(page,'profiles'); await expect(page.locator('.profile-row')).toContainText('81740106');
-  await expect(page.getByLabel('Password',{exact:true})).toHaveCount(0);
-  await page.getByRole('button',{name:'Use a different account'}).click();
-  await expect(page.getByRole('button',{name:/Investor/})).toHaveAttribute('aria-pressed','true');
+test('default saved profile opens the connect form with Master selected', async ({page}) => {
+  await bridge(page,'profiles');
+  await expect(page.getByLabel('Account login',{exact:true})).toHaveValue('81740106');
+  await expect(page.getByRole('button',{name:'Master', exact:true})).toHaveAttribute('aria-pressed','true');
+  await expect(page.getByRole('button',{name:'Connect to terminal'})).toBeEnabled();
 });
 test('paste strips spaces and free-text server remains available', async ({page}) => {
   await bridge(page);
@@ -116,3 +116,5 @@ test('REAL badge and master banner persist in studio chrome', async({page})=>{
   await bridge(page,'studio-real');await expect(page.getByTestId('account-mode')).toHaveText('REAL');
   await page.reload(); await expect(page.getByTestId('account-mode')).toHaveText('REAL');
 });
+
+

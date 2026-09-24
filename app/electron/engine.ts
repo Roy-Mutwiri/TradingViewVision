@@ -68,14 +68,14 @@ export class EngineClient {
   command<T>(command: string, fields: Record<string, any> = {}): Promise<T> {
     this.start();
     const id = ++this.sequence;
-    const buffer = Buffer.from(JSON.stringify({id, command, ...fields}) + "\\n", "utf8");
+    const payload = JSON.stringify({id, command, ...fields}) + "\n";
     if (fields.request && typeof fields.request === 'object') fields.request.password = '';
     return new Promise<T>((resolveRequest, reject) => {
       const timer = setTimeout(() => { this.pending.delete(id); reject(new EngineBoundaryError({code:'ENGINE_TIMEOUT',message:`The ${command} request timed out; retry the connection.`,detail:{command},recoverable:true})); this.stop(); }, command === 'preflight' || command === 'chart_subscribe' || command === 'chart_background' ? 600000 : 120000);
       this.pending.set(id, { resolve: resolveRequest, reject, timer });
       const child = this.child;
-      if (!child) { buffer.fill(0); this.rejectPending(); return; }
-      child.stdin.write(buffer, error => { buffer.fill(0); if (error) this.stop(); });
+      if (!child) { this.rejectPending(); return; }
+      child.stdin.write(payload, 'utf8', error => { if (error) this.stop(); });
     });
   }
   async restart() { await this.stop(); this.start(); }

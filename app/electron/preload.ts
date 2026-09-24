@@ -24,7 +24,7 @@ const bridge: GateBridge = {
   mode: () => invoke('gate:mode'),
   settings: () => invoke('gate:settings'),
   connect: (request: ConnectInput) => {
-    try { return invoke('gate:connect', request); }
+    try { return invoke('gate:connect', {...request}); }
     finally { request.password = ''; }
   },
   connectProfile: profile => invoke('gate:profile', profile),

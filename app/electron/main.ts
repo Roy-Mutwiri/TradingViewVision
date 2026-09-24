@@ -6,7 +6,7 @@ import type { ConnectInput } from '../src/auth/bridge';
 import type { ConnectResult, GateSettings, SessionStatus } from '../src/net/auth';
 import {readStream,saveStream,readLiving} from './stream-config';
 import {testTikTok,TikTokService} from './tiktok';
-import {readKeyLevels,captureHistory} from './key-levels';
+import {readKeyLevels} from './key-levels';
 import {readSpeakerStatus,writeSpeakerIntent,readSpeakerIntent,setSpeakerStop} from './speaker';
 
 app.setName('TradeFix Studio');
@@ -61,7 +61,7 @@ async function reconnect(state: 'reconnecting' | 'locked' = 'reconnecting') {
 async function connect(command: 'connect' | 'connect_profile', fields: Record<string, unknown>): Promise<ConnectResult> {
   if (connecting) return {error: {code: 'BUSY', message: 'A connection is already in progress.', field: 'login', actions: []}};
   connecting = true;
-  try { await engine.restart();const profile=(fields.profile??fields.request) as {login:number;server:string};await captureHistory(root,{login:profile.login,server:profile.server});const result=await engine.command<ConnectResult>(command, fields);if(!result.error){activeProfile={login:profile.login,server:profile.server};}return result; }
+  try { const profile=(fields.profile??fields.request) as {login:number;server:string};const result=await engine.command<ConnectResult>(command, fields);if(!result.error){activeProfile={login:profile.login,server:profile.server};}return result; }
   catch(error) { const fault=faultOf(error);return {error:{code:fault.code,message:fault.message,field:'terminalPath',actions:['retry']}}; }
   finally { connecting = false; }
 }
