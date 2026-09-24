@@ -1,0 +1,1933 @@
+{
+  "$defs": {
+    "Animation": {
+      "additionalProperties": false,
+      "properties": {
+        "in_": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "title": "In",
+          "type": "string"
+        },
+        "loop": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Loop"
+        }
+      },
+      "required": [
+        "in_",
+        "loop"
+      ],
+      "title": "Animation",
+      "type": "object"
+    },
+    "Bar": {
+      "additionalProperties": false,
+      "properties": {
+        "c": {
+          "exclusiveMinimum": 0,
+          "title": "C",
+          "type": "number"
+        },
+        "clock_confidence": {
+          "default": "ASSUMED",
+          "enum": [
+            "MEASURED",
+            "DERIVED",
+            "ASSUMED"
+          ],
+          "title": "Clock Confidence",
+          "type": "string"
+        },
+        "complete": {
+          "title": "Complete",
+          "type": "boolean"
+        },
+        "digits": {
+          "default": 2,
+          "enum": [
+            2,
+            3
+          ],
+          "title": "Digits",
+          "type": "integer"
+        },
+        "h": {
+          "exclusiveMinimum": 0,
+          "title": "H",
+          "type": "number"
+        },
+        "id": {
+          "default": "",
+          "title": "Id",
+          "type": "string"
+        },
+        "l": {
+          "exclusiveMinimum": 0,
+          "title": "L",
+          "type": "number"
+        },
+        "o": {
+          "exclusiveMinimum": 0,
+          "title": "O",
+          "type": "number"
+        },
+        "object_hash": {
+          "default": "",
+          "title": "Object Hash",
+          "type": "string"
+        },
+        "source": {
+          "enum": [
+            "mt5",
+            "twelve_data",
+            "synthetic"
+          ],
+          "title": "Source",
+          "type": "string"
+        },
+        "symbol": {
+          "const": "XAUUSD",
+          "default": "XAUUSD",
+          "title": "Symbol",
+          "type": "string"
+        },
+        "t_open_ms": {
+          "minimum": 0,
+          "title": "T Open Ms",
+          "type": "integer"
+        },
+        "tf": {
+          "enum": [
+            "M1",
+            "M5",
+            "M15",
+            "M30",
+            "H1",
+            "H4",
+            "D1",
+            "W1",
+            "MN1"
+          ],
+          "title": "Tf",
+          "type": "string"
+        },
+        "tick_volume": {
+          "minimum": 0,
+          "title": "Tick Volume",
+          "type": "number"
+        }
+      },
+      "required": [
+        "tf",
+        "t_open_ms",
+        "o",
+        "h",
+        "l",
+        "c",
+        "tick_volume",
+        "source",
+        "complete"
+      ],
+      "title": "Bar",
+      "type": "object"
+    },
+    "BarCorrection": {
+      "additionalProperties": false,
+      "properties": {
+        "corrected": {
+          "$ref": "#/$defs/Bar"
+        },
+        "deviation": {
+          "minimum": 0,
+          "title": "Deviation",
+          "type": "number"
+        },
+        "previous": {
+          "$ref": "#/$defs/Bar"
+        }
+      },
+      "required": [
+        "previous",
+        "corrected",
+        "deviation"
+      ],
+      "title": "BarCorrection",
+      "type": "object"
+    },
+    "Bias": {
+      "additionalProperties": false,
+      "properties": {
+        "confidence": {
+          "maximum": 1,
+          "minimum": 0,
+          "title": "Confidence",
+          "type": "number"
+        },
+        "direction": {
+          "enum": [
+            "BULLISH",
+            "BEARISH",
+            "NEUTRAL"
+          ],
+          "title": "Direction",
+          "type": "string"
+        },
+        "evidence": {
+          "items": {
+            "minLength": 1,
+            "pattern": "\\S",
+            "type": "string"
+          },
+          "title": "Evidence",
+          "type": "array"
+        }
+      },
+      "required": [
+        "direction",
+        "confidence",
+        "evidence"
+      ],
+      "title": "Bias",
+      "type": "object"
+    },
+    "BiasStack": {
+      "additionalProperties": false,
+      "properties": {
+        "alignment_score": {
+          "maximum": 1,
+          "minimum": 0,
+          "title": "Alignment Score",
+          "type": "number"
+        },
+        "evidence": {
+          "items": {
+            "minLength": 1,
+            "pattern": "\\S",
+            "type": "string"
+          },
+          "title": "Evidence",
+          "type": "array"
+        },
+        "per_tf": {
+          "additionalProperties": {
+            "$ref": "#/$defs/Bias"
+          },
+          "propertyNames": {
+            "enum": [
+              "M1",
+              "M5",
+              "M15",
+              "M30",
+              "H1",
+              "H4",
+              "D1",
+              "W1",
+              "MN1"
+            ]
+          },
+          "title": "Per Tf",
+          "type": "object"
+        }
+      },
+      "required": [
+        "per_tf",
+        "alignment_score",
+        "evidence"
+      ],
+      "title": "BiasStack",
+      "type": "object"
+    },
+    "CameraMove": {
+      "additionalProperties": false,
+      "properties": {
+        "duration_ms": {
+          "minimum": 0,
+          "title": "Duration Ms",
+          "type": "integer"
+        },
+        "easing": {
+          "enum": [
+            "linear",
+            "ease_in_out",
+            "ease_out"
+          ],
+          "title": "Easing",
+          "type": "string"
+        },
+        "kind": {
+          "enum": [
+            "PAN",
+            "ZOOM_TO_ZONE",
+            "FRAME_RANGE",
+            "TF_MORPH"
+          ],
+          "title": "Kind",
+          "type": "string"
+        },
+        "target": {
+          "$ref": "#/$defs/CameraTarget"
+        }
+      },
+      "required": [
+        "kind",
+        "target",
+        "duration_ms",
+        "easing"
+      ],
+      "title": "CameraMove",
+      "type": "object"
+    },
+    "CameraTarget": {
+      "additionalProperties": false,
+      "properties": {
+        "from_ms": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "From Ms"
+        },
+        "object_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Object Id"
+        },
+        "price_hi": {
+          "anyOf": [
+            {
+              "exclusiveMinimum": 0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Price Hi"
+        },
+        "price_lo": {
+          "anyOf": [
+            {
+              "exclusiveMinimum": 0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Price Lo"
+        },
+        "tf": {
+          "anyOf": [
+            {
+              "enum": [
+                "M1",
+                "M5",
+                "M15",
+                "M30",
+                "H1",
+                "H4",
+                "D1",
+                "W1",
+                "MN1"
+              ],
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Tf"
+        },
+        "to_ms": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "To Ms"
+        }
+      },
+      "title": "CameraTarget",
+      "type": "object"
+    },
+    "DataGapHealed": {
+      "additionalProperties": false,
+      "properties": {
+        "bars_recovered": {
+          "minimum": 0,
+          "title": "Bars Recovered",
+          "type": "integer"
+        },
+        "from_ms": {
+          "minimum": 0,
+          "title": "From Ms",
+          "type": "integer"
+        },
+        "symbol": {
+          "const": "XAUUSD",
+          "title": "Symbol",
+          "type": "string"
+        },
+        "to_ms": {
+          "minimum": 0,
+          "title": "To Ms",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "symbol",
+        "from_ms",
+        "to_ms",
+        "bars_recovered"
+      ],
+      "title": "DataGapHealed",
+      "type": "object"
+    },
+    "DataQuality": {
+      "additionalProperties": false,
+      "properties": {
+        "detail": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "title": "Detail",
+          "type": "string"
+        },
+        "spread_points": {
+          "minimum": 0,
+          "title": "Spread Points",
+          "type": "number"
+        },
+        "staleness_ms": {
+          "minimum": 0,
+          "title": "Staleness Ms",
+          "type": "integer"
+        },
+        "state": {
+          "enum": [
+            "OK",
+            "STALE",
+            "GAPPED",
+            "WIDE_SPREAD",
+            "HALTED",
+            "NO_DATA",
+            "CALENDAR_PENDING"
+          ],
+          "title": "State",
+          "type": "string"
+        }
+      },
+      "required": [
+        "state",
+        "staleness_ms",
+        "spread_points",
+        "detail"
+      ],
+      "title": "DataQuality",
+      "type": "object"
+    },
+    "DrawObject": {
+      "additionalProperties": false,
+      "properties": {
+        "anim": {
+          "$ref": "#/$defs/Animation"
+        },
+        "confidence": {
+          "maximum": 1,
+          "minimum": 0,
+          "title": "Confidence",
+          "type": "number"
+        },
+        "digits": {
+          "default": 2,
+          "enum": [
+            2,
+            3
+          ],
+          "title": "Digits",
+          "type": "integer"
+        },
+        "id": {
+          "default": "",
+          "title": "Id",
+          "type": "string"
+        },
+        "layer": {
+          "enum": [
+            "L2",
+            "L3"
+          ],
+          "title": "Layer",
+          "type": "string"
+        },
+        "object_hash": {
+          "default": "",
+          "title": "Object Hash",
+          "type": "string"
+        },
+        "points": {
+          "items": {
+            "$ref": "#/$defs/Point"
+          },
+          "minItems": 1,
+          "title": "Points",
+          "type": "array"
+        },
+        "priority": {
+          "minimum": 0,
+          "title": "Priority",
+          "type": "integer"
+        },
+        "reason": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "title": "Reason",
+          "type": "string"
+        },
+        "shape": {
+          "enum": [
+            "ZONE",
+            "LINE",
+            "RAY",
+            "LABEL",
+            "ARROW",
+            "FIB",
+            "PATH",
+            "LADDER",
+            "GLYPH"
+          ],
+          "title": "Shape",
+          "type": "string"
+        },
+        "source_bars": {
+          "items": {
+            "minimum": 0,
+            "type": "integer"
+          },
+          "minItems": 1,
+          "title": "Source Bars",
+          "type": "array"
+        },
+        "state": {
+          "enum": [
+            "FRESH",
+            "TOUCHED",
+            "MITIGATED",
+            "BREAKER",
+            "INVALID"
+          ],
+          "title": "State",
+          "type": "string"
+        },
+        "style": {
+          "$ref": "#/$defs/Style"
+        },
+        "text_args": {
+          "additionalProperties": {
+            "$ref": "#/$defs/JsonValue"
+          },
+          "title": "Text Args",
+          "type": "object"
+        },
+        "text_key": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "title": "Text Key",
+          "type": "string"
+        },
+        "ttl_ms": {
+          "minimum": 0,
+          "title": "Ttl Ms",
+          "type": "integer"
+        },
+        "z": {
+          "title": "Z",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "layer",
+        "shape",
+        "points",
+        "style",
+        "text_key",
+        "text_args",
+        "state",
+        "ttl_ms",
+        "priority",
+        "z",
+        "anim",
+        "reason",
+        "source_bars",
+        "confidence"
+      ],
+      "title": "DrawObject",
+      "type": "object"
+    },
+    "DrawPlan": {
+      "additionalProperties": false,
+      "properties": {
+        "add": {
+          "items": {
+            "$ref": "#/$defs/DrawObject"
+          },
+          "title": "Add",
+          "type": "array"
+        },
+        "as_of_ms": {
+          "minimum": 0,
+          "title": "As Of Ms",
+          "type": "integer"
+        },
+        "remove": {
+          "items": {
+            "minLength": 1,
+            "pattern": "\\S",
+            "type": "string"
+          },
+          "title": "Remove",
+          "type": "array"
+        },
+        "update": {
+          "items": {
+            "$ref": "#/$defs/DrawObject"
+          },
+          "title": "Update",
+          "type": "array"
+        }
+      },
+      "required": [
+        "as_of_ms",
+        "add",
+        "update",
+        "remove"
+      ],
+      "title": "DrawPlan",
+      "type": "object"
+    },
+    "HighlightCue": {
+      "additionalProperties": false,
+      "properties": {
+        "at_ms": {
+          "minimum": 0,
+          "title": "At Ms",
+          "type": "integer"
+        },
+        "kind": {
+          "enum": [
+            "PULSE",
+            "FLASH",
+            "TRACE"
+          ],
+          "title": "Kind",
+          "type": "string"
+        },
+        "object_id": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "title": "Object Id",
+          "type": "string"
+        }
+      },
+      "required": [
+        "object_id",
+        "at_ms",
+        "kind"
+      ],
+      "title": "HighlightCue",
+      "type": "object"
+    },
+    "IntelItem": {
+      "additionalProperties": false,
+      "properties": {
+        "headline": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "title": "Headline",
+          "type": "string"
+        },
+        "impact": {
+          "maximum": 1,
+          "minimum": 0,
+          "title": "Impact",
+          "type": "number"
+        },
+        "kind": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "title": "Kind",
+          "type": "string"
+        },
+        "payload": {
+          "additionalProperties": {
+            "$ref": "#/$defs/JsonValue"
+          },
+          "title": "Payload",
+          "type": "object"
+        },
+        "source": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "title": "Source",
+          "type": "string"
+        },
+        "t_ms": {
+          "minimum": 0,
+          "title": "T Ms",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "source",
+        "t_ms",
+        "kind",
+        "headline",
+        "impact",
+        "payload"
+      ],
+      "title": "IntelItem",
+      "type": "object"
+    },
+    "IntelSnapshot": {
+      "additionalProperties": false,
+      "properties": {
+        "as_of_ms": {
+          "minimum": 0,
+          "title": "As Of Ms",
+          "type": "integer"
+        },
+        "correlates": {
+          "additionalProperties": {
+            "type": "number"
+          },
+          "title": "Correlates",
+          "type": "object"
+        },
+        "intel_confidence": {
+          "maximum": 1,
+          "minimum": 0,
+          "title": "Intel Confidence",
+          "type": "number"
+        },
+        "minutes_to_next_high_impact": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Minutes To Next High Impact"
+        },
+        "next_event": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/IntelItem"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "risk_regime": {
+          "enum": [
+            "RISK_ON",
+            "RISK_OFF",
+            "MIXED",
+            "EVENT_PENDING"
+          ],
+          "title": "Risk Regime",
+          "type": "string"
+        },
+        "top_facts": {
+          "items": {
+            "minLength": 1,
+            "pattern": "\\S",
+            "type": "string"
+          },
+          "maxItems": 3,
+          "title": "Top Facts",
+          "type": "array"
+        }
+      },
+      "required": [
+        "as_of_ms",
+        "risk_regime",
+        "minutes_to_next_high_impact",
+        "next_event",
+        "correlates",
+        "top_facts",
+        "intel_confidence"
+      ],
+      "title": "IntelSnapshot",
+      "type": "object"
+    },
+    "JsonValue": {},
+    "MarketState": {
+      "additionalProperties": false,
+      "properties": {
+        "active_segment": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "title": "Active Segment",
+          "type": "string"
+        },
+        "as_of_ms": {
+          "minimum": 0,
+          "title": "As Of Ms",
+          "type": "integer"
+        },
+        "atr_percentile": {
+          "maximum": 1,
+          "minimum": 0,
+          "title": "Atr Percentile",
+          "type": "number"
+        },
+        "bias": {
+          "$ref": "#/$defs/BiasStack"
+        },
+        "data_quality": {
+          "$ref": "#/$defs/DataQuality"
+        },
+        "events": {
+          "items": {
+            "$ref": "#/$defs/StructureEvt"
+          },
+          "title": "Events",
+          "type": "array"
+        },
+        "killzone": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Killzone"
+        },
+        "price": {
+          "exclusiveMinimum": 0,
+          "title": "Price",
+          "type": "number"
+        },
+        "range_position": {
+          "maximum": 1,
+          "minimum": 0,
+          "title": "Range Position",
+          "type": "number"
+        },
+        "setup": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/SetupGrade"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "state_hash": {
+          "default": "",
+          "title": "State Hash",
+          "type": "string"
+        },
+        "sweeps": {
+          "items": {
+            "$ref": "#/$defs/Sweep"
+          },
+          "title": "Sweeps",
+          "type": "array"
+        },
+        "swings": {
+          "items": {
+            "$ref": "#/$defs/Swing"
+          },
+          "title": "Swings",
+          "type": "array"
+        },
+        "symbol": {
+          "const": "XAUUSD",
+          "title": "Symbol",
+          "type": "string"
+        },
+        "tick_size": {
+          "exclusiveMinimum": 0,
+          "title": "Tick Size",
+          "type": "number"
+        },
+        "zones": {
+          "items": {
+            "$ref": "#/$defs/Zone"
+          },
+          "title": "Zones",
+          "type": "array"
+        }
+      },
+      "required": [
+        "as_of_ms",
+        "symbol",
+        "price",
+        "swings",
+        "events",
+        "zones",
+        "sweeps",
+        "bias",
+        "range_position",
+        "killzone",
+        "data_quality",
+        "atr_percentile",
+        "setup",
+        "tick_size",
+        "active_segment"
+      ],
+      "title": "MarketState",
+      "type": "object"
+    },
+    "Point": {
+      "additionalProperties": false,
+      "properties": {
+        "price": {
+          "exclusiveMinimum": 0,
+          "title": "Price",
+          "type": "number"
+        },
+        "t_ms": {
+          "minimum": 0,
+          "title": "T Ms",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "t_ms",
+        "price"
+      ],
+      "title": "Point",
+      "type": "object"
+    },
+    "PresentationBeat": {
+      "additionalProperties": false,
+      "properties": {
+        "camera": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/CameraMove"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "cues": {
+          "items": {
+            "$ref": "#/$defs/HighlightCue"
+          },
+          "title": "Cues",
+          "type": "array"
+        },
+        "draw_plan": {
+          "$ref": "#/$defs/DrawPlan"
+        },
+        "segment_id": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "title": "Segment Id",
+          "type": "string"
+        }
+      },
+      "required": [
+        "segment_id",
+        "draw_plan",
+        "camera",
+        "cues"
+      ],
+      "title": "PresentationBeat",
+      "type": "object"
+    },
+    "Quote": {
+      "additionalProperties": false,
+      "properties": {
+        "ask": {
+          "exclusiveMinimum": 0,
+          "title": "Ask",
+          "type": "number"
+        },
+        "bid": {
+          "exclusiveMinimum": 0,
+          "title": "Bid",
+          "type": "number"
+        },
+        "source": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "title": "Source",
+          "type": "string"
+        },
+        "symbol": {
+          "const": "XAUUSD",
+          "title": "Symbol",
+          "type": "string"
+        },
+        "t_ms": {
+          "minimum": 0,
+          "title": "T Ms",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "symbol",
+        "bid",
+        "ask",
+        "t_ms",
+        "source"
+      ],
+      "title": "Quote",
+      "type": "object"
+    },
+    "Scenario": {
+      "additionalProperties": false,
+      "properties": {
+        "digits": {
+          "default": 2,
+          "enum": [
+            2,
+            3
+          ],
+          "title": "Digits",
+          "type": "integer"
+        },
+        "direction": {
+          "enum": [
+            "BULLISH",
+            "BEARISH",
+            "NEUTRAL"
+          ],
+          "title": "Direction",
+          "type": "string"
+        },
+        "expected_move_atr": {
+          "minimum": 0,
+          "title": "Expected Move Atr",
+          "type": "number"
+        },
+        "id": {
+          "default": "",
+          "title": "Id",
+          "type": "string"
+        },
+        "invalidation_price": {
+          "exclusiveMinimum": 0,
+          "title": "Invalidation Price",
+          "type": "number"
+        },
+        "object_hash": {
+          "default": "",
+          "title": "Object Hash",
+          "type": "string"
+        },
+        "prob_sample_n": {
+          "minimum": 0,
+          "title": "Prob Sample N",
+          "type": "integer"
+        },
+        "probability": {
+          "anyOf": [
+            {
+              "maximum": 1,
+              "minimum": 0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Probability"
+        },
+        "rank": {
+          "enum": [
+            "PRIMARY",
+            "ALTERNATE",
+            "INVALIDATION"
+          ],
+          "title": "Rank",
+          "type": "string"
+        },
+        "reason_chain": {
+          "items": {
+            "minLength": 1,
+            "pattern": "\\S",
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Reason Chain",
+          "type": "array"
+        },
+        "valid_until_ms": {
+          "minimum": 0,
+          "title": "Valid Until Ms",
+          "type": "integer"
+        },
+        "waypoints": {
+          "items": {
+            "$ref": "#/$defs/Waypoint"
+          },
+          "minItems": 1,
+          "title": "Waypoints",
+          "type": "array"
+        }
+      },
+      "required": [
+        "rank",
+        "direction",
+        "waypoints",
+        "invalidation_price",
+        "probability",
+        "prob_sample_n",
+        "expected_move_atr",
+        "valid_until_ms",
+        "reason_chain"
+      ],
+      "title": "Scenario",
+      "type": "object"
+    },
+    "SetupGrade": {
+      "additionalProperties": false,
+      "properties": {
+        "contributing_factors": {
+          "items": {
+            "minLength": 1,
+            "pattern": "\\S",
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Contributing Factors",
+          "type": "array"
+        },
+        "grade": {
+          "enum": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ],
+          "title": "Grade",
+          "type": "string"
+        },
+        "score": {
+          "maximum": 1,
+          "minimum": 0,
+          "title": "Score",
+          "type": "number"
+        }
+      },
+      "required": [
+        "score",
+        "grade",
+        "contributing_factors"
+      ],
+      "title": "SetupGrade",
+      "type": "object"
+    },
+    "StructureEvt": {
+      "additionalProperties": false,
+      "properties": {
+        "break_bar_idx": {
+          "minimum": 0,
+          "title": "Break Bar Idx",
+          "type": "integer"
+        },
+        "break_mode": {
+          "default": "body",
+          "enum": [
+            "body",
+            "wick"
+          ],
+          "title": "Break Mode",
+          "type": "string"
+        },
+        "broken_swing_id": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "title": "Broken Swing Id",
+          "type": "string"
+        },
+        "confirmed": {
+          "title": "Confirmed",
+          "type": "boolean"
+        },
+        "digits": {
+          "default": 2,
+          "enum": [
+            2,
+            3
+          ],
+          "title": "Digits",
+          "type": "integer"
+        },
+        "direction": {
+          "enum": [
+            "BULLISH",
+            "BEARISH",
+            "NEUTRAL"
+          ],
+          "title": "Direction",
+          "type": "string"
+        },
+        "id": {
+          "default": "",
+          "title": "Id",
+          "type": "string"
+        },
+        "kind": {
+          "enum": [
+            "BOS",
+            "CHOCH",
+            "MSS"
+          ],
+          "title": "Kind",
+          "type": "string"
+        },
+        "object_hash": {
+          "default": "",
+          "title": "Object Hash",
+          "type": "string"
+        },
+        "price": {
+          "exclusiveMinimum": 0,
+          "title": "Price",
+          "type": "number"
+        },
+        "t_ms": {
+          "minimum": 0,
+          "title": "T Ms",
+          "type": "integer"
+        },
+        "tf": {
+          "enum": [
+            "M1",
+            "M5",
+            "M15",
+            "M30",
+            "H1",
+            "H4",
+            "D1",
+            "W1",
+            "MN1"
+          ],
+          "title": "Tf",
+          "type": "string"
+        }
+      },
+      "required": [
+        "kind",
+        "direction",
+        "broken_swing_id",
+        "break_bar_idx",
+        "t_ms",
+        "price",
+        "tf",
+        "confirmed"
+      ],
+      "title": "StructureEvt",
+      "type": "object"
+    },
+    "Style": {
+      "additionalProperties": false,
+      "properties": {
+        "token": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "title": "Token",
+          "type": "string"
+        }
+      },
+      "required": [
+        "token"
+      ],
+      "title": "Style",
+      "type": "object"
+    },
+    "Sweep": {
+      "additionalProperties": false,
+      "properties": {
+        "digits": {
+          "default": 2,
+          "enum": [
+            2,
+            3
+          ],
+          "title": "Digits",
+          "type": "integer"
+        },
+        "direction": {
+          "enum": [
+            "BULLISH",
+            "BEARISH",
+            "NEUTRAL"
+          ],
+          "title": "Direction",
+          "type": "string"
+        },
+        "id": {
+          "default": "",
+          "title": "Id",
+          "type": "string"
+        },
+        "level_kind": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "title": "Level Kind",
+          "type": "string"
+        },
+        "level_price": {
+          "exclusiveMinimum": 0,
+          "title": "Level Price",
+          "type": "number"
+        },
+        "object_hash": {
+          "default": "",
+          "title": "Object Hash",
+          "type": "string"
+        },
+        "reclaimed": {
+          "title": "Reclaimed",
+          "type": "boolean"
+        },
+        "sweep_bar_idx": {
+          "minimum": 0,
+          "title": "Sweep Bar Idx",
+          "type": "integer"
+        },
+        "t_ms": {
+          "minimum": 0,
+          "title": "T Ms",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "level_price",
+        "level_kind",
+        "sweep_bar_idx",
+        "t_ms",
+        "direction",
+        "reclaimed"
+      ],
+      "title": "Sweep",
+      "type": "object"
+    },
+    "Swing": {
+      "additionalProperties": false,
+      "properties": {
+        "digits": {
+          "default": 2,
+          "enum": [
+            2,
+            3
+          ],
+          "title": "Digits",
+          "type": "integer"
+        },
+        "id": {
+          "default": "",
+          "title": "Id",
+          "type": "string"
+        },
+        "idx": {
+          "minimum": 0,
+          "title": "Idx",
+          "type": "integer"
+        },
+        "kind": {
+          "enum": [
+            "HH",
+            "HL",
+            "LH",
+            "LL"
+          ],
+          "title": "Kind",
+          "type": "string"
+        },
+        "object_hash": {
+          "default": "",
+          "title": "Object Hash",
+          "type": "string"
+        },
+        "price": {
+          "exclusiveMinimum": 0,
+          "title": "Price",
+          "type": "number"
+        },
+        "t_ms": {
+          "minimum": 0,
+          "title": "T Ms",
+          "type": "integer"
+        },
+        "tf": {
+          "enum": [
+            "M1",
+            "M5",
+            "M15",
+            "M30",
+            "H1",
+            "H4",
+            "D1",
+            "W1",
+            "MN1"
+          ],
+          "title": "Tf",
+          "type": "string"
+        }
+      },
+      "required": [
+        "kind",
+        "idx",
+        "t_ms",
+        "price",
+        "tf"
+      ],
+      "title": "Swing",
+      "type": "object"
+    },
+    "UTBotDrawObject": {
+      "additionalProperties": false,
+      "properties": {
+        "anim": {
+          "$ref": "#/$defs/Animation"
+        },
+        "confidence": {
+          "maximum": 1,
+          "minimum": 0,
+          "title": "Confidence",
+          "type": "number"
+        },
+        "confirmed": {
+          "default": true,
+          "title": "Confirmed",
+          "type": "boolean"
+        },
+        "digits": {
+          "default": 2,
+          "enum": [
+            2,
+            3
+          ],
+          "title": "Digits",
+          "type": "integer"
+        },
+        "direction": {
+          "enum": [
+            "BULLISH",
+            "BEARISH",
+            "NEUTRAL"
+          ],
+          "title": "Direction",
+          "type": "string"
+        },
+        "id": {
+          "default": "",
+          "title": "Id",
+          "type": "string"
+        },
+        "indicator": {
+          "const": "utbot",
+          "default": "utbot",
+          "title": "Indicator",
+          "type": "string"
+        },
+        "layer": {
+          "enum": [
+            "L2",
+            "L3"
+          ],
+          "title": "Layer",
+          "type": "string"
+        },
+        "object_hash": {
+          "default": "",
+          "title": "Object Hash",
+          "type": "string"
+        },
+        "points": {
+          "items": {
+            "$ref": "#/$defs/Point"
+          },
+          "minItems": 1,
+          "title": "Points",
+          "type": "array"
+        },
+        "priority": {
+          "minimum": 0,
+          "title": "Priority",
+          "type": "integer"
+        },
+        "reason": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "title": "Reason",
+          "type": "string"
+        },
+        "shape": {
+          "enum": [
+            "ZONE",
+            "LINE",
+            "RAY",
+            "LABEL",
+            "ARROW",
+            "FIB",
+            "PATH",
+            "LADDER",
+            "GLYPH"
+          ],
+          "title": "Shape",
+          "type": "string"
+        },
+        "source_bars": {
+          "items": {
+            "minimum": 0,
+            "type": "integer"
+          },
+          "minItems": 1,
+          "title": "Source Bars",
+          "type": "array"
+        },
+        "state": {
+          "enum": [
+            "FRESH",
+            "TOUCHED",
+            "MITIGATED",
+            "BREAKER",
+            "INVALID"
+          ],
+          "title": "State",
+          "type": "string"
+        },
+        "style": {
+          "$ref": "#/$defs/Style"
+        },
+        "symbol": {
+          "const": "XAUUSD",
+          "default": "XAUUSD",
+          "title": "Symbol",
+          "type": "string"
+        },
+        "t_open_ms": {
+          "minimum": 0,
+          "title": "T Open Ms",
+          "type": "integer"
+        },
+        "text_args": {
+          "additionalProperties": {
+            "$ref": "#/$defs/JsonValue"
+          },
+          "title": "Text Args",
+          "type": "object"
+        },
+        "text_key": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "title": "Text Key",
+          "type": "string"
+        },
+        "tf": {
+          "enum": [
+            "M1",
+            "M5",
+            "M15",
+            "M30",
+            "H1",
+            "H4",
+            "D1",
+            "W1",
+            "MN1"
+          ],
+          "title": "Tf",
+          "type": "string"
+        },
+        "ttl_ms": {
+          "minimum": 0,
+          "title": "Ttl Ms",
+          "type": "integer"
+        },
+        "warmup": {
+          "default": false,
+          "title": "Warmup",
+          "type": "boolean"
+        },
+        "z": {
+          "title": "Z",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "layer",
+        "shape",
+        "points",
+        "style",
+        "text_key",
+        "text_args",
+        "state",
+        "ttl_ms",
+        "priority",
+        "z",
+        "anim",
+        "reason",
+        "source_bars",
+        "confidence",
+        "tf",
+        "t_open_ms",
+        "direction"
+      ],
+      "title": "UTBotDrawObject",
+      "type": "object"
+    },
+    "Waypoint": {
+      "additionalProperties": false,
+      "properties": {
+        "kind": {
+          "enum": [
+            "ZONE_TAP",
+            "REACTION",
+            "TARGET"
+          ],
+          "title": "Kind",
+          "type": "string"
+        },
+        "note": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "title": "Note",
+          "type": "string"
+        },
+        "price": {
+          "exclusiveMinimum": 0,
+          "title": "Price",
+          "type": "number"
+        }
+      },
+      "required": [
+        "price",
+        "kind",
+        "note"
+      ],
+      "title": "Waypoint",
+      "type": "object"
+    },
+    "WireEvent": {
+      "additionalProperties": false,
+      "properties": {
+        "payload": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Bar"
+            },
+            {
+              "$ref": "#/$defs/BarCorrection"
+            },
+            {
+              "$ref": "#/$defs/Quote"
+            },
+            {
+              "$ref": "#/$defs/DataQuality"
+            },
+            {
+              "$ref": "#/$defs/DataGapHealed"
+            },
+            {
+              "$ref": "#/$defs/MarketState"
+            },
+            {
+              "$ref": "#/$defs/IntelSnapshot"
+            },
+            {
+              "$ref": "#/$defs/PresentationBeat"
+            }
+          ],
+          "title": "Payload"
+        },
+        "sequence": {
+          "minimum": 0,
+          "title": "Sequence",
+          "type": "integer"
+        },
+        "t_ms": {
+          "minimum": 0,
+          "title": "T Ms",
+          "type": "integer"
+        },
+        "version": {
+          "const": 1,
+          "default": 1,
+          "title": "Version",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "sequence",
+        "t_ms",
+        "payload"
+      ],
+      "title": "WireEvent",
+      "type": "object"
+    },
+    "Zone": {
+      "additionalProperties": false,
+      "properties": {
+        "digits": {
+          "default": 2,
+          "enum": [
+            2,
+            3
+          ],
+          "title": "Digits",
+          "type": "integer"
+        },
+        "direction": {
+          "enum": [
+            "BULLISH",
+            "BEARISH",
+            "NEUTRAL"
+          ],
+          "title": "Direction",
+          "type": "string"
+        },
+        "fill_pct": {
+          "maximum": 100,
+          "minimum": 0,
+          "title": "Fill Pct",
+          "type": "number"
+        },
+        "id": {
+          "default": "",
+          "title": "Id",
+          "type": "string"
+        },
+        "kind": {
+          "enum": [
+            "OB",
+            "BREAKER",
+            "FVG",
+            "IFVG",
+            "LIQ_POOL",
+            "OTE",
+            "RANGE",
+            "GAP_FVG"
+          ],
+          "title": "Kind",
+          "type": "string"
+        },
+        "object_hash": {
+          "default": "",
+          "title": "Object Hash",
+          "type": "string"
+        },
+        "price_hi": {
+          "exclusiveMinimum": 0,
+          "title": "Price Hi",
+          "type": "number"
+        },
+        "price_lo": {
+          "exclusiveMinimum": 0,
+          "title": "Price Lo",
+          "type": "number"
+        },
+        "reason": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "title": "Reason",
+          "type": "string"
+        },
+        "score": {
+          "maximum": 1,
+          "minimum": 0,
+          "title": "Score",
+          "type": "number"
+        },
+        "source_bars": {
+          "items": {
+            "minimum": 0,
+            "type": "integer"
+          },
+          "minItems": 1,
+          "title": "Source Bars",
+          "type": "array"
+        },
+        "state": {
+          "enum": [
+            "FRESH",
+            "TOUCHED",
+            "MITIGATED",
+            "BREAKER",
+            "INVALID"
+          ],
+          "title": "State",
+          "type": "string"
+        },
+        "t_end_ms": {
+          "minimum": 0,
+          "title": "T End Ms",
+          "type": "integer"
+        },
+        "t_start_ms": {
+          "minimum": 0,
+          "title": "T Start Ms",
+          "type": "integer"
+        },
+        "tf": {
+          "enum": [
+            "M1",
+            "M5",
+            "M15",
+            "M30",
+            "H1",
+            "H4",
+            "D1",
+            "W1",
+            "MN1"
+          ],
+          "title": "Tf",
+          "type": "string"
+        }
+      },
+      "required": [
+        "kind",
+        "direction",
+        "tf",
+        "t_start_ms",
+        "t_end_ms",
+        "price_hi",
+        "price_lo",
+        "state",
+        "fill_pct",
+        "score",
+        "reason",
+        "source_bars"
+      ],
+      "title": "Zone",
+      "type": "object"
+    }
+  },
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "Animation": {
+      "$ref": "#/$defs/Animation"
+    },
+    "Bar": {
+      "$ref": "#/$defs/Bar"
+    },
+    "BarCorrection": {
+      "$ref": "#/$defs/BarCorrection"
+    },
+    "Bias": {
+      "$ref": "#/$defs/Bias"
+    },
+    "BiasStack": {
+      "$ref": "#/$defs/BiasStack"
+    },
+    "CameraMove": {
+      "$ref": "#/$defs/CameraMove"
+    },
+    "CameraTarget": {
+      "$ref": "#/$defs/CameraTarget"
+    },
+    "DataGapHealed": {
+      "$ref": "#/$defs/DataGapHealed"
+    },
+    "DataQuality": {
+      "$ref": "#/$defs/DataQuality"
+    },
+    "DrawObject": {
+      "$ref": "#/$defs/DrawObject"
+    },
+    "DrawPlan": {
+      "$ref": "#/$defs/DrawPlan"
+    },
+    "HighlightCue": {
+      "$ref": "#/$defs/HighlightCue"
+    },
+    "IntelItem": {
+      "$ref": "#/$defs/IntelItem"
+    },
+    "IntelSnapshot": {
+      "$ref": "#/$defs/IntelSnapshot"
+    },
+    "JsonValue": {
+      "$ref": "#/$defs/JsonValue"
+    },
+    "MarketState": {
+      "$ref": "#/$defs/MarketState"
+    },
+    "Point": {
+      "$ref": "#/$defs/Point"
+    },
+    "PresentationBeat": {
+      "$ref": "#/$defs/PresentationBeat"
+    },
+    "Quote": {
+      "$ref": "#/$defs/Quote"
+    },
+    "Scenario": {
+      "$ref": "#/$defs/Scenario"
+    },
+    "SetupGrade": {
+      "$ref": "#/$defs/SetupGrade"
+    },
+    "StructureEvt": {
+      "$ref": "#/$defs/StructureEvt"
+    },
+    "Style": {
+      "$ref": "#/$defs/Style"
+    },
+    "Sweep": {
+      "$ref": "#/$defs/Sweep"
+    },
+    "Swing": {
+      "$ref": "#/$defs/Swing"
+    },
+    "UTBotDrawObject": {
+      "$ref": "#/$defs/UTBotDrawObject"
+    },
+    "Waypoint": {
+      "$ref": "#/$defs/Waypoint"
+    },
+    "WireEvent": {
+      "$ref": "#/$defs/WireEvent"
+    },
+    "Zone": {
+      "$ref": "#/$defs/Zone"
+    }
+  },
+  "title": "OracleProtocol",
+  "type": "object"
+}

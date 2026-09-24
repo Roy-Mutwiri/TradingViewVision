@@ -1,0 +1,7 @@
+{
+  "description": "A stale low of 90 precedes the broken high. Only the inclusive broken-high-to-break interval counts; its minimum is 97 at bar 3.",
+  "bars": [[94,95,90,94],[99,100,98,99],[99,99.8,98.2,99],[98.5,99,97,98.5],[99,99.8,98.1,99],[100,101,98.5,100.06]],
+  "broken_high_idx": 1,
+  "expected_protected_low": 97,
+  "expected_protected_idx": 3
+}

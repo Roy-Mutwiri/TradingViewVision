@@ -1,0 +1,10 @@
+# Seed hints only: numbered servers and regional prefixes may go stale.
+# Live account_info().server is authoritative. Free-text servers remain allowed.
+servers:
+  - ExnessKE-MT5Trial10 # Confirmed in use.
+  - ExnessKE-MT5Real10
+  - Exness-MT5Trial
+  - Exness-MT5Trial6
+  - Exness-MT5Trial7
+  - Exness-MT5Real
+  - Exness-MT5Real8

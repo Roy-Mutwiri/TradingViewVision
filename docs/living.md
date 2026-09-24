@@ -1,0 +1,25 @@
+﻿# Living analyst layer
+
+Candidate decisions are driven only by frozen EvalPoints. Live input uses the last BID in each broker-time 250 ms bucket; each authoritative parent close has one final CLOSE point. Every configured timeframe uses stored M1 aggregation plus the latest authoritative native closes, independently of the chart tab. The worker owns its queue and database connection; chart and quote rendering do not wait for candidate evaluation.
+
+Candidate audit schema 2 records whether startup missed the beginning of the first parent candle. That incomplete prefix cannot create an intrabar candidate: evaluation waits for its authoritative close, then follows the next complete candle normally. Schema 1 recordings require regeneration. Raw tick fill is a separate read-only drawing projection; it cannot mutate confirmed geometry, ATR thresholds, or the DecisionLog.
+
+Replay uses O-L-H-C for bullish/doji M1 bars and O-H-L-C for bearish bars. Missing constituent coverage falls back to four parent-bar points, with SYNTHETIC_COARSE boundaries in coarse-spans.jsonl. Coarse fidelity is never presented as tick fidelity. Recorded replay also requires contexts.jsonl and seed-bars.jsonl: bucketed last prices cannot reconstruct the authoritative OHLC close by themselves.
+
+Live audits are account scoped: runs/<session>/evalpoints.jsonl and decisions.jsonl. M15 is the root stream; other configured timeframe streams have their own subdirectories. No credentials are written. metadata.json names the broker server, schema and clock versions and weights hash. FVG record schema 4 adds birth fidelity; geometry schema remains 3. Old record checkpoints require regeneration. Real-server goldens must be regenerated when moving off ExnessKE-MT5Trial10.
+
+The real stored-history 500-bar golden tests the ordered decision tuple hash, byte-identical decision logs at speeds 1 and 100, and exact recorded replay. Static checks reject lifecycle clock/render dependencies. CandidateObject is distinct from FVGRecord; the confirmed-only boundary rejects candidates. True OHLC closes alone advance confirmed objects. Missing authoritative closes discard candidates without inventing confirmed bars.
+
+Discards carry closed reasons and mandatory 600 ms strikethrough-chip fades, including when optional motion is disabled. Transport eviction cannot interrupt a fade. The engine's render-trace.jsonl contains deterministic fade INTENTS, not measured animation timings. Actual presentation timings are separately available through oracleRenderTrace() in the renderer; neither trace feeds market state. Worklog entries project Decisions, retaining their source provenance.
+
+The existing union regression freezes 0% fill at creation and measures subsequent fill from created_ms, not the drawing anchor t_start_ms.
+
+Measurements use the operands and result stored on a Decision, not a renderer recomputation. Candidate CREATE/UPDATE measurements describe the positive gap test; confirmation measurements describe the frozen ATR size gate. Their bracket holds for 2.5 seconds and fades for 600 ms, with a renderer-only minimum interval of 180 seconds.
+
+Session scans share the ribbon's DST-aware session calendar. Initial connection, reconnect and timeframe switches do not manufacture boundaries. A genuine opening produces a 1.2-second white sweep followed by a four-second corner chip. Boundary tests cover northern winter and summer; these calendar tests are separate from the still-unproven broker clock correlation.
+
+Camera motion transforms existing canvases only. It never calls viewport or data setters. Plot canvases and the price-axis canvases share the same vertical transform; the time axis shares the horizontal transform. Horizontal motion is bounded by the last candle's clearance and the corner branding, with the configured 24 px limit as a ceiling. Mandatory discard fades pause optional camera motion and reclaim animation slots.
+
+The operator drawer can load metadata.json, evalpoints.jsonl and coarse-spans.jsonl from an offline replay audit. Its coverage cursor marks actual missing-M1 spans amber and reports SYNTHETIC_COARSE at their boundaries. This is an audit cursor, not a command to seek or alter the live chart.
+
+The three-minute recorded-live proof, matching audits and rate report are in runtime/ui-proof/recorded-proof/delivery. Recorded playback is 1×, source session and broker window are labelled, with no audio track. Continuous capture now indexes recorded decision windows rather than waiting for a market pattern. Structure and order blocks ship with their drawing; see structure.md and order_blocks.md. The candidate report uses post-prefix-fix recordings only, shows endpoint open candidates and TTL censoring, and balances exactly. Pre-birth OB validator rejections are separate from candidate DISCARD records. January/July external DST correlation remains unproven without the vendor key. Operator mode continues to show that status. Liquidity, trade construction and producer integration are not claimed complete.

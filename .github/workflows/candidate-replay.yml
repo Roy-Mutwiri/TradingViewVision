@@ -1,0 +1,26 @@
+﻿name: Candidate replay invariants
+on: [push, pull_request]
+jobs:
+  replay:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: '3.12' }
+      - run: python -m pip install -e "./engine[dev]"
+      - run: python -m pytest engine/tests/unit/test_candidates.py engine/tests/unit/test_imbalance.py engine/tests/unit/test_structure.py engine/tests/unit/test_candidate_census.py engine/tests/unit/test_order_blocks.py engine/tests/unit/test_ob_integration.py engine/tests/unit/test_liquidity.py engine/tests/unit/test_call_producer.py engine/tests/unit/test_analysis_calls.py -q
+      - uses: actions/setup-node@v4
+        with: { node-version: '22' }
+      - run: npm ci --prefix app
+      - run: python engine/tests/tools/export_candidate_render.py
+      - run: npm run test:candidate-render --prefix app
+      - run: npm run test:living --prefix app
+      - run: node scripts/test-ob-render.mjs
+        working-directory: app
+
+      - run: node scripts/test-liquidity-render.mjs
+        working-directory: app
+      - run: node scripts/test-call-render.mjs
+        working-directory: app
+      - run: npm run test:honesty:fixture --prefix app
+

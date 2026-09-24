@@ -1,0 +1,23 @@
+{
+  "server": "ExnessKE-MT5Trial10",
+  "clock_version": 1,
+  "weights_hash": "feb1cdb48ff9dd15548c140fc97d3db5974b50c7a699f876abfaabc95f83e729",
+  "broker": "exness",
+  "schema_version": 2,
+  "config": {
+    "break_mode": "body",
+    "thin_day_factor": 0.8,
+    "min_break_atr": 0.05,
+    "internal": false,
+    "mss_sweep_lookback_bars": 10,
+    "show_protected_swing": true,
+    "max_events_visible": 6
+  },
+  "date_range_ms": [
+    1789047000000,
+    1789697700000
+  ],
+  "events_count": 26,
+  "events_sha256": "bcbf2b234aaedafd7685cd7d771672a03cbc4fcfcb6d8b8446f46bea7ec4a0e8",
+  "regeneration_reason": "Structure schema 2: directional sweep query and serialized sweep_event_id; dormant-hook event sequence unchanged."
+}

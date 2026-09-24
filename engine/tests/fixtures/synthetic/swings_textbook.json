@@ -1,0 +1,7 @@
+{
+  "source": "synthetic unit fixture; not broker history or a producer golden",
+  "highs": [101, 103, 106, 103, 101, 102, 104, 107, 103, 101, 102, 104, 105, 103, 101],
+  "lows": [99, 100, 101, 99, 96, 98, 100, 101, 99, 95, 98, 100, 101, 99, 96],
+  "confirmed_high_indices": [2, 7, 12],
+  "confirmed_low_indices": [4, 9]
+}

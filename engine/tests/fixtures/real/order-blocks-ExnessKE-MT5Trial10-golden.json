@@ -1,0 +1,7678 @@
+{
+  "server": "ExnessKE-MT5Trial10",
+  "broker": "exness",
+  "symbol": "XAUUSDz",
+  "clock_version": 1,
+  "schema_version": 1,
+  "weights_hash": "feb1cdb48ff9dd15548c140fc97d3db5974b50c7a699f876abfaabc95f83e729",
+  "config": {
+    "fvg_min_atr": 0.2,
+    "fvg_merge_overlap": 0.5,
+    "max_merged_span_atr": 2.5,
+    "max_inversion_depth": 1,
+    "ob_displacement_atr": 1.5,
+    "ob_require_fvg": true,
+    "ob_require_structure_break": true,
+    "ob_boundary": "body_to_wick",
+    "ob_mitigation": "wick_50",
+    "ob_max_cluster": 3,
+    "ob_max_leg_bars": 10,
+    "ob_candidate_on_displacement": true,
+    "ob_merge_overlap": 0.5,
+    "zone_ttl_bars": 50,
+    "max_visible_per_tf": {
+      "ob": 3,
+      "fvg": 3
+    },
+    "htf_overlay": [
+      "H4",
+      "H1"
+    ]
+  },
+  "range_ms": [
+    1789047000000,
+    1789697700000
+  ],
+  "decisions_sha256": "160f4c013216ec7fc85b43ab3d91c7a49af63e76d7194680eaa000d18c399899",
+  "events": 113,
+  "decisions": [
+    {
+      "seq": 15,
+      "t_broker_ms": 1789048800000,
+      "object_id": "4faa2a3c6a847712",
+      "kind": "OB",
+      "action": "CREATE",
+      "reason": null,
+      "fidelity": "BAR",
+      "tf": "M15",
+      "t_utc_ms": 1789048800000,
+      "criterion": null,
+      "confirmed_id": null,
+      "union_id": null,
+      "measurement": null,
+      "geometry": {
+        "schema_version": 1,
+        "symbol": "XAUUSD",
+        "tf": "M15",
+        "direction": "BULLISH",
+        "price_lo": 4324.081,
+        "price_hi": 4375.236,
+        "ce": 4349.6585,
+        "size": 51.154999999999745,
+        "atr_at_creation": 15.15042055393585,
+        "created_ms": 1789048800000,
+        "t_start_ms": 1789042500000,
+        "created_idx": 15,
+        "origin_idx": 11,
+        "leg_start_idx": 12,
+        "boundary": "body_to_wick",
+        "displacement_atr": 2.4234310769981953,
+        "source_bars": [
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15
+        ],
+        "source_object_ids": [
+          "021b4b3b9fa1f9f2",
+          "dbe17713093f4368",
+          "8a475ecdfb8c8a1f",
+          "5d29ec691fd3ca6e",
+          "a931f7e80d4ad8d3",
+          "374447763ddd4a5c",
+          "69ba550e98d1bdf9"
+        ],
+        "fvg_ids": [
+          "be9dc267d2119db7"
+        ],
+        "constituent_ids": []
+      },
+      "source_bars": [
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "source_object_ids": [
+        "021b4b3b9fa1f9f2",
+        "dbe17713093f4368",
+        "8a475ecdfb8c8a1f",
+        "5d29ec691fd3ca6e",
+        "a931f7e80d4ad8d3",
+        "374447763ddd4a5c",
+        "69ba550e98d1bdf9"
+      ]
+    },
+    {
+      "seq": 21,
+      "t_broker_ms": 1789054200000,
+      "object_id": "4faa2a3c6a847712",
+      "kind": "OB",
+      "action": "DISCARD",
+      "reason": "FAILED_CRITERIA",
+      "fidelity": "BAR",
+      "tf": "M15",
+      "t_utc_ms": 1789054200000,
+      "criterion": "STRUCTURE",
+      "confirmed_id": null,
+      "union_id": null,
+      "measurement": null,
+      "geometry": {
+        "schema_version": 1,
+        "symbol": "XAUUSD",
+        "tf": "M15",
+        "direction": "BULLISH",
+        "price_lo": 4324.081,
+        "price_hi": 4375.236,
+        "ce": 4349.6585,
+        "size": 51.154999999999745,
+        "atr_at_creation": 15.15042055393585,
+        "created_ms": 1789048800000,
+        "t_start_ms": 1789042500000,
+        "created_idx": 15,
+        "origin_idx": 11,
+        "leg_start_idx": 12,
+        "boundary": "body_to_wick",
+        "displacement_atr": 2.4234310769981953,
+        "source_bars": [
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15
+        ],
+        "source_object_ids": [
+          "021b4b3b9fa1f9f2",
+          "dbe17713093f4368",
+          "8a475ecdfb8c8a1f",
+          "5d29ec691fd3ca6e",
+          "a931f7e80d4ad8d3",
+          "374447763ddd4a5c",
+          "69ba550e98d1bdf9"
+        ],
+        "fvg_ids": [
+          "be9dc267d2119db7"
+        ],
+        "constituent_ids": []
+      },
+      "source_bars": [
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "source_object_ids": [
+        "021b4b3b9fa1f9f2",
+        "dbe17713093f4368",
+        "8a475ecdfb8c8a1f",
+        "5d29ec691fd3ca6e",
+        "a931f7e80d4ad8d3",
+        "374447763ddd4a5c",
+        "69ba550e98d1bdf9"
+      ]
+    },
+    {
+      "seq": 33,
+      "t_broker_ms": 1789065000000,
+      "object_id": "5e578eb6032d337a",
+      "kind": "OB",
+      "action": "CREATE",
+      "reason": null,
+      "fidelity": "BAR",
+      "tf": "M15",
+      "t_utc_ms": 1789065000000,
+      "criterion": null,
+      "confirmed_id": null,
+      "union_id": null,
+      "measurement": null,
+      "geometry": {
+        "schema_version": 1,
+        "symbol": "XAUUSD",
+        "tf": "M15",
+        "direction": "BEARISH",
+        "price_lo": 4362.804,
+        "price_hi": 4366.832,
+        "ce": 4364.818,
+        "size": 4.028000000000247,
+        "atr_at_creation": 11.846337801375876,
+        "created_ms": 1789065000000,
+        "t_start_ms": 1789060500000,
+        "created_idx": 33,
+        "origin_idx": 29,
+        "leg_start_idx": 30,
+        "boundary": "body_to_wick",
+        "displacement_atr": 2.438053049326784,
+        "source_bars": [
+          29,
+          30,
+          31,
+          32,
+          33
+        ],
+        "source_object_ids": [
+          "d1c3e649b58d4025",
+          "c944e7153abff674",
+          "e71cff6131a407be",
+          "825bc6fa15fd26d4",
+          "36f96ef72d0cf4e0"
+        ],
+        "fvg_ids": [
+          "1488dbacb976f78d"
+        ],
+        "constituent_ids": []
+      },
+      "source_bars": [
+        29,
+        30,
+        31,
+        32,
+        33
+      ],
+      "source_object_ids": [
+        "d1c3e649b58d4025",
+        "c944e7153abff674",
+        "e71cff6131a407be",
+        "825bc6fa15fd26d4",
+        "36f96ef72d0cf4e0"
+      ]
+    },
+    {
+      "seq": 39,
+      "t_broker_ms": 1789070400000,
+      "object_id": "5e578eb6032d337a",
+      "kind": "OB",
+      "action": "DISCARD",
+      "reason": "FAILED_CRITERIA",
+      "fidelity": "BAR",
+      "tf": "M15",
+      "t_utc_ms": 1789070400000,
+      "criterion": "STRUCTURE",
+      "confirmed_id": null,
+      "union_id": null,
+      "measurement": null,
+      "geometry": {
+        "schema_version": 1,
+        "symbol": "XAUUSD",
+        "tf": "M15",
+        "direction": "BEARISH",
+        "price_lo": 4362.804,
+        "price_hi": 4366.832,
+        "ce": 4364.818,
+        "size": 4.028000000000247,
+        "atr_at_creation": 11.846337801375876,
+        "created_ms": 1789065000000,
+        "t_start_ms": 1789060500000,
+        "created_idx": 33,
+        "origin_idx": 29,
+        "leg_start_idx": 30,
+        "boundary": "body_to_wick",
+        "displacement_atr": 2.438053049326784,
+        "source_bars": [
+          29,
+          30,
+          31,
+          32,
+          33
+        ],
+        "source_object_ids": [
+          "d1c3e649b58d4025",
+          "c944e7153abff674",
+          "e71cff6131a407be",
+          "825bc6fa15fd26d4",
+          "36f96ef72d0cf4e0"
+        ],
+        "fvg_ids": [
+          "1488dbacb976f78d"
+        ],
+        "constituent_ids": []
+      },
+      "source_bars": [
+        29,
+        30,
+        31,
+        32,
+        33
+      ],
+      "source_object_ids": [
+        "d1c3e649b58d4025",
+        "c944e7153abff674",
+        "e71cff6131a407be",
+        "825bc6fa15fd26d4",
+        "36f96ef72d0cf4e0"
+      ]
+    },
+    {
+      "seq": 54,
+      "t_broker_ms": 1789088400000,
+      "object_id": "67d3e58518e9e9d6",
+      "kind": "OB",
+      "action": "CREATE",
+      "reason": null,
+      "fidelity": "BAR",
+      "tf": "M15",
+      "t_utc_ms": 1789088400000,
+      "criterion": null,
+      "confirmed_id": null,
+      "union_id": null,
+      "measurement": null,
+      "geometry": {
+        "schema_version": 1,
+        "symbol": "XAUUSD",
+        "tf": "M15",
+        "direction": "BULLISH",
+        "price_lo": 4311.187,
+        "price_hi": 4319.679,
+        "ce": 4315.433,
+        "size": 8.49200000000019,
+        "atr_at_creation": 7.903487072461951,
+        "created_ms": 1789088400000,
+        "t_start_ms": 1789082100000,
+        "created_idx": 54,
+        "origin_idx": 50,
+        "leg_start_idx": 51,
+        "boundary": "body_to_wick",
+        "displacement_atr": 2.702351481590659,
+        "source_bars": [
+          48,
+          49,
+          50,
+          51,
+          52,
+          53,
+          54
+        ],
+        "source_object_ids": [
+          "6ce36fc1a9a7f7e9",
+          "bae9722facb17467",
+          "13bf398730d3286b",
+          "6241543d1e81dfed",
+          "efc23ca903a8c781",
+          "23c2c1fe7865d996",
+          "662ec100d4b8497f"
+        ],
+        "fvg_ids": [
+          "deabcbd65ddb37ff"
+        ],
+        "constituent_ids": []
+      },
+      "source_bars": [
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54
+      ],
+      "source_object_ids": [
+        "6ce36fc1a9a7f7e9",
+        "bae9722facb17467",
+        "13bf398730d3286b",
+        "6241543d1e81dfed",
+        "efc23ca903a8c781",
+        "23c2c1fe7865d996",
+        "662ec100d4b8497f"
+      ]
+    },
+    {
+      "seq": 60,
+      "t_broker_ms": 1789093800000,
+      "object_id": "67d3e58518e9e9d6",
+      "kind": "OB",
+      "action": "DISCARD",
+      "reason": "FAILED_CRITERIA",
+      "fidelity": "BAR",
+      "tf": "M15",
+      "t_utc_ms": 1789093800000,
+      "criterion": "STRUCTURE",
+      "confirmed_id": null,
+      "union_id": null,
+      "measurement": null,
+      "geometry": {
+        "schema_version": 1,
+        "symbol": "XAUUSD",
+        "tf": "M15",
+        "direction": "BULLISH",
+        "price_lo": 4311.187,
+        "price_hi": 4319.679,
+        "ce": 4315.433,
+        "size": 8.49200000000019,
+        "atr_at_creation": 7.903487072461951,
+        "created_ms": 1789088400000,
+        "t_start_ms": 1789082100000,
+        "created_idx": 54,
+        "origin_idx": 50,
+        "leg_start_idx": 51,
+        "boundary": "body_to_wick",
+        "displacement_atr": 2.702351481590659,
+        "source_bars": [
+          48,
+          49,
+          50,
+          51,
+          52,
+          53,
+          54
+        ],
+        "source_object_ids": [
+          "6ce36fc1a9a7f7e9",
+          "bae9722facb17467",
+          "13bf398730d3286b",
+          "6241543d1e81dfed",
+          "efc23ca903a8c781",
+          "23c2c1fe7865d996",
+          "662ec100d4b8497f"
+        ],
+        "fvg_ids": [
+          "deabcbd65ddb37ff"
+        ],
+        "constituent_ids": []
+      },
+      "source_bars": [
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54
+      ],
+      "source_object_ids": [
+        "6ce36fc1a9a7f7e9",
+        "bae9722facb17467",
+        "13bf398730d3286b",
+        "6241543d1e81dfed",
+        "efc23ca903a8c781",
+        "23c2c1fe7865d996",
+        "662ec100d4b8497f"
+      ]
+    },
+    {
+      "seq": 68,
+      "t_broker_ms": 1789101000000,
+      "object_id": "8acfd4f35554b39b",
+      "kind": "OB",
+      "action": "CREATE",
+      "reason": null,
+      "fidelity": "BAR",
+      "tf": "M15",
+      "t_utc_ms": 1789101000000,
+      "criterion": null,
+      "confirmed_id": null,
+      "union_id": null,
+      "measurement": null,
+      "geometry": {
+        "schema_version": 1,
+        "symbol": "XAUUSD",
+        "tf": "M15",
+        "direction": "BULLISH",
+        "price_lo": 4300.629,
+        "price_hi": 4319.54,
+        "ce": 4310.0845,
+        "size": 18.911000000000058,
+        "atr_at_creation": 10.440122904485076,
+        "created_ms": 1789101000000,
+        "t_start_ms": 1789096500000,
+        "created_idx": 68,
+        "origin_idx": 66,
+        "leg_start_idx": 67,
+        "boundary": "body_to_wick",
+        "displacement_atr": 2.6226702741437498,
+        "source_bars": [
+          64,
+          65,
+          66,
+          67,
+          68
+        ],
+        "source_object_ids": [
+          "9f8df09cd6cdf7d5",
+          "42433ee3a0318a93",
+          "20c93663e0b8e031",
+          "4a0c848edde5b9c7",
+          "ab4c4c17cd119b46"
+        ],
+        "fvg_ids": [
+          "65ad87c693ecae0f"
+        ],
+        "constituent_ids": []
+      },
+      "source_bars": [
+        64,
+        65,
+        66,
+        67,
+        68
+      ],
+      "source_object_ids": [
+        "9f8df09cd6cdf7d5",
+        "42433ee3a0318a93",
+        "20c93663e0b8e031",
+        "4a0c848edde5b9c7",
+        "ab4c4c17cd119b46"
+      ]
+    },
+    {
+      "seq": 71,
+      "t_broker_ms": 1789103700000,
+      "object_id": "8acfd4f35554b39b",
+      "kind": "OB",
+      "action": "PROMOTE",
+      "reason": null,
+      "fidelity": "BAR",
+      "tf": "M15",
+      "t_utc_ms": 1789103700000,
+      "criterion": null,
+      "confirmed_id": "4d7111fca2ebbcea",
+      "union_id": null,
+      "measurement": null,
+      "geometry": {
+        "schema_version": 1,
+        "symbol": "XAUUSD",
+        "tf": "M15",
+        "direction": "BULLISH",
+        "price_lo": 4300.629,
+        "price_hi": 4319.54,
+        "ce": 4310.0845,
+        "size": 18.911000000000058,
+        "atr_at_creation": 10.007317063102661,
+        "created_ms": 1789103700000,
+        "t_start_ms": 1789096500000,
+        "created_idx": 71,
+        "origin_idx": 66,
+        "leg_start_idx": 67,
+        "boundary": "body_to_wick",
+        "displacement_atr": 3.635040218134361,
+        "source_bars": [
+          64,
+          65,
+          66,
+          67,
+          68,
+          69,
+          70,
+          71
+        ],
+        "source_object_ids": [
+          "9f8df09cd6cdf7d5",
+          "42433ee3a0318a93",
+          "20c93663e0b8e031",
+          "4a0c848edde5b9c7",
+          "ab4c4c17cd119b46",
+          "d5164d3a38cf513e",
+          "43ad0d47d3ccc521",
+          "05ed5adec9790e89"
+        ],
+        "fvg_ids": [
+          "65ad87c693ecae0f"
+        ],
+        "constituent_ids": []
+      },
+      "source_bars": [
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71
+      ],
+      "source_object_ids": [
+        "9f8df09cd6cdf7d5",
+        "42433ee3a0318a93",
+        "20c93663e0b8e031",
+        "4a0c848edde5b9c7",
+        "ab4c4c17cd119b46",
+        "d5164d3a38cf513e",
+        "43ad0d47d3ccc521",
+        "05ed5adec9790e89"
+      ]
+    },
+    {
+      "seq": 75,
+      "t_broker_ms": 1789107300000,
+      "object_id": "273478738bd581e5",
+      "kind": "OB",
+      "action": "CREATE",
+      "reason": null,
+      "fidelity": "BAR",
+      "tf": "M15",
+      "t_utc_ms": 1789107300000,
+      "criterion": null,
+      "confirmed_id": null,
+      "union_id": null,
+      "measurement": null,
+      "geometry": {
+        "schema_version": 1,
+        "symbol": "XAUUSD",
+        "tf": "M15",
+        "direction": "BULLISH",
+        "price_lo": 4333.642,
+        "price_hi": 4338.077,
+        "ce": 4335.8595000000005,
+        "size": 4.4350000000004,
+        "atr_at_creation": 10.299351640964062,
+        "created_ms": 1789107300000,
+        "t_start_ms": 1789103700000,
+        "created_idx": 75,
+        "origin_idx": 72,
+        "leg_start_idx": 73,
+        "boundary": "body_to_wick",
+        "displacement_atr": 2.6757995027946877,
+        "source_bars": [
+          72,
+          73,
+          74,
+          75
+        ],
+        "source_object_ids": [
+          "ff8d4ee2a0a2f477",
+          "33966b60d82a5507",
+          "0c650c44c54d709d",
+          "089d580754fbe00c"
+        ],
+        "fvg_ids": [
+          "0781cabe5cd9b140"
+        ],
+        "constituent_ids": []
+      },
+      "source_bars": [
+        72,
+        73,
+        74,
+        75
+      ],
+      "source_object_ids": [
+        "ff8d4ee2a0a2f477",
+        "33966b60d82a5507",
+        "0c650c44c54d709d",
+        "089d580754fbe00c"
+      ]
+    },
+    {
+      "seq": 82,
+      "t_broker_ms": 1789113600000,
+      "object_id": "273478738bd581e5",
+      "kind": "OB",
+      "action": "DISCARD",
+      "reason": "FAILED_CRITERIA",
+      "fidelity": "BAR",
+      "tf": "M15",
+      "t_utc_ms": 1789113600000,
+      "criterion": "STRUCTURE",
+      "confirmed_id": null,
+      "union_id": null,
+      "measurement": null,
+      "geometry": {
+        "schema_version": 1,
+        "symbol": "XAUUSD",
+        "tf": "M15",
+        "direction": "BULLISH",
+        "price_lo": 4333.642,
+        "price_hi": 4338.077,
+        "ce": 4335.8595000000005,
+        "size": 4.4350000000004,
+        "atr_at_creation": 10.299351640964062,
+        "created_ms": 1789107300000,
+        "t_start_ms": 1789103700000,
+        "created_idx": 75,
+        "origin_idx": 72,
+        "leg_start_idx": 73,
+        "boundary": "body_to_wick",
+        "displacement_atr": 2.6757995027946877,
+        "source_bars": [
+          72,
+          73,
+          74,
+          75
+        ],
+        "source_object_ids": [
+          "ff8d4ee2a0a2f477",
+          "33966b60d82a5507",
+          "0c650c44c54d709d",
+          "089d580754fbe00c"
+        ],
+        "fvg_ids": [
+          "0781cabe5cd9b140"
+        ],
+        "constituent_ids": []
+      },
+      "source_bars": [
+        72,
+        73,
+        74,
+        75
+      ],
+      "source_object_ids": [
+        "ff8d4ee2a0a2f477",
+        "33966b60d82a5507",
+        "0c650c44c54d709d",
+        "089d580754fbe00c"
+      ]
+    },
+    {
+      "seq": 82,
+      "t_broker_ms": 1789113600000,
+      "object_id": "47121053a91386a9",
+      "kind": "OB",
+      "action": "CREATE",
+      "reason": null,
+      "fidelity": "BAR",
+      "tf": "M15",
+      "t_utc_ms": 1789113600000,
+      "criterion": null,
+      "confirmed_id": null,
+      "union_id": null,
+      "measurement": null,
+      "geometry": {
+        "schema_version": 1,
+        "symbol": "XAUUSD",
+        "tf": "M15",
+        "direction": "BEARISH",
+        "price_lo": 4350.697,
+        "price_hi": 4355.551,
+        "ce": 4353.124,
+        "size": 4.854000000000269,
+        "atr_at_creation": 8.664865699597776,
+        "created_ms": 1789113600000,
+        "t_start_ms": 1789109100000,
+        "created_idx": 82,
+        "origin_idx": 78,
+        "leg_start_idx": 79,
+        "boundary": "body_to_wick",
+        "displacement_atr": 1.8536928969072768,
+        "source_bars": [
+          78,
+          79,
+          80,
+          81,
+          82
+        ],
+        "source_object_ids": [
+          "2c692b265ad8dda8",
+          "56771097f1ee697d",
+          "48beadd5e9a921c2",
+          "a821bbb814a28d53",
+          "775bce492d5b3ec7"
+        ],
+        "fvg_ids": [
+          "52ad498016cf8c0b"
+        ],
+        "constituent_ids": []
+      },
+      "source_bars": [
+        78,
+        79,
+        80,
+        81,
+        82
+      ],
+      "source_object_ids": [
+        "2c692b265ad8dda8",
+        "56771097f1ee697d",
+        "48beadd5e9a921c2",
+        "a821bbb814a28d53",
+        "775bce492d5b3ec7"
+      ]
+    },
+    {
+      "seq": 88,
+      "t_broker_ms": 1789119000000,
+      "object_id": "47121053a91386a9",
+      "kind": "OB",
+      "action": "DISCARD",
+      "reason": "FAILED_CRITERIA",
+      "fidelity": "BAR",
+      "tf": "M15",
+      "t_utc_ms": 1789119000000,
+      "criterion": "STRUCTURE",
+      "confirmed_id": null,
+      "union_id": null,
+      "measurement": null,
+      "geometry": {
+        "schema_version": 1,
+        "symbol": "XAUUSD",
+        "tf": "M15",
+        "direction": "BEARISH",
+        "price_lo": 4350.697,
+        "price_hi": 4355.551,
+        "ce": 4353.124,
+        "size": 4.854000000000269,
+        "atr_at_creation": 8.664865699597776,
+        "created_ms": 1789113600000,
+        "t_start_ms": 1789109100000,
+        "created_idx": 82,
+        "origin_idx": 78,
+        "leg_start_idx": 79,
+        "boundary": "body_to_wick",
+        "displacement_atr": 1.8536928969072768,
+        "source_bars": [
+          78,
+          79,
+          80,
+          81,
+          82
+        ],
+        "source_object_ids": [
+          "2c692b265ad8dda8",
+          "56771097f1ee697d",
+          "48beadd5e9a921c2",
+          "a821bbb814a28d53",
+          "775bce492d5b3ec7"
+        ],
+        "fvg_ids": [
+          "52ad498016cf8c0b"
+        ],
+        "constituent_ids": []
+      },
+      "source_bars": [
+        78,
+        79,
+        80,
+        81,
+        82
+      ],
+      "source_object_ids": [
+        "2c692b265ad8dda8",
+        "56771097f1ee697d",
+        "48beadd5e9a921c2",
+        "a821bbb814a28d53",
+        "775bce492d5b3ec7"
+      ]
+    },
+    {
+      "seq": 101,
+      "t_broker_ms": 1789130700000,
+      "object_id": "4d7111fca2ebbcea",
+      "kind": "OB",
+      "action": "UPDATE",
+      "reason": null,
+      "fidelity": "BAR",
+      "tf": "M15",
+      "t_utc_ms": 1789130700000,
+      "criterion": "MITIGATED",
+      "confirmed_id": "4d7111fca2ebbcea",
+      "union_id": null,
+      "measurement": null,
+      "geometry": {
+        "schema_version": 1,
+        "symbol": "XAUUSD",
+        "tf": "M15",
+        "direction": "BULLISH",
+        "price_lo": 4300.629,
+        "price_hi": 4319.54,
+        "ce": 4310.0845,
+        "size": 18.911000000000058,
+        "atr_at_creation": 10.007317063102661,
+        "created_ms": 1789103700000,
+        "t_start_ms": 1789096500000,
+        "created_idx": 71,
+        "origin_idx": 66,
+        "leg_start_idx": 67,
+        "boundary": "body_to_wick",
+        "displacement_atr": 3.635040218134361,
+        "source_bars": [
+          64,
+          65,
+          66,
+          67,
+          68,
+          69,
+          70,
+          71
+        ],
+        "source_object_ids": [
+          "9f8df09cd6cdf7d5",
+          "42433ee3a0318a93",
+          "20c93663e0b8e031",
+          "4a0c848edde5b9c7",
+          "ab4c4c17cd119b46",
+          "d5164d3a38cf513e",
+          "43ad0d47d3ccc521",
+          "05ed5adec9790e89"
+        ],
+        "fvg_ids": [
+          "65ad87c693ecae0f"
+        ],
+        "constituent_ids": []
+      },
+      "source_bars": [
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71
+      ],
+      "source_object_ids": [
+        "9f8df09cd6cdf7d5",
+        "42433ee3a0318a93",
+        "20c93663e0b8e031",
+        "4a0c848edde5b9c7",
+        "ab4c4c17cd119b46",
+        "d5164d3a38cf513e",
+        "43ad0d47d3ccc521",
+        "05ed5adec9790e89"
+      ]
+    },
+    {
+      "seq": 102,
+      "t_broker_ms": 1789131600000,
+      "object_id": "c45b4052ec4842d8",
+      "kind": "OB",
+      "action": "CREATE",
+      "reason": null,
+      "fidelity": "BAR",
+      "tf": "M15",
+      "t_utc_ms": 1789131600000,
+      "criterion": null,
+      "confirmed_id": null,
+      "union_id": null,
+      "measurement": null,
+      "geometry": {
+        "schema_version": 1,
+        "symbol": "XAUUSD",
+        "tf": "M15",
+        "direction": "BULLISH",
+        "price_lo": 4324.665,
+        "price_hi": 4336.592,
+        "ce": 4330.6285,
+        "size": 11.92699999999968,
+        "atr_at_creation": 14.66387330151895,
+        "created_ms": 1789131600000,
+        "t_start_ms": 1789126200000,
+        "created_idx": 102,
+        "origin_idx": 99,
+        "leg_start_idx": 100,
+        "boundary": "body_to_wick",
+        "displacement_atr": 6.7135740998117885,
+        "source_bars": [
+          97,
+          98,
+          99,
+          100,
+          101,
+          102
+        ],
+        "source_object_ids": [
+          "be9f73c5d1d82f87",
+          "9f93d09b030bfb60",
+          "e9b56f33bb3724e4",
+          "36cbf768a86cfad1",
+          "e74cf41303ca08bc",
+          "29b4ecc5d1608379"
+        ],
+        "fvg_ids": [
+          "78a9b862d141bb9c"
+        ],
+        "constituent_ids": []
+      },
+      "source_bars": [
+        97,
+        98,
+        99,
+        100,
+        101,
+        102
+      ],
+      "source_object_ids": [
+        "be9f73c5d1d82f87",
+        "9f93d09b030bfb60",
+        "e9b56f33bb3724e4",
+        "36cbf768a86cfad1",
+        "e74cf41303ca08bc",
+        "29b4ecc5d1608379"
+      ]
+    },
+    {
+      "seq": 109,
+      "t_broker_ms": 1789137900000,
+      "object_id": "c45b4052ec4842d8",
+      "kind": "OB",
+      "action": "DISCARD",
+      "reason": "FAILED_CRITERIA",
+      "fidelity": "BAR",
+      "tf": "M15",
+      "t_utc_ms": 1789137900000,
+      "criterion": "STRUCTURE",
+      "confirmed_id": null,
+      "union_id": null,
+      "measurement": null,
+      "geometry": {
+        "schema_version": 1,
+        "symbol": "XAUUSD",
+        "tf": "M15",
+        "direction": "BULLISH",
+        "price_lo": 4324.665,
+        "price_hi": 4336.592,
+        "ce": 4330.6285,
+        "size": 11.92699999999968,
+        "atr_at_creation": 14.66387330151895,
+        "created_ms": 1789131600000,
+        "t_start_ms": 1789126200000,
+        "created_idx": 102,
+        "origin_idx": 99,
+        "leg_start_idx": 100,
+        "boundary": "body_to_wick",
+        "displacement_atr": 6.7135740998117885,
+        "source_bars": [
+          97,
+          98,
+          99,
+          100,
+          101,
+          102
+        ],
+        "source_object_ids": [
+          "be9f73c5d1d82f87",
+          "9f93d09b030bfb60",
+          "e9b56f33bb3724e4",
+          "36cbf768a86cfad1",
+          "e74cf41303ca08bc",
+          "29b4ecc5d1608379"
+        ],
+        "fvg_ids": [
+          "78a9b862d141bb9c"
+        ],
+        "constituent_ids": []
+      },
+      "source_bars": [
+        97,
+        98,
+        99,
+        100,
+        101,
+        102
+      ],
+      "source_object_ids": [
+        "be9f73c5d1d82f87",
+        "9f93d09b030bfb60",
+        "e9b56f33bb3724e4",
+        "36cbf768a86cfad1",
+        "e74cf41303ca08bc",
+        "29b4ecc5d1608379"
+      ]
+    },
+    {
+      "seq": 109,
+      "t_broker_ms": 1789137900000,
+      "object_id": "7ce2b1222076a4b4",
+      "kind": "OB",
+      "action": "CREATE",
+      "reason": null,
+      "fidelity": "BAR",
+      "tf": "M15",
+      "t_utc_ms": 1789137900000,
+      "criterion": null,
+      "confirmed_id": null,
+      "union_id": null,
+      "measurement": null,
+      "geometry": {
+        "schema_version": 1,
+        "symbol": "XAUUSD",
+        "tf": "M15",
+        "direction": "BEARISH",
+        "price_lo": 4389.311,
+        "price_hi": 4402.675,
+        "ce": 4395.993,
+        "size": 13.364000000000487,
+        "atr_at_creation": 14.98665528123619,
+        "created_ms": 1789137900000,
+        "t_start_ms": 1789132500000,
+        "created_idx": 109,
+        "origin_idx": 106,
+        "leg_start_idx": 107,
+        "boundary": "body_to_wick",
+        "displacement_atr": 2.518240347280928,
+        "source_bars": [
+          104,
+          105,
+          106,
+          107,
+          108,
+          109
+        ],
+        "source_object_ids": [
+          "b88b5a4a116a8f11",
+          "af6139394d367401",
+          "8fd67c118853ff01",
+          "19d2dbeb38284efe",
+          "d8872c488157580c",
+          "216af829a310d9b3"
+        ],
+        "fvg_ids": [
+          "80e93ff00e1118da"
+        ],
+        "constituent_ids": []
+      },
+      "source_bars": [
+        104,
+        105,
+        106,
+        107,
+        108,
+        109
+      ],
+      "source_object_ids": [
+        "b88b5a4a116a8f11",
+        "af6139394d367401",
+        "8fd67c118853ff01",
+        "19d2dbeb38284efe",
+        "d8872c488157580c",
+        "216af829a310d9b3"
+      ]
+    },
+    {
+      "seq": 116,
+      "t_broker_ms": 1789144200000,
+      "object_id": "7ce2b1222076a4b4",
+      "kind": "OB",
+      "action": "DISCARD",
+      "reason": "FAILED_CRITERIA",
+      "fidelity": "BAR",
+      "tf": "M15",
+      "t_utc_ms": 1789144200000,
+      "criterion": "STRUCTURE",
+      "confirmed_id": null,
+      "union_id": null,
+      "measurement": null,
+      "geometry": {
+        "schema_version": 1,
+        "symbol": "XAUUSD",
+        "tf": "M15",
+        "direction": "BEARISH",
+        "price_lo": 4389.311,
+        "price_hi": 4402.675,
+        "ce": 4395.993,
+        "size": 13.364000000000487,
+        "atr_at_creation": 14.98665528123619,
+        "created_ms": 1789137900000,
+        "t_start_ms": 1789132500000,
+        "created_idx": 109,
+        "origin_idx": 106,
+        "leg_start_idx": 107,
+        "boundary": "body_to_wick",
+        "displacement_atr": 2.518240347280928,
+        "source_bars": [
+          104,
+          105,
+          106,
+          107,
+          108,
+          109
+        ],
+        "source_object_ids": [
+          "b88b5a4a116a8f11",
+          "af6139394d367401",
+          "8fd67c118853ff01",
+          "19d2dbeb38284efe",
+          "d8872c488157580c",
+          "216af829a310d9b3"
+        ],
+        "fvg_ids": [
+          "80e93ff00e1118da"
+        ],
+        "constituent_ids": []
+      },
+      "source_bars": [
+        104,
+        105,
+        106,
+        107,
+        108,
+        109
+      ],
+      "source_object_ids": [
+        "b88b5a4a116a8f11",
+        "af6139394d367401",
+        "8fd67c118853ff01",
+        "19d2dbeb38284efe",
+        "d8872c488157580c",
+        "216af829a310d9b3"
+      ]
+    },
+    {
+      "seq": 124,
+      "t_broker_ms": 1789151400000,
+      "object_id": "14af5287b449472c",
+      "kind": "OB",
+      "action": "CREATE",
+      "reason": null,
+      "fidelity": "BAR",
+      "tf": "M15",
+      "t_utc_ms": 1789151400000,
+      "criterion": null,
+      "confirmed_id": null,
+      "union_id": null,
+      "measurement": null,
+      "geometry": {
+        "schema_version": 1,
+        "symbol": "XAUUSD",
+        "tf": "M15",
+        "direction": "BEARISH",
+        "price_lo": 4361.723,
+        "price_hi": 4369.943,
+        "ce": 4365.8330000000005,
+        "size": 8.220000000000255,
+        "atr_at_creation": 11.569643329437085,
+        "created_ms": 1789151400000,
+        "t_start_ms": 1789146000000,
+        "created_idx": 124,
+        "origin_idx": 120,
+        "leg_start_idx": 121,
+        "boundary": "body_to_wick",
+        "displacement_atr": 2.2962678488458304,
+        "source_bars": [
+          119,
+          120,
+          121,
+          122,
+          123,
+          124
+        ],
+        "source_object_ids": [
+          "63db22e7177b31f6",
+          "2a30f144d1a356c0",
+          "1d7a153f2291e40b",
+          "e66fb3fde1123826",
+          "c19d789f96ec13c4",
+          "b38f5bfa1de222c7"
+        ],
+        "fvg_ids": [
+          "c8140fdd054ad8f1"
+        ],
+        "constituent_ids": []
+      },
+      "source_bars": [
+        119,
+        120,
+        121,
+        122,
+        123,
+        124
+      ],
+      "source_object_ids": [
+        "63db22e7177b31f6",
+        "2a30f144d1a356c0",
+        "1d7a153f2291e40b",
+        "e66fb3fde1123826",
+        "c19d789f96ec13c4",
+        "b38f5bfa1de222c7"
+      ]
+    },
+    {
+      "seq": 130,
+      "t_broker_ms": 1789156800000,
+      "object_id": "14af5287b449472c",
+      "kind": "OB",
+      "action": "DISCARD",
+      "reason": "FAILED_CRITERIA",
+      "fidelity": "BAR",
+      "tf": "M15",
+      "t_utc_ms": 1789156800000,
+      "criterion": "STRUCTURE",
+      "confirmed_id": null,
+      "union_id": null,
+      "measurement": null,
+      "geometry": {
+        "schema_version": 1,
+        "symbol": "XAUUSD",
+        "tf": "M15",
+        "direction": "BEARISH",
+        "price_lo": 4361.723,
+        "price_hi": 4369.943,
+        "ce": 4365.8330000000005,
+        "size": 8.220000000000255,
+        "atr_at_creation": 11.569643329437085,
+        "created_ms": 1789151400000,
+        "t_start_ms": 1789146000000,
+        "created_idx": 124,
+        "origin_idx": 120,
+        "leg_start_idx": 121,
+        "boundary": "body_to_wick",
+        "displacement_atr": 2.2962678488458304,
+        "source_bars": [
+          119,
+          120,
+          121,
+          122,
+          123,
+          124
+        ],
+        "source_object_ids": [
+          "63db22e7177b31f6",
+          "2a30f144d1a356c0",
+          "1d7a153f2291e40b",
+          "e66fb3fde1123826",
+          "c19d789f96ec13c4",
+          "b38f5bfa1de222c7"
+        ],
+        "fvg_ids": [
+          "c8140fdd054ad8f1"
+        ],
+        "constituent_ids": []
+      },
+      "source_bars": [
+        119,
+        120,
+        121,
+        122,
+        123,
+        124
+      ],
+      "source_object_ids": [
+        "63db22e7177b31f6",
+        "2a30f144d1a356c0",
+        "1d7a153f2291e40b",
+        "e66fb3fde1123826",
+        "c19d789f96ec13c4",
+        "b38f5bfa1de222c7"
+      ]
+    },
+    {
+      "seq": 134,
+      "t_broker_ms": 1789338600000,
+      "object_id": "04e776ff0704ec8e",
+      "kind": "OB",
+      "action": "CREATE",
+      "reason": null,
+      "fidelity": "BAR",
+      "tf": "M15",
+      "t_utc_ms": 1789338600000,
+      "criterion": null,
+      "confirmed_id": null,
+      "union_id": null,
+      "measurement": null,
+      "geometry": {
+        "schema_version": 1,
+        "symbol": "XAUUSD",
+        "tf": "M15",
+        "direction": "BEARISH",
+        "price_lo": 4346.333,
+        "price_hi": 4351.502,
+        "ce": 4348.9175,
+        "size": 5.1690000000007785,
+        "atr_at_creation": 9.013450995600355,
+        "created_ms": 1789338600000,
+        "t_start_ms": 1789155900000,
+        "created_idx": 134,
+        "origin_idx": 132,
+        "leg_start_idx": 133,
+        "boundary": "body_to_wick",
+        "displacement_atr": 2.3199771108987153,
+        "source_bars": [
+          130,
+          131,
+          132,
+          133,
+          134
+        ],
+        "source_object_ids": [
+          "45e4477f7c6b04a5",
+          "06e767859ecb82aa",
+          "1995cc4c50558136",
+          "8c79df988ace7296",
+          "a129d3912c71ccaa"
+        ],
+        "fvg_ids": [
+          "1614332c44edf236"
+        ],
+        "constituent_ids": []
+      },
+      "source_bars": [
+        130,
+        131,
+        132,
+        133,
+        134
+      ],
+      "source_object_ids": [
+        "45e4477f7c6b04a5",
+        "06e767859ecb82aa",
+        "1995cc4c50558136",
+        "8c79df988ace7296",
+        "a129d3912c71ccaa"
+      ]
+    },
+    {
+      "seq": 142,
+      "t_broker_ms": 1789345800000,
+      "object_id": "04e776ff0704ec8e",
+      "kind": "OB",
+      "action": "DISCARD",
+      "reason": "FAILED_CRITERIA",
+      "fidelity": "BAR",
+      "tf": "M15",
+      "t_utc_ms": 1789345800000,
+      "criterion": "STRUCTURE",
+      "confirmed_id": null,
+      "union_id": null,
+      "measurement": null,
+      "geometry": {
+        "schema_version": 1,
+        "symbol": "XAUUSD",
+        "tf": "M15",
+        "direction": "BEARISH",
+        "price_lo": 4346.333,
+        "price_hi": 4351.502,
+        "ce": 4348.9175,
+        "size": 5.1690000000007785,
+        "atr_at_creation": 9.013450995600355,
+        "created_ms": 1789338600000,
+        "t_start_ms": 1789155900000,
+        "created_idx": 134,
+        "origin_idx": 132,
+        "leg_start_idx": 133,
+        "boundary": "body_to_wick",
+        "displacement_atr": 2.3199771108987153,
+        "source_bars": [
+          130,
+          131,
+          132,
+          133,
+          134
+        ],
+        "source_object_ids": [
+          "45e4477f7c6b04a5",
+          "06e767859ecb82aa",
+          "1995cc4c50558136",
+          "8c79df988ace7296",
+          "a129d3912c71ccaa"
+        ],
+        "fvg_ids": [
+          "1614332c44edf236"
+        ],
+        "constituent_ids": []
+      },
+      "source_bars": [
+        130,
+        131,
+        132,
+        133,
+        134
+      ],
+      "source_object_ids": [
+        "45e4477f7c6b04a5",
+        "06e767859ecb82aa",
+        "1995cc4c50558136",
+        "8c79df988ace7296",
+        "a129d3912c71ccaa"
+      ]
+    },
+    {
+      "seq": 148,
+      "t_broker_ms": 1789351200000,
+      "object_id": "e7ed90d78ec9dde1",
+      "kind": "OB",
+      "action": "CREATE",
+      "reason": null,
+      "fidelity": "BAR",
+      "tf": "M15",
+      "t_utc_ms": 1789351200000,
+      "criterion": null,
+      "confirmed_id": null,
+      "union_id": null,
+      "measurement": null,
+      "geometry": {
+        "schema_version": 1,
+        "symbol": "XAUUSD",
+        "tf": "M15",
+        "direction": "BULLISH",
+        "price_lo": 4329.448,
+        "price_hi": 4338.415,
+        "ce": 4333.931500000001,
+        "size": 8.966999999999643,
+        "atr_at_creation": 10.075058586839118,
+        "created_ms": 1789351200000,
+        "t_start_ms": 1789347600000,
+        "created_idx": 148,
+        "origin_idx": 145,
+        "leg_start_idx": 146,
+        "boundary": "body_to_wick",
+        "displacement_atr": 2.892092363419436,
+        "source_bars": [
+          145,
+          146,
+          147,
+          148
+        ],
+        "source_object_ids": [
+          "d794e0672fe923b5",
+          "2f8c16cb4974920d",
+          "8aa95dcbea84762a",
+          "80e3f78a11e8723e"
+        ],
+        "fvg_ids": [
+          "852b581199d78d78"
+        ],
+        "constituent_ids": []
+      },
+      "source_bars": [
+        145,
+        146,
+        147,
+        148
+      ],
+      "source_object_ids": [
+        "d794e0672fe923b5",
+        "2f8c16cb4974920d",
+        "8aa95dcbea84762a",
+        "80e3f78a11e8723e"
+      ]
+    },
+    {
+      "seq": 148,
+      "t_broker_ms": 1789351200000,
+      "object_id": "e7ed90d78ec9dde1",
+      "kind": "OB",
+      "action": "PROMOTE",
+      "reason": null,
+      "fidelity": "BAR",
+      "tf": "M15",
+      "t_utc_ms": 1789351200000,
+      "criterion": null,
+      "confirmed_id": "9b25c5c6329b2a19",
+      "union_id": null,
+      "measurement": null,
+      "geometry": {
+        "schema_version": 1,
+        "symbol": "XAUUSD",
+        "tf": "M15",
+        "direction": "BULLISH",
+        "price_lo": 4329.448,
+        "price_hi": 4338.415,
+        "ce": 4333.931500000001,
+        "size": 8.966999999999643,
+        "atr_at_creation": 10.075058586839118,
+        "created_ms": 1789351200000,
+        "t_start_ms": 1789347600000,
+        "created_idx": 148,
+        "origin_idx": 145,
+        "leg_start_idx": 146,
+        "boundary": "body_to_wick",
+        "displacement_atr": 2.892092363419436,
+        "source_bars": [
+          145,
+          146,
+          147,
+          148
+        ],
+        "source_object_ids": [
+          "d794e0672fe923b5",
+          "2f8c16cb4974920d",
+          "8aa95dcbea84762a",
+          "80e3f78a11e8723e"
+        ],
+        "fvg_ids": [
+          "852b581199d78d78"
+        ],
+        "constituent_ids": []
+      },
+      "source_bars": [
+        145,
+        146,
+        147,
+        148
+      ],
+      "source_object_ids": [
+        "d794e0672fe923b5",
+        "2f8c16cb4974920d",
+        "8aa95dcbea84762a",
+        "80e3f78a11e8723e"
+      ]
+    },
+    {
+      "seq": 152,
+      "t_broker_ms": 1789354800000,
+      "object_id": "9b25c5c6329b2a19",
+      "kind": "OB",
+      "action": "UPDATE",
+      "reason": null,
+      "fidelity": "BAR",
+      "tf": "M15",
+      "t_utc_ms": 1789354800000,
+      "criterion": "MITIGATED",
+      "confirmed_id": "9b25c5c6329b2a19",
+      "union_id": null,
+      "measurement": null,
+      "geometry": {
+        "schema_version": 1,
+        "symbol": "XAUUSD",
+        "tf": "M15",
+        "direction": "BULLISH",
+        "price_lo": 4329.448,
+        "price_hi": 4338.415,
+        "ce": 4333.931500000001,
+        "size": 8.966999999999643,
+        "atr_at_creation": 10.075058586839118,
+        "created_ms": 1789351200000,
+        "t_start_ms": 1789347600000,
+        "created_idx": 148,
+        "origin_idx": 145,
+        "leg_start_idx": 146,
+        "boundary": "body_to_wick",
+        "displacement_atr": 2.892092363419436,
+        "source_bars": [
+          145,
+          146,
+          147,
+          148
+        ],
+        "source_object_ids": [
+          "d794e0672fe923b5",
+          "2f8c16cb4974920d",
+          "8aa95dcbea84762a",
+          "80e3f78a11e8723e"
+        ],
+        "fvg_ids": [
+          "852b581199d78d78"
+        ],
+        "constituent_ids": []
+      },
+      "source_bars": [
+        145,
+        146,
+        147,
+        148
+      ],
+      "source_object_ids": [
+        "d794e0672fe923b5",
+        "2f8c16cb4974920d",
+        "8aa95dcbea84762a",
+        "80e3f78a11e8723e"
+      ]
+    },
+    {
+      "seq": 153,
+      "t_broker_ms": 1789355700000,
+      "object_id": "3484269a563b6c58",
+      "kind": "OB",
+      "action": "CREATE",
+      "reason": null,
+      "fidelity": "BAR",
+      "tf": "M15",
+      "t_utc_ms": 1789355700000,
+      "criterion": null,
+      "confirmed_id": null,
+      "union_id": null,
+      "measurement": null,
+      "geometry": {
+        "schema_version": 1,
+        "symbol": "XAUUSD",
+        "tf": "M15",
+        "direction": "BEARISH",
+        "price_lo": 4349.477,
+        "price_hi": 4354.136,
+        "ce": 4351.806500000001,
+        "size": 4.65900000000056,
+        "atr_at_creation": 10.24427395929388,
+        "created_ms": 1789355700000,
+        "t_start_ms": 1789352100000,
+        "created_idx": 153,
+        "origin_idx": 150,
+        "leg_start_idx": 151,
+        "boundary": "body_to_wick",
+        "displacement_atr": 2.745728990826258,
+        "source_bars": [
+          150,
+          151,
+          152,
+          153
+        ],
+        "source_object_ids": [
+          "6b36dd45ce2ac7fd",
+          "62a7340572dc150d",
+          "aff1ccb24b27cb85",
+          "88390061aa280fe4"
+        ],
+        "fvg_ids": [
+          "77ff06e40ea959d8"
+        ],
+        "constituent_ids": []
+      },
+      "source_bars": [
+        150,
+        151,
+        152,
+        153
+      ],
+      "source_object_ids": [
+        "6b36dd45ce2ac7fd",
+        "62a7340572dc150d",
+        "aff1ccb24b27cb85",
+        "88390061aa280fe4"
+      ]
+    },
+    {
+      "seq": 157,
+      "t_broker_ms": 1789359300000,
+      "object_id": "9b25c5c6329b2a19",
+      "kind": "OB",
+      "action": "UPDATE",
+      "reason": null,
+      "fidelity": "BAR",
+      "tf": "M15",
+      "t_utc_ms": 1789359300000,
+      "criterion": "INVALID",
+      "confirmed_id": "0c8d06ba009e2ce3",
+      "union_id": null,
+      "measurement": null,
+      "geometry": {
+        "schema_version": 1,
+        "symbol": "XAUUSD",
+        "tf": "M15",
+        "direction": "BULLISH",
+        "price_lo": 4329.448,
+        "price_hi": 4338.415,
+        "ce": 4333.931500000001,
+        "size": 8.966999999999643,
+        "atr_at_creation": 10.075058586839118,
+        "created_ms": 1789351200000,
+        "t_start_ms": 1789347600000,
+        "created_idx": 148,
+        "origin_idx": 145,
+        "leg_start_idx": 146,
+        "boundary": "body_to_wick",
+        "displacement_atr": 2.892092363419436,
+        "source_bars": [
+          145,
+          146,
+          147,
+          148
+        ],
+        "source_object_ids": [
+          "d794e0672fe923b5",
+          "2f8c16cb4974920d",
+          "8aa95dcbea84762a",
+          "80e3f78a11e8723e"
+        ],
+        "fvg_ids": [
+          "852b581199d78d78"
+        ],
+        "constituent_ids": []
+      },
+      "source_bars": [
+        145,
+        146,
+        147,
+        148
+      ],
+      "source_object_ids": [
+        "d794e0672fe923b5",
+        "2f8c16cb4974920d",
+        "8aa95dcbea84762a",
+        "80e3f78a11e8723e"
+      ]
+    },
+    {
+      "seq": 159,
+      "t_broker_ms": 1789361100000,
+      "object_id": "3484269a563b6c58",
+      "kind": "OB",
+      "action": "PROMOTE",
+      "reason": null,
+      "fidelity": "BAR",
+      "tf": "M15",
+      "t_utc_ms": 1789361100000,
+      "criterion": null,
+      "confirmed_id": "de86411c4c0c2725",
+      "union_id": null,
+      "measurement": null,
+      "geometry": {
+        "schema_version": 1,
+        "symbol": "XAUUSD",
+        "tf": "M15",
+        "direction": "BEARISH",
+        "price_lo": 4349.477,
+        "price_hi": 4354.136,
+        "ce": 4351.806500000001,
+        "size": 4.65900000000056,
+        "atr_at_creation": 8.535447412720432,
+        "created_ms": 1789361100000,
+        "t_start_ms": 1789352100000,
+        "created_idx": 159,
+        "origin_idx": 150,
+        "leg_start_idx": 151,
+        "boundary": "body_to_wick",
+        "displacement_atr": 3.7812897718636282,
+        "source_bars": [
+          150,
+          151,
+          152,
+          153,
+          154,
+          155,
+          156,
+          157,
+          158,
+          159
+        ],
+        "source_object_ids": [
+          "6b36dd45ce2ac7fd",
+          "62a7340572dc150d",
+          "aff1ccb24b27cb85",
+          "88390061aa280fe4",
+          "7f5ac940b7a25a33",
+          "fa98d4d8ebe101c5",
+          "54202974cbc9bf0b",
+          "5b2894c795b78fcc",
+          "38b525291adfadc6",
+          "aa0c9b9b684426e9"
+        ],
+        "fvg_ids": [
+          "77ff06e40ea959d8"
+        ],
+        "constituent_ids": []
+      },
+      "source_bars": [
+        150,
+        151,
+        152,
+        153,
+        154,
+        155,
+        156,
+        157,
+        158,
+        159
+      ],
+      "source_object_ids": [
+        "6b36dd45ce2ac7fd",
+        "62a7340572dc150d",
+        "aff1ccb24b27cb85",
+        "88390061aa280fe4",
+        "7f5ac940b7a25a33",
+        "fa98d4d8ebe101c5",
+        "54202974cbc9bf0b",
+        "5b2894c795b78fcc",
+        "38b525291adfadc6",
+        "aa0c9b9b684426e9"
+      ]
+    },
+    {
+      "seq": 178,
+      "t_broker_ms": 1789378200000,
+      "object_id": "4d7111fca2ebbcea",
+      "kind": "OB",
+      "action": "UPDATE",
+      "reason": null,
+      "fidelity": "BAR",
+      "tf": "M15",
+      "t_utc_ms": 1789378200000,
+      "criterion": "INVALID",
+      "confirmed_id": "4eab798372169441",
+      "union_id": null,
+      "measurement": null,
+      "geometry": {
+        "schema_version": 1,
+        "symbol": "XAUUSD",
+        "tf": "M15",
+        "direction": "BULLISH",
+        "price_lo": 4300.629,
+        "price_hi": 4319.54,
+        "ce": 4310.0845,
+        "size": 18.911000000000058,
+        "atr_at_creation": 10.007317063102661,
+        "created_ms": 1789103700000,
+        "t_start_ms": 1789096500000,
+        "created_idx": 71,
+        "origin_idx": 66,
+        "leg_start_idx": 67,
+        "boundary": "body_to_wick",
+        "displacement_atr": 3.635040218134361,
+        "source_bars": [
+          64,
+          65,
+          66,
+          67,
+          68,
+          69,
+          70,
+          71
+        ],
+        "source_object_ids": [
+          "9f8df09cd6cdf7d5",
+          "42433ee3a0318a93",
+          "20c93663e0b8e031",
+          "4a0c848edde5b9c7",
+          "ab4c4c17cd119b46",
+          "d5164d3a38cf513e",
+          "43ad0d47d3ccc521",
+          "05ed5adec9790e89"
+        ],
+        "fvg_ids": [
+          "65ad87c693ecae0f"
+        ],
+        "constituent_ids": []
+      },
+      "source_bars": [
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71
+      ],
+      "source_object_ids": [
+        "9f8df09cd6cdf7d5",
+        "42433ee3a0318a93",
+        "20c93663e0b8e031",
+        "4a0c848edde5b9c7",
+        "ab4c4c17cd119b46",
+        "d5164d3a38cf513e",
+        "43ad0d47d3ccc521",
+        "05ed5adec9790e89"
+      ]
+    },
+    {
+      "seq": 179,
+      "t_broker_ms": 1789379100000,
+      "object_id": "fd2c5773c520d3f6",
+      "kind": "OB",
+      "action": "CREATE",
+      "reason": null,
+      "fidelity": "BAR",
+      "tf": "M15",
+      "t_utc_ms": 1789379100000,
+      "criterion": null,
+      "confirmed_id": null,
+      "union_id": null,
+      "measurement": null,
+      "geometry": {
+        "schema_version": 1,
+        "symbol": "XAUUSD",
+        "tf": "M15",
+        "direction": "BEARISH",
+        "price_lo": 4310.788,
+        "price_hi": 4316.171,
+        "ce": 4313.4794999999995,
+        "size": 5.38300000000072,
+        "atr_at_creation": 9.536121328234572,
+        "created_ms": 1789379100000,
+        "t_start_ms": 1789374600000,
+        "created_idx": 179,
+        "origin_idx": 175,
+        "leg_start_idx": 176,
+        "boundary": "body_to_wick",
+        "displacement_atr": 3.5890902414028796,
+        "source_bars": [
+          175,
+          176,
+          177,
+          178,
+          179
+        ],
+        "source_object_ids": [
+          "471efd1d36f22f16",
+          "d0cb89d3406eb7b6",
+          "1c8540ec6a2c8a2f",
+          "c234cbf0d15ddcfa",
+          "e1090f8b632abfde"
+        ],
+        "fvg_ids": [
+          "5392a3140740ec9e"
+        ],
+        "constituent_ids": []
+      },
+      "source_bars": [
+        175,
+        176,
+        177,
+        178,
+        179
+      ],
+      "source_object_ids": [
+        "471efd1d36f22f16",
+        "d0cb89d3406eb7b6",
+        "1c8540ec6a2c8a2f",
+        "c234cbf0d15ddcfa",
+        "e1090f8b632abfde"
+      ]
+    },
+    {
+      "seq": 185,
+      "t_broker_ms": 1789384500000,
+      "object_id": "fd2c5773c520d3f6",
+      "kind": "OB",
+      "action": "DISCARD",
+      "reason": "FAILED_CRITERIA",
+      "fidelity": "BAR",
+      "tf": "M15",
+      "t_utc_ms": 1789384500000,
+      "criterion": "STRUCTURE",
+      "confirmed_id": null,
+      "union_id": null,
+      "measurement": null,
+      "geometry": {
+        "schema_version": 1,
+        "symbol": "XAUUSD",
+        "tf": "M15",
+        "direction": "BEARISH",
+        "price_lo": 4310.788,
+        "price_hi": 4316.171,
+        "ce": 4313.4794999999995,
+        "size": 5.38300000000072,
+        "atr_at_creation": 9.536121328234572,
+        "created_ms": 1789379100000,
+        "t_start_ms": 1789374600000,
+        "created_idx": 179,
+        "origin_idx": 175,
+        "leg_start_idx": 176,
+        "boundary": "body_to_wick",
+        "displacement_atr": 3.5890902414028796,
+        "source_bars": [
+          175,
+          176,
+          177,
+          178,
+          179
+        ],
+        "source_object_ids": [
+          "471efd1d36f22f16",
+          "d0cb89d3406eb7b6",
+          "1c8540ec6a2c8a2f",
+          "c234cbf0d15ddcfa",
+          "e1090f8b632abfde"
+        ],
+        "fvg_ids": [
+          "5392a3140740ec9e"
+        ],
+        "constituent_ids": []
+      },
+      "source_bars": [
+        175,
+        176,
+        177,
+        178,
+        179
+      ],
+      "source_object_ids": [
+        "471efd1d36f22f16",
+        "d0cb89d3406eb7b6",
+        "1c8540ec6a2c8a2f",
+        "c234cbf0d15ddcfa",
+        "e1090f8b632abfde"
+      ]
+    },
+    {
+      "seq": 209,
+      "t_broker_ms": 1789406100000,
+      "object_id": "9b3da5b72bc279c2",
+      "kind": "OB",
+      "action": "CREATE",
+      "reason": null,
+      "fidelity": "BAR",
+      "tf": "M15",
+      "t_utc_ms": 1789406100000,
+      "criterion": null,
+      "confirmed_id": null,
+      "union_id": null,
+      "measurement": null,
+      "geometry": {
+        "schema_version": 1,
+        "symbol": "XAUUSD",
+        "tf": "M15",
+        "direction": "BULLISH",
+        "price_lo": 4286.396,
+        "price_hi": 4294.286,
+        "ce": 4290.341,
+        "size": 7.890000000000327,
+        "atr_at_creation": 11.24132342017017,
+        "created_ms": 1789406100000,
+        "t_start_ms": 1789400700000,
+        "created_idx": 209,
+        "origin_idx": 204,
+        "leg_start_idx": 205,
+        "boundary": "body_to_wick",
+        "displacement_atr": 2.8135477307992014,
+        "source_bars": [
+          204,
+          205,
+          206,
+          207,
+          208,
+          209
+        ],
+        "source_object_ids": [
+          "7cc73cd5d7bba4fd",
+          "0fba57267793b1a8",
+          "f4c5d3cafc870296",
+          "10a7fd3df78da8ba",
+          "383e30937317266b",
+          "00709d889a0e342a"
+        ],
+        "fvg_ids": [
+          "6f539e2284d2044f"
+        ],
+        "constituent_ids": []
+      },
+      "source_bars": [
+        204,
+        205,
+        206,
+        207,
+        208,
+        209
+      ],
+      "source_object_ids": [
+        "7cc73cd5d7bba4fd",
+        "0fba57267793b1a8",
+        "f4c5d3cafc870296",
+        "10a7fd3df78da8ba",
+        "383e30937317266b",
+        "00709d889a0e342a"
+      ]
+    },
+    {
+      "seq": 214,
+      "t_broker_ms": 1789410600000,
+      "object_id": "9b3da5b72bc279c2",
+      "kind": "OB",
+      "action": "DISCARD",
+      "reason": "FAILED_CRITERIA",
+      "fidelity": "BAR",
+      "tf": "M15",
+      "t_utc_ms": 1789410600000,
+      "criterion": "STRUCTURE",
+      "confirmed_id": null,
+      "union_id": null,
+      "measurement": null,
+      "geometry": {
+        "schema_version": 1,
+        "symbol": "XAUUSD",
+        "tf": "M15",
+        "direction": "BULLISH",
+        "price_lo": 4286.396,
+        "price_hi": 4294.286,
+        "ce": 4290.341,
+        "size": 7.890000000000327,
+        "atr_at_creation": 11.24132342017017,
+        "created_ms": 1789406100000,
+        "t_start_ms": 1789400700000,
+        "created_idx": 209,
+        "origin_idx": 204,
+        "leg_start_idx": 205,
+        "boundary": "body_to_wick",
+        "displacement_atr": 2.8135477307992014,
+        "source_bars": [
+          204,
+          205,
+          206,
+          207,
+          208,
+          209
+        ],
+        "source_object_ids": [
+          "7cc73cd5d7bba4fd",
+          "0fba57267793b1a8",
+          "f4c5d3cafc870296",
+          "10a7fd3df78da8ba",
+          "383e30937317266b",
+          "00709d889a0e342a"
+        ],
+        "fvg_ids": [
+          "6f539e2284d2044f"
+        ],
+        "constituent_ids": []
+      },
+      "source_bars": [
+        204,
+        205,
+        206,
+        207,
+        208,
+        209
+      ],
+      "source_object_ids": [
+        "7cc73cd5d7bba4fd",
+        "0fba57267793b1a8",
+        "f4c5d3cafc870296",
+        "10a7fd3df78da8ba",
+        "383e30937317266b",
+        "00709d889a0e342a"
+      ]
+    },
+    {
+      "seq": 219,
+      "t_broker_ms": 1789415100000,
+      "object_id": "99d260aaf7a9e5d3",
+      "kind": "OB",
+      "action": "CREATE",
+      "reason": null,
+      "fidelity": "BAR",
+      "tf": "M15",
+      "t_utc_ms": 1789415100000,
+      "criterion": null,
+      "confirmed_id": null,
+      "union_id": null,
+      "measurement": null,
+      "geometry": {
+        "schema_version": 1,
+        "symbol": "XAUUSD",
+        "tf": "M15",
+        "direction": "BEARISH",
+        "price_lo": 4310.123,
+        "price_hi": 4316.161,
+        "ce": 4313.142,
+        "size": 6.038000000000466,
+        "atr_at_creation": 8.739711027197346,
+        "created_ms": 1789415100000,
+        "t_start_ms": 1789407900000,
+        "created_idx": 219,
+        "origin_idx": 213,
+        "leg_start_idx": 214,
+        "boundary": "body_to_wick",
+        "displacement_atr": 2.613129876826538,
+        "source_bars": [
+          212,
+          213,
+          214,
+          215,
+          216,
+          217,
+          218,
+          219
+        ],
+        "source_object_ids": [
+          "a7f98c264f42902e",
+          "994e85fcde5e5038",
+          "349ce3818705fdce",
+          "d1ee4b7f35892adb",
+          "18811e8e2ef674a7",
+          "362aa37c8c324799",
+          "4d5cc6c0deb79cd5",
+          "a0fbc425d0ebc98f"
+        ],
+        "fvg_ids": [
+          "988ab0b2fcab6c4c"
+        ],
+        "constituent_ids": []
+      },
+      "source_bars": [
+        212,
+        213,
+        214,
+        215,
+        216,
+        217,
+        218,
+        219
+      ],
+      "source_object_ids": [
+        "a7f98c264f42902e",
+        "994e85fcde5e5038",
+        "349ce3818705fdce",
+        "d1ee4b7f35892adb",
+        "18811e8e2ef674a7",
+        "362aa37c8c324799",
+        "4d5cc6c0deb79cd5",
+        "a0fbc425d0ebc98f"
+      ]
+    },
+    {
+      "seq": 223,
+      "t_broker_ms": 1789418700000,
+      "object_id": "99d260aaf7a9e5d3",
+      "kind": "OB",
+      "action": "DISCARD",
+      "reason": "FAILED_CRITERIA",
+      "fidelity": "BAR",
+      "tf": "M15",
+      "t_utc_ms": 1789418700000,
+      "criterion": "STRUCTURE",
+      "confirmed_id": null,
+      "union_id": null,
+      "measurement": null,
+      "geometry": {
+        "schema_version": 1,
+        "symbol": "XAUUSD",
+        "tf": "M15",
+        "direction": "BEARISH",
+        "price_lo": 4310.123,
+        "price_hi": 4316.161,
+        "ce": 4313.142,
+        "size": 6.038000000000466,
+        "atr_at_creation": 8.739711027197346,
+        "created_ms": 1789415100000,
+        "t_start_ms": 1789407900000,
+        "created_idx": 219,
+        "origin_idx": 213,
+        "leg_start_idx": 214,
+        "boundary": "body_to_wick",
+        "displacement_atr": 2.613129876826538,
+        "source_bars": [
+          212,
+          213,
+          214,
+          215,
+          216,
+          217,
+          218,
+          219
+        ],
+        "source_object_ids": [
+          "a7f98c264f42902e",
+          "994e85fcde5e5038",
+          "349ce3818705fdce",
+          "d1ee4b7f35892adb",
+          "18811e8e2ef674a7",
+          "362aa37c8c324799",
+          "4d5cc6c0deb79cd5",
+          "a0fbc425d0ebc98f"
+        ],
+        "fvg_ids": [
+          "988ab0b2fcab6c4c"
+        ],
+        "constituent_ids": []
+      },
+      "source_bars": [
+        212,
+        213,
+        214,
+        215,
+        216,
+        217,
+        218,
+        219
+      ],
+      "source_object_ids": [
+        "a7f98c264f42902e",
+        "994e85fcde5e5038",
+        "349ce3818705fdce",
+        "d1ee4b7f35892adb",
+        "18811e8e2ef674a7",
+        "362aa37c8c324799",
+        "4d5cc6c0deb79cd5",
+        "a0fbc425d0ebc98f"
+      ]
+    },
+    {
+      "seq": 223,
+      "t_broker_ms": 1789418700000,
+      "object_id": "83720f7f8446d904",
+      "kind": "OB",
+      "action": "CREATE",
+      "reason": null,
+      "fidelity": "BAR",
+      "tf": "M15",
+      "t_utc_ms": 1789418700000,
+      "criterion": null,
+      "confirmed_id": null,
+      "union_id": null,
+      "measurement": null,
+      "geometry": {
+        "schema_version": 1,
+        "symbol": "XAUUSD",
+        "tf": "M15",
+        "direction": "BULLISH",
+        "price_lo": 4283.017,
+        "price_hi": 4305.844,
+        "ce": 4294.4305,
+        "size": 22.827000000000226,
+        "atr_at_creation": 8.484336933772,
+        "created_ms": 1789418700000,
+        "t_start_ms": 1789413300000,
+        "created_idx": 223,
+        "origin_idx": 220,
+        "leg_start_idx": 221,
+        "boundary": "body_to_wick",
+        "displacement_atr": 2.068163975213484,
+        "source_bars": [
+          218,
+          219,
+          220,
+          221,
+          222,
+          223
+        ],
+        "source_object_ids": [
+          "4d5cc6c0deb79cd5",
+          "a0fbc425d0ebc98f",
+          "b8c28b4a90bc8926",
+          "6a5ed7beae469061",
+          "a0d4cbe20e67b738",
+          "ce4a2428ac8f16c5"
+        ],
+        "fvg_ids": [
+          "b6184b78d8374c28"
+        ],
+        "constituent_ids": []
+      },
+      "source_bars": [
+        218,
+        219,
+        220,
+        221,
+        222,
+        223
+      ],
+      "source_object_ids": [
+        "4d5cc6c0deb79cd5",
+        "a0fbc425d0ebc98f",
+        "b8c28b4a90bc8926",
+        "6a5ed7beae469061",
+        "a0d4cbe20e67b738",
+        "ce4a2428ac8f16c5"
+      ]
+    },
+    {
+      "seq": 230,
+      "t_broker_ms": 1789429500000,
+      "object_id": "83720f7f8446d904",
+      "kind": "OB",
+      "action": "DISCARD",
+      "reason": "FAILED_CRITERIA",
+      "fidelity": "BAR",
+      "tf": "M15",
+      "t_utc_ms": 1789429500000,
+      "criterion": "STRUCTURE",
+      "confirmed_id": null,
+      "union_id": null,
+      "measurement": null,
+      "geometry": {
+        "schema_version": 1,
+        "symbol": "XAUUSD",
+        "tf": "M15",
+        "direction": "BULLISH",
+        "price_lo": 4283.017,
+        "price_hi": 4305.844,
+        "ce": 4294.4305,
+        "size": 22.827000000000226,
+        "atr_at_creation": 8.484336933772,
+        "created_ms": 1789418700000,
+        "t_start_ms": 1789413300000,
+        "created_idx": 223,
+        "origin_idx": 220,
+        "leg_start_idx": 221,
+        "boundary": "body_to_wick",
+        "displacement_atr": 2.068163975213484,
+        "source_bars": [
+          218,
+          219,
+          220,
+          221,
+          222,
+          223
+        ],
+        "source_object_ids": [
+          "4d5cc6c0deb79cd5",
+          "a0fbc425d0ebc98f",
+          "b8c28b4a90bc8926",
+          "6a5ed7beae469061",
+          "a0d4cbe20e67b738",
+          "ce4a2428ac8f16c5"
+        ],
+        "fvg_ids": [
+          "b6184b78d8374c28"
+        ],
+        "constituent_ids": []
+      },
+      "source_bars": [
+        218,
+        219,
+        220,
+        221,
+        222,
+        223
+      ],
+      "source_object_ids": [
+        "4d5cc6c0deb79cd5",
+        "a0fbc425d0ebc98f",
+        "b8c28b4a90bc8926",
+        "6a5ed7beae469061",
+        "a0d4cbe20e67b738",
+        "ce4a2428ac8f16c5"
+      ]
+    },
+    {
+      "seq": 235,
+      "t_broker_ms": 1789434000000,
+      "object_id": "2765395a7353af62",
+      "kind": "OB",
+      "action": "CREATE",
+      "reason": null,
+      "fidelity": "BAR",
+      "tf": "M15",
+      "t_utc_ms": 1789434000000,
+      "criterion": null,
+      "confirmed_id": null,
+      "union_id": null,
+      "measurement": null,
+      "geometry": {
+        "schema_version": 1,
+        "symbol": "XAUUSD",
+        "tf": "M15",
+        "direction": "BULLISH",
+        "price_lo": 4283.599,
+        "price_hi": 4290.033,
+        "ce": 4286.816000000001,
+        "size": 6.4340000000001965,
+        "atr_at_creation": 6.792760652591248,
+        "created_ms": 1789434000000,
+        "t_start_ms": 1789428600000,
+        "created_idx": 235,
+        "origin_idx": 232,
+        "leg_start_idx": 233,
+        "boundary": "body_to_wick",
+        "displacement_atr": 2.0178835529515524,
+        "source_bars": [
+          230,
+          231,
+          232,
+          233,
+          234,
+          235
+        ],
+        "source_object_ids": [
+          "ffff6cce11fa7c3a",
+          "77b568d642c6adee",
+          "c7472bda3e07a84f",
+          "441e54877c603ee1",
+          "3fe390919b95fa2c",
+          "4956869dc7b0f596"
+        ],
+        "fvg_ids": [
+          "1af43993b0d1615e"
+        ],
+        "constituent_ids": []
+      },
+      "source_bars": [
+        230,
+        231,
+        232,
+        233,
+        234,
+        235
+      ],
+      "source_object_ids": [
+        "ffff6cce11fa7c3a",
+        "77b568d642c6adee",
+        "c7472bda3e07a84f",
+        "441e54877c603ee1",
+        "3fe390919b95fa2c",
+        "4956869dc7b0f596"
+      ]
+    },
+    {
+      "seq": 237,
+      "t_broker_ms": 1789435800000,
+      "object_id": "2765395a7353af62",
+      "kind": "OB",
+      "action": "PROMOTE",
+      "reason": null,
+      "fidelity": "BAR",
+      "tf": "M15",
+      "t_utc_ms": 1789435800000,
+      "criterion": null,
+      "confirmed_id": "6a44bb33c3f99fdc",
+      "union_id": null,
+      "measurement": null,
+      "geometry": {
+        "schema_version": 1,
+        "symbol": "XAUUSD",
+        "tf": "M15",
+        "direction": "BULLISH",
+        "price_lo": 4283.599,
+        "price_hi": 4290.033,
+        "ce": 4286.816000000001,
+        "size": 6.4340000000001965,
+        "atr_at_creation": 7.176533419836335,
+        "created_ms": 1789435800000,
+        "t_start_ms": 1789428600000,
+        "created_idx": 237,
+        "origin_idx": 232,
+        "leg_start_idx": 233,
+        "boundary": "body_to_wick",
+        "displacement_atr": 3.196390047678959,
+        "source_bars": [
+          230,
+          231,
+          232,
+          233,
+          234,
+          235,
+          236,
+          237
+        ],
+        "source_object_ids": [
+          "ffff6cce11fa7c3a",
+          "77b568d642c6adee",
+          "c7472bda3e07a84f",
+          "441e54877c603ee1",
+          "3fe390919b95fa2c",
+          "4956869dc7b0f596",
+          "67778f625cfef580",
+          "24b1986c47ff260e"
+        ],
+        "fvg_ids": [
+          "1af43993b0d1615e",
+          "a9cb825f488341ed"
+        ],
+        "constituent_ids": []
+      },
+      "source_bars": [
+        230,
+        231,
+        232,
+        233,
+        234,
+        235,
+        236,
+        237
+      ],
+      "source_object_ids": [
+        "ffff6cce11fa7c3a",
+        "77b568d642c6adee",
+        "c7472bda3e07a84f",
+        "441e54877c603ee1",
+        "3fe390919b95fa2c",
+        "4956869dc7b0f596",
+        "67778f625cfef580",
+        "24b1986c47ff260e"
+      ]
+    },
+    {
+      "seq": 253,
+      "t_broker_ms": 1789450200000,
+      "object_id": "990575c56adc6f58",
+      "kind": "OB",
+      "action": "CREATE",
+      "reason": null,
+      "fidelity": "BAR",
+      "tf": "M15",
+      "t_utc_ms": 1789450200000,
+      "criterion": null,
+      "confirmed_id": null,
+      "union_id": null,
+      "measurement": null,
+      "geometry": {
+        "schema_version": 1,
+        "symbol": "XAUUSD",
+        "tf": "M15",
+        "direction": "BEARISH",
+        "price_lo": 4303.618,
+        "price_hi": 4306.399,
+        "ce": 4305.0085,
+        "size": 2.780999999999949,
+        "atr_at_creation": 6.69239527975509,
+        "created_ms": 1789450200000,
+        "t_start_ms": 1789446600000,
+        "created_idx": 253,
+        "origin_idx": 250,
+        "leg_start_idx": 251,
+        "boundary": "body_to_wick",
+        "displacement_atr": 1.7273337148762278,
+        "source_bars": [
+          250,
+          251,
+          252,
+          253
+        ],
+        "source_object_ids": [
+          "e1c53f94f7aca045",
+          "124ec3b9572dc7e7",
+          "8fd35dfb8e261414",
+          "693f131952df4360"
+        ],
+        "fvg_ids": [
+          "a616a9dce5cf0a1d"
+        ],
+        "constituent_ids": []
+      },
+      "source_bars": [
+        250,
+        251,
+        252,
+        253
+      ],
+      "source_object_ids": [
+        "e1c53f94f7aca045",
+        "124ec3b9572dc7e7",
+        "8fd35dfb8e261414",
+        "693f131952df4360"
+      ]
+    },
+    {
+      "seq": 254,
+      "t_broker_ms": 1789451100000,
+      "object_id": "6a44bb33c3f99fdc",
+      "kind": "OB",
+      "action": "UPDATE",
+      "reason": null,
+      "fidelity": "BAR",
+      "tf": "M15",
+      "t_utc_ms": 1789451100000,
+      "criterion": "TOUCHED",
+      "confirmed_id": "6a44bb33c3f99fdc",
+      "union_id": null,
+      "measurement": null,
+      "geometry": {
+        "schema_version": 1,
+        "symbol": "XAUUSD",
+        "tf": "M15",
+        "direction": "BULLISH",
+        "price_lo": 4283.599,
+        "price_hi": 4290.033,
+        "ce": 4286.816000000001,
+        "size": 6.4340000000001965,
+        "atr_at_creation": 7.176533419836335,
+        "created_ms": 1789435800000,
+        "t_start_ms": 1789428600000,
+        "created_idx": 237,
+        "origin_idx": 232,
+        "leg_start_idx": 233,
+        "boundary": "body_to_wick",
+        "displacement_atr": 3.196390047678959,
+        "source_bars": [
+          230,
+          231,
+          232,
+          233,
+          234,
+          235,
+          236,
+          237
+        ],
+        "source_object_ids": [
+          "ffff6cce11fa7c3a",
+          "77b568d642c6adee",
+          "c7472bda3e07a84f",
+          "441e54877c603ee1",
+          "3fe390919b95fa2c",
+          "4956869dc7b0f596",
+          "67778f625cfef580",
+          "24b1986c47ff260e"
+        ],
+        "fvg_ids": [
+          "1af43993b0d1615e",
+          "a9cb825f488341ed"
+        ],
+        "constituent_ids": []
+      },
+      "source_bars": [
+        230,
+        231,
+        232,
+        233,
+        234,
+        235,
+        236,
+        237
+      ],
+      "source_object_ids": [
+        "ffff6cce11fa7c3a",
+        "77b568d642c6adee",
+        "c7472bda3e07a84f",
+        "441e54877c603ee1",
+        "3fe390919b95fa2c",
+        "4956869dc7b0f596",
+        "67778f625cfef580",
+        "24b1986c47ff260e"
+      ]
+    },
+    {
+      "seq": 256,
+      "t_broker_ms": 1789452900000,
+      "object_id": "6a44bb33c3f99fdc",
+      "kind": "OB",
+      "action": "UPDATE",
+      "reason": null,
+      "fidelity": "BAR",
+      "tf": "M15",
+      "t_utc_ms": 1789452900000,
+      "criterion": "MITIGATED",
+      "confirmed_id": "6a44bb33c3f99fdc",
+      "union_id": null,
+      "measurement": null,
+      "geometry": {
+        "schema_version": 1,
+        "symbol": "XAUUSD",
+        "tf": "M15",
+        "direction": "BULLISH",
+        "price_lo": 4283.599,
+        "price_hi": 4290.033,
+        "ce": 4286.816000000001,
+        "size": 6.4340000000001965,
+        "atr_at_creation": 7.176533419836335,
+        "created_ms": 1789435800000,
+        "t_start_ms": 1789428600000,
+        "created_idx": 237,
+        "origin_idx": 232,
+        "leg_start_idx": 233,
+        "boundary": "body_to_wick",
+        "displacement_atr": 3.196390047678959,
+        "source_bars": [
+          230,
+          231,
+          232,
+          233,
+          234,
+          235,
+          236,
+          237
+        ],
+        "source_object_ids": [
+          "ffff6cce11fa7c3a",
+          "77b568d642c6adee",
+          "c7472bda3e07a84f",
+          "441e54877c603ee1",
+          "3fe390919b95fa2c",
+          "4956869dc7b0f596",
+          "67778f625cfef580",
+          "24b1986c47ff260e"
+        ],
+        "fvg_ids": [
+          "1af43993b0d1615e",
+          "a9cb825f488341ed"
+        ],
+        "constituent_ids": []
+      },
+      "source_bars": [
+        230,
+        231,
+        232,
+        233,
+        234,
+        235,
+        236,
+        237
+      ],
+      "source_object_ids": [
+        "ffff6cce11fa7c3a",
+        "77b568d642c6adee",
+        "c7472bda3e07a84f",
+        "441e54877c603ee1",
+        "3fe390919b95fa2c",
+        "4956869dc7b0f596",
+        "67778f625cfef580",
+        "24b1986c47ff260e"
+      ]
+    },
+    {
+      "seq": 260,
+      "t_broker_ms": 1789456500000,
+      "object_id": "990575c56adc6f58",
+      "kind": "OB",
+      "action": "DISCARD",
+      "reason": "FAILED_CRITERIA",
+      "fidelity": "BAR",
+      "tf": "M15",
+      "t_utc_ms": 1789456500000,
+      "criterion": "STRUCTURE",
+      "confirmed_id": null,
+      "union_id": null,
+      "measurement": null,
+      "geometry": {
+        "schema_version": 1,
+        "symbol": "XAUUSD",
+        "tf": "M15",
+        "direction": "BEARISH",
+        "price_lo": 4303.618,
+        "price_hi": 4306.399,
+        "ce": 4305.0085,
+        "size": 2.780999999999949,
+        "atr_at_creation": 6.69239527975509,
+        "created_ms": 1789450200000,
+        "t_start_ms": 1789446600000,
+        "created_idx": 253,
+        "origin_idx": 250,
+        "leg_start_idx": 251,
+        "boundary": "body_to_wick",
+        "displacement_atr": 1.7273337148762278,
+        "source_bars": [
+          250,
+          251,
+          252,
+          253
+        ],
+        "source_object_ids": [
+          "e1c53f94f7aca045",
+          "124ec3b9572dc7e7",
+          "8fd35dfb8e261414",
+          "693f131952df4360"
+        ],
+        "fvg_ids": [
+          "a616a9dce5cf0a1d"
+        ],
+        "constituent_ids": []
+      },
+      "source_bars": [
+        250,
+        251,
+        252,
+        253
+      ],
+      "source_object_ids": [
+        "e1c53f94f7aca045",
+        "124ec3b9572dc7e7",
+        "8fd35dfb8e261414",
+        "693f131952df4360"
+      ]
+    },
+    {
+      "seq": 263,
+      "t_broker_ms": 1789459200000,
+      "object_id": "6a44bb33c3f99fdc",
+      "kind": "OB",
+      "action": "UPDATE",
+      "reason": null,
+      "fidelity": "BAR",
+      "tf": "M15",
+      "t_utc_ms": 1789459200000,
+      "criterion": "INVALID",
+      "confirmed_id": "bf119a548f6ecae7",
+      "union_id": null,
+      "measurement": null,
+      "geometry": {
+        "schema_version": 1,
+        "symbol": "XAUUSD",
+        "tf": "M15",
+        "direction": "BULLISH",
+        "price_lo": 4283.599,
+        "price_hi": 4290.033,
+        "ce": 4286.816000000001,
+        "size": 6.4340000000001965,
+        "atr_at_creation": 7.176533419836335,
+        "created_ms": 1789435800000,
+        "t_start_ms": 1789428600000,
+        "created_idx": 237,
+        "origin_idx": 232,
+        "leg_start_idx": 233,
+        "boundary": "body_to_wick",
+        "displacement_atr": 3.196390047678959,
+        "source_bars": [
+          230,
+          231,
+          232,
+          233,
+          234,
+          235,
+          236,
+          237
+        ],
+        "source_object_ids": [
+          "ffff6cce11fa7c3a",
+          "77b568d642c6adee",
+          "c7472bda3e07a84f",
+          "441e54877c603ee1",
+          "3fe390919b95fa2c",
+          "4956869dc7b0f596",
+          "67778f625cfef580",
+          "24b1986c47ff260e"
+        ],
+        "fvg_ids": [
+          "1af43993b0d1615e",
+          "a9cb825f488341ed"
+        ],
+        "constituent_ids": []
+      },
+      "source_bars": [
+        230,
+        231,
+        232,
+        233,
+        234,
+        235,
+        236,
+        237
+      ],
+      "source_object_ids": [
+        "ffff6cce11fa7c3a",
+        "77b568d642c6adee",
+        "c7472bda3e07a84f",
+        "441e54877c603ee1",
+        "3fe390919b95fa2c",
+        "4956869dc7b0f596",
+        "67778f625cfef580",
+        "24b1986c47ff260e"
+      ]
+    },
+    {
+      "seq": 281,
+      "t_broker_ms": 1789475400000,
+      "object_id": "522fa1b1854afd40",
+      "kind": "OB",
+      "action": "CREATE",
+      "reason": null,
+      "fidelity": "BAR",
+      "tf": "M15",
+      "t_utc_ms": 1789475400000,
+      "criterion": null,
+      "confirmed_id": null,
+      "union_id": null,
+      "measurement": null,
+      "geometry": {
+        "schema_version": 1,
+        "symbol": "XAUUSD",
+        "tf": "M15",
+        "direction": "BEARISH",
+        "price_lo": 4282.764,
+        "price_hi": 4286.979,
+        "ce": 4284.8715,
+        "size": 4.2150000000001455,
+        "atr_at_creation": 7.067495437468501,
+        "created_ms": 1789475400000,
+        "t_start_ms": 1789472700000,
+        "created_idx": 281,
+        "origin_idx": 279,
+        "leg_start_idx": 280,
+        "boundary": "body_to_wick",
+        "displacement_atr": 1.9548650752223835,
+        "source_bars": [
+          279,
+          280,
+          281
+        ],
+        "source_object_ids": [
+          "031bb66ff0a785da",
+          "ac3ab3d69beb1df3",
+          "93802a3df6dccc73"
+        ],
+        "fvg_ids": [
+          "6253701ee8beca5b"
+        ],
+        "constituent_ids": []
+      },
+      "source_bars": [
+        279,
+        280,
+        281
+      ],
+      "source_object_ids": [
+        "031bb66ff0a785da",
+        "ac3ab3d69beb1df3",
+        "93802a3df6dccc73"
+      ]
+    },
+    {
+      "seq": 283,
+      "t_broker_ms": 1789477200000,
+      "object_id": "bf119a548f6ecae7",
+      "kind": "OB",
+      "action": "UPDATE",
+      "reason": null,
+      "fidelity": "BAR",
+      "tf": "M15",
+      "t_utc_ms": 1789477200000,
+      "criterion": "INVALID",
+      "confirmed_id": "bf119a548f6ecae7",
+      "union_id": null,
+      "measurement": null,
+      "geometry": {
+        "schema_version": 1,
+        "symbol": "XAUUSD",
+        "tf": "M15",
+        "direction": "BEARISH",
+        "price_lo": 4283.599,
+        "price_hi": 4290.033,
+        "ce": 4286.816000000001,
+        "size": 6.4340000000001965,
+        "atr_at_creation": 7.176533419836335,
+        "created_ms": 1789459200000,
+        "t_start_ms": 1789428600000,
+        "created_idx": 263,
+        "origin_idx": 232,
+        "leg_start_idx": 233,
+        "boundary": "body_to_wick",
+        "displacement_atr": 3.196390047678959,
+        "source_bars": [
+          230,
+          231,
+          232,
+          233,
+          234,
+          235,
+          236,
+          237,
+          263
+        ],
+        "source_object_ids": [
+          "ffff6cce11fa7c3a",
+          "77b568d642c6adee",
+          "c7472bda3e07a84f",
+          "441e54877c603ee1",
+          "3fe390919b95fa2c",
+          "4956869dc7b0f596",
+          "67778f625cfef580",
+          "24b1986c47ff260e",
+          "f4ddbe563a90b36a"
+        ],
+        "fvg_ids": [
+          "1af43993b0d1615e",
+          "a9cb825f488341ed"
+        ],
+        "constituent_ids": []
+      },
+      "source_bars": [
+        230,
+        231,
+        232,
+        233,
+        234,
+        235,
+        236,
+        237,
+        263
+      ],
+      "source_object_ids": [
+        "ffff6cce11fa7c3a",
+        "77b568d642c6adee",
+        "c7472bda3e07a84f",
+        "441e54877c603ee1",
+        "3fe390919b95fa2c",
+        "4956869dc7b0f596",
+        "67778f625cfef580",
+        "24b1986c47ff260e",
+        "f4ddbe563a90b36a"
+      ]
+    },
+    {
+      "seq": 283,
+      "t_broker_ms": 1789477200000,
+      "object_id": "522fa1b1854afd40",
+      "kind": "OB",
+      "action": "DISCARD",
+      "reason": "INVALIDATED",
+      "fidelity": "BAR",
+      "tf": "M15",
+      "t_utc_ms": 1789477200000,
+      "criterion": "STRUCTURE",
+      "confirmed_id": null,
+      "union_id": null,
+      "measurement": null,
+      "geometry": {
+        "schema_version": 1,
+        "symbol": "XAUUSD",
+        "tf": "M15",
+        "direction": "BEARISH",
+        "price_lo": 4282.764,
+        "price_hi": 4286.979,
+        "ce": 4284.8715,
+        "size": 4.2150000000001455,
+        "atr_at_creation": 7.067495437468501,
+        "created_ms": 1789475400000,
+        "t_start_ms": 1789472700000,
+        "created_idx": 281,
+        "origin_idx": 279,
+        "leg_start_idx": 280,
+        "boundary": "body_to_wick",
+        "displacement_atr": 1.9548650752223835,
+        "source_bars": [
+          279,
+          280,
+          281
+        ],
+        "source_object_ids": [
+          "031bb66ff0a785da",
+          "ac3ab3d69beb1df3",
+          "93802a3df6dccc73"
+        ],
+        "fvg_ids": [
+          "6253701ee8beca5b"
+        ],
+        "constituent_ids": []
+      },
+      "source_bars": [
+        279,
+        280,
+        281
+      ],
+      "source_object_ids": [
+        "031bb66ff0a785da",
+        "ac3ab3d69beb1df3",
+        "93802a3df6dccc73"
+      ]
+    },
+    {
+      "seq": 283,
+      "t_broker_ms": 1789477200000,
+      "object_id": "721385d2ba3c9e6a",
+      "kind": "OB",
+      "action": "CREATE",
+      "reason": null,
+      "fidelity": "BAR",
+      "tf": "M15",
+      "t_utc_ms": 1789477200000,
+      "criterion": null,
+      "confirmed_id": null,
+      "union_id": null,
+      "measurement": null,
+      "geometry": {
+        "schema_version": 1,
+        "symbol": "XAUUSD",
+        "tf": "M15",
+        "direction": "BULLISH",
+        "price_lo": 4271.409,
+        "price_hi": 4284.492,
+        "ce": 4277.9505,
+        "size": 13.083000000000538,
+        "atr_at_creation": 7.94661086189892,
+        "created_ms": 1789477200000,
+        "t_start_ms": 1789473600000,
+        "created_idx": 283,
+        "origin_idx": 281,
+        "leg_start_idx": 282,
+        "boundary": "body_to_wick",
+        "displacement_atr": 2.6927202516730357,
+        "source_bars": [
+          280,
+          281,
+          282,
+          283
+        ],
+        "source_object_ids": [
+          "ac3ab3d69beb1df3",
+          "93802a3df6dccc73",
+          "e1a4f610430bc28f",
+          "0846106a9b9bf015"
+        ],
+        "fvg_ids": [
+          "7de0b08dee57ee76"
+        ],
+        "constituent_ids": []
+      },
+      "source_bars": [
+        280,
+        281,
+        282,
+        283
+      ],
+      "source_object_ids": [
+        "ac3ab3d69beb1df3",
+        "93802a3df6dccc73",
+        "e1a4f610430bc28f",
+        "0846106a9b9bf015"
+      ]
+    },
+    {
+      "seq": 283,
+      "t_broker_ms": 1789477200000,
+      "object_id": "721385d2ba3c9e6a",
+      "kind": "OB",
+      "action": "PROMOTE",
+      "reason": null,
+      "fidelity": "BAR",
+      "tf": "M15",
+      "t_utc_ms": 1789477200000,
+      "criterion": null,
+      "confirmed_id": "8abbcb5d69292da2",
+      "union_id": null,
+      "measurement": null,
+      "geometry": {
+        "schema_version": 1,
+        "symbol": "XAUUSD",
+        "tf": "M15",
+        "direction": "BULLISH",
+        "price_lo": 4271.409,
+        "price_hi": 4284.492,
+        "ce": 4277.9505,
+        "size": 13.083000000000538,
+        "atr_at_creation": 7.94661086189892,
+        "created_ms": 1789477200000,
+        "t_start_ms": 1789473600000,
+        "created_idx": 283,
+        "origin_idx": 281,
+        "leg_start_idx": 282,
+        "boundary": "body_to_wick",
+        "displacement_atr": 2.6927202516730357,
+        "source_bars": [
+          280,
+          281,
+          282,
+          283
+        ],
+        "source_object_ids": [
+          "ac3ab3d69beb1df3",
+          "93802a3df6dccc73",
+          "e1a4f610430bc28f",
+          "0846106a9b9bf015"
+        ],
+        "fvg_ids": [
+          "7de0b08dee57ee76"
+        ],
+        "constituent_ids": []
+      },
+      "source_bars": [
+        280,
+        281,
+        282,
+        283
+      ],
+      "source_object_ids": [
+        "ac3ab3d69beb1df3",
+        "93802a3df6dccc73",
+        "e1a4f610430bc28f",
+        "0846106a9b9bf015"
+      ]
+    },
+    {
+      "seq": 284,
+      "t_broker_ms": 1789478100000,
+      "object_id": "8abbcb5d69292da2",
+      "kind": "OB",
+      "action": "UPDATE",
+      "reason": null,
+      "fidelity": "BAR",
+      "tf": "M15",
+      "t_utc_ms": 1789478100000,
+      "criterion": "TOUCHED",
+      "confirmed_id": "8abbcb5d69292da2",
+      "union_id": null,
+      "measurement": null,
+      "geometry": {
+        "schema_version": 1,
+        "symbol": "XAUUSD",
+        "tf": "M15",
+        "direction": "BULLISH",
+        "price_lo": 4271.409,
+        "price_hi": 4284.492,
+        "ce": 4277.9505,
+        "size": 13.083000000000538,
+        "atr_at_creation": 7.94661086189892,
+        "created_ms": 1789477200000,
+        "t_start_ms": 1789473600000,
+        "created_idx": 283,
+        "origin_idx": 281,
+        "leg_start_idx": 282,
+        "boundary": "body_to_wick",
+        "displacement_atr": 2.6927202516730357,
+        "source_bars": [
+          280,
+          281,
+          282,
+          283
+        ],
+        "source_object_ids": [
+          "ac3ab3d69beb1df3",
+          "93802a3df6dccc73",
+          "e1a4f610430bc28f",
+          "0846106a9b9bf015"
+        ],
+        "fvg_ids": [
+          "7de0b08dee57ee76"
+        ],
+        "constituent_ids": []
+      },
+      "source_bars": [
+        280,
+        281,
+        282,
+        283
+      ],
+      "source_object_ids": [
+        "ac3ab3d69beb1df3",
+        "93802a3df6dccc73",
+        "e1a4f610430bc28f",
+        "0846106a9b9bf015"
+      ]
+    },
+    {
+      "seq": 290,
+      "t_broker_ms": 1789483500000,
+      "object_id": "8abbcb5d69292da2",
+      "kind": "OB",
+      "action": "UPDATE",
+      "reason": null,
+      "fidelity": "BAR",
+      "tf": "M15",
+      "t_utc_ms": 1789483500000,
+      "criterion": "MITIGATED",
+      "confirmed_id": "8abbcb5d69292da2",
+      "union_id": null,
+      "measurement": null,
+      "geometry": {
+        "schema_version": 1,
+        "symbol": "XAUUSD",
+        "tf": "M15",
+        "direction": "BULLISH",
+        "price_lo": 4271.409,
+        "price_hi": 4284.492,
+        "ce": 4277.9505,
+        "size": 13.083000000000538,
+        "atr_at_creation": 7.94661086189892,
+        "created_ms": 1789477200000,
+        "t_start_ms": 1789473600000,
+        "created_idx": 283,
+        "origin_idx": 281,
+        "leg_start_idx": 282,
+        "boundary": "body_to_wick",
+        "displacement_atr": 2.6927202516730357,
+        "source_bars": [
+          280,
+          281,
+          282,
+          283
+        ],
+        "source_object_ids": [
+          "ac3ab3d69beb1df3",
+          "93802a3df6dccc73",
+          "e1a4f610430bc28f",
+          "0846106a9b9bf015"
+        ],
+        "fvg_ids": [
+          "7de0b08dee57ee76"
+        ],
+        "constituent_ids": []
+      },
+      "source_bars": [
+        280,
+        281,
+        282,
+        283
+      ],
+      "source_object_ids": [
+        "ac3ab3d69beb1df3",
+        "93802a3df6dccc73",
+        "e1a4f610430bc28f",
+        "0846106a9b9bf015"
+      ]
+    },
+    {
+      "seq": 290,
+      "t_broker_ms": 1789483500000,
+      "object_id": "1e4b9adc4462d38b",
+      "kind": "OB",
+      "action": "CREATE",
+      "reason": null,
+      "fidelity": "BAR",
+      "tf": "M15",
+      "t_utc_ms": 1789483500000,
+      "criterion": null,
+      "confirmed_id": null,
+      "union_id": null,
+      "measurement": null,
+      "geometry": {
+        "schema_version": 1,
+        "symbol": "XAUUSD",
+        "tf": "M15",
+        "direction": "BEARISH",
+        "price_lo": 4286.934,
+        "price_hi": 4298.592,
+        "ce": 4292.763,
+        "size": 11.657999999999447,
+        "atr_at_creation": 8.929911149469435,
+        "created_ms": 1789483500000,
+        "t_start_ms": 1789478100000,
+        "created_idx": 290,
+        "origin_idx": 287,
+        "leg_start_idx": 288,
+        "boundary": "body_to_wick",
+        "displacement_atr": 2.8217525995762505,
+        "source_bars": [
+          285,
+          286,
+          287,
+          288,
+          289,
+          290
+        ],
+        "source_object_ids": [
+          "5b411ae67cb74c7d",
+          "759ed5dbd478025d",
+          "185f13564f0e87ad",
+          "b41b69555dfe2b86",
+          "2258947857d200c3",
+          "4da38c4fdbf5815c"
+        ],
+        "fvg_ids": [
+          "8d5457dd4b2f6a00"
+        ],
+        "constituent_ids": []
+      },
+      "source_bars": [
+        285,
+        286,
+        287,
+        288,
+        289,
+        290
+      ],
+      "source_object_ids": [
+        "5b411ae67cb74c7d",
+        "759ed5dbd478025d",
+        "185f13564f0e87ad",
+        "b41b69555dfe2b86",
+        "2258947857d200c3",
+        "4da38c4fdbf5815c"
+      ]
+    },
+    {
+      "seq": 297,
+      "t_broker_ms": 1789489800000,
+      "object_id": "1e4b9adc4462d38b",
+      "kind": "OB",
+      "action": "DISCARD",
+      "reason": "FAILED_CRITERIA",
+      "fidelity": "BAR",
+      "tf": "M15",
+      "t_utc_ms": 1789489800000,
+      "criterion": "STRUCTURE",
+      "confirmed_id": null,
+      "union_id": null,
+      "measurement": null,
+      "geometry": {
+        "schema_version": 1,
+        "symbol": "XAUUSD",
+        "tf": "M15",
+        "direction": "BEARISH",
+        "price_lo": 4286.934,
+        "price_hi": 4298.592,
+        "ce": 4292.763,
+        "size": 11.657999999999447,
+        "atr_at_creation": 8.929911149469435,
+        "created_ms": 1789483500000,
+        "t_start_ms": 1789478100000,
+        "created_idx": 290,
+        "origin_idx": 287,
+        "leg_start_idx": 288,
+        "boundary": "body_to_wick",
+        "displacement_atr": 2.8217525995762505,
+        "source_bars": [
+          285,
+          286,
+          287,
+          288,
+          289,
+          290
+        ],
+        "source_object_ids": [
+          "5b411ae67cb74c7d",
+          "759ed5dbd478025d",
+          "185f13564f0e87ad",
+          "b41b69555dfe2b86",
+          "2258947857d200c3",
+          "4da38c4fdbf5815c"
+        ],
+        "fvg_ids": [
+          "8d5457dd4b2f6a00"
+        ],
+        "constituent_ids": []
+      },
+      "source_bars": [
+        285,
+        286,
+        287,
+        288,
+        289,
+        290
+      ],
+      "source_object_ids": [
+        "5b411ae67cb74c7d",
+        "759ed5dbd478025d",
+        "185f13564f0e87ad",
+        "b41b69555dfe2b86",
+        "2258947857d200c3",
+        "4da38c4fdbf5815c"
+      ]
+    },
+    {
+      "seq": 305,
+      "t_broker_ms": 1789497000000,
+      "object_id": "89943313e29c3fe6",
+      "kind": "OB",
+      "action": "CREATE",
+      "reason": null,
+      "fidelity": "BAR",
+      "tf": "M15",
+      "t_utc_ms": 1789497000000,
+      "criterion": null,
+      "confirmed_id": null,
+      "union_id": null,
+      "measurement": null,
+      "geometry": {
+        "schema_version": 1,
+        "symbol": "XAUUSD",
+        "tf": "M15",
+        "direction": "BULLISH",
+        "price_lo": 4290.313,
+        "price_hi": 4295.79,
+        "ce": 4293.0515,
+        "size": 5.476999999999862,
+        "atr_at_creation": 7.733317182863659,
+        "created_ms": 1789497000000,
+        "t_start_ms": 1789491600000,
+        "created_idx": 305,
+        "origin_idx": 302,
+        "leg_start_idx": 303,
+        "boundary": "body_to_wick",
+        "displacement_atr": 1.8045296306897851,
+        "source_bars": [
+          300,
+          301,
+          302,
+          303,
+          304,
+          305
+        ],
+        "source_object_ids": [
+          "c00d6136dcbd5a25",
+          "cc20ef0a6a9124b5",
+          "0c4bd0a0346bd459",
+          "4f28e34f82fb1296",
+          "63d6bdbc9c9e4b59",
+          "3d9e0a4e9ff25743"
+        ],
+        "fvg_ids": [
+          "476a080faeed3082"
+        ],
+        "constituent_ids": []
+      },
+      "source_bars": [
+        300,
+        301,
+        302,
+        303,
+        304,
+        305
+      ],
+      "source_object_ids": [
+        "c00d6136dcbd5a25",
+        "cc20ef0a6a9124b5",
+        "0c4bd0a0346bd459",
+        "4f28e34f82fb1296",
+        "63d6bdbc9c9e4b59",
+        "3d9e0a4e9ff25743"
+      ]
+    },
+    {
+      "seq": 309,
+      "t_broker_ms": 1789500600000,
+      "object_id": "940fe6ccf862b546",
+      "kind": "OB",
+      "action": "CREATE",
+      "reason": null,
+      "fidelity": "BAR",
+      "tf": "M15",
+      "t_utc_ms": 1789500600000,
+      "criterion": null,
+      "confirmed_id": null,
+      "union_id": null,
+      "measurement": null,
+      "geometry": {
+        "schema_version": 1,
+        "symbol": "XAUUSD",
+        "tf": "M15",
+        "direction": "BEARISH",
+        "price_lo": 4305.01,
+        "price_hi": 4310.51,
+        "ce": 4307.76,
+        "size": 5.5,
+        "atr_at_creation": 7.544580540914411,
+        "created_ms": 1789500600000,
+        "t_start_ms": 1789497900000,
+        "created_idx": 309,
+        "origin_idx": 307,
+        "leg_start_idx": 308,
+        "boundary": "body_to_wick",
+        "displacement_atr": 1.68823169570887,
+        "source_bars": [
+          307,
+          308,
+          309
+        ],
+        "source_object_ids": [
+          "f96bdd8e17512232",
+          "f8896584c5037ce1",
+          "d3a5aa5559eb4b08"
+        ],
+        "fvg_ids": [
+          "500b506a8abb2ac7"
+        ],
+        "constituent_ids": []
+      },
+      "source_bars": [
+        307,
+        308,
+        309
+      ],
+      "source_object_ids": [
+        "f96bdd8e17512232",
+        "f8896584c5037ce1",
+        "d3a5aa5559eb4b08"
+      ]
+    },
+    {
+      "seq": 312,
+      "t_broker_ms": 1789503300000,
+      "object_id": "89943313e29c3fe6",
+      "kind": "OB",
+      "action": "DISCARD",
+      "reason": "FAILED_CRITERIA",
+      "fidelity": "BAR",
+      "tf": "M15",
+      "t_utc_ms": 1789503300000,
+      "criterion": "STRUCTURE",
+      "confirmed_id": null,
+      "union_id": null,
+      "measurement": null,
+      "geometry": {
+        "schema_version": 1,
+        "symbol": "XAUUSD",
+        "tf": "M15",
+        "direction": "BULLISH",
+        "price_lo": 4290.313,
+        "price_hi": 4295.79,
+        "ce": 4293.0515,
+        "size": 5.476999999999862,
+        "atr_at_creation": 7.733317182863659,
+        "created_ms": 1789497000000,
+        "t_start_ms": 1789491600000,
+        "created_idx": 305,
+        "origin_idx": 302,
+        "leg_start_idx": 303,
+        "boundary": "body_to_wick",
+        "displacement_atr": 1.8045296306897851,
+        "source_bars": [
+          300,
+          301,
+          302,
+          303,
+          304,
+          305
+        ],
+        "source_object_ids": [
+          "c00d6136dcbd5a25",
+          "cc20ef0a6a9124b5",
+          "0c4bd0a0346bd459",
+          "4f28e34f82fb1296",
+          "63d6bdbc9c9e4b59",
+          "3d9e0a4e9ff25743"
+        ],
+        "fvg_ids": [
+          "476a080faeed3082"
+        ],
+        "constituent_ids": []
+      },
+      "source_bars": [
+        300,
+        301,
+        302,
+        303,
+        304,
+        305
+      ],
+      "source_object_ids": [
+        "c00d6136dcbd5a25",
+        "cc20ef0a6a9124b5",
+        "0c4bd0a0346bd459",
+        "4f28e34f82fb1296",
+        "63d6bdbc9c9e4b59",
+        "3d9e0a4e9ff25743"
+      ]
+    },
+    {
+      "seq": 317,
+      "t_broker_ms": 1789512300000,
+      "object_id": "940fe6ccf862b546",
+      "kind": "OB",
+      "action": "DISCARD",
+      "reason": "FAILED_CRITERIA",
+      "fidelity": "BAR",
+      "tf": "M15",
+      "t_utc_ms": 1789512300000,
+      "criterion": "STRUCTURE",
+      "confirmed_id": null,
+      "union_id": null,
+      "measurement": null,
+      "geometry": {
+        "schema_version": 1,
+        "symbol": "XAUUSD",
+        "tf": "M15",
+        "direction": "BEARISH",
+        "price_lo": 4305.01,
+        "price_hi": 4310.51,
+        "ce": 4307.76,
+        "size": 5.5,
+        "atr_at_creation": 7.544580540914411,
+        "created_ms": 1789500600000,
+        "t_start_ms": 1789497900000,
+        "created_idx": 309,
+        "origin_idx": 307,
+        "leg_start_idx": 308,
+        "boundary": "body_to_wick",
+        "displacement_atr": 1.68823169570887,
+        "source_bars": [
+          307,
+          308,
+          309
+        ],
+        "source_object_ids": [
+          "f96bdd8e17512232",
+          "f8896584c5037ce1",
+          "d3a5aa5559eb4b08"
+        ],
+        "fvg_ids": [
+          "500b506a8abb2ac7"
+        ],
+        "constituent_ids": []
+      },
+      "source_bars": [
+        307,
+        308,
+        309
+      ],
+      "source_object_ids": [
+        "f96bdd8e17512232",
+        "f8896584c5037ce1",
+        "d3a5aa5559eb4b08"
+      ]
+    },
+    {
+      "seq": 319,
+      "t_broker_ms": 1789514100000,
+      "object_id": "027e8fd34e47acdd",
+      "kind": "OB",
+      "action": "CREATE",
+      "reason": null,
+      "fidelity": "BAR",
+      "tf": "M15",
+      "t_utc_ms": 1789514100000,
+      "criterion": null,
+      "confirmed_id": null,
+      "union_id": null,
+      "measurement": null,
+      "geometry": {
+        "schema_version": 1,
+        "symbol": "XAUUSD",
+        "tf": "M15",
+        "direction": "BEARISH",
+        "price_lo": 4293.246,
+        "price_hi": 4298.996,
+        "ce": 4296.121,
+        "size": 5.75,
+        "atr_at_creation": 6.2170755125511805,
+        "created_ms": 1789514100000,
+        "t_start_ms": 1789510500000,
+        "created_idx": 319,
+        "origin_idx": 316,
+        "leg_start_idx": 317,
+        "boundary": "body_to_wick",
+        "displacement_atr": 2.274381253927857,
+        "source_bars": [
+          316,
+          317,
+          318,
+          319
+        ],
+        "source_object_ids": [
+          "b5d44ce9cc122f53",
+          "8ce4aa490b3d929d",
+          "cd7122a8159c20dd",
+          "2407b1114c92d77c"
+        ],
+        "fvg_ids": [
+          "d76dfcd751fe4f12"
+        ],
+        "constituent_ids": []
+      },
+      "source_bars": [
+        316,
+        317,
+        318,
+        319
+      ],
+      "source_object_ids": [
+        "b5d44ce9cc122f53",
+        "8ce4aa490b3d929d",
+        "cd7122a8159c20dd",
+        "2407b1114c92d77c"
+      ]
+    },
+    {
+      "seq": 326,
+      "t_broker_ms": 1789520400000,
+      "object_id": "027e8fd34e47acdd",
+      "kind": "OB",
+      "action": "DISCARD",
+      "reason": "FAILED_CRITERIA",
+      "fidelity": "BAR",
+      "tf": "M15",
+      "t_utc_ms": 1789520400000,
+      "criterion": "STRUCTURE",
+      "confirmed_id": null,
+      "union_id": null,
+      "measurement": null,
+      "geometry": {
+        "schema_version": 1,
+        "symbol": "XAUUSD",
+        "tf": "M15",
+        "direction": "BEARISH",
+        "price_lo": 4293.246,
+        "price_hi": 4298.996,
+        "ce": 4296.121,
+        "size": 5.75,
+        "atr_at_creation": 6.2170755125511805,
+        "created_ms": 1789514100000,
+        "t_start_ms": 1789510500000,
+        "created_idx": 319,
+        "origin_idx": 316,
+        "leg_start_idx": 317,
+        "boundary": "body_to_wick",
+        "displacement_atr": 2.274381253927857,
+        "source_bars": [
+          316,
+          317,
+          318,
+          319
+        ],
+        "source_object_ids": [
+          "b5d44ce9cc122f53",
+          "8ce4aa490b3d929d",
+          "cd7122a8159c20dd",
+          "2407b1114c92d77c"
+        ],
+        "fvg_ids": [
+          "d76dfcd751fe4f12"
+        ],
+        "constituent_ids": []
+      },
+      "source_bars": [
+        316,
+        317,
+        318,
+        319
+      ],
+      "source_object_ids": [
+        "b5d44ce9cc122f53",
+        "8ce4aa490b3d929d",
+        "cd7122a8159c20dd",
+        "2407b1114c92d77c"
+      ]
+    },
+    {
+      "seq": 333,
+      "t_broker_ms": 1789526700000,
+      "object_id": "f096a1f6c6c99af6",
+      "kind": "OB",
+      "action": "CREATE",
+      "reason": null,
+      "fidelity": "BAR",
+      "tf": "M15",
+      "t_utc_ms": 1789526700000,
+      "criterion": null,
+      "confirmed_id": null,
+      "union_id": null,
+      "measurement": null,
+      "geometry": {
+        "schema_version": 1,
+        "symbol": "XAUUSD",
+        "tf": "M15",
+        "direction": "BULLISH",
+        "price_lo": 4280.244,
+        "price_hi": 4290.53,
+        "ce": 4285.387,
+        "size": 10.286000000000058,
+        "atr_at_creation": 8.184405445130905,
+        "created_ms": 1789526700000,
+        "t_start_ms": 1789522200000,
+        "created_idx": 333,
+        "origin_idx": 330,
+        "leg_start_idx": 331,
+        "boundary": "body_to_wick",
+        "displacement_atr": 4.1812444690602835,
+        "source_bars": [
+          329,
+          330,
+          331,
+          332,
+          333
+        ],
+        "source_object_ids": [
+          "3c4b667728a15716",
+          "cb0f1970b1878b95",
+          "9cf300d8e1060fd5",
+          "efe66809c092f8ec",
+          "6d97a2aaaa9e91eb"
+        ],
+        "fvg_ids": [
+          "4295dc0962c65174"
+        ],
+        "constituent_ids": []
+      },
+      "source_bars": [
+        329,
+        330,
+        331,
+        332,
+        333
+      ],
+      "source_object_ids": [
+        "3c4b667728a15716",
+        "cb0f1970b1878b95",
+        "9cf300d8e1060fd5",
+        "efe66809c092f8ec",
+        "6d97a2aaaa9e91eb"
+      ]
+    },
+    {
+      "seq": 334,
+      "t_broker_ms": 1789527600000,
+      "object_id": "4eab798372169441",
+      "kind": "OB",
+      "action": "UPDATE",
+      "reason": null,
+      "fidelity": "BAR",
+      "tf": "M15",
+      "t_utc_ms": 1789527600000,
+      "criterion": "INVALID",
+      "confirmed_id": "4eab798372169441",
+      "union_id": null,
+      "measurement": null,
+      "geometry": {
+        "schema_version": 1,
+        "symbol": "XAUUSD",
+        "tf": "M15",
+        "direction": "BEARISH",
+        "price_lo": 4300.629,
+        "price_hi": 4319.54,
+        "ce": 4310.0845,
+        "size": 18.911000000000058,
+        "atr_at_creation": 10.007317063102661,
+        "created_ms": 1789378200000,
+        "t_start_ms": 1789096500000,
+        "created_idx": 178,
+        "origin_idx": 66,
+        "leg_start_idx": 67,
+        "boundary": "body_to_wick",
+        "displacement_atr": 3.635040218134361,
+        "source_bars": [
+          64,
+          65,
+          66,
+          67,
+          68,
+          69,
+          70,
+          71,
+          178
+        ],
+        "source_object_ids": [
+          "9f8df09cd6cdf7d5",
+          "42433ee3a0318a93",
+          "20c93663e0b8e031",
+          "4a0c848edde5b9c7",
+          "ab4c4c17cd119b46",
+          "d5164d3a38cf513e",
+          "43ad0d47d3ccc521",
+          "05ed5adec9790e89",
+          "c234cbf0d15ddcfa"
+        ],
+        "fvg_ids": [
+          "65ad87c693ecae0f"
+        ],
+        "constituent_ids": []
+      },
+      "source_bars": [
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        178
+      ],
+      "source_object_ids": [
+        "9f8df09cd6cdf7d5",
+        "42433ee3a0318a93",
+        "20c93663e0b8e031",
+        "4a0c848edde5b9c7",
+        "ab4c4c17cd119b46",
+        "d5164d3a38cf513e",
+        "43ad0d47d3ccc521",
+        "05ed5adec9790e89",
+        "c234cbf0d15ddcfa"
+      ]
+    },
+    {
+      "seq": 334,
+      "t_broker_ms": 1789527600000,
+      "object_id": "f096a1f6c6c99af6",
+      "kind": "OB",
+      "action": "PROMOTE",
+      "reason": null,
+      "fidelity": "BAR",
+      "tf": "M15",
+      "t_utc_ms": 1789527600000,
+      "criterion": null,
+      "confirmed_id": "65d53cda7e155887",
+      "union_id": null,
+      "measurement": null,
+      "geometry": {
+        "schema_version": 1,
+        "symbol": "XAUUSD",
+        "tf": "M15",
+        "direction": "BULLISH",
+        "price_lo": 4280.244,
+        "price_hi": 4290.53,
+        "ce": 4285.387,
+        "size": 10.286000000000058,
+        "atr_at_creation": 8.516805056192963,
+        "created_ms": 1789527600000,
+        "t_start_ms": 1789522200000,
+        "created_idx": 334,
+        "origin_idx": 330,
+        "leg_start_idx": 331,
+        "boundary": "body_to_wick",
+        "displacement_atr": 4.912522914866634,
+        "source_bars": [
+          329,
+          330,
+          331,
+          332,
+          333,
+          334
+        ],
+        "source_object_ids": [
+          "3c4b667728a15716",
+          "cb0f1970b1878b95",
+          "9cf300d8e1060fd5",
+          "efe66809c092f8ec",
+          "6d97a2aaaa9e91eb",
+          "38fe74fd7b02d044"
+        ],
+        "fvg_ids": [
+          "3cdd3af965356d37",
+          "4295dc0962c65174"
+        ],
+        "constituent_ids": []
+      },
+      "source_bars": [
+        329,
+        330,
+        331,
+        332,
+        333,
+        334
+      ],
+      "source_object_ids": [
+        "3c4b667728a15716",
+        "cb0f1970b1878b95",
+        "9cf300d8e1060fd5",
+        "efe66809c092f8ec",
+        "6d97a2aaaa9e91eb",
+        "38fe74fd7b02d044"
+      ]
+    },
+    {
+      "seq": 338,
+      "t_broker_ms": 1789531200000,
+      "object_id": "09fd4dbfbc9b5ac9",
+      "kind": "OB",
+      "action": "CREATE",
+      "reason": null,
+      "fidelity": "BAR",
+      "tf": "M15",
+      "t_utc_ms": 1789531200000,
+      "criterion": null,
+      "confirmed_id": null,
+      "union_id": null,
+      "measurement": null,
+      "geometry": {
+        "schema_version": 1,
+        "symbol": "XAUUSD",
+        "tf": "M15",
+        "direction": "BEARISH",
+        "price_lo": 4298.763,
+        "price_hi": 4338.784,
+        "ce": 4318.773499999999,
+        "size": 40.02099999999973,
+        "atr_at_creation": 8.74200167143705,
+        "created_ms": 1789531200000,
+        "t_start_ms": 1789525800000,
+        "created_idx": 338,
+        "origin_idx": 335,
+        "leg_start_idx": 336,
+        "boundary": "body_to_wick",
+        "displacement_atr": 2.1300613635022434,
+        "source_bars": [
+          333,
+          334,
+          335,
+          336,
+          337,
+          338
+        ],
+        "source_object_ids": [
+          "6d97a2aaaa9e91eb",
+          "38fe74fd7b02d044",
+          "1e53f34e0709e977",
+          "f80935cce1e12b0c",
+          "07a4adc796c3c245",
+          "e47e21c02b749cff"
+        ],
+        "fvg_ids": [
+          "aaa292181b3e3690"
+        ],
+        "constituent_ids": []
+      },
+      "source_bars": [
+        333,
+        334,
+        335,
+        336,
+        337,
+        338
+      ],
+      "source_object_ids": [
+        "6d97a2aaaa9e91eb",
+        "38fe74fd7b02d044",
+        "1e53f34e0709e977",
+        "f80935cce1e12b0c",
+        "07a4adc796c3c245",
+        "e47e21c02b749cff"
+      ]
+    },
+    {
+      "seq": 345,
+      "t_broker_ms": 1789537500000,
+      "object_id": "09fd4dbfbc9b5ac9",
+      "kind": "OB",
+      "action": "DISCARD",
+      "reason": "FAILED_CRITERIA",
+      "fidelity": "BAR",
+      "tf": "M15",
+      "t_utc_ms": 1789537500000,
+      "criterion": "STRUCTURE",
+      "confirmed_id": null,
+      "union_id": null,
+      "measurement": null,
+      "geometry": {
+        "schema_version": 1,
+        "symbol": "XAUUSD",
+        "tf": "M15",
+        "direction": "BEARISH",
+        "price_lo": 4298.763,
+        "price_hi": 4338.784,
+        "ce": 4318.773499999999,
+        "size": 40.02099999999973,
+        "atr_at_creation": 8.74200167143705,
+        "created_ms": 1789531200000,
+        "t_start_ms": 1789525800000,
+        "created_idx": 338,
+        "origin_idx": 335,
+        "leg_start_idx": 336,
+        "boundary": "body_to_wick",
+        "displacement_atr": 2.1300613635022434,
+        "source_bars": [
+          333,
+          334,
+          335,
+          336,
+          337,
+          338
+        ],
+        "source_object_ids": [
+          "6d97a2aaaa9e91eb",
+          "38fe74fd7b02d044",
+          "1e53f34e0709e977",
+          "f80935cce1e12b0c",
+          "07a4adc796c3c245",
+          "e47e21c02b749cff"
+        ],
+        "fvg_ids": [
+          "aaa292181b3e3690"
+        ],
+        "constituent_ids": []
+      },
+      "source_bars": [
+        333,
+        334,
+        335,
+        336,
+        337,
+        338
+      ],
+      "source_object_ids": [
+        "6d97a2aaaa9e91eb",
+        "38fe74fd7b02d044",
+        "1e53f34e0709e977",
+        "f80935cce1e12b0c",
+        "07a4adc796c3c245",
+        "e47e21c02b749cff"
+      ]
+    },
+    {
+      "seq": 351,
+      "t_broker_ms": 1789542900000,
+      "object_id": "d855e4d94da1d039",
+      "kind": "OB",
+      "action": "CREATE",
+      "reason": null,
+      "fidelity": "BAR",
+      "tf": "M15",
+      "t_utc_ms": 1789542900000,
+      "criterion": null,
+      "confirmed_id": null,
+      "union_id": null,
+      "measurement": null,
+      "geometry": {
+        "schema_version": 1,
+        "symbol": "XAUUSD",
+        "tf": "M15",
+        "direction": "BULLISH",
+        "price_lo": 4321.392,
+        "price_hi": 4332.815,
+        "ce": 4327.103499999999,
+        "size": 11.422999999999774,
+        "atr_at_creation": 7.139548929888727,
+        "created_ms": 1789542900000,
+        "t_start_ms": 1789537500000,
+        "created_idx": 351,
+        "origin_idx": 347,
+        "leg_start_idx": 348,
+        "boundary": "body_to_wick",
+        "displacement_atr": 1.694504809590052,
+        "source_bars": [
+          346,
+          347,
+          348,
+          349,
+          350,
+          351
+        ],
+        "source_object_ids": [
+          "dadfe36b5e28a323",
+          "94e3185281491215",
+          "be6b8ae0508af61a",
+          "e386ae21db4eddfe",
+          "59a22d01f4fd80bd",
+          "a66084a8aba21572"
+        ],
+        "fvg_ids": [
+          "6f50e1818cda575b"
+        ],
+        "constituent_ids": []
+      },
+      "source_bars": [
+        346,
+        347,
+        348,
+        349,
+        350,
+        351
+      ],
+      "source_object_ids": [
+        "dadfe36b5e28a323",
+        "94e3185281491215",
+        "be6b8ae0508af61a",
+        "e386ae21db4eddfe",
+        "59a22d01f4fd80bd",
+        "a66084a8aba21572"
+      ]
+    },
+    {
+      "seq": 351,
+      "t_broker_ms": 1789542900000,
+      "object_id": "d855e4d94da1d039",
+      "kind": "OB",
+      "action": "PROMOTE",
+      "reason": null,
+      "fidelity": "BAR",
+      "tf": "M15",
+      "t_utc_ms": 1789542900000,
+      "criterion": null,
+      "confirmed_id": "39b85663d7a57fb9",
+      "union_id": null,
+      "measurement": null,
+      "geometry": {
+        "schema_version": 1,
+        "symbol": "XAUUSD",
+        "tf": "M15",
+        "direction": "BULLISH",
+        "price_lo": 4321.392,
+        "price_hi": 4332.815,
+        "ce": 4327.103499999999,
+        "size": 11.422999999999774,
+        "atr_at_creation": 7.139548929888727,
+        "created_ms": 1789542900000,
+        "t_start_ms": 1789537500000,
+        "created_idx": 351,
+        "origin_idx": 347,
+        "leg_start_idx": 348,
+        "boundary": "body_to_wick",
+        "displacement_atr": 1.694504809590052,
+        "source_bars": [
+          346,
+          347,
+          348,
+          349,
+          350,
+          351
+        ],
+        "source_object_ids": [
+          "dadfe36b5e28a323",
+          "94e3185281491215",
+          "be6b8ae0508af61a",
+          "e386ae21db4eddfe",
+          "59a22d01f4fd80bd",
+          "a66084a8aba21572"
+        ],
+        "fvg_ids": [
+          "6f50e1818cda575b"
+        ],
+        "constituent_ids": []
+      },
+      "source_bars": [
+        346,
+        347,
+        348,
+        349,
+        350,
+        351
+      ],
+      "source_object_ids": [
+        "dadfe36b5e28a323",
+        "94e3185281491215",
+        "be6b8ae0508af61a",
+        "e386ae21db4eddfe",
+        "59a22d01f4fd80bd",
+        "a66084a8aba21572"
+      ]
+    },
+    {
+      "seq": 352,
+      "t_broker_ms": 1789543800000,
+      "object_id": "39b85663d7a57fb9",
+      "kind": "OB",
+      "action": "UPDATE",
+      "reason": null,
+      "fidelity": "BAR",
+      "tf": "M15",
+      "t_utc_ms": 1789543800000,
+      "criterion": "TOUCHED",
+      "confirmed_id": "39b85663d7a57fb9",
+      "union_id": null,
+      "measurement": null,
+      "geometry": {
+        "schema_version": 1,
+        "symbol": "XAUUSD",
+        "tf": "M15",
+        "direction": "BULLISH",
+        "price_lo": 4321.392,
+        "price_hi": 4332.815,
+        "ce": 4327.103499999999,
+        "size": 11.422999999999774,
+        "atr_at_creation": 7.139548929888727,
+        "created_ms": 1789542900000,
+        "t_start_ms": 1789537500000,
+        "created_idx": 351,
+        "origin_idx": 347,
+        "leg_start_idx": 348,
+        "boundary": "body_to_wick",
+        "displacement_atr": 1.694504809590052,
+        "source_bars": [
+          346,
+          347,
+          348,
+          349,
+          350,
+          351
+        ],
+        "source_object_ids": [
+          "dadfe36b5e28a323",
+          "94e3185281491215",
+          "be6b8ae0508af61a",
+          "e386ae21db4eddfe",
+          "59a22d01f4fd80bd",
+          "a66084a8aba21572"
+        ],
+        "fvg_ids": [
+          "6f50e1818cda575b"
+        ],
+        "constituent_ids": []
+      },
+      "source_bars": [
+        346,
+        347,
+        348,
+        349,
+        350,
+        351
+      ],
+      "source_object_ids": [
+        "dadfe36b5e28a323",
+        "94e3185281491215",
+        "be6b8ae0508af61a",
+        "e386ae21db4eddfe",
+        "59a22d01f4fd80bd",
+        "a66084a8aba21572"
+      ]
+    },
+    {
+      "seq": 355,
+      "t_broker_ms": 1789546500000,
+      "object_id": "39b85663d7a57fb9",
+      "kind": "OB",
+      "action": "UPDATE",
+      "reason": null,
+      "fidelity": "BAR",
+      "tf": "M15",
+      "t_utc_ms": 1789546500000,
+      "criterion": "MITIGATED",
+      "confirmed_id": "39b85663d7a57fb9",
+      "union_id": null,
+      "measurement": null,
+      "geometry": {
+        "schema_version": 1,
+        "symbol": "XAUUSD",
+        "tf": "M15",
+        "direction": "BULLISH",
+        "price_lo": 4321.392,
+        "price_hi": 4332.815,
+        "ce": 4327.103499999999,
+        "size": 11.422999999999774,
+        "atr_at_creation": 7.139548929888727,
+        "created_ms": 1789542900000,
+        "t_start_ms": 1789537500000,
+        "created_idx": 351,
+        "origin_idx": 347,
+        "leg_start_idx": 348,
+        "boundary": "body_to_wick",
+        "displacement_atr": 1.694504809590052,
+        "source_bars": [
+          346,
+          347,
+          348,
+          349,
+          350,
+          351
+        ],
+        "source_object_ids": [
+          "dadfe36b5e28a323",
+          "94e3185281491215",
+          "be6b8ae0508af61a",
+          "e386ae21db4eddfe",
+          "59a22d01f4fd80bd",
+          "a66084a8aba21572"
+        ],
+        "fvg_ids": [
+          "6f50e1818cda575b"
+        ],
+        "constituent_ids": []
+      },
+      "source_bars": [
+        346,
+        347,
+        348,
+        349,
+        350,
+        351
+      ],
+      "source_object_ids": [
+        "dadfe36b5e28a323",
+        "94e3185281491215",
+        "be6b8ae0508af61a",
+        "e386ae21db4eddfe",
+        "59a22d01f4fd80bd",
+        "a66084a8aba21572"
+      ]
+    },
+    {
+      "seq": 355,
+      "t_broker_ms": 1789546500000,
+      "object_id": "4a26110b71b81e2d",
+      "kind": "OB",
+      "action": "CREATE",
+      "reason": null,
+      "fidelity": "BAR",
+      "tf": "M15",
+      "t_utc_ms": 1789546500000,
+      "criterion": null,
+      "confirmed_id": null,
+      "union_id": null,
+      "measurement": null,
+      "geometry": {
+        "schema_version": 1,
+        "symbol": "XAUUSD",
+        "tf": "M15",
+        "direction": "BEARISH",
+        "price_lo": 4335.484,
+        "price_hi": 4339.375,
+        "ce": 4337.4295,
+        "size": 3.8909999999996217,
+        "atr_at_creation": 7.10395311814225,
+        "created_ms": 1789546500000,
+        "t_start_ms": 1789543800000,
+        "created_idx": 355,
+        "origin_idx": 353,
+        "leg_start_idx": 354,
+        "boundary": "body_to_wick",
+        "displacement_atr": 2.139090693207419,
+        "source_bars": [
+          353,
+          354,
+          355
+        ],
+        "source_object_ids": [
+          "b4c05ce1608940ac",
+          "754d59700c0cbcf3",
+          "cf9f0f75c564fe17"
+        ],
+        "fvg_ids": [
+          "5837c1b6f764de93"
+        ],
+        "constituent_ids": []
+      },
+      "source_bars": [
+        353,
+        354,
+        355
+      ],
+      "source_object_ids": [
+        "b4c05ce1608940ac",
+        "754d59700c0cbcf3",
+        "cf9f0f75c564fe17"
+      ]
+    },
+    {
+      "seq": 363,
+      "t_broker_ms": 1789553700000,
+      "object_id": "0c8d06ba009e2ce3",
+      "kind": "OB",
+      "action": "UPDATE",
+      "reason": null,
+      "fidelity": "BAR",
+      "tf": "M15",
+      "t_utc_ms": 1789553700000,
+      "criterion": "INVALID",
+      "confirmed_id": "0c8d06ba009e2ce3",
+      "union_id": null,
+      "measurement": null,
+      "geometry": {
+        "schema_version": 1,
+        "symbol": "XAUUSD",
+        "tf": "M15",
+        "direction": "BEARISH",
+        "price_lo": 4329.448,
+        "price_hi": 4338.415,
+        "ce": 4333.931500000001,
+        "size": 8.966999999999643,
+        "atr_at_creation": 10.075058586839118,
+        "created_ms": 1789359300000,
+        "t_start_ms": 1789347600000,
+        "created_idx": 157,
+        "origin_idx": 145,
+        "leg_start_idx": 146,
+        "boundary": "body_to_wick",
+        "displacement_atr": 2.892092363419436,
+        "source_bars": [
+          145,
+          146,
+          147,
+          148,
+          157
+        ],
+        "source_object_ids": [
+          "d794e0672fe923b5",
+          "2f8c16cb4974920d",
+          "8aa95dcbea84762a",
+          "80e3f78a11e8723e",
+          "5b2894c795b78fcc"
+        ],
+        "fvg_ids": [
+          "852b581199d78d78"
+        ],
+        "constituent_ids": []
+      },
+      "source_bars": [
+        145,
+        146,
+        147,
+        148,
+        157
+      ],
+      "source_object_ids": [
+        "d794e0672fe923b5",
+        "2f8c16cb4974920d",
+        "8aa95dcbea84762a",
+        "80e3f78a11e8723e",
+        "5b2894c795b78fcc"
+      ]
+    },
+    {
+      "seq": 363,
+      "t_broker_ms": 1789553700000,
+      "object_id": "4a26110b71b81e2d",
+      "kind": "OB",
+      "action": "DISCARD",
+      "reason": "INVALIDATED",
+      "fidelity": "BAR",
+      "tf": "M15",
+      "t_utc_ms": 1789553700000,
+      "criterion": "STRUCTURE",
+      "confirmed_id": null,
+      "union_id": null,
+      "measurement": null,
+      "geometry": {
+        "schema_version": 1,
+        "symbol": "XAUUSD",
+        "tf": "M15",
+        "direction": "BEARISH",
+        "price_lo": 4335.484,
+        "price_hi": 4339.375,
+        "ce": 4337.4295,
+        "size": 3.8909999999996217,
+        "atr_at_creation": 7.10395311814225,
+        "created_ms": 1789546500000,
+        "t_start_ms": 1789543800000,
+        "created_idx": 355,
+        "origin_idx": 353,
+        "leg_start_idx": 354,
+        "boundary": "body_to_wick",
+        "displacement_atr": 2.139090693207419,
+        "source_bars": [
+          353,
+          354,
+          355
+        ],
+        "source_object_ids": [
+          "b4c05ce1608940ac",
+          "754d59700c0cbcf3",
+          "cf9f0f75c564fe17"
+        ],
+        "fvg_ids": [
+          "5837c1b6f764de93"
+        ],
+        "constituent_ids": []
+      },
+      "source_bars": [
+        353,
+        354,
+        355
+      ],
+      "source_object_ids": [
+        "b4c05ce1608940ac",
+        "754d59700c0cbcf3",
+        "cf9f0f75c564fe17"
+      ]
+    },
+    {
+      "seq": 365,
+      "t_broker_ms": 1789555500000,
+      "object_id": "de86411c4c0c2725",
+      "kind": "OB",
+      "action": "UPDATE",
+      "reason": null,
+      "fidelity": "BAR",
+      "tf": "M15",
+      "t_utc_ms": 1789555500000,
+      "criterion": "TOUCHED",
+      "confirmed_id": "de86411c4c0c2725",
+      "union_id": null,
+      "measurement": null,
+      "geometry": {
+        "schema_version": 1,
+        "symbol": "XAUUSD",
+        "tf": "M15",
+        "direction": "BEARISH",
+        "price_lo": 4349.477,
+        "price_hi": 4354.136,
+        "ce": 4351.806500000001,
+        "size": 4.65900000000056,
+        "atr_at_creation": 8.535447412720432,
+        "created_ms": 1789361100000,
+        "t_start_ms": 1789352100000,
+        "created_idx": 159,
+        "origin_idx": 150,
+        "leg_start_idx": 151,
+        "boundary": "body_to_wick",
+        "displacement_atr": 3.7812897718636282,
+        "source_bars": [
+          150,
+          151,
+          152,
+          153,
+          154,
+          155,
+          156,
+          157,
+          158,
+          159
+        ],
+        "source_object_ids": [
+          "6b36dd45ce2ac7fd",
+          "62a7340572dc150d",
+          "aff1ccb24b27cb85",
+          "88390061aa280fe4",
+          "7f5ac940b7a25a33",
+          "fa98d4d8ebe101c5",
+          "54202974cbc9bf0b",
+          "5b2894c795b78fcc",
+          "38b525291adfadc6",
+          "aa0c9b9b684426e9"
+        ],
+        "fvg_ids": [
+          "77ff06e40ea959d8"
+        ],
+        "constituent_ids": []
+      },
+      "source_bars": [
+        150,
+        151,
+        152,
+        153,
+        154,
+        155,
+        156,
+        157,
+        158,
+        159
+      ],
+      "source_object_ids": [
+        "6b36dd45ce2ac7fd",
+        "62a7340572dc150d",
+        "aff1ccb24b27cb85",
+        "88390061aa280fe4",
+        "7f5ac940b7a25a33",
+        "fa98d4d8ebe101c5",
+        "54202974cbc9bf0b",
+        "5b2894c795b78fcc",
+        "38b525291adfadc6",
+        "aa0c9b9b684426e9"
+      ]
+    },
+    {
+      "seq": 367,
+      "t_broker_ms": 1789557300000,
+      "object_id": "de86411c4c0c2725",
+      "kind": "OB",
+      "action": "UPDATE",
+      "reason": null,
+      "fidelity": "BAR",
+      "tf": "M15",
+      "t_utc_ms": 1789557300000,
+      "criterion": "MITIGATED",
+      "confirmed_id": "de86411c4c0c2725",
+      "union_id": null,
+      "measurement": null,
+      "geometry": {
+        "schema_version": 1,
+        "symbol": "XAUUSD",
+        "tf": "M15",
+        "direction": "BEARISH",
+        "price_lo": 4349.477,
+        "price_hi": 4354.136,
+        "ce": 4351.806500000001,
+        "size": 4.65900000000056,
+        "atr_at_creation": 8.535447412720432,
+        "created_ms": 1789361100000,
+        "t_start_ms": 1789352100000,
+        "created_idx": 159,
+        "origin_idx": 150,
+        "leg_start_idx": 151,
+        "boundary": "body_to_wick",
+        "displacement_atr": 3.7812897718636282,
+        "source_bars": [
+          150,
+          151,
+          152,
+          153,
+          154,
+          155,
+          156,
+          157,
+          158,
+          159
+        ],
+        "source_object_ids": [
+          "6b36dd45ce2ac7fd",
+          "62a7340572dc150d",
+          "aff1ccb24b27cb85",
+          "88390061aa280fe4",
+          "7f5ac940b7a25a33",
+          "fa98d4d8ebe101c5",
+          "54202974cbc9bf0b",
+          "5b2894c795b78fcc",
+          "38b525291adfadc6",
+          "aa0c9b9b684426e9"
+        ],
+        "fvg_ids": [
+          "77ff06e40ea959d8"
+        ],
+        "constituent_ids": []
+      },
+      "source_bars": [
+        150,
+        151,
+        152,
+        153,
+        154,
+        155,
+        156,
+        157,
+        158,
+        159
+      ],
+      "source_object_ids": [
+        "6b36dd45ce2ac7fd",
+        "62a7340572dc150d",
+        "aff1ccb24b27cb85",
+        "88390061aa280fe4",
+        "7f5ac940b7a25a33",
+        "fa98d4d8ebe101c5",
+        "54202974cbc9bf0b",
+        "5b2894c795b78fcc",
+        "38b525291adfadc6",
+        "aa0c9b9b684426e9"
+      ]
+    },
+    {
+      "seq": 375,
+      "t_broker_ms": 1789564500000,
+      "object_id": "de86411c4c0c2725",
+      "kind": "OB",
+      "action": "UPDATE",
+      "reason": null,
+      "fidelity": "BAR",
+      "tf": "M15",
+      "t_utc_ms": 1789564500000,
+      "criterion": "INVALID",
+      "confirmed_id": "e0bc6f2a512c49a0",
+      "union_id": null,
+      "measurement": null,
+      "geometry": {
+        "schema_version": 1,
+        "symbol": "XAUUSD",
+        "tf": "M15",
+        "direction": "BEARISH",
+        "price_lo": 4349.477,
+        "price_hi": 4354.136,
+        "ce": 4351.806500000001,
+        "size": 4.65900000000056,
+        "atr_at_creation": 8.535447412720432,
+        "created_ms": 1789361100000,
+        "t_start_ms": 1789352100000,
+        "created_idx": 159,
+        "origin_idx": 150,
+        "leg_start_idx": 151,
+        "boundary": "body_to_wick",
+        "displacement_atr": 3.7812897718636282,
+        "source_bars": [
+          150,
+          151,
+          152,
+          153,
+          154,
+          155,
+          156,
+          157,
+          158,
+          159
+        ],
+        "source_object_ids": [
+          "6b36dd45ce2ac7fd",
+          "62a7340572dc150d",
+          "aff1ccb24b27cb85",
+          "88390061aa280fe4",
+          "7f5ac940b7a25a33",
+          "fa98d4d8ebe101c5",
+          "54202974cbc9bf0b",
+          "5b2894c795b78fcc",
+          "38b525291adfadc6",
+          "aa0c9b9b684426e9"
+        ],
+        "fvg_ids": [
+          "77ff06e40ea959d8"
+        ],
+        "constituent_ids": []
+      },
+      "source_bars": [
+        150,
+        151,
+        152,
+        153,
+        154,
+        155,
+        156,
+        157,
+        158,
+        159
+      ],
+      "source_object_ids": [
+        "6b36dd45ce2ac7fd",
+        "62a7340572dc150d",
+        "aff1ccb24b27cb85",
+        "88390061aa280fe4",
+        "7f5ac940b7a25a33",
+        "fa98d4d8ebe101c5",
+        "54202974cbc9bf0b",
+        "5b2894c795b78fcc",
+        "38b525291adfadc6",
+        "aa0c9b9b684426e9"
+      ]
+    },
+    {
+      "seq": 377,
+      "t_broker_ms": 1789566300000,
+      "object_id": "e0bc6f2a512c49a0",
+      "kind": "OB",
+      "action": "UPDATE",
+      "reason": null,
+      "fidelity": "BAR",
+      "tf": "M15",
+      "t_utc_ms": 1789566300000,
+      "criterion": "INVALID",
+      "confirmed_id": "e0bc6f2a512c49a0",
+      "union_id": null,
+      "measurement": null,
+      "geometry": {
+        "schema_version": 1,
+        "symbol": "XAUUSD",
+        "tf": "M15",
+        "direction": "BULLISH",
+        "price_lo": 4349.477,
+        "price_hi": 4354.136,
+        "ce": 4351.806500000001,
+        "size": 4.65900000000056,
+        "atr_at_creation": 8.535447412720432,
+        "created_ms": 1789564500000,
+        "t_start_ms": 1789352100000,
+        "created_idx": 375,
+        "origin_idx": 150,
+        "leg_start_idx": 151,
+        "boundary": "body_to_wick",
+        "displacement_atr": 3.7812897718636282,
+        "source_bars": [
+          150,
+          151,
+          152,
+          153,
+          154,
+          155,
+          156,
+          157,
+          158,
+          159,
+          375
+        ],
+        "source_object_ids": [
+          "6b36dd45ce2ac7fd",
+          "62a7340572dc150d",
+          "aff1ccb24b27cb85",
+          "88390061aa280fe4",
+          "7f5ac940b7a25a33",
+          "fa98d4d8ebe101c5",
+          "54202974cbc9bf0b",
+          "5b2894c795b78fcc",
+          "38b525291adfadc6",
+          "aa0c9b9b684426e9",
+          "a60dbec8bd78c3f9"
+        ],
+        "fvg_ids": [
+          "77ff06e40ea959d8"
+        ],
+        "constituent_ids": []
+      },
+      "source_bars": [
+        150,
+        151,
+        152,
+        153,
+        154,
+        155,
+        156,
+        157,
+        158,
+        159,
+        375
+      ],
+      "source_object_ids": [
+        "6b36dd45ce2ac7fd",
+        "62a7340572dc150d",
+        "aff1ccb24b27cb85",
+        "88390061aa280fe4",
+        "7f5ac940b7a25a33",
+        "fa98d4d8ebe101c5",
+        "54202974cbc9bf0b",
+        "5b2894c795b78fcc",
+        "38b525291adfadc6",
+        "aa0c9b9b684426e9",
+        "a60dbec8bd78c3f9"
+      ]
+    },
+    {
+      "seq": 378,
+      "t_broker_ms": 1789567200000,
+      "object_id": "371b7f8a89902ad6",
+      "kind": "OB",
+      "action": "CREATE",
+      "reason": null,
+      "fidelity": "BAR",
+      "tf": "M15",
+      "t_utc_ms": 1789567200000,
+      "criterion": null,
+      "confirmed_id": null,
+      "union_id": null,
+      "measurement": null,
+      "geometry": {
+        "schema_version": 1,
+        "symbol": "XAUUSD",
+        "tf": "M15",
+        "direction": "BEARISH",
+        "price_lo": 4339.833,
+        "price_hi": 4357.423,
+        "ce": 4348.628,
+        "size": 17.590000000000146,
+        "atr_at_creation": 8.781024432962896,
+        "created_ms": 1789567200000,
+        "t_start_ms": 1789561800000,
+        "created_idx": 378,
+        "origin_idx": 375,
+        "leg_start_idx": 376,
+        "boundary": "body_to_wick",
+        "displacement_atr": 2.903875304603374,
+        "source_bars": [
+          373,
+          374,
+          375,
+          376,
+          377,
+          378
+        ],
+        "source_object_ids": [
+          "1f0426e4026886f9",
+          "61e19c20973b8018",
+          "a60dbec8bd78c3f9",
+          "a85dd2bac8a64b43",
+          "31e02e47d120cd4c",
+          "469c43db27e05cb3"
+        ],
+        "fvg_ids": [
+          "8ee9eb1214110a49"
+        ],
+        "constituent_ids": []
+      },
+      "source_bars": [
+        373,
+        374,
+        375,
+        376,
+        377,
+        378
+      ],
+      "source_object_ids": [
+        "1f0426e4026886f9",
+        "61e19c20973b8018",
+        "a60dbec8bd78c3f9",
+        "a85dd2bac8a64b43",
+        "31e02e47d120cd4c",
+        "469c43db27e05cb3"
+      ]
+    },
+    {
+      "seq": 382,
+      "t_broker_ms": 1789570800000,
+      "object_id": "e2facda324f1a302",
+      "kind": "OB",
+      "action": "CREATE",
+      "reason": null,
+      "fidelity": "BAR",
+      "tf": "M15",
+      "t_utc_ms": 1789570800000,
+      "criterion": null,
+      "confirmed_id": null,
+      "union_id": null,
+      "measurement": null,
+      "geometry": {
+        "schema_version": 1,
+        "symbol": "XAUUSD",
+        "tf": "M15",
+        "direction": "BULLISH",
+        "price_lo": 4330.701,
+        "price_hi": 4340.33,
+        "ce": 4335.5154999999995,
+        "size": 9.628999999999905,
+        "atr_at_creation": 9.672163417061963,
+        "created_ms": 1789570800000,
+        "t_start_ms": 1789568100000,
+        "created_idx": 382,
+        "origin_idx": 380,
+        "leg_start_idx": 381,
+        "boundary": "body_to_wick",
+        "displacement_atr": 2.2510992692278093,
+        "source_bars": [
+          380,
+          381,
+          382
+        ],
+        "source_object_ids": [
+          "efdcd5607eeb4547",
+          "86c50ec815d6901e",
+          "d1bc33053bfb7fc2"
+        ],
+        "fvg_ids": [
+          "0120ffd8a42c3f60"
+        ],
+        "constituent_ids": []
+      },
+      "source_bars": [
+        380,
+        381,
+        382
+      ],
+      "source_object_ids": [
+        "efdcd5607eeb4547",
+        "86c50ec815d6901e",
+        "d1bc33053bfb7fc2"
+      ]
+    },
+    {
+      "seq": 385,
+      "t_broker_ms": 1789573500000,
+      "object_id": "371b7f8a89902ad6",
+      "kind": "OB",
+      "action": "DISCARD",
+      "reason": "FAILED_CRITERIA",
+      "fidelity": "BAR",
+      "tf": "M15",
+      "t_utc_ms": 1789573500000,
+      "criterion": "STRUCTURE",
+      "confirmed_id": null,
+      "union_id": null,
+      "measurement": null,
+      "geometry": {
+        "schema_version": 1,
+        "symbol": "XAUUSD",
+        "tf": "M15",
+        "direction": "BEARISH",
+        "price_lo": 4339.833,
+        "price_hi": 4357.423,
+        "ce": 4348.628,
+        "size": 17.590000000000146,
+        "atr_at_creation": 8.781024432962896,
+        "created_ms": 1789567200000,
+        "t_start_ms": 1789561800000,
+        "created_idx": 378,
+        "origin_idx": 375,
+        "leg_start_idx": 376,
+        "boundary": "body_to_wick",
+        "displacement_atr": 2.903875304603374,
+        "source_bars": [
+          373,
+          374,
+          375,
+          376,
+          377,
+          378
+        ],
+        "source_object_ids": [
+          "1f0426e4026886f9",
+          "61e19c20973b8018",
+          "a60dbec8bd78c3f9",
+          "a85dd2bac8a64b43",
+          "31e02e47d120cd4c",
+          "469c43db27e05cb3"
+        ],
+        "fvg_ids": [
+          "8ee9eb1214110a49"
+        ],
+        "constituent_ids": []
+      },
+      "source_bars": [
+        373,
+        374,
+        375,
+        376,
+        377,
+        378
+      ],
+      "source_object_ids": [
+        "1f0426e4026886f9",
+        "61e19c20973b8018",
+        "a60dbec8bd78c3f9",
+        "a85dd2bac8a64b43",
+        "31e02e47d120cd4c",
+        "469c43db27e05cb3"
+      ]
+    },
+    {
+      "seq": 390,
+      "t_broker_ms": 1789578000000,
+      "object_id": "e2facda324f1a302",
+      "kind": "OB",
+      "action": "DISCARD",
+      "reason": "FAILED_CRITERIA",
+      "fidelity": "BAR",
+      "tf": "M15",
+      "t_utc_ms": 1789578000000,
+      "criterion": "STRUCTURE",
+      "confirmed_id": null,
+      "union_id": null,
+      "measurement": null,
+      "geometry": {
+        "schema_version": 1,
+        "symbol": "XAUUSD",
+        "tf": "M15",
+        "direction": "BULLISH",
+        "price_lo": 4330.701,
+        "price_hi": 4340.33,
+        "ce": 4335.5154999999995,
+        "size": 9.628999999999905,
+        "atr_at_creation": 9.672163417061963,
+        "created_ms": 1789570800000,
+        "t_start_ms": 1789568100000,
+        "created_idx": 382,
+        "origin_idx": 380,
+        "leg_start_idx": 381,
+        "boundary": "body_to_wick",
+        "displacement_atr": 2.2510992692278093,
+        "source_bars": [
+          380,
+          381,
+          382
+        ],
+        "source_object_ids": [
+          "efdcd5607eeb4547",
+          "86c50ec815d6901e",
+          "d1bc33053bfb7fc2"
+        ],
+        "fvg_ids": [
+          "0120ffd8a42c3f60"
+        ],
+        "constituent_ids": []
+      },
+      "source_bars": [
+        380,
+        381,
+        382
+      ],
+      "source_object_ids": [
+        "efdcd5607eeb4547",
+        "86c50ec815d6901e",
+        "d1bc33053bfb7fc2"
+      ]
+    },
+    {
+      "seq": 395,
+      "t_broker_ms": 1789582500000,
+      "object_id": "39b85663d7a57fb9",
+      "kind": "OB",
+      "action": "UPDATE",
+      "reason": null,
+      "fidelity": "BAR",
+      "tf": "M15",
+      "t_utc_ms": 1789582500000,
+      "criterion": "INVALID",
+      "confirmed_id": "8931adaca7f8d58f",
+      "union_id": null,
+      "measurement": null,
+      "geometry": {
+        "schema_version": 1,
+        "symbol": "XAUUSD",
+        "tf": "M15",
+        "direction": "BULLISH",
+        "price_lo": 4321.392,
+        "price_hi": 4332.815,
+        "ce": 4327.103499999999,
+        "size": 11.422999999999774,
+        "atr_at_creation": 7.139548929888727,
+        "created_ms": 1789542900000,
+        "t_start_ms": 1789537500000,
+        "created_idx": 351,
+        "origin_idx": 347,
+        "leg_start_idx": 348,
+        "boundary": "body_to_wick",
+        "displacement_atr": 1.694504809590052,
+        "source_bars": [
+          346,
+          347,
+          348,
+          349,
+          350,
+          351
+        ],
+        "source_object_ids": [
+          "dadfe36b5e28a323",
+          "94e3185281491215",
+          "be6b8ae0508af61a",
+          "e386ae21db4eddfe",
+          "59a22d01f4fd80bd",
+          "a66084a8aba21572"
+        ],
+        "fvg_ids": [
+          "6f50e1818cda575b"
+        ],
+        "constituent_ids": []
+      },
+      "source_bars": [
+        346,
+        347,
+        348,
+        349,
+        350,
+        351
+      ],
+      "source_object_ids": [
+        "dadfe36b5e28a323",
+        "94e3185281491215",
+        "be6b8ae0508af61a",
+        "e386ae21db4eddfe",
+        "59a22d01f4fd80bd",
+        "a66084a8aba21572"
+      ]
+    },
+    {
+      "seq": 396,
+      "t_broker_ms": 1789583400000,
+      "object_id": "efcf8576686b7fd2",
+      "kind": "OB",
+      "action": "CREATE",
+      "reason": null,
+      "fidelity": "BAR",
+      "tf": "M15",
+      "t_utc_ms": 1789583400000,
+      "criterion": null,
+      "confirmed_id": null,
+      "union_id": null,
+      "measurement": null,
+      "geometry": {
+        "schema_version": 1,
+        "symbol": "XAUUSD",
+        "tf": "M15",
+        "direction": "BEARISH",
+        "price_lo": 4344.323,
+        "price_hi": 4365.501,
+        "ce": 4354.912,
+        "size": 21.177999999999884,
+        "atr_at_creation": 13.316408441106006,
+        "created_ms": 1789583400000,
+        "t_start_ms": 1789580700000,
+        "created_idx": 396,
+        "origin_idx": 394,
+        "leg_start_idx": 395,
+        "boundary": "body_to_wick",
+        "displacement_atr": 4.674533698429389,
+        "source_bars": [
+          394,
+          395,
+          396
+        ],
+        "source_object_ids": [
+          "5ba359415a806082",
+          "363a32e079070d38",
+          "4f02c358018783b5"
+        ],
+        "fvg_ids": [
+          "50d749eea360621a"
+        ],
+        "constituent_ids": []
+      },
+      "source_bars": [
+        394,
+        395,
+        396
+      ],
+      "source_object_ids": [
+        "5ba359415a806082",
+        "363a32e079070d38",
+        "4f02c358018783b5"
+      ]
+    },
+    {
+      "seq": 397,
+      "t_broker_ms": 1789584300000,
+      "object_id": "65d53cda7e155887",
+      "kind": "OB",
+      "action": "UPDATE",
+      "reason": null,
+      "fidelity": "BAR",
+      "tf": "M15",
+      "t_utc_ms": 1789584300000,
+      "criterion": "MITIGATED",
+      "confirmed_id": "65d53cda7e155887",
+      "union_id": null,
+      "measurement": null,
+      "geometry": {
+        "schema_version": 1,
+        "symbol": "XAUUSD",
+        "tf": "M15",
+        "direction": "BULLISH",
+        "price_lo": 4280.244,
+        "price_hi": 4290.53,
+        "ce": 4285.387,
+        "size": 10.286000000000058,
+        "atr_at_creation": 8.516805056192963,
+        "created_ms": 1789527600000,
+        "t_start_ms": 1789522200000,
+        "created_idx": 334,
+        "origin_idx": 330,
+        "leg_start_idx": 331,
+        "boundary": "body_to_wick",
+        "displacement_atr": 4.912522914866634,
+        "source_bars": [
+          329,
+          330,
+          331,
+          332,
+          333,
+          334
+        ],
+        "source_object_ids": [
+          "3c4b667728a15716",
+          "cb0f1970b1878b95",
+          "9cf300d8e1060fd5",
+          "efe66809c092f8ec",
+          "6d97a2aaaa9e91eb",
+          "38fe74fd7b02d044"
+        ],
+        "fvg_ids": [
+          "3cdd3af965356d37",
+          "4295dc0962c65174"
+        ],
+        "constituent_ids": []
+      },
+      "source_bars": [
+        329,
+        330,
+        331,
+        332,
+        333,
+        334
+      ],
+      "source_object_ids": [
+        "3c4b667728a15716",
+        "cb0f1970b1878b95",
+        "9cf300d8e1060fd5",
+        "efe66809c092f8ec",
+        "6d97a2aaaa9e91eb",
+        "38fe74fd7b02d044"
+      ]
+    },
+    {
+      "seq": 398,
+      "t_broker_ms": 1789585200000,
+      "object_id": "8abbcb5d69292da2",
+      "kind": "OB",
+      "action": "UPDATE",
+      "reason": null,
+      "fidelity": "BAR",
+      "tf": "M15",
+      "t_utc_ms": 1789585200000,
+      "criterion": "INVALID",
+      "confirmed_id": "c4aee0d909773af8",
+      "union_id": null,
+      "measurement": null,
+      "geometry": {
+        "schema_version": 1,
+        "symbol": "XAUUSD",
+        "tf": "M15",
+        "direction": "BULLISH",
+        "price_lo": 4271.409,
+        "price_hi": 4284.492,
+        "ce": 4277.9505,
+        "size": 13.083000000000538,
+        "atr_at_creation": 7.94661086189892,
+        "created_ms": 1789477200000,
+        "t_start_ms": 1789473600000,
+        "created_idx": 283,
+        "origin_idx": 281,
+        "leg_start_idx": 282,
+        "boundary": "body_to_wick",
+        "displacement_atr": 2.6927202516730357,
+        "source_bars": [
+          280,
+          281,
+          282,
+          283
+        ],
+        "source_object_ids": [
+          "ac3ab3d69beb1df3",
+          "93802a3df6dccc73",
+          "e1a4f610430bc28f",
+          "0846106a9b9bf015"
+        ],
+        "fvg_ids": [
+          "7de0b08dee57ee76"
+        ],
+        "constituent_ids": []
+      },
+      "source_bars": [
+        280,
+        281,
+        282,
+        283
+      ],
+      "source_object_ids": [
+        "ac3ab3d69beb1df3",
+        "93802a3df6dccc73",
+        "e1a4f610430bc28f",
+        "0846106a9b9bf015"
+      ]
+    },
+    {
+      "seq": 398,
+      "t_broker_ms": 1789585200000,
+      "object_id": "65d53cda7e155887",
+      "kind": "OB",
+      "action": "UPDATE",
+      "reason": null,
+      "fidelity": "BAR",
+      "tf": "M15",
+      "t_utc_ms": 1789585200000,
+      "criterion": "INVALID",
+      "confirmed_id": "f4681c1997ff4239",
+      "union_id": null,
+      "measurement": null,
+      "geometry": {
+        "schema_version": 1,
+        "symbol": "XAUUSD",
+        "tf": "M15",
+        "direction": "BULLISH",
+        "price_lo": 4280.244,
+        "price_hi": 4290.53,
+        "ce": 4285.387,
+        "size": 10.286000000000058,
+        "atr_at_creation": 8.516805056192963,
+        "created_ms": 1789527600000,
+        "t_start_ms": 1789522200000,
+        "created_idx": 334,
+        "origin_idx": 330,
+        "leg_start_idx": 331,
+        "boundary": "body_to_wick",
+        "displacement_atr": 4.912522914866634,
+        "source_bars": [
+          329,
+          330,
+          331,
+          332,
+          333,
+          334
+        ],
+        "source_object_ids": [
+          "3c4b667728a15716",
+          "cb0f1970b1878b95",
+          "9cf300d8e1060fd5",
+          "efe66809c092f8ec",
+          "6d97a2aaaa9e91eb",
+          "38fe74fd7b02d044"
+        ],
+        "fvg_ids": [
+          "3cdd3af965356d37",
+          "4295dc0962c65174"
+        ],
+        "constituent_ids": []
+      },
+      "source_bars": [
+        329,
+        330,
+        331,
+        332,
+        333,
+        334
+      ],
+      "source_object_ids": [
+        "3c4b667728a15716",
+        "cb0f1970b1878b95",
+        "9cf300d8e1060fd5",
+        "efe66809c092f8ec",
+        "6d97a2aaaa9e91eb",
+        "38fe74fd7b02d044"
+      ]
+    },
+    {
+      "seq": 402,
+      "t_broker_ms": 1789588800000,
+      "object_id": "a39ddcb6aa619b95",
+      "kind": "OB",
+      "action": "CREATE",
+      "reason": null,
+      "fidelity": "BAR",
+      "tf": "M15",
+      "t_utc_ms": 1789588800000,
+      "criterion": null,
+      "confirmed_id": null,
+      "union_id": null,
+      "measurement": null,
+      "geometry": {
+        "schema_version": 1,
+        "symbol": "XAUUSD",
+        "tf": "M15",
+        "direction": "BULLISH",
+        "price_lo": 4235.035,
+        "price_hi": 4322.447,
+        "ce": 4278.741,
+        "size": 87.41200000000026,
+        "atr_at_creation": 20.532298277769936,
+        "created_ms": 1789588800000,
+        "t_start_ms": 1789583400000,
+        "created_idx": 402,
+        "origin_idx": 399,
+        "leg_start_idx": 400,
+        "boundary": "body_to_wick",
+        "displacement_atr": 1.8255140994411359,
+        "source_bars": [
+          397,
+          398,
+          399,
+          400,
+          401,
+          402
+        ],
+        "source_object_ids": [
+          "c2c25b8e97e82602",
+          "13d3b4a761b26f39",
+          "033e61b0e93063e6",
+          "436e8b0edea65a95",
+          "84544eb04b5163c0",
+          "c39492c16f0fac64"
+        ],
+        "fvg_ids": [
+          "905c77e72d169afe"
+        ],
+        "constituent_ids": []
+      },
+      "source_bars": [
+        397,
+        398,
+        399,
+        400,
+        401,
+        402
+      ],
+      "source_object_ids": [
+        "c2c25b8e97e82602",
+        "13d3b4a761b26f39",
+        "033e61b0e93063e6",
+        "436e8b0edea65a95",
+        "84544eb04b5163c0",
+        "c39492c16f0fac64"
+      ]
+    },
+    {
+      "seq": 404,
+      "t_broker_ms": 1789590600000,
+      "object_id": "efcf8576686b7fd2",
+      "kind": "OB",
+      "action": "DISCARD",
+      "reason": "FAILED_CRITERIA",
+      "fidelity": "BAR",
+      "tf": "M15",
+      "t_utc_ms": 1789590600000,
+      "criterion": "STRUCTURE",
+      "confirmed_id": null,
+      "union_id": null,
+      "measurement": null,
+      "geometry": {
+        "schema_version": 1,
+        "symbol": "XAUUSD",
+        "tf": "M15",
+        "direction": "BEARISH",
+        "price_lo": 4344.323,
+        "price_hi": 4365.501,
+        "ce": 4354.912,
+        "size": 21.177999999999884,
+        "atr_at_creation": 13.316408441106006,
+        "created_ms": 1789583400000,
+        "t_start_ms": 1789580700000,
+        "created_idx": 396,
+        "origin_idx": 394,
+        "leg_start_idx": 395,
+        "boundary": "body_to_wick",
+        "displacement_atr": 4.674533698429389,
+        "source_bars": [
+          394,
+          395,
+          396
+        ],
+        "source_object_ids": [
+          "5ba359415a806082",
+          "363a32e079070d38",
+          "4f02c358018783b5"
+        ],
+        "fvg_ids": [
+          "50d749eea360621a"
+        ],
+        "constituent_ids": []
+      },
+      "source_bars": [
+        394,
+        395,
+        396
+      ],
+      "source_object_ids": [
+        "5ba359415a806082",
+        "363a32e079070d38",
+        "4f02c358018783b5"
+      ]
+    },
+    {
+      "seq": 409,
+      "t_broker_ms": 1789599600000,
+      "object_id": "a39ddcb6aa619b95",
+      "kind": "OB",
+      "action": "DISCARD",
+      "reason": "FAILED_CRITERIA",
+      "fidelity": "BAR",
+      "tf": "M15",
+      "t_utc_ms": 1789599600000,
+      "criterion": "STRUCTURE",
+      "confirmed_id": null,
+      "union_id": null,
+      "measurement": null,
+      "geometry": {
+        "schema_version": 1,
+        "symbol": "XAUUSD",
+        "tf": "M15",
+        "direction": "BULLISH",
+        "price_lo": 4235.035,
+        "price_hi": 4322.447,
+        "ce": 4278.741,
+        "size": 87.41200000000026,
+        "atr_at_creation": 20.532298277769936,
+        "created_ms": 1789588800000,
+        "t_start_ms": 1789583400000,
+        "created_idx": 402,
+        "origin_idx": 399,
+        "leg_start_idx": 400,
+        "boundary": "body_to_wick",
+        "displacement_atr": 1.8255140994411359,
+        "source_bars": [
+          397,
+          398,
+          399,
+          400,
+          401,
+          402
+        ],
+        "source_object_ids": [
+          "c2c25b8e97e82602",
+          "13d3b4a761b26f39",
+          "033e61b0e93063e6",
+          "436e8b0edea65a95",
+          "84544eb04b5163c0",
+          "c39492c16f0fac64"
+        ],
+        "fvg_ids": [
+          "905c77e72d169afe"
+        ],
+        "constituent_ids": []
+      },
+      "source_bars": [
+        397,
+        398,
+        399,
+        400,
+        401,
+        402
+      ],
+      "source_object_ids": [
+        "c2c25b8e97e82602",
+        "13d3b4a761b26f39",
+        "033e61b0e93063e6",
+        "436e8b0edea65a95",
+        "84544eb04b5163c0",
+        "c39492c16f0fac64"
+      ]
+    },
+    {
+      "seq": 414,
+      "t_broker_ms": 1789604100000,
+      "object_id": "c4aee0d909773af8",
+      "kind": "OB",
+      "action": "UPDATE",
+      "reason": null,
+      "fidelity": "BAR",
+      "tf": "M15",
+      "t_utc_ms": 1789604100000,
+      "criterion": "INVALID",
+      "confirmed_id": "c4aee0d909773af8",
+      "union_id": null,
+      "measurement": null,
+      "geometry": {
+        "schema_version": 1,
+        "symbol": "XAUUSD",
+        "tf": "M15",
+        "direction": "BEARISH",
+        "price_lo": 4271.409,
+        "price_hi": 4284.492,
+        "ce": 4277.9505,
+        "size": 13.083000000000538,
+        "atr_at_creation": 7.94661086189892,
+        "created_ms": 1789585200000,
+        "t_start_ms": 1789473600000,
+        "created_idx": 398,
+        "origin_idx": 281,
+        "leg_start_idx": 282,
+        "boundary": "body_to_wick",
+        "displacement_atr": 2.6927202516730357,
+        "source_bars": [
+          280,
+          281,
+          282,
+          283,
+          398
+        ],
+        "source_object_ids": [
+          "ac3ab3d69beb1df3",
+          "93802a3df6dccc73",
+          "e1a4f610430bc28f",
+          "0846106a9b9bf015",
+          "13d3b4a761b26f39"
+        ],
+        "fvg_ids": [
+          "7de0b08dee57ee76"
+        ],
+        "constituent_ids": []
+      },
+      "source_bars": [
+        280,
+        281,
+        282,
+        283,
+        398
+      ],
+      "source_object_ids": [
+        "ac3ab3d69beb1df3",
+        "93802a3df6dccc73",
+        "e1a4f610430bc28f",
+        "0846106a9b9bf015",
+        "13d3b4a761b26f39"
+      ]
+    },
+    {
+      "seq": 415,
+      "t_broker_ms": 1789605000000,
+      "object_id": "56c12b07f335decc",
+      "kind": "OB",
+      "action": "CREATE",
+      "reason": null,
+      "fidelity": "BAR",
+      "tf": "M15",
+      "t_utc_ms": 1789605000000,
+      "criterion": null,
+      "confirmed_id": null,
+      "union_id": null,
+      "measurement": null,
+      "geometry": {
+        "schema_version": 1,
+        "symbol": "XAUUSD",
+        "tf": "M15",
+        "direction": "BULLISH",
+        "price_lo": 4271.476,
+        "price_hi": 4273.662,
+        "ce": 4272.5689999999995,
+        "size": 2.186000000000604,
+        "atr_at_creation": 13.816949698522032,
+        "created_ms": 1789605000000,
+        "t_start_ms": 1789602300000,
+        "created_idx": 415,
+        "origin_idx": 413,
+        "leg_start_idx": 414,
+        "boundary": "body_to_wick",
+        "displacement_atr": 1.708626036506847,
+        "source_bars": [
+          413,
+          414,
+          415
+        ],
+        "source_object_ids": [
+          "2e34552f585bf2f6",
+          "439d08dc0f2eebd6",
+          "402ef9654949bf4b"
+        ],
+        "fvg_ids": [
+          "a61d6dc4b53b6b44"
+        ],
+        "constituent_ids": []
+      },
+      "source_bars": [
+        413,
+        414,
+        415
+      ],
+      "source_object_ids": [
+        "2e34552f585bf2f6",
+        "439d08dc0f2eebd6",
+        "402ef9654949bf4b"
+      ]
+    },
+    {
+      "seq": 418,
+      "t_broker_ms": 1789607700000,
+      "object_id": "f4681c1997ff4239",
+      "kind": "OB",
+      "action": "UPDATE",
+      "reason": null,
+      "fidelity": "BAR",
+      "tf": "M15",
+      "t_utc_ms": 1789607700000,
+      "criterion": "INVALID",
+      "confirmed_id": "f4681c1997ff4239",
+      "union_id": null,
+      "measurement": null,
+      "geometry": {
+        "schema_version": 1,
+        "symbol": "XAUUSD",
+        "tf": "M15",
+        "direction": "BEARISH",
+        "price_lo": 4280.244,
+        "price_hi": 4290.53,
+        "ce": 4285.387,
+        "size": 10.286000000000058,
+        "atr_at_creation": 8.516805056192963,
+        "created_ms": 1789585200000,
+        "t_start_ms": 1789522200000,
+        "created_idx": 398,
+        "origin_idx": 330,
+        "leg_start_idx": 331,
+        "boundary": "body_to_wick",
+        "displacement_atr": 4.912522914866634,
+        "source_bars": [
+          329,
+          330,
+          331,
+          332,
+          333,
+          334,
+          398
+        ],
+        "source_object_ids": [
+          "3c4b667728a15716",
+          "cb0f1970b1878b95",
+          "9cf300d8e1060fd5",
+          "efe66809c092f8ec",
+          "6d97a2aaaa9e91eb",
+          "38fe74fd7b02d044",
+          "13d3b4a761b26f39"
+        ],
+        "fvg_ids": [
+          "3cdd3af965356d37",
+          "4295dc0962c65174"
+        ],
+        "constituent_ids": []
+      },
+      "source_bars": [
+        329,
+        330,
+        331,
+        332,
+        333,
+        334,
+        398
+      ],
+      "source_object_ids": [
+        "3c4b667728a15716",
+        "cb0f1970b1878b95",
+        "9cf300d8e1060fd5",
+        "efe66809c092f8ec",
+        "6d97a2aaaa9e91eb",
+        "38fe74fd7b02d044",
+        "13d3b4a761b26f39"
+      ]
+    },
+    {
+      "seq": 419,
+      "t_broker_ms": 1789608600000,
+      "object_id": "74c188ee2d624938",
+      "kind": "OB",
+      "action": "CREATE",
+      "reason": null,
+      "fidelity": "BAR",
+      "tf": "M15",
+      "t_utc_ms": 1789608600000,
+      "criterion": null,
+      "confirmed_id": null,
+      "union_id": null,
+      "measurement": null,
+      "geometry": {
+        "schema_version": 1,
+        "symbol": "XAUUSD",
+        "tf": "M15",
+        "direction": "BULLISH",
+        "price_lo": 4277.213,
+        "price_hi": 4288.787,
+        "ce": 4283.0,
+        "size": 11.574000000000524,
+        "atr_at_creation": 14.671673191885914,
+        "created_ms": 1789608600000,
+        "t_start_ms": 1789605900000,
+        "created_idx": 419,
+        "origin_idx": 417,
+        "leg_start_idx": 418,
+        "boundary": "body_to_wick",
+        "displacement_atr": 2.2326015289187215,
+        "source_bars": [
+          417,
+          418,
+          419
+        ],
+        "source_object_ids": [
+          "d8cf28dcb70af8fe",
+          "a9c006b15d8d214e",
+          "8d2df47018673f0f"
+        ],
+        "fvg_ids": [
+          "7789e4041b05a41a"
+        ],
+        "constituent_ids": []
+      },
+      "source_bars": [
+        417,
+        418,
+        419
+      ],
+      "source_object_ids": [
+        "d8cf28dcb70af8fe",
+        "a9c006b15d8d214e",
+        "8d2df47018673f0f"
+      ]
+    },
+    {
+      "seq": 422,
+      "t_broker_ms": 1789611300000,
+      "object_id": "2f0114e883b6af6d",
+      "kind": "OB",
+      "action": "CREATE",
+      "reason": null,
+      "fidelity": "BAR",
+      "tf": "M15",
+      "t_utc_ms": 1789611300000,
+      "criterion": null,
+      "confirmed_id": null,
+      "union_id": null,
+      "measurement": null,
+      "geometry": {
+        "schema_version": 1,
+        "symbol": "XAUUSD",
+        "tf": "M15",
+        "direction": "BEARISH",
+        "price_lo": 4280.4,
+        "price_hi": 4312.804,
+        "ce": 4296.602,
+        "size": 32.40400000000045,
+        "atr_at_creation": 14.68802733329932,
+        "created_ms": 1789611300000,
+        "t_start_ms": 1789606800000,
+        "created_idx": 422,
+        "origin_idx": 419,
+        "leg_start_idx": 420,
+        "boundary": "body_to_wick",
+        "displacement_atr": 2.5317218681704845,
+        "source_bars": [
+          418,
+          419,
+          420,
+          421,
+          422
+        ],
+        "source_object_ids": [
+          "a9c006b15d8d214e",
+          "8d2df47018673f0f",
+          "344b97e6e641e7d7",
+          "1447141aa44e6e76",
+          "7368779ca7a71f00"
+        ],
+        "fvg_ids": [
+          "6b4c133bfc4c8773"
+        ],
+        "constituent_ids": []
+      },
+      "source_bars": [
+        418,
+        419,
+        420,
+        421,
+        422
+      ],
+      "source_object_ids": [
+        "a9c006b15d8d214e",
+        "8d2df47018673f0f",
+        "344b97e6e641e7d7",
+        "1447141aa44e6e76",
+        "7368779ca7a71f00"
+      ]
+    },
+    {
+      "seq": 423,
+      "t_broker_ms": 1789612200000,
+      "object_id": "56c12b07f335decc",
+      "kind": "OB",
+      "action": "DISCARD",
+      "reason": "FAILED_CRITERIA",
+      "fidelity": "BAR",
+      "tf": "M15",
+      "t_utc_ms": 1789612200000,
+      "criterion": "STRUCTURE",
+      "confirmed_id": null,
+      "union_id": null,
+      "measurement": null,
+      "geometry": {
+        "schema_version": 1,
+        "symbol": "XAUUSD",
+        "tf": "M15",
+        "direction": "BULLISH",
+        "price_lo": 4271.476,
+        "price_hi": 4273.662,
+        "ce": 4272.5689999999995,
+        "size": 2.186000000000604,
+        "atr_at_creation": 13.816949698522032,
+        "created_ms": 1789605000000,
+        "t_start_ms": 1789602300000,
+        "created_idx": 415,
+        "origin_idx": 413,
+        "leg_start_idx": 414,
+        "boundary": "body_to_wick",
+        "displacement_atr": 1.708626036506847,
+        "source_bars": [
+          413,
+          414,
+          415
+        ],
+        "source_object_ids": [
+          "2e34552f585bf2f6",
+          "439d08dc0f2eebd6",
+          "402ef9654949bf4b"
+        ],
+        "fvg_ids": [
+          "a61d6dc4b53b6b44"
+        ],
+        "constituent_ids": []
+      },
+      "source_bars": [
+        413,
+        414,
+        415
+      ],
+      "source_object_ids": [
+        "2e34552f585bf2f6",
+        "439d08dc0f2eebd6",
+        "402ef9654949bf4b"
+      ]
+    },
+    {
+      "seq": 425,
+      "t_broker_ms": 1789614000000,
+      "object_id": "74c188ee2d624938",
+      "kind": "OB",
+      "action": "DISCARD",
+      "reason": "INVALIDATED",
+      "fidelity": "BAR",
+      "tf": "M15",
+      "t_utc_ms": 1789614000000,
+      "criterion": "STRUCTURE",
+      "confirmed_id": null,
+      "union_id": null,
+      "measurement": null,
+      "geometry": {
+        "schema_version": 1,
+        "symbol": "XAUUSD",
+        "tf": "M15",
+        "direction": "BULLISH",
+        "price_lo": 4277.213,
+        "price_hi": 4288.787,
+        "ce": 4283.0,
+        "size": 11.574000000000524,
+        "atr_at_creation": 14.671673191885914,
+        "created_ms": 1789608600000,
+        "t_start_ms": 1789605900000,
+        "created_idx": 419,
+        "origin_idx": 417,
+        "leg_start_idx": 418,
+        "boundary": "body_to_wick",
+        "displacement_atr": 2.2326015289187215,
+        "source_bars": [
+          417,
+          418,
+          419
+        ],
+        "source_object_ids": [
+          "d8cf28dcb70af8fe",
+          "a9c006b15d8d214e",
+          "8d2df47018673f0f"
+        ],
+        "fvg_ids": [
+          "7789e4041b05a41a"
+        ],
+        "constituent_ids": []
+      },
+      "source_bars": [
+        417,
+        418,
+        419
+      ],
+      "source_object_ids": [
+        "d8cf28dcb70af8fe",
+        "a9c006b15d8d214e",
+        "8d2df47018673f0f"
+      ]
+    },
+    {
+      "seq": 425,
+      "t_broker_ms": 1789614000000,
+      "object_id": "2f0114e883b6af6d",
+      "kind": "OB",
+      "action": "PROMOTE",
+      "reason": null,
+      "fidelity": "BAR",
+      "tf": "M15",
+      "t_utc_ms": 1789614000000,
+      "criterion": null,
+      "confirmed_id": "1001dc2c068d80d3",
+      "union_id": null,
+      "measurement": null,
+      "geometry": {
+        "schema_version": 1,
+        "symbol": "XAUUSD",
+        "tf": "M15",
+        "direction": "BEARISH",
+        "price_lo": 4280.4,
+        "price_hi": 4312.804,
+        "ce": 4296.602,
+        "size": 32.40400000000045,
+        "atr_at_creation": 14.013251840837691,
+        "created_ms": 1789614000000,
+        "t_start_ms": 1789606800000,
+        "created_idx": 425,
+        "origin_idx": 419,
+        "leg_start_idx": 420,
+        "boundary": "body_to_wick",
+        "displacement_atr": 3.158938446463659,
+        "source_bars": [
+          418,
+          419,
+          420,
+          421,
+          422,
+          423,
+          424,
+          425
+        ],
+        "source_object_ids": [
+          "a9c006b15d8d214e",
+          "8d2df47018673f0f",
+          "344b97e6e641e7d7",
+          "1447141aa44e6e76",
+          "7368779ca7a71f00",
+          "6fc879d8673b37d7",
+          "7efe4a462dadedf1",
+          "922af86343f2ff82"
+        ],
+        "fvg_ids": [
+          "0b0ab7bdb12f3335",
+          "6b4c133bfc4c8773"
+        ],
+        "constituent_ids": []
+      },
+      "source_bars": [
+        418,
+        419,
+        420,
+        421,
+        422,
+        423,
+        424,
+        425
+      ],
+      "source_object_ids": [
+        "a9c006b15d8d214e",
+        "8d2df47018673f0f",
+        "344b97e6e641e7d7",
+        "1447141aa44e6e76",
+        "7368779ca7a71f00",
+        "6fc879d8673b37d7",
+        "7efe4a462dadedf1",
+        "922af86343f2ff82"
+      ]
+    },
+    {
+      "seq": 426,
+      "t_broker_ms": 1789614900000,
+      "object_id": "1001dc2c068d80d3",
+      "kind": "OB",
+      "action": "UPDATE",
+      "reason": null,
+      "fidelity": "BAR",
+      "tf": "M15",
+      "t_utc_ms": 1789614900000,
+      "criterion": "TOUCHED",
+      "confirmed_id": "1001dc2c068d80d3",
+      "union_id": null,
+      "measurement": null,
+      "geometry": {
+        "schema_version": 1,
+        "symbol": "XAUUSD",
+        "tf": "M15",
+        "direction": "BEARISH",
+        "price_lo": 4280.4,
+        "price_hi": 4312.804,
+        "ce": 4296.602,
+        "size": 32.40400000000045,
+        "atr_at_creation": 14.013251840837691,
+        "created_ms": 1789614000000,
+        "t_start_ms": 1789606800000,
+        "created_idx": 425,
+        "origin_idx": 419,
+        "leg_start_idx": 420,
+        "boundary": "body_to_wick",
+        "displacement_atr": 3.158938446463659,
+        "source_bars": [
+          418,
+          419,
+          420,
+          421,
+          422,
+          423,
+          424,
+          425
+        ],
+        "source_object_ids": [
+          "a9c006b15d8d214e",
+          "8d2df47018673f0f",
+          "344b97e6e641e7d7",
+          "1447141aa44e6e76",
+          "7368779ca7a71f00",
+          "6fc879d8673b37d7",
+          "7efe4a462dadedf1",
+          "922af86343f2ff82"
+        ],
+        "fvg_ids": [
+          "0b0ab7bdb12f3335",
+          "6b4c133bfc4c8773"
+        ],
+        "constituent_ids": []
+      },
+      "source_bars": [
+        418,
+        419,
+        420,
+        421,
+        422,
+        423,
+        424,
+        425
+      ],
+      "source_object_ids": [
+        "a9c006b15d8d214e",
+        "8d2df47018673f0f",
+        "344b97e6e641e7d7",
+        "1447141aa44e6e76",
+        "7368779ca7a71f00",
+        "6fc879d8673b37d7",
+        "7efe4a462dadedf1",
+        "922af86343f2ff82"
+      ]
+    },
+    {
+      "seq": 429,
+      "t_broker_ms": 1789617600000,
+      "object_id": "1001dc2c068d80d3",
+      "kind": "OB",
+      "action": "UPDATE",
+      "reason": null,
+      "fidelity": "BAR",
+      "tf": "M15",
+      "t_utc_ms": 1789617600000,
+      "criterion": "MITIGATED",
+      "confirmed_id": "1001dc2c068d80d3",
+      "union_id": null,
+      "measurement": null,
+      "geometry": {
+        "schema_version": 1,
+        "symbol": "XAUUSD",
+        "tf": "M15",
+        "direction": "BEARISH",
+        "price_lo": 4280.4,
+        "price_hi": 4312.804,
+        "ce": 4296.602,
+        "size": 32.40400000000045,
+        "atr_at_creation": 14.013251840837691,
+        "created_ms": 1789614000000,
+        "t_start_ms": 1789606800000,
+        "created_idx": 425,
+        "origin_idx": 419,
+        "leg_start_idx": 420,
+        "boundary": "body_to_wick",
+        "displacement_atr": 3.158938446463659,
+        "source_bars": [
+          418,
+          419,
+          420,
+          421,
+          422,
+          423,
+          424,
+          425
+        ],
+        "source_object_ids": [
+          "a9c006b15d8d214e",
+          "8d2df47018673f0f",
+          "344b97e6e641e7d7",
+          "1447141aa44e6e76",
+          "7368779ca7a71f00",
+          "6fc879d8673b37d7",
+          "7efe4a462dadedf1",
+          "922af86343f2ff82"
+        ],
+        "fvg_ids": [
+          "0b0ab7bdb12f3335",
+          "6b4c133bfc4c8773"
+        ],
+        "constituent_ids": []
+      },
+      "source_bars": [
+        418,
+        419,
+        420,
+        421,
+        422,
+        423,
+        424,
+        425
+      ],
+      "source_object_ids": [
+        "a9c006b15d8d214e",
+        "8d2df47018673f0f",
+        "344b97e6e641e7d7",
+        "1447141aa44e6e76",
+        "7368779ca7a71f00",
+        "6fc879d8673b37d7",
+        "7efe4a462dadedf1",
+        "922af86343f2ff82"
+      ]
+    },
+    {
+      "seq": 429,
+      "t_broker_ms": 1789617600000,
+      "object_id": "9d64f0a556aaa4d8",
+      "kind": "OB",
+      "action": "CREATE",
+      "reason": null,
+      "fidelity": "BAR",
+      "tf": "M15",
+      "t_utc_ms": 1789617600000,
+      "criterion": null,
+      "confirmed_id": null,
+      "union_id": null,
+      "measurement": null,
+      "geometry": {
+        "schema_version": 1,
+        "symbol": "XAUUSD",
+        "tf": "M15",
+        "direction": "BULLISH",
+        "price_lo": 4274.058,
+        "price_hi": 4291.684,
+        "ce": 4282.871,
+        "size": 17.626000000000204,
+        "atr_at_creation": 12.216615103763186,
+        "created_ms": 1789617600000,
+        "t_start_ms": 1789612200000,
+        "created_idx": 429,
+        "origin_idx": 425,
+        "leg_start_idx": 426,
+        "boundary": "body_to_wick",
+        "displacement_atr": 1.6965419491373888,
+        "source_bars": [
+          424,
+          425,
+          426,
+          427,
+          428,
+          429
+        ],
+        "source_object_ids": [
+          "7efe4a462dadedf1",
+          "922af86343f2ff82",
+          "a47fbe91ba83a82f",
+          "df40f53b646f4b16",
+          "7f65598569d04231",
+          "d48f17efe63dbc1a"
+        ],
+        "fvg_ids": [
+          "d303bd3b042a78ea"
+        ],
+        "constituent_ids": []
+      },
+      "source_bars": [
+        424,
+        425,
+        426,
+        427,
+        428,
+        429
+      ],
+      "source_object_ids": [
+        "7efe4a462dadedf1",
+        "922af86343f2ff82",
+        "a47fbe91ba83a82f",
+        "df40f53b646f4b16",
+        "7f65598569d04231",
+        "d48f17efe63dbc1a"
+      ]
+    },
+    {
+      "seq": 435,
+      "t_broker_ms": 1789623000000,
+      "object_id": "9d64f0a556aaa4d8",
+      "kind": "OB",
+      "action": "DISCARD",
+      "reason": "FAILED_CRITERIA",
+      "fidelity": "BAR",
+      "tf": "M15",
+      "t_utc_ms": 1789623000000,
+      "criterion": "STRUCTURE",
+      "confirmed_id": null,
+      "union_id": null,
+      "measurement": null,
+      "geometry": {
+        "schema_version": 1,
+        "symbol": "XAUUSD",
+        "tf": "M15",
+        "direction": "BULLISH",
+        "price_lo": 4274.058,
+        "price_hi": 4291.684,
+        "ce": 4282.871,
+        "size": 17.626000000000204,
+        "atr_at_creation": 12.216615103763186,
+        "created_ms": 1789617600000,
+        "t_start_ms": 1789612200000,
+        "created_idx": 429,
+        "origin_idx": 425,
+        "leg_start_idx": 426,
+        "boundary": "body_to_wick",
+        "displacement_atr": 1.6965419491373888,
+        "source_bars": [
+          424,
+          425,
+          426,
+          427,
+          428,
+          429
+        ],
+        "source_object_ids": [
+          "7efe4a462dadedf1",
+          "922af86343f2ff82",
+          "a47fbe91ba83a82f",
+          "df40f53b646f4b16",
+          "7f65598569d04231",
+          "d48f17efe63dbc1a"
+        ],
+        "fvg_ids": [
+          "d303bd3b042a78ea"
+        ],
+        "constituent_ids": []
+      },
+      "source_bars": [
+        424,
+        425,
+        426,
+        427,
+        428,
+        429
+      ],
+      "source_object_ids": [
+        "7efe4a462dadedf1",
+        "922af86343f2ff82",
+        "a47fbe91ba83a82f",
+        "df40f53b646f4b16",
+        "7f65598569d04231",
+        "d48f17efe63dbc1a"
+      ]
+    },
+    {
+      "seq": 438,
+      "t_broker_ms": 1789625700000,
+      "object_id": "df341762c5cd5eb4",
+      "kind": "OB",
+      "action": "CREATE",
+      "reason": null,
+      "fidelity": "BAR",
+      "tf": "M15",
+      "t_utc_ms": 1789625700000,
+      "criterion": null,
+      "confirmed_id": null,
+      "union_id": null,
+      "measurement": null,
+      "geometry": {
+        "schema_version": 1,
+        "symbol": "XAUUSD",
+        "tf": "M15",
+        "direction": "BULLISH",
+        "price_lo": 4285.514,
+        "price_hi": 4297.361,
+        "ce": 4291.4375,
+        "size": 11.846999999999753,
+        "atr_at_creation": 9.886259411867615,
+        "created_ms": 1789625700000,
+        "t_start_ms": 1789621200000,
+        "created_idx": 438,
+        "origin_idx": 435,
+        "leg_start_idx": 436,
+        "boundary": "body_to_wick",
+        "displacement_atr": 2.668552270470493,
+        "source_bars": [
+          434,
+          435,
+          436,
+          437,
+          438
+        ],
+        "source_object_ids": [
+          "5c6b6366a0201fdd",
+          "759b3b20772fba80",
+          "212ae4dd4ff748a9",
+          "997379b29d5f8dc1",
+          "3b6fbbfc534df65f"
+        ],
+        "fvg_ids": [
+          "42776ae1cbe7a320"
+        ],
+        "constituent_ids": []
+      },
+      "source_bars": [
+        434,
+        435,
+        436,
+        437,
+        438
+      ],
+      "source_object_ids": [
+        "5c6b6366a0201fdd",
+        "759b3b20772fba80",
+        "212ae4dd4ff748a9",
+        "997379b29d5f8dc1",
+        "3b6fbbfc534df65f"
+      ]
+    },
+    {
+      "seq": 442,
+      "t_broker_ms": 1789629300000,
+      "object_id": "1001dc2c068d80d3",
+      "kind": "OB",
+      "action": "UPDATE",
+      "reason": null,
+      "fidelity": "BAR",
+      "tf": "M15",
+      "t_utc_ms": 1789629300000,
+      "criterion": "INVALID",
+      "confirmed_id": "0d3693cb3c457eaf",
+      "union_id": null,
+      "measurement": null,
+      "geometry": {
+        "schema_version": 1,
+        "symbol": "XAUUSD",
+        "tf": "M15",
+        "direction": "BEARISH",
+        "price_lo": 4280.4,
+        "price_hi": 4312.804,
+        "ce": 4296.602,
+        "size": 32.40400000000045,
+        "atr_at_creation": 14.013251840837691,
+        "created_ms": 1789614000000,
+        "t_start_ms": 1789606800000,
+        "created_idx": 425,
+        "origin_idx": 419,
+        "leg_start_idx": 420,
+        "boundary": "body_to_wick",
+        "displacement_atr": 3.158938446463659,
+        "source_bars": [
+          418,
+          419,
+          420,
+          421,
+          422,
+          423,
+          424,
+          425
+        ],
+        "source_object_ids": [
+          "a9c006b15d8d214e",
+          "8d2df47018673f0f",
+          "344b97e6e641e7d7",
+          "1447141aa44e6e76",
+          "7368779ca7a71f00",
+          "6fc879d8673b37d7",
+          "7efe4a462dadedf1",
+          "922af86343f2ff82"
+        ],
+        "fvg_ids": [
+          "0b0ab7bdb12f3335",
+          "6b4c133bfc4c8773"
+        ],
+        "constituent_ids": []
+      },
+      "source_bars": [
+        418,
+        419,
+        420,
+        421,
+        422,
+        423,
+        424,
+        425
+      ],
+      "source_object_ids": [
+        "a9c006b15d8d214e",
+        "8d2df47018673f0f",
+        "344b97e6e641e7d7",
+        "1447141aa44e6e76",
+        "7368779ca7a71f00",
+        "6fc879d8673b37d7",
+        "7efe4a462dadedf1",
+        "922af86343f2ff82"
+      ]
+    },
+    {
+      "seq": 443,
+      "t_broker_ms": 1789630200000,
+      "object_id": "ca1ef6099bde0a78",
+      "kind": "OB",
+      "action": "CREATE",
+      "reason": null,
+      "fidelity": "BAR",
+      "tf": "M15",
+      "t_utc_ms": 1789630200000,
+      "criterion": null,
+      "confirmed_id": null,
+      "union_id": null,
+      "measurement": null,
+      "geometry": {
+        "schema_version": 1,
+        "symbol": "XAUUSD",
+        "tf": "M15",
+        "direction": "BULLISH",
+        "price_lo": 4305.965,
+        "price_hi": 4312.22,
+        "ce": 4309.092500000001,
+        "size": 6.255000000000109,
+        "atr_at_creation": 9.831458826327152,
+        "created_ms": 1789630200000,
+        "t_start_ms": 1789626600000,
+        "created_idx": 443,
+        "origin_idx": 440,
+        "leg_start_idx": 441,
+        "boundary": "body_to_wick",
+        "displacement_atr": 2.3626198726275507,
+        "source_bars": [
+          440,
+          441,
+          442,
+          443
+        ],
+        "source_object_ids": [
+          "bfa56634e46efb6e",
+          "641045e315844fac",
+          "63cfb8adb585e587",
+          "54f5a0c43a5fb4d9"
+        ],
+        "fvg_ids": [
+          "e85fc7c98e14ee32"
+        ],
+        "constituent_ids": []
+      },
+      "source_bars": [
+        440,
+        441,
+        442,
+        443
+      ],
+      "source_object_ids": [
+        "bfa56634e46efb6e",
+        "641045e315844fac",
+        "63cfb8adb585e587",
+        "54f5a0c43a5fb4d9"
+      ]
+    },
+    {
+      "seq": 445,
+      "t_broker_ms": 1789632000000,
+      "object_id": "df341762c5cd5eb4",
+      "kind": "OB",
+      "action": "DISCARD",
+      "reason": "FAILED_CRITERIA",
+      "fidelity": "BAR",
+      "tf": "M15",
+      "t_utc_ms": 1789632000000,
+      "criterion": "STRUCTURE",
+      "confirmed_id": null,
+      "union_id": null,
+      "measurement": null,
+      "geometry": {
+        "schema_version": 1,
+        "symbol": "XAUUSD",
+        "tf": "M15",
+        "direction": "BULLISH",
+        "price_lo": 4285.514,
+        "price_hi": 4297.361,
+        "ce": 4291.4375,
+        "size": 11.846999999999753,
+        "atr_at_creation": 9.886259411867615,
+        "created_ms": 1789625700000,
+        "t_start_ms": 1789621200000,
+        "created_idx": 438,
+        "origin_idx": 435,
+        "leg_start_idx": 436,
+        "boundary": "body_to_wick",
+        "displacement_atr": 2.668552270470493,
+        "source_bars": [
+          434,
+          435,
+          436,
+          437,
+          438
+        ],
+        "source_object_ids": [
+          "5c6b6366a0201fdd",
+          "759b3b20772fba80",
+          "212ae4dd4ff748a9",
+          "997379b29d5f8dc1",
+          "3b6fbbfc534df65f"
+        ],
+        "fvg_ids": [
+          "42776ae1cbe7a320"
+        ],
+        "constituent_ids": []
+      },
+      "source_bars": [
+        434,
+        435,
+        436,
+        437,
+        438
+      ],
+      "source_object_ids": [
+        "5c6b6366a0201fdd",
+        "759b3b20772fba80",
+        "212ae4dd4ff748a9",
+        "997379b29d5f8dc1",
+        "3b6fbbfc534df65f"
+      ]
+    },
+    {
+      "seq": 450,
+      "t_broker_ms": 1789636500000,
+      "object_id": "ca1ef6099bde0a78",
+      "kind": "OB",
+      "action": "DISCARD",
+      "reason": "FAILED_CRITERIA",
+      "fidelity": "BAR",
+      "tf": "M15",
+      "t_utc_ms": 1789636500000,
+      "criterion": "STRUCTURE",
+      "confirmed_id": null,
+      "union_id": null,
+      "measurement": null,
+      "geometry": {
+        "schema_version": 1,
+        "symbol": "XAUUSD",
+        "tf": "M15",
+        "direction": "BULLISH",
+        "price_lo": 4305.965,
+        "price_hi": 4312.22,
+        "ce": 4309.092500000001,
+        "size": 6.255000000000109,
+        "atr_at_creation": 9.831458826327152,
+        "created_ms": 1789630200000,
+        "t_start_ms": 1789626600000,
+        "created_idx": 443,
+        "origin_idx": 440,
+        "leg_start_idx": 441,
+        "boundary": "body_to_wick",
+        "displacement_atr": 2.3626198726275507,
+        "source_bars": [
+          440,
+          441,
+          442,
+          443
+        ],
+        "source_object_ids": [
+          "bfa56634e46efb6e",
+          "641045e315844fac",
+          "63cfb8adb585e587",
+          "54f5a0c43a5fb4d9"
+        ],
+        "fvg_ids": [
+          "e85fc7c98e14ee32"
+        ],
+        "constituent_ids": []
+      },
+      "source_bars": [
+        440,
+        441,
+        442,
+        443
+      ],
+      "source_object_ids": [
+        "bfa56634e46efb6e",
+        "641045e315844fac",
+        "63cfb8adb585e587",
+        "54f5a0c43a5fb4d9"
+      ]
+    },
+    {
+      "seq": 458,
+      "t_broker_ms": 1789643700000,
+      "object_id": "b5c4e44cf0a799c7",
+      "kind": "OB",
+      "action": "CREATE",
+      "reason": null,
+      "fidelity": "BAR",
+      "tf": "M15",
+      "t_utc_ms": 1789643700000,
+      "criterion": null,
+      "confirmed_id": null,
+      "union_id": null,
+      "measurement": null,
+      "geometry": {
+        "schema_version": 1,
+        "symbol": "XAUUSD",
+        "tf": "M15",
+        "direction": "BULLISH",
+        "price_lo": 4305.487,
+        "price_hi": 4309.191,
+        "ce": 4307.339,
+        "size": 3.7039999999997235,
+        "atr_at_creation": 9.151316816166368,
+        "created_ms": 1789643700000,
+        "t_start_ms": 1789638300000,
+        "created_idx": 458,
+        "origin_idx": 453,
+        "leg_start_idx": 454,
+        "boundary": "body_to_wick",
+        "displacement_atr": 3.816499931277708,
+        "source_bars": [
+          453,
+          454,
+          455,
+          456,
+          457,
+          458
+        ],
+        "source_object_ids": [
+          "717acee03a1bfbd1",
+          "c555a6eb8de66187",
+          "9e39e6a5d90abfdc",
+          "7dda507954aa5a1b",
+          "12cc51ade137fd94",
+          "5110c3875dc7a0e8"
+        ],
+        "fvg_ids": [
+          "f58561b250a4cb30"
+        ],
+        "constituent_ids": []
+      },
+      "source_bars": [
+        453,
+        454,
+        455,
+        456,
+        457,
+        458
+      ],
+      "source_object_ids": [
+        "717acee03a1bfbd1",
+        "c555a6eb8de66187",
+        "9e39e6a5d90abfdc",
+        "7dda507954aa5a1b",
+        "12cc51ade137fd94",
+        "5110c3875dc7a0e8"
+      ]
+    },
+    {
+      "seq": 461,
+      "t_broker_ms": 1789646400000,
+      "object_id": "8931adaca7f8d58f",
+      "kind": "OB",
+      "action": "UPDATE",
+      "reason": null,
+      "fidelity": "BAR",
+      "tf": "M15",
+      "t_utc_ms": 1789646400000,
+      "criterion": "INVALID",
+      "confirmed_id": "8931adaca7f8d58f",
+      "union_id": null,
+      "measurement": null,
+      "geometry": {
+        "schema_version": 1,
+        "symbol": "XAUUSD",
+        "tf": "M15",
+        "direction": "BEARISH",
+        "price_lo": 4321.392,
+        "price_hi": 4332.815,
+        "ce": 4327.103499999999,
+        "size": 11.422999999999774,
+        "atr_at_creation": 7.139548929888727,
+        "created_ms": 1789582500000,
+        "t_start_ms": 1789537500000,
+        "created_idx": 395,
+        "origin_idx": 347,
+        "leg_start_idx": 348,
+        "boundary": "body_to_wick",
+        "displacement_atr": 1.694504809590052,
+        "source_bars": [
+          346,
+          347,
+          348,
+          349,
+          350,
+          351,
+          395
+        ],
+        "source_object_ids": [
+          "dadfe36b5e28a323",
+          "94e3185281491215",
+          "be6b8ae0508af61a",
+          "e386ae21db4eddfe",
+          "59a22d01f4fd80bd",
+          "a66084a8aba21572",
+          "363a32e079070d38"
+        ],
+        "fvg_ids": [
+          "6f50e1818cda575b"
+        ],
+        "constituent_ids": []
+      },
+      "source_bars": [
+        346,
+        347,
+        348,
+        349,
+        350,
+        351,
+        395
+      ],
+      "source_object_ids": [
+        "dadfe36b5e28a323",
+        "94e3185281491215",
+        "be6b8ae0508af61a",
+        "e386ae21db4eddfe",
+        "59a22d01f4fd80bd",
+        "a66084a8aba21572",
+        "363a32e079070d38"
+      ]
+    },
+    {
+      "seq": 461,
+      "t_broker_ms": 1789646400000,
+      "object_id": "b5c4e44cf0a799c7",
+      "kind": "OB",
+      "action": "PROMOTE",
+      "reason": null,
+      "fidelity": "BAR",
+      "tf": "M15",
+      "t_utc_ms": 1789646400000,
+      "criterion": null,
+      "confirmed_id": "e14d2169e466e0e1",
+      "union_id": null,
+      "measurement": null,
+      "geometry": {
+        "schema_version": 1,
+        "symbol": "XAUUSD",
+        "tf": "M15",
+        "direction": "BULLISH",
+        "price_lo": 4305.487,
+        "price_hi": 4309.191,
+        "ce": 4307.339,
+        "size": 3.7039999999997235,
+        "atr_at_creation": 10.315876474168146,
+        "created_ms": 1789646400000,
+        "t_start_ms": 1789638300000,
+        "created_idx": 461,
+        "origin_idx": 453,
+        "leg_start_idx": 454,
+        "boundary": "body_to_wick",
+        "displacement_atr": 4.697225691034326,
+        "source_bars": [
+          453,
+          454,
+          455,
+          456,
+          457,
+          458,
+          459,
+          460,
+          461
+        ],
+        "source_object_ids": [
+          "717acee03a1bfbd1",
+          "c555a6eb8de66187",
+          "9e39e6a5d90abfdc",
+          "7dda507954aa5a1b",
+          "12cc51ade137fd94",
+          "5110c3875dc7a0e8",
+          "bdc85338912ee561",
+          "dc53b56c22801e02",
+          "055fc995632878da"
+        ],
+        "fvg_ids": [
+          "f58561b250a4cb30"
+        ],
+        "constituent_ids": []
+      },
+      "source_bars": [
+        453,
+        454,
+        455,
+        456,
+        457,
+        458,
+        459,
+        460,
+        461
+      ],
+      "source_object_ids": [
+        "717acee03a1bfbd1",
+        "c555a6eb8de66187",
+        "9e39e6a5d90abfdc",
+        "7dda507954aa5a1b",
+        "12cc51ade137fd94",
+        "5110c3875dc7a0e8",
+        "bdc85338912ee561",
+        "dc53b56c22801e02",
+        "055fc995632878da"
+      ]
+    },
+    {
+      "seq": 462,
+      "t_broker_ms": 1789647300000,
+      "object_id": "22a915c428a4bdbc",
+      "kind": "OB",
+      "action": "CREATE",
+      "reason": null,
+      "fidelity": "BAR",
+      "tf": "M15",
+      "t_utc_ms": 1789647300000,
+      "criterion": null,
+      "confirmed_id": null,
+      "union_id": null,
+      "measurement": null,
+      "geometry": {
+        "schema_version": 1,
+        "symbol": "XAUUSD",
+        "tf": "M15",
+        "direction": "BULLISH",
+        "price_lo": 4323.381,
+        "price_hi": 4332.279,
+        "ce": 4327.83,
+        "size": 8.898000000000138,
+        "atr_at_creation": 10.420385297441817,
+        "created_ms": 1789647300000,
+        "t_start_ms": 1789643700000,
+        "created_idx": 462,
+        "origin_idx": 460,
+        "leg_start_idx": 461,
+        "boundary": "body_to_wick",
+        "displacement_atr": 2.9944190266803083,
+        "source_bars": [
+          459,
+          460,
+          461,
+          462
+        ],
+        "source_object_ids": [
+          "bdc85338912ee561",
+          "dc53b56c22801e02",
+          "055fc995632878da",
+          "8524c6277149e927"
+        ],
+        "fvg_ids": [
+          "48cb08125cb73f74"
+        ],
+        "constituent_ids": []
+      },
+      "source_bars": [
+        459,
+        460,
+        461,
+        462
+      ],
+      "source_object_ids": [
+        "bdc85338912ee561",
+        "dc53b56c22801e02",
+        "055fc995632878da",
+        "8524c6277149e927"
+      ]
+    },
+    {
+      "seq": 470,
+      "t_broker_ms": 1789654500000,
+      "object_id": "22a915c428a4bdbc",
+      "kind": "OB",
+      "action": "DISCARD",
+      "reason": "FAILED_CRITERIA",
+      "fidelity": "BAR",
+      "tf": "M15",
+      "t_utc_ms": 1789654500000,
+      "criterion": "STRUCTURE",
+      "confirmed_id": null,
+      "union_id": null,
+      "measurement": null,
+      "geometry": {
+        "schema_version": 1,
+        "symbol": "XAUUSD",
+        "tf": "M15",
+        "direction": "BULLISH",
+        "price_lo": 4323.381,
+        "price_hi": 4332.279,
+        "ce": 4327.83,
+        "size": 8.898000000000138,
+        "atr_at_creation": 10.420385297441817,
+        "created_ms": 1789647300000,
+        "t_start_ms": 1789643700000,
+        "created_idx": 462,
+        "origin_idx": 460,
+        "leg_start_idx": 461,
+        "boundary": "body_to_wick",
+        "displacement_atr": 2.9944190266803083,
+        "source_bars": [
+          459,
+          460,
+          461,
+          462
+        ],
+        "source_object_ids": [
+          "bdc85338912ee561",
+          "dc53b56c22801e02",
+          "055fc995632878da",
+          "8524c6277149e927"
+        ],
+        "fvg_ids": [
+          "48cb08125cb73f74"
+        ],
+        "constituent_ids": []
+      },
+      "source_bars": [
+        459,
+        460,
+        461,
+        462
+      ],
+      "source_object_ids": [
+        "bdc85338912ee561",
+        "dc53b56c22801e02",
+        "055fc995632878da",
+        "8524c6277149e927"
+      ]
+    },
+    {
+      "seq": 488,
+      "t_broker_ms": 1789670700000,
+      "object_id": "e92f7b0114f2c753",
+      "kind": "OB",
+      "action": "CREATE",
+      "reason": null,
+      "fidelity": "BAR",
+      "tf": "M15",
+      "t_utc_ms": 1789670700000,
+      "criterion": null,
+      "confirmed_id": null,
+      "union_id": null,
+      "measurement": null,
+      "geometry": {
+        "schema_version": 1,
+        "symbol": "XAUUSD",
+        "tf": "M15",
+        "direction": "BEARISH",
+        "price_lo": 4360.311,
+        "price_hi": 4365.519,
+        "ce": 4362.915,
+        "size": 5.208000000000538,
+        "atr_at_creation": 8.992664827047381,
+        "created_ms": 1789670700000,
+        "t_start_ms": 1789667100000,
+        "created_idx": 488,
+        "origin_idx": 486,
+        "leg_start_idx": 487,
+        "boundary": "body_to_wick",
+        "displacement_atr": 1.9344655154584995,
+        "source_bars": [
+          485,
+          486,
+          487,
+          488
+        ],
+        "source_object_ids": [
+          "93541c080ce18008",
+          "5bdc074eb6ec97ab",
+          "253f5d3ae8357da1",
+          "57109e4d22730685"
+        ],
+        "fvg_ids": [
+          "4cca28036dd998c2"
+        ],
+        "constituent_ids": []
+      },
+      "source_bars": [
+        485,
+        486,
+        487,
+        488
+      ],
+      "source_object_ids": [
+        "93541c080ce18008",
+        "5bdc074eb6ec97ab",
+        "253f5d3ae8357da1",
+        "57109e4d22730685"
+      ]
+    },
+    {
+      "seq": 496,
+      "t_broker_ms": 1789677900000,
+      "object_id": "e92f7b0114f2c753",
+      "kind": "OB",
+      "action": "DISCARD",
+      "reason": "FAILED_CRITERIA",
+      "fidelity": "BAR",
+      "tf": "M15",
+      "t_utc_ms": 1789677900000,
+      "criterion": "STRUCTURE",
+      "confirmed_id": null,
+      "union_id": null,
+      "measurement": null,
+      "geometry": {
+        "schema_version": 1,
+        "symbol": "XAUUSD",
+        "tf": "M15",
+        "direction": "BEARISH",
+        "price_lo": 4360.311,
+        "price_hi": 4365.519,
+        "ce": 4362.915,
+        "size": 5.208000000000538,
+        "atr_at_creation": 8.992664827047381,
+        "created_ms": 1789670700000,
+        "t_start_ms": 1789667100000,
+        "created_idx": 488,
+        "origin_idx": 486,
+        "leg_start_idx": 487,
+        "boundary": "body_to_wick",
+        "displacement_atr": 1.9344655154584995,
+        "source_bars": [
+          485,
+          486,
+          487,
+          488
+        ],
+        "source_object_ids": [
+          "93541c080ce18008",
+          "5bdc074eb6ec97ab",
+          "253f5d3ae8357da1",
+          "57109e4d22730685"
+        ],
+        "fvg_ids": [
+          "4cca28036dd998c2"
+        ],
+        "constituent_ids": []
+      },
+      "source_bars": [
+        485,
+        486,
+        487,
+        488
+      ],
+      "source_object_ids": [
+        "93541c080ce18008",
+        "5bdc074eb6ec97ab",
+        "253f5d3ae8357da1",
+        "57109e4d22730685"
+      ]
+    },
+    {
+      "seq": 506,
+      "t_broker_ms": 1789691400000,
+      "object_id": "f45f5a2dc43034d8",
+      "kind": "OB",
+      "action": "CREATE",
+      "reason": null,
+      "fidelity": "BAR",
+      "tf": "M15",
+      "t_utc_ms": 1789691400000,
+      "criterion": null,
+      "confirmed_id": null,
+      "union_id": null,
+      "measurement": null,
+      "geometry": {
+        "schema_version": 1,
+        "symbol": "XAUUSD",
+        "tf": "M15",
+        "direction": "BULLISH",
+        "price_lo": 4341.774,
+        "price_hi": 4345.198,
+        "ce": 4343.486000000001,
+        "size": 3.423999999999978,
+        "atr_at_creation": 6.5214289216075185,
+        "created_ms": 1789691400000,
+        "t_start_ms": 1789686900000,
+        "created_idx": 506,
+        "origin_idx": 502,
+        "leg_start_idx": 503,
+        "boundary": "body_to_wick",
+        "displacement_atr": 2.359452228179289,
+        "source_bars": [
+          502,
+          503,
+          504,
+          505,
+          506
+        ],
+        "source_object_ids": [
+          "6b37b92ef634b66d",
+          "fb6d4372cc8c350f",
+          "d166767fae0c9b03",
+          "14788c7f893f8638",
+          "a4fb55a21146607f"
+        ],
+        "fvg_ids": [
+          "c34e4a6b3cd704cf"
+        ],
+        "constituent_ids": []
+      },
+      "source_bars": [
+        502,
+        503,
+        504,
+        505,
+        506
+      ],
+      "source_object_ids": [
+        "6b37b92ef634b66d",
+        "fb6d4372cc8c350f",
+        "d166767fae0c9b03",
+        "14788c7f893f8638",
+        "a4fb55a21146607f"
+      ]
+    },
+    {
+      "seq": 512,
+      "t_broker_ms": 1789696800000,
+      "object_id": "f45f5a2dc43034d8",
+      "kind": "OB",
+      "action": "DISCARD",
+      "reason": "FAILED_CRITERIA",
+      "fidelity": "BAR",
+      "tf": "M15",
+      "t_utc_ms": 1789696800000,
+      "criterion": "STRUCTURE",
+      "confirmed_id": null,
+      "union_id": null,
+      "measurement": null,
+      "geometry": {
+        "schema_version": 1,
+        "symbol": "XAUUSD",
+        "tf": "M15",
+        "direction": "BULLISH",
+        "price_lo": 4341.774,
+        "price_hi": 4345.198,
+        "ce": 4343.486000000001,
+        "size": 3.423999999999978,
+        "atr_at_creation": 6.5214289216075185,
+        "created_ms": 1789691400000,
+        "t_start_ms": 1789686900000,
+        "created_idx": 506,
+        "origin_idx": 502,
+        "leg_start_idx": 503,
+        "boundary": "body_to_wick",
+        "displacement_atr": 2.359452228179289,
+        "source_bars": [
+          502,
+          503,
+          504,
+          505,
+          506
+        ],
+        "source_object_ids": [
+          "6b37b92ef634b66d",
+          "fb6d4372cc8c350f",
+          "d166767fae0c9b03",
+          "14788c7f893f8638",
+          "a4fb55a21146607f"
+        ],
+        "fvg_ids": [
+          "c34e4a6b3cd704cf"
+        ],
+        "constituent_ids": []
+      },
+      "source_bars": [
+        502,
+        503,
+        504,
+        505,
+        506
+      ],
+      "source_object_ids": [
+        "6b37b92ef634b66d",
+        "fb6d4372cc8c350f",
+        "d166767fae0c9b03",
+        "14788c7f893f8638",
+        "a4fb55a21146607f"
+      ]
+    },
+    {
+      "seq": 512,
+      "t_broker_ms": 1789696800000,
+      "object_id": "b1d6bf24034d0e68",
+      "kind": "OB",
+      "action": "CREATE",
+      "reason": null,
+      "fidelity": "BAR",
+      "tf": "M15",
+      "t_utc_ms": 1789696800000,
+      "criterion": null,
+      "confirmed_id": null,
+      "union_id": null,
+      "measurement": null,
+      "geometry": {
+        "schema_version": 1,
+        "symbol": "XAUUSD",
+        "tf": "M15",
+        "direction": "BEARISH",
+        "price_lo": 4356.41,
+        "price_hi": 4365.681,
+        "ce": 4361.0455,
+        "size": 9.27099999999973,
+        "atr_at_creation": 7.410418656298975,
+        "created_ms": 1789696800000,
+        "t_start_ms": 1789693200000,
+        "created_idx": 512,
+        "origin_idx": 510,
+        "leg_start_idx": 511,
+        "boundary": "body_to_wick",
+        "displacement_atr": 2.2128304432653847,
+        "source_bars": [
+          509,
+          510,
+          511,
+          512
+        ],
+        "source_object_ids": [
+          "3f1df494e5f0bd5f",
+          "23a20380a6fe2aea",
+          "11eaa54583c1191b",
+          "eaf054d351a5adb7"
+        ],
+        "fvg_ids": [
+          "c310f3615828d795"
+        ],
+        "constituent_ids": []
+      },
+      "source_bars": [
+        509,
+        510,
+        511,
+        512
+      ],
+      "source_object_ids": [
+        "3f1df494e5f0bd5f",
+        "23a20380a6fe2aea",
+        "11eaa54583c1191b",
+        "eaf054d351a5adb7"
+      ]
+    }
+  ]
+}

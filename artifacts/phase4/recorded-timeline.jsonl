@@ -1,0 +1,35 @@
+{"kind": "hook", "action": "start", "at_ms": 1789692385898, "hook": {"kind": "CANDLE_CLOSE", "headline": "Watch the next confirmed candle close", "sub": "Above its open: an up candle. Below: a down candle. Equal: unchanged; no direction claimed.", "countdown_ms": 34102, "ring_pct": 0.4316333333333333, "priority": 0, "id": "close:1789692420000", "ends_ms": 1789692420000, "outcome": null}}
+{"kind": "session", "action": "start", "at_ms": 1789692385904}
+{"kind": "poll", "action": "start", "at_ms": 1789692387089, "poll": {"id": "ff477a96268e3aa3", "question": "Will gold close above 4,356.593?", "resolve_condition": "M1 close > 4356.593 at 1789692600000 UTC-ms", "opens_ms": 1789692387089, "closes_ms": 1789692600000, "votes": {}, "level": 4356.593, "tf": "M1", "outcome": null}}
+{"kind": "beat", "type": "hook.CANDLE_CLOSE", "id": "close:1789692420000", "start_ms": 1789692385898, "end_ms": 1789692387238}
+{"kind": "hook", "action": "start", "at_ms": 1789692387238, "hook": {"kind": "POLL_RESOLVE", "headline": "Will gold close above 4,356.593?", "sub": "Above: UP wins. At or below: DOWN wins. Only the confirmed M1 close counts.", "countdown_ms": 212762, "ring_pct": 0.0006998229307081383, "priority": 50, "id": "ff477a96268e3aa3", "ends_ms": 1789692600000, "outcome": null}}
+{"kind": "vote", "at_ms": 1789692387920, "poll_id": "ff477a96268e3aa3", "handle": "Amina💛", "vote": "UP"}
+{"kind": "vote", "at_ms": 1789692387920, "poll_id": "ff477a96268e3aa3", "handle": "HaddanFx", "vote": "DOWN"}
+{"kind": "beat", "type": "shout", "start_ms": 1789692387920, "end_ms": 1789692391920}
+{"kind": "beat", "type": "shout", "start_ms": 1789692392042, "end_ms": 1789692396042}
+{"kind": "card", "action": "start", "at_ms": 1789692458615, "card": {"id": "42a44e2d9cd738a3", "kind": "ANSWER", "handle": "Amina💛", "question": "What is gold watching?", "answer": "Gold's verified candle is 4,356.316. UP/DOWN votes settle on a closed candle; UT Bot labels are indicator flips, not trade calls.", "ends_ms": 1789692471615}}
+{"kind": "beat", "type": "segment.LIVE_CHART", "start_ms": 1789692385898, "end_ms": 1789692458615}
+{"kind": "beat", "type": "answer", "id": "42a44e2d9cd738a3", "start_ms": 1789692458615, "end_ms": 1789692471615}
+{"kind": "beat", "type": "segment.VIEWER_ANSWER", "start_ms": 1789692458615, "end_ms": 1789692471791}
+{"kind": "card", "action": "start", "at_ms": 1789692519077, "card": {"id": "703c041892e6ec0a", "kind": "SCORE", "handle": "HaddanFx", "question": "!score", "answer": "Today: 0 correct / 0 wrong viewer predictions. Every result stays in the stream log.", "ends_ms": 1789692532077}}
+{"kind": "beat", "type": "segment.LIVE_CHART", "start_ms": 1789692471791, "end_ms": 1789692519077}
+{"kind": "beat", "type": "answer", "id": "703c041892e6ec0a", "start_ms": 1789692519077, "end_ms": 1789692532077}
+{"kind": "beat", "type": "segment.VIEWER_ANSWER", "start_ms": 1789692519077, "end_ms": 1789692532277}
+{"kind": "beat", "type": "shout", "start_ms": 1789692544419, "end_ms": 1789692548419}
+{"kind": "card", "action": "start", "at_ms": 1789692569541, "card": {"id": "519cccc9d44178b6", "kind": "THANKS", "handle": "Supporter", "question": "Thank you", "answer": "Support never buys access. Polls and predictions are free for everyone.", "ends_ms": 1789692573541}}
+{"kind": "beat", "type": "segment.LIVE_CHART", "start_ms": 1789692532277, "end_ms": 1789692569541}
+{"kind": "beat", "type": "gift", "id": "519cccc9d44178b6", "start_ms": 1789692569541, "end_ms": 1789692573541}
+{"kind": "beat", "type": "shout", "start_ms": 1789692569541, "end_ms": 1789692573541}
+{"kind": "beat", "type": "segment.VIEWER_ANSWER", "start_ms": 1789692569541, "end_ms": 1789692573610}
+{"kind": "resolution", "resolution_kind": "POLL", "id": "ff477a96268e3aa3", "at_ms": 1789692602416, "outcome": "DOWN", "text": "Gold closed at or below 4,356.593 at 4,353.757. DOWN wins.", "correct": 1, "wrong": 1}
+{"kind": "beat", "type": "poll", "id": "ff477a96268e3aa3", "start_ms": 1789692387089, "end_ms": 1789692602416}
+{"kind": "beat", "type": "segment.LIVE_CHART", "start_ms": 1789692573610, "end_ms": 1789692602271}
+{"kind": "beat", "type": "hook.POLL_RESOLVE", "id": "ff477a96268e3aa3", "start_ms": 1789692387238, "end_ms": 1789692610549}
+{"kind": "hook", "action": "start", "at_ms": 1789692610549, "hook": {"kind": "CANDLE_CLOSE", "headline": "Watch the next confirmed candle close", "sub": "Above its open: an up candle. Below: a down candle. Equal: unchanged; no direction claimed.", "countdown_ms": 589451, "ring_pct": 0.34505444444444444, "priority": 0, "id": "close:1789693200000", "ends_ms": 1789693200000, "outcome": null}}
+{"kind": "beat", "type": "segment.POLL_RESULT", "start_ms": 1789692602271, "end_ms": 1789692610549}
+{"kind": "poll", "action": "start", "at_ms": 1789692610670, "poll": {"id": "4f6a20af25f5a3e5", "question": "Will gold close above 4,353.254?", "resolve_condition": "M1 close > 4353.254 at 1789692840000 UTC-ms", "opens_ms": 1789692610670, "closes_ms": 1789692840000, "votes": {}, "level": 4353.254, "tf": "M1", "outcome": null}}
+{"kind": "beat", "type": "hook.CANDLE_CLOSE", "id": "close:1789693200000", "start_ms": 1789692610549, "end_ms": 1789692610760}
+{"kind": "hook", "action": "start", "at_ms": 1789692610760, "hook": {"kind": "POLL_RESOLVE", "headline": "Will gold close above 4,353.254?", "sub": "Above: UP wins. At or below: DOWN wins. Only the confirmed M1 close counts.", "countdown_ms": 229240, "ring_pct": 0.00039244756464484887, "priority": 50, "id": "4f6a20af25f5a3e5", "ends_ms": 1789692840000, "outcome": null}}
+{"kind": "beat", "type": "hook.POLL_RESOLVE", "id": "4f6a20af25f5a3e5", "start_ms": 1789692610760, "end_ms": 1789692639705}
+{"kind": "beat", "type": "segment.LIVE_CHART", "start_ms": 1789692610549, "end_ms": 1789692639705}
+{"kind": "session", "action": "end", "at_ms": 1789692639705}

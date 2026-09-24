@@ -1,0 +1,36 @@
+{
+  "server": "ExnessKE-MT5Trial10",
+  "broker": "exness",
+  "symbol": "XAUUSDz",
+  "clock_version": 1,
+  "schema_version": 1,
+  "structure_schema_version": 2,
+  "weights_hash": "feb1cdb48ff9dd15548c140fc97d3db5974b50c7a699f876abfaabc95f83e729",
+  "from_ms": 1789034400000,
+  "to_ms": 1789697700000,
+  "config": {
+    "eq_tolerance_atr": 0.1,
+    "sweep_min_penetration_atr": 0.05,
+    "sweep_reclaim_bars": 3,
+    "max_pools_visible": 6,
+    "named_levels": [
+      "PDH",
+      "PDL",
+      "PWH",
+      "PWL",
+      "ASIA",
+      "LONDON",
+      "NY",
+      "DH",
+      "DL"
+    ]
+  },
+  "sessions": {
+    "day_boundary": "17:00 America/New_York",
+    "true_day_open": "00:00 America/New_York"
+  },
+  "decisions_sha256": "00db699f35f2c331c3ee8e7210316960b6212936a555aa8130d17e4c7d3ede4e",
+  "decisions_count": 1912,
+  "sweeps_count": 134,
+  "mss_count": 3
+}

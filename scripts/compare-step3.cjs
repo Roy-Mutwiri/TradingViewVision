@@ -1,0 +1,11 @@
+﻿const fs=require('fs');
+const before=JSON.parse(fs.readFileSync('runtime/ui-proof/call-in-sample-target-eq-2/summary.before-step3.json','utf8'));
+const after=JSON.parse(fs.readFileSync('runtime/ui-proof/call-in-sample-target-eq-2/summary.json','utf8'));
+const fields=['calls','calls_per_day','hit_rate','expectancy_r','longest_losing_streak','ledger_sha256'];
+const by={};
+for(const f of fields)by[f]={before:before[f],after:after[f],delta:typeof before[f]==='number'&&typeof after[f]==='number'?after[f]-before[f]:undefined};
+const tf={};
+for(const k of Object.keys(after.by_timeframe||{}))tf[k]={before:before.by_timeframe?.[k]||null,after:after.by_timeframe[k]};
+const out={comparison:by,by_timeframe:tf,note:'Compared saved call-in-sample-target-eq-2 baseline to current rerun after dry-run presentation changes.'};
+fs.writeFileSync('runtime/ui-proof/call-in-sample-target-eq-2/comparison-step3.json',JSON.stringify(out,null,2));
+console.log(JSON.stringify(out.comparison,null,2));

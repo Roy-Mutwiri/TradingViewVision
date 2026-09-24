@@ -1,0 +1,1128 @@
+{
+  "$defs": {
+    "Animation": {
+      "additionalProperties": false,
+      "properties": {
+        "in_": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "title": "In",
+          "type": "string"
+        },
+        "loop": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Loop"
+        }
+      },
+      "required": [
+        "in_",
+        "loop"
+      ],
+      "title": "Animation",
+      "type": "object"
+    },
+    "AudienceComment": {
+      "additionalProperties": false,
+      "properties": {
+        "at_ms": {
+          "minimum": 0,
+          "title": "At Ms",
+          "type": "integer"
+        },
+        "ends_ms": {
+          "minimum": 0,
+          "title": "Ends Ms",
+          "type": "integer"
+        },
+        "handle": {
+          "title": "Handle",
+          "type": "string"
+        },
+        "text": {
+          "title": "Text",
+          "type": "string"
+        }
+      },
+      "required": [
+        "handle",
+        "text",
+        "at_ms",
+        "ends_ms"
+      ],
+      "title": "AudienceComment",
+      "type": "object"
+    },
+    "Call": {
+      "additionalProperties": false,
+      "properties": {
+        "clock_version": {
+          "minimum": 1,
+          "title": "Clock Version",
+          "type": "integer"
+        },
+        "created_ms": {
+          "minimum": 0,
+          "title": "Created Ms",
+          "type": "integer"
+        },
+        "created_trading_day": {
+          "default": "",
+          "title": "Created Trading Day",
+          "type": "string"
+        },
+        "day_boundary": {
+          "default": "17:00 America/New_York",
+          "title": "Day Boundary",
+          "type": "string"
+        },
+        "direction": {
+          "enum": [
+            "LONG",
+            "SHORT"
+          ],
+          "title": "Direction",
+          "type": "string"
+        },
+        "entry_hi": {
+          "exclusiveMinimum": 0,
+          "title": "Entry Hi",
+          "type": "number"
+        },
+        "entry_lo": {
+          "exclusiveMinimum": 0,
+          "title": "Entry Lo",
+          "type": "number"
+        },
+        "entry_ref": {
+          "anyOf": [
+            {
+              "exclusiveMinimum": 0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Entry Ref"
+        },
+        "eval_from_ms": {
+          "default": 0,
+          "minimum": 0,
+          "title": "Eval From Ms",
+          "type": "integer"
+        },
+        "eval_to_ms": {
+          "default": 0,
+          "minimum": 0,
+          "title": "Eval To Ms",
+          "type": "integer"
+        },
+        "expires_ms": {
+          "minimum": 0,
+          "title": "Expires Ms",
+          "type": "integer"
+        },
+        "gap_skipped": {
+          "default": false,
+          "title": "Gap Skipped",
+          "type": "boolean"
+        },
+        "grade": {
+          "default": "A",
+          "enum": [
+            "A",
+            "B",
+            "C"
+          ],
+          "title": "Grade",
+          "type": "string"
+        },
+        "grade_notes": {
+          "default": [],
+          "items": {
+            "minLength": 1,
+            "pattern": "\\S",
+            "type": "string"
+          },
+          "title": "Grade Notes",
+          "type": "array"
+        },
+        "id": {
+          "default": "",
+          "title": "Id",
+          "type": "string"
+        },
+        "in_ote": {
+          "anyOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "In Ote"
+        },
+        "invalidation": {
+          "exclusiveMinimum": 0,
+          "title": "Invalidation",
+          "type": "number"
+        },
+        "kind": {
+          "enum": [
+            "SETUP",
+            "STRUCTURE"
+          ],
+          "title": "Kind",
+          "type": "string"
+        },
+        "mae": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Mae"
+        },
+        "mfe": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Mfe"
+        },
+        "ob_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Ob Id"
+        },
+        "reason": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "title": "Reason",
+          "type": "string"
+        },
+        "reason_chain": {
+          "default": [],
+          "items": {
+            "minLength": 1,
+            "pattern": "\\S",
+            "type": "string"
+          },
+          "title": "Reason Chain",
+          "type": "array"
+        },
+        "resolved_ms": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Resolved Ms"
+        },
+        "resolved_trading_day": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Resolved Trading Day"
+        },
+        "source_bars": {
+          "default": [],
+          "items": {
+            "type": "integer"
+          },
+          "title": "Source Bars",
+          "type": "array"
+        },
+        "state": {
+          "default": "PENDING",
+          "enum": [
+            "PENDING",
+            "ACTIVE",
+            "WIN",
+            "LOSS",
+            "SCRATCH",
+            "NEVER_TRIGGERED",
+            "VOID_DATA",
+            "CANCELLED"
+          ],
+          "title": "State",
+          "type": "string"
+        },
+        "state_hash": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "title": "State Hash",
+          "type": "string"
+        },
+        "structure_event_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Structure Event Id"
+        },
+        "symbol": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "title": "Symbol",
+          "type": "string"
+        },
+        "target": {
+          "exclusiveMinimum": 0,
+          "title": "Target",
+          "type": "number"
+        },
+        "target_pool_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Target Pool Id"
+        },
+        "timeframe": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Timeframe"
+        },
+        "tp2": {
+          "anyOf": [
+            {
+              "exclusiveMinimum": 0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Tp2"
+        },
+        "trigger_price": {
+          "anyOf": [
+            {
+              "exclusiveMinimum": 0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Trigger Price"
+        }
+      },
+      "required": [
+        "created_ms",
+        "kind",
+        "direction",
+        "entry_lo",
+        "entry_hi",
+        "invalidation",
+        "target",
+        "expires_ms",
+        "state_hash",
+        "reason",
+        "symbol",
+        "clock_version"
+      ],
+      "title": "Call",
+      "type": "object"
+    },
+    "CallBoard": {
+      "additionalProperties": false,
+      "properties": {
+        "all_time": {
+          "$ref": "#/$defs/CallStats",
+          "default": {
+            "active": 0,
+            "ambiguous": 0,
+            "cancelled": 0,
+            "expectancy": null,
+            "gap_skipped": 0,
+            "hit_rate": null,
+            "losses": 0,
+            "never_triggered": 0,
+            "pending": 0,
+            "produced": 0,
+            "resolved": 0,
+            "scratch": 0,
+            "triggered": 0,
+            "void_data": 0,
+            "wins": 0
+          }
+        },
+        "last_20": {
+          "$ref": "#/$defs/CallStats",
+          "default": {
+            "active": 0,
+            "ambiguous": 0,
+            "cancelled": 0,
+            "expectancy": null,
+            "gap_skipped": 0,
+            "hit_rate": null,
+            "losses": 0,
+            "never_triggered": 0,
+            "pending": 0,
+            "produced": 0,
+            "resolved": 0,
+            "scratch": 0,
+            "triggered": 0,
+            "void_data": 0,
+            "wins": 0
+          }
+        },
+        "rows": {
+          "default": [],
+          "items": {
+            "$ref": "#/$defs/CallRow"
+          },
+          "title": "Rows",
+          "type": "array"
+        },
+        "today": {
+          "$ref": "#/$defs/CallStats",
+          "default": {
+            "active": 0,
+            "ambiguous": 0,
+            "cancelled": 0,
+            "expectancy": null,
+            "gap_skipped": 0,
+            "hit_rate": null,
+            "losses": 0,
+            "never_triggered": 0,
+            "pending": 0,
+            "produced": 0,
+            "resolved": 0,
+            "scratch": 0,
+            "triggered": 0,
+            "void_data": 0,
+            "wins": 0
+          }
+        },
+        "today_label": {
+          "default": "TODAY \u00c2\u00b7 from 17:00 NY",
+          "title": "Today Label",
+          "type": "string"
+        },
+        "today_trading_day": {
+          "default": "",
+          "title": "Today Trading Day",
+          "type": "string"
+        }
+      },
+      "title": "CallBoard",
+      "type": "object"
+    },
+    "CallRow": {
+      "additionalProperties": false,
+      "properties": {
+        "ambiguous": {
+          "default": false,
+          "title": "Ambiguous",
+          "type": "boolean"
+        },
+        "call": {
+          "$ref": "#/$defs/Call"
+        },
+        "cancellation_reason": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Cancellation Reason"
+        },
+        "cancelled": {
+          "default": false,
+          "title": "Cancelled",
+          "type": "boolean"
+        },
+        "prior_bid_close": {
+          "anyOf": [
+            {
+              "exclusiveMinimum": 0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Prior Bid Close"
+        },
+        "resolution_reason": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Resolution Reason"
+        }
+      },
+      "required": [
+        "call"
+      ],
+      "title": "CallRow",
+      "type": "object"
+    },
+    "CallStats": {
+      "additionalProperties": false,
+      "properties": {
+        "active": {
+          "default": 0,
+          "title": "Active",
+          "type": "integer"
+        },
+        "ambiguous": {
+          "default": 0,
+          "title": "Ambiguous",
+          "type": "integer"
+        },
+        "cancelled": {
+          "default": 0,
+          "title": "Cancelled",
+          "type": "integer"
+        },
+        "expectancy": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Expectancy"
+        },
+        "gap_skipped": {
+          "default": 0,
+          "title": "Gap Skipped",
+          "type": "integer"
+        },
+        "hit_rate": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Hit Rate"
+        },
+        "losses": {
+          "default": 0,
+          "title": "Losses",
+          "type": "integer"
+        },
+        "never_triggered": {
+          "default": 0,
+          "title": "Never Triggered",
+          "type": "integer"
+        },
+        "pending": {
+          "default": 0,
+          "title": "Pending",
+          "type": "integer"
+        },
+        "produced": {
+          "default": 0,
+          "title": "Produced",
+          "type": "integer"
+        },
+        "resolved": {
+          "default": 0,
+          "title": "Resolved",
+          "type": "integer"
+        },
+        "scratch": {
+          "default": 0,
+          "title": "Scratch",
+          "type": "integer"
+        },
+        "triggered": {
+          "default": 0,
+          "title": "Triggered",
+          "type": "integer"
+        },
+        "void_data": {
+          "default": 0,
+          "title": "Void Data",
+          "type": "integer"
+        },
+        "wins": {
+          "default": 0,
+          "title": "Wins",
+          "type": "integer"
+        }
+      },
+      "title": "CallStats",
+      "type": "object"
+    },
+    "Card": {
+      "additionalProperties": false,
+      "properties": {
+        "answer": {
+          "title": "Answer",
+          "type": "string"
+        },
+        "ends_ms": {
+          "minimum": 0,
+          "title": "Ends Ms",
+          "type": "integer"
+        },
+        "handle": {
+          "title": "Handle",
+          "type": "string"
+        },
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "kind": {
+          "enum": [
+            "ANSWER",
+            "BIAS",
+            "LEVELS",
+            "SCORE",
+            "ZONE",
+            "THANKS"
+          ],
+          "title": "Kind",
+          "type": "string"
+        },
+        "question": {
+          "title": "Question",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "kind",
+        "handle",
+        "question",
+        "answer",
+        "ends_ms"
+      ],
+      "title": "Card",
+      "type": "object"
+    },
+    "DrawObject": {
+      "additionalProperties": false,
+      "properties": {
+        "anim": {
+          "$ref": "#/$defs/Animation"
+        },
+        "confidence": {
+          "maximum": 1,
+          "minimum": 0,
+          "title": "Confidence",
+          "type": "number"
+        },
+        "digits": {
+          "default": 2,
+          "enum": [
+            2,
+            3
+          ],
+          "title": "Digits",
+          "type": "integer"
+        },
+        "id": {
+          "default": "",
+          "title": "Id",
+          "type": "string"
+        },
+        "layer": {
+          "enum": [
+            "L2",
+            "L3"
+          ],
+          "title": "Layer",
+          "type": "string"
+        },
+        "object_hash": {
+          "default": "",
+          "title": "Object Hash",
+          "type": "string"
+        },
+        "points": {
+          "items": {
+            "$ref": "#/$defs/Point"
+          },
+          "minItems": 1,
+          "title": "Points",
+          "type": "array"
+        },
+        "priority": {
+          "minimum": 0,
+          "title": "Priority",
+          "type": "integer"
+        },
+        "reason": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "title": "Reason",
+          "type": "string"
+        },
+        "shape": {
+          "enum": [
+            "ZONE",
+            "LINE",
+            "RAY",
+            "LABEL",
+            "ARROW",
+            "FIB",
+            "PATH",
+            "LADDER",
+            "GLYPH"
+          ],
+          "title": "Shape",
+          "type": "string"
+        },
+        "source_bars": {
+          "items": {
+            "minimum": 0,
+            "type": "integer"
+          },
+          "minItems": 1,
+          "title": "Source Bars",
+          "type": "array"
+        },
+        "state": {
+          "enum": [
+            "FRESH",
+            "TOUCHED",
+            "MITIGATED",
+            "BREAKER",
+            "INVALID"
+          ],
+          "title": "State",
+          "type": "string"
+        },
+        "style": {
+          "$ref": "#/$defs/Style"
+        },
+        "text_args": {
+          "additionalProperties": {
+            "$ref": "#/$defs/JsonValue"
+          },
+          "title": "Text Args",
+          "type": "object"
+        },
+        "text_key": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "title": "Text Key",
+          "type": "string"
+        },
+        "ttl_ms": {
+          "minimum": 0,
+          "title": "Ttl Ms",
+          "type": "integer"
+        },
+        "z": {
+          "title": "Z",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "layer",
+        "shape",
+        "points",
+        "style",
+        "text_key",
+        "text_args",
+        "state",
+        "ttl_ms",
+        "priority",
+        "z",
+        "anim",
+        "reason",
+        "source_bars",
+        "confidence"
+      ],
+      "title": "DrawObject",
+      "type": "object"
+    },
+    "Hook": {
+      "additionalProperties": false,
+      "properties": {
+        "countdown_ms": {
+          "minimum": 0,
+          "title": "Countdown Ms",
+          "type": "integer"
+        },
+        "ends_ms": {
+          "minimum": 0,
+          "title": "Ends Ms",
+          "type": "integer"
+        },
+        "headline": {
+          "title": "Headline",
+          "type": "string"
+        },
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "kind": {
+          "enum": [
+            "CANDLE_CLOSE",
+            "LEVEL_APPROACH",
+            "EVENT_COUNTDOWN",
+            "SETUP_TRIGGER",
+            "STREAK",
+            "SESSION_OPEN"
+          ],
+          "title": "Kind",
+          "type": "string"
+        },
+        "outcome": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Outcome"
+        },
+        "priority": {
+          "title": "Priority",
+          "type": "integer"
+        },
+        "ring_pct": {
+          "maximum": 1,
+          "minimum": 0,
+          "title": "Ring Pct",
+          "type": "number"
+        },
+        "sub": {
+          "title": "Sub",
+          "type": "string"
+        }
+      },
+      "required": [
+        "kind",
+        "headline",
+        "sub",
+        "countdown_ms",
+        "ring_pct",
+        "priority",
+        "id",
+        "ends_ms"
+      ],
+      "title": "Hook",
+      "type": "object"
+    },
+    "JsonValue": {},
+    "Level": {
+      "additionalProperties": false,
+      "properties": {
+        "label": {
+          "title": "Label",
+          "type": "string"
+        },
+        "price": {
+          "title": "Price",
+          "type": "number"
+        }
+      },
+      "required": [
+        "label",
+        "price"
+      ],
+      "title": "Level",
+      "type": "object"
+    },
+    "Point": {
+      "additionalProperties": false,
+      "properties": {
+        "price": {
+          "exclusiveMinimum": 0,
+          "title": "Price",
+          "type": "number"
+        },
+        "t_ms": {
+          "minimum": 0,
+          "title": "T Ms",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "t_ms",
+        "price"
+      ],
+      "title": "Point",
+      "type": "object"
+    },
+    "Style": {
+      "additionalProperties": false,
+      "properties": {
+        "token": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "title": "Token",
+          "type": "string"
+        }
+      },
+      "required": [
+        "token"
+      ],
+      "title": "Style",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "bias": {
+      "additionalProperties": {
+        "type": "string"
+      },
+      "default": {
+        "H1": "NOT ASSESSED",
+        "H4": "NOT ASSESSED",
+        "M15": "NOT ASSESSED"
+      },
+      "title": "Bias",
+      "type": "object"
+    },
+    "card": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/Card"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null
+    },
+    "comment": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/AudienceComment"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null
+    },
+    "hook": {
+      "$ref": "#/$defs/Hook"
+    },
+    "language": {
+      "default": "en",
+      "title": "Language",
+      "type": "string"
+    },
+    "levels": {
+      "default": [],
+      "items": {
+        "$ref": "#/$defs/Level"
+      },
+      "title": "Levels",
+      "type": "array"
+    },
+    "marks": {
+      "default": [],
+      "items": {
+        "$ref": "#/$defs/DrawObject"
+      },
+      "title": "Marks",
+      "type": "array"
+    },
+    "now_ms": {
+      "minimum": 0,
+      "title": "Now Ms",
+      "type": "integer"
+    },
+    "rehearsal": {
+      "default": false,
+      "title": "Rehearsal",
+      "type": "boolean"
+    },
+    "scoreboard": {
+      "$ref": "#/$defs/CallBoard",
+      "default": {
+        "all_time": {
+          "active": 0,
+          "ambiguous": 0,
+          "cancelled": 0,
+          "expectancy": null,
+          "gap_skipped": 0,
+          "hit_rate": null,
+          "losses": 0,
+          "never_triggered": 0,
+          "pending": 0,
+          "produced": 0,
+          "resolved": 0,
+          "scratch": 0,
+          "triggered": 0,
+          "void_data": 0,
+          "wins": 0
+        },
+        "last_20": {
+          "active": 0,
+          "ambiguous": 0,
+          "cancelled": 0,
+          "expectancy": null,
+          "gap_skipped": 0,
+          "hit_rate": null,
+          "losses": 0,
+          "never_triggered": 0,
+          "pending": 0,
+          "produced": 0,
+          "resolved": 0,
+          "scratch": 0,
+          "triggered": 0,
+          "void_data": 0,
+          "wins": 0
+        },
+        "rows": [],
+        "today": {
+          "active": 0,
+          "ambiguous": 0,
+          "cancelled": 0,
+          "expectancy": null,
+          "gap_skipped": 0,
+          "hit_rate": null,
+          "losses": 0,
+          "never_triggered": 0,
+          "pending": 0,
+          "produced": 0,
+          "resolved": 0,
+          "scratch": 0,
+          "triggered": 0,
+          "void_data": 0,
+          "wins": 0
+        },
+        "today_label": "TODAY \u00c2\u00b7 from 17:00 NY",
+        "today_trading_day": ""
+      }
+    },
+    "session": {
+      "default": "Gold / UTC",
+      "title": "Session",
+      "type": "string"
+    },
+    "shout": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Shout"
+    },
+    "supporters": {
+      "default": [],
+      "items": {
+        "type": "string"
+      },
+      "title": "Supporters",
+      "type": "array"
+    },
+    "zoom": {
+      "anyOf": [
+        {
+          "additionalProperties": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "number"
+              }
+            ]
+          },
+          "type": "object"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Zoom"
+    }
+  },
+  "required": [
+    "now_ms",
+    "hook"
+  ],
+  "title": "RetentionFrame",
+  "type": "object"
+}

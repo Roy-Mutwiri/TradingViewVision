@@ -1,0 +1,4 @@
+const clocks=[{label:'UTC',format:new Intl.DateTimeFormat('en-GB',{timeZone:'UTC',hour:'2-digit',minute:'2-digit',second:'2-digit',hourCycle:'h23'})},{label:'NEW YORK',format:new Intl.DateTimeFormat('en-GB',{timeZone:'America/New_York',hour:'2-digit',minute:'2-digit',second:'2-digit',hourCycle:'h23'})},{label:'NAIROBI',format:new Intl.DateTimeFormat('en-GB',{timeZone:'Africa/Nairobi',hour:'2-digit',minute:'2-digit',second:'2-digit',hourCycle:'h23'})}];
+export function ClockCluster({now,countdown}:{now:number;countdown:string}){
+  return <div className="clock-cluster" aria-label="Clock cluster">{clocks.map(clock=><div key={clock.label}><span>{clock.label}</span><time>{clock.format.format(now)}</time></div>)}<div className="candle-clock"><span>CANDLE CLOSE</span><time aria-label="Candle close countdown">{countdown}</time></div></div>;
+}

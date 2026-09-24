@@ -1,0 +1,121 @@
+data:
+  authoritative: mt5
+  canonical_broker: exness
+  canonical_symbol: XAUUSD
+  broker_symbol_patterns:
+    - XAUUSD
+    - XAUUSDm
+    - XAUUSDc
+    - XAUUSDz
+  expected_offset_s:
+    - 0
+    - 3600
+  broker_clock_path: runtime/broker-clock.json
+  clock_proof_path: runtime/clock-proof.json
+  backfill_vendor: twelve_data
+  history_depth:
+    M1: 90d
+    M5: 180d
+    M15: 1y
+    H1: 3y
+    H4: 5y
+    D1: 10y
+    W1: max
+  store_path: runtime/candles.duckdb
+  stale_ms: 15000
+  tick_poll_ms: 50
+  bar_poll_ms: 1000
+  render_throttle_hz: 10
+  max_tick_latency_ms: 250
+  max_spread_points: 200
+broker:
+  signup_url: null
+  download_url: https://www.exness.com/metatrader-5/
+security:
+  idle_lock_min: null
+chart:
+  density: notebook
+  visible_bars: 1500
+  lookback: 500
+  update_hz: 10
+zones:
+  fvg_min_atr: 0.2
+  fvg_merge_overlap: 0.5
+  max_merged_span_atr: 2.5
+  max_inversion_depth: 1
+  ob_displacement_atr: 1.5
+  ob_require_fvg: true
+  ob_require_structure_break: true
+  ob_boundary: body_to_wick
+  ob_mitigation: wick_50
+  ob_max_cluster: 3
+  ob_max_leg_bars: 10
+  ob_candidate_on_displacement: true
+  ob_merge_overlap: 0.5
+  zone_ttl_bars: 50
+  max_visible_per_tf:
+    ob: 3
+    fvg: 3
+  htf_overlay:
+    - H4
+    - H1
+sessions:
+  day_boundary: 17:00 America/New_York
+  true_day_open: 00:00 America/New_York
+indicators:
+  ut_bot:
+    enabled: true
+    key: 1
+    atr_period: 10
+    heikin_ashi: false
+    confirm_on_close: true
+    show_stop_line: false
+    color_bars: false
+    label_budget: 100
+    per_timeframe:
+      M1:
+        enabled: false
+      M15:
+        key: 1
+      H1:
+        key: 2
+dashboard:
+  host: 127.0.0.1
+  port: 8765
+distribution:
+  telegram:
+    auto_post: false
+language: en
+narration:
+  audio: false
+  on_chart_reasons: true
+  reason_strip_seconds: 20
+ui:
+  mode: broadcast
+speaker:
+  enabled: true
+  sink_dir: runtime/speaker
+  hz: 1
+retention:
+  min_call_life_ms: 300000
+  timeline_dir: runtime/retention
+  gamechanger_events: ../LetsTalk/data/live_events
+log_path: runtime/events.jsonl
+eval:
+  live_bucket_ms: 250
+  replay_source: m1_synth
+  record_evalpoints: true
+candidates:
+  enabled: true
+  candidate_ttl_bars: 3
+  fade_ms: 600
+  show_reason_chip: true
+  timeframes:
+    - M1
+    - M5
+    - M15
+    - M30
+    - H1
+    - H4
+    - D1
+    - W1

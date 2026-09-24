@@ -1,0 +1,5 @@
+[
+  {"name":"Asia","key":"ASIA","zone":"Asia/Tokyo","open":9,"close":18},
+  {"name":"London","key":"LONDON","zone":"Europe/London","open":8,"close":17},
+  {"name":"New York","key":"NY","zone":"America/New_York","open":8,"close":17}
+]

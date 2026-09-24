@@ -1,0 +1,15 @@
+﻿{
+  "phase": 0,
+  "gate": "pending_operator_contract_confirmation",
+  "python": "3.12.14",
+  "pytest": {"passed": 8, "failed": 0},
+  "ruff": "pass",
+  "mypy_strict": "pass_60_modules",
+  "protocol_codegen_and_drift_check": "pass",
+  "typescript": "pass",
+  "vite_build": "pass",
+  "phase1_started": false,
+  "proof_scope": "Browser dashboard shell, not Electron or market chart",
+  "pending": ["Contract choices in README", "Broker history and expected trading intervals", "Gold pip definition"],
+  "limitations": ["Later phases are explicit stubs", "Two upstream test-client deprecation warnings", "Translation copy awaits native review"]
+}

@@ -1,0 +1,12 @@
+# Assertions only; observed calendar is authoritative.
+sessions:
+  day_boundary: "17:00 America/New_York"
+  true_day_open: "00:00 America/New_York"
+  weekly:
+    close: "Fri 21:00 UTC +/-60m"
+    open: "Sun 21:00 UTC +/-60m"
+    daily_break: "21:00-22:00 UTC +/-30m"
+  full_closures: [12-25, 01-01, good-friday]
+  thin_liquidity: [12-24, 12-26, 12-31, 07-04, us-thanksgiving, us-thanksgiving+1]
+killzone_zones: [Europe/London, America/New_York, Asia/Tokyo]
+observed_holidays: []

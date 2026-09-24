@@ -1,0 +1,361 @@
+{
+  "live": true,
+  "passwordType": "master",
+  "tradeMode": "DEMO",
+  "symbol": "XAUUSDz",
+  "switches": [
+    {
+      "tf": "M15",
+      "ipc_ms": 70.29999999701977,
+      "store_ms": 52.17209999682382,
+      "bars": 2000,
+      "objects": 100
+    },
+    {
+      "tf": "H1",
+      "ipc_ms": 183.79999999701977,
+      "store_ms": 173.90619999787305,
+      "bars": 1010,
+      "objects": 46
+    },
+    {
+      "tf": "M5",
+      "ipc_ms": 94.70000000298023,
+      "store_ms": 66.41379999928176,
+      "bars": 2000,
+      "objects": 100
+    },
+    {
+      "tf": "M15",
+      "ipc_ms": 69.10000000149012,
+      "store_ms": 51.61769999904209,
+      "bars": 2000,
+      "objects": 100
+    },
+    {
+      "tf": "H1",
+      "ipc_ms": 61.80000000074506,
+      "store_ms": 35.282199998619035,
+      "bars": 1006,
+      "objects": 93
+    },
+    {
+      "tf": "M5",
+      "ipc_ms": 85.30000000074506,
+      "store_ms": 56.03449999762233,
+      "bars": 2000,
+      "objects": 100
+    }
+  ],
+  "quotes": [
+    {
+      "delivery_ms": 17,
+      "event_age_ms": 910,
+      "t_ms": 1789690156545,
+      "bid": 4346.472
+    },
+    {
+      "delivery_ms": 13,
+      "event_age_ms": 861,
+      "t_ms": 1789690158003,
+      "bid": 4346.183
+    },
+    {
+      "delivery_ms": 21,
+      "event_age_ms": 903,
+      "t_ms": 1789690159015,
+      "bid": 4346.44
+    },
+    {
+      "delivery_ms": 0,
+      "event_age_ms": 880,
+      "t_ms": 1789690160201,
+      "bid": 4346.378
+    },
+    {
+      "delivery_ms": 1,
+      "event_age_ms": 868,
+      "t_ms": 1789690160779,
+      "bid": 4346.431
+    },
+    {
+      "delivery_ms": 0,
+      "event_age_ms": 881,
+      "t_ms": 1789690160896,
+      "bid": 4346.484
+    },
+    {
+      "delivery_ms": 33,
+      "event_age_ms": 929,
+      "t_ms": 1789690161594,
+      "bid": 4346.428
+    },
+    {
+      "delivery_ms": 18,
+      "event_age_ms": 898,
+      "t_ms": 1789690162387,
+      "bid": 4346.268
+    },
+    {
+      "delivery_ms": 9,
+      "event_age_ms": 923,
+      "t_ms": 1789690162742,
+      "bid": 4346.338
+    },
+    {
+      "delivery_ms": 63,
+      "event_age_ms": 1094,
+      "t_ms": 1789690163620,
+      "bid": 4346.698
+    },
+    {
+      "delivery_ms": 47,
+      "event_age_ms": 924,
+      "t_ms": 1789690164862,
+      "bid": 4346.425
+    },
+    {
+      "delivery_ms": 1,
+      "event_age_ms": 901,
+      "t_ms": 1789690165299,
+      "bid": 4346.488
+    },
+    {
+      "delivery_ms": 1,
+      "event_age_ms": 916,
+      "t_ms": 1789690166300,
+      "bid": 4346.743
+    },
+    {
+      "delivery_ms": 21,
+      "event_age_ms": 887,
+      "t_ms": 1789690166476,
+      "bid": 4346.805
+    },
+    {
+      "delivery_ms": 97,
+      "event_age_ms": 1013,
+      "t_ms": 1789690166497,
+      "bid": 4346.753
+    },
+    {
+      "delivery_ms": 37,
+      "event_age_ms": 906,
+      "t_ms": 1789690167260,
+      "bid": 4346.806
+    },
+    {
+      "delivery_ms": 1,
+      "event_age_ms": 879,
+      "t_ms": 1789690168087,
+      "bid": 4346.585
+    },
+    {
+      "delivery_ms": 1,
+      "event_age_ms": 895,
+      "t_ms": 1789690169110,
+      "bid": 4346.804
+    },
+    {
+      "delivery_ms": 30,
+      "event_age_ms": 922,
+      "t_ms": 1789690169449,
+      "bid": 4346.754
+    },
+    {
+      "delivery_ms": 47,
+      "event_age_ms": 936,
+      "t_ms": 1789690170453,
+      "bid": 4346.73
+    },
+    {
+      "delivery_ms": 16,
+      "event_age_ms": 928,
+      "t_ms": 1789690171612,
+      "bid": 4346.736
+    },
+    {
+      "delivery_ms": 16,
+      "event_age_ms": 918,
+      "t_ms": 1789690172415,
+      "bid": 4346.517
+    },
+    {
+      "delivery_ms": 42,
+      "event_age_ms": 918,
+      "t_ms": 1789690173538,
+      "bid": 4346.799
+    },
+    {
+      "delivery_ms": 28,
+      "event_age_ms": 885,
+      "t_ms": 1789690174506,
+      "bid": 4346.786
+    },
+    {
+      "delivery_ms": 1,
+      "event_age_ms": 896,
+      "t_ms": 1789690174660,
+      "bid": 4346.654
+    },
+    {
+      "delivery_ms": 9,
+      "event_age_ms": 899,
+      "t_ms": 1789690175787,
+      "bid": 4346.899
+    },
+    {
+      "delivery_ms": 2,
+      "event_age_ms": 867,
+      "t_ms": 1789690177536,
+      "bid": 4346.739
+    },
+    {
+      "delivery_ms": 1,
+      "event_age_ms": 909,
+      "t_ms": 1789690178571,
+      "bid": 4346.686
+    }
+  ],
+  "backfill": [
+    "Calendar pending: downloading observed M1 history",
+    "Calendar pending: downloading observed M1 history",
+    "Derived calendar from 2 days; bulk history continuing",
+    "Calendar downloading: 4,000 M1 bars received",
+    "Calendar downloading: 6,000 M1 bars received",
+    "Calendar downloading: 7,000 M1 bars received",
+    "Calendar downloading: 8,000 M1 bars received",
+    "Calendar downloading: 9,000 M1 bars received",
+    "Calendar downloading: 10,000 M1 bars received",
+    "Calendar downloading: 11,000 M1 bars received",
+    "Calendar downloading: 12,000 M1 bars received",
+    "Calendar downloading: 13,000 M1 bars received",
+    "Calendar downloading: 14,000 M1 bars received",
+    "Calendar downloading: 15,000 M1 bars received",
+    "Calendar downloading: 17,000 M1 bars received",
+    "Calendar downloading: 18,000 M1 bars received",
+    "Calendar downloading: 19,000 M1 bars received",
+    "Calendar downloading: 20,000 M1 bars received",
+    "Calendar downloading: 21,000 M1 bars received",
+    "Calendar downloading: 22,000 M1 bars received",
+    "Calendar downloading: 23,000 M1 bars received",
+    "Calendar downloading: 24,000 M1 bars received",
+    "Calendar downloading: 25,000 M1 bars received",
+    "Calendar downloading: 26,000 M1 bars received",
+    "Calendar downloading: 27,000 M1 bars received",
+    "Calendar downloading: 28,000 M1 bars received",
+    "Calendar downloading: 29,000 M1 bars received",
+    "Calendar downloading: 30,000 M1 bars received",
+    "Calendar downloading: 31,000 M1 bars received",
+    "Calendar downloading: 32,000 M1 bars received",
+    "Calendar downloading: 33,000 M1 bars received",
+    "Calendar downloading: 34,000 M1 bars received",
+    "Calendar downloading: 35,000 M1 bars received",
+    "Calendar downloading: 36,000 M1 bars received",
+    "Calendar downloading: 37,000 M1 bars received",
+    "Calendar downloading: 38,000 M1 bars received",
+    "Calendar downloading: 39,000 M1 bars received",
+    "Calendar downloading: 40,000 M1 bars received",
+    "Calendar downloading: 41,000 M1 bars received",
+    "Calendar downloading: 42,000 M1 bars received",
+    "Calendar downloading: 43,000 M1 bars received",
+    "Calendar downloading: 44,000 M1 bars received",
+    "Calendar downloading: 45,000 M1 bars received",
+    "Calendar downloading: 46,000 M1 bars received",
+    "Calendar downloading: 47,000 M1 bars received",
+    "Calendar downloading: 48,000 M1 bars received",
+    "Calendar downloading: 49,000 M1 bars received",
+    "Calendar downloading: 50,000 M1 bars received",
+    "Calendar downloading: 51,000 M1 bars received",
+    "Calendar downloading: 52,000 M1 bars received",
+    "Calendar downloading: 53,000 M1 bars received",
+    "Calendar downloading: 54,000 M1 bars received",
+    "Calendar downloading: 55,000 M1 bars received",
+    "Calendar downloading: 56,000 M1 bars received",
+    "Calendar downloading: 57,000 M1 bars received",
+    "Calendar downloading: 58,000 M1 bars received",
+    "Calendar downloading: 59,000 M1 bars received",
+    "Calendar downloading: 60,000 M1 bars received",
+    "Calendar downloading: 61,000 M1 bars received",
+    "Calendar downloading: 62,000 M1 bars received",
+    "Calendar downloading: 63,000 M1 bars received",
+    "Derived calendar from 63 days; bulk history continuing",
+    "Derived calendar from 63 days; bulk history continuing",
+    "Calendar downloading: 64,000 M1 bars received",
+    "Calendar downloading: 64,000 M1 bars received",
+    "Calendar downloading: 65,000 M1 bars received",
+    "Calendar downloading: 66,000 M1 bars received",
+    "Calendar downloading: 66,000 M1 bars received",
+    "Calendar downloading: 67,000 M1 bars received",
+    "Calendar downloading: 68,000 M1 bars received",
+    "Calendar downloading: 69,000 M1 bars received",
+    "Calendar downloading: 70,000 M1 bars received",
+    "Calendar downloading: 71,000 M1 bars received",
+    "Calendar downloading: 72,000 M1 bars received",
+    "Calendar downloading: 73,000 M1 bars received",
+    "Calendar downloading: 74,000 M1 bars received",
+    "Calendar downloading: 75,000 M1 bars received",
+    "Calendar downloading: 77,000 M1 bars received",
+    "Calendar downloading: 78,000 M1 bars received",
+    "Calendar downloading: 79,000 M1 bars received",
+    "Calendar downloading: 80,000 M1 bars received",
+    "Calendar downloading: 81,000 M1 bars received",
+    "Calendar downloading: 82,000 M1 bars received",
+    "Calendar downloading: 83,000 M1 bars received",
+    "Calendar downloading: 84,000 M1 bars received",
+    "Calendar downloading: 85,000 M1 bars received",
+    "Calendar downloading: 86,000 M1 bars received",
+    "Calendar downloading: 87,000 M1 bars received",
+    "Calendar downloading: 88,000 M1 bars received",
+    "Calendar downloading: 89,000 M1 bars received",
+    "Calendar downloading: 90,000 M1 bars received"
+  ],
+  "quality": {
+    "state": "CALENDAR_PENDING",
+    "staleness_ms": 1374,
+    "spread_points": 50.0000000001819,
+    "detail": "data.calendar_pending"
+  },
+  "missing_ranges": [],
+  "gateway": {
+    "priorities": {
+      "0": {
+        "calls": 357,
+        "wait_ms": 28.000000002066372,
+        "call_ms": 0,
+        "queue_depth": 0
+      },
+      "1": {
+        "calls": 150,
+        "wait_ms": 0,
+        "call_ms": 0,
+        "queue_depth": 0
+      },
+      "2": {
+        "calls": 97,
+        "wait_ms": 0,
+        "call_ms": 0,
+        "queue_depth": 0
+      }
+    },
+    "tick_latency_ms": 59.000000001105946,
+    "queue_depth": 0
+  },
+  "indicator": {
+    "enabled": true,
+    "warmup_bars": 30,
+    "warmup_from_ms": 1788888300000,
+    "provisional": 2,
+    "confirmed": 0,
+    "removed": 1,
+    "conversion_rate": 0,
+    "key": 1,
+    "atr_period": 10,
+    "show_stop_line": false,
+    "color_bars": false,
+    "bar_colors": []
+  },
+  "engineFaults": [],
+  "rendererExceptions": [],
+  "timestamp": "2026-09-18T00:09:40.134Z"
+}

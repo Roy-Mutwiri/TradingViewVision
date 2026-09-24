@@ -1,0 +1,14 @@
+# Confluence weights are still awaiting section 2h.
+weights: {}
+swings:
+  left: 2
+  right: 2
+  atr_period: 14
+  eq_tolerance_atr: 0.10
+  significance_atr:
+    default: 1.0
+    M1: 1.4
+    M5: 1.2
+    M15: 1.0
+    H1: 0.8
+    H4: 0.7

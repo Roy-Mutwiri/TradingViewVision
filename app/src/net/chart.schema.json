@@ -1,0 +1,2251 @@
+{
+  "$defs": {
+    "Animation": {
+      "additionalProperties": false,
+      "properties": {
+        "in_": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "title": "In",
+          "type": "string"
+        },
+        "loop": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Loop"
+        }
+      },
+      "required": [
+        "in_",
+        "loop"
+      ],
+      "title": "Animation",
+      "type": "object"
+    },
+    "Bar": {
+      "additionalProperties": false,
+      "properties": {
+        "c": {
+          "exclusiveMinimum": 0,
+          "title": "C",
+          "type": "number"
+        },
+        "clock_confidence": {
+          "default": "ASSUMED",
+          "enum": [
+            "MEASURED",
+            "DERIVED",
+            "ASSUMED"
+          ],
+          "title": "Clock Confidence",
+          "type": "string"
+        },
+        "complete": {
+          "title": "Complete",
+          "type": "boolean"
+        },
+        "digits": {
+          "default": 2,
+          "enum": [
+            2,
+            3
+          ],
+          "title": "Digits",
+          "type": "integer"
+        },
+        "h": {
+          "exclusiveMinimum": 0,
+          "title": "H",
+          "type": "number"
+        },
+        "id": {
+          "default": "",
+          "title": "Id",
+          "type": "string"
+        },
+        "l": {
+          "exclusiveMinimum": 0,
+          "title": "L",
+          "type": "number"
+        },
+        "o": {
+          "exclusiveMinimum": 0,
+          "title": "O",
+          "type": "number"
+        },
+        "object_hash": {
+          "default": "",
+          "title": "Object Hash",
+          "type": "string"
+        },
+        "source": {
+          "enum": [
+            "mt5",
+            "twelve_data",
+            "synthetic"
+          ],
+          "title": "Source",
+          "type": "string"
+        },
+        "symbol": {
+          "const": "XAUUSD",
+          "default": "XAUUSD",
+          "title": "Symbol",
+          "type": "string"
+        },
+        "t_open_ms": {
+          "minimum": 0,
+          "title": "T Open Ms",
+          "type": "integer"
+        },
+        "tf": {
+          "enum": [
+            "M1",
+            "M5",
+            "M15",
+            "M30",
+            "H1",
+            "H4",
+            "D1",
+            "W1",
+            "MN1"
+          ],
+          "title": "Tf",
+          "type": "string"
+        },
+        "tick_volume": {
+          "minimum": 0,
+          "title": "Tick Volume",
+          "type": "number"
+        }
+      },
+      "required": [
+        "tf",
+        "t_open_ms",
+        "o",
+        "h",
+        "l",
+        "c",
+        "tick_volume",
+        "source",
+        "complete"
+      ],
+      "title": "Bar",
+      "type": "object"
+    },
+    "BarColor": {
+      "additionalProperties": false,
+      "properties": {
+        "t_ms": {
+          "minimum": 0,
+          "title": "T Ms",
+          "type": "integer"
+        },
+        "token": {
+          "title": "Token",
+          "type": "string"
+        }
+      },
+      "required": [
+        "t_ms",
+        "token"
+      ],
+      "title": "BarColor",
+      "type": "object"
+    },
+    "BarCorrection": {
+      "additionalProperties": false,
+      "properties": {
+        "bar": {
+          "$ref": "#/$defs/Bar"
+        },
+        "symbol": {
+          "const": "XAUUSD",
+          "default": "XAUUSD",
+          "title": "Symbol",
+          "type": "string"
+        },
+        "tf": {
+          "enum": [
+            "M1",
+            "M5",
+            "M15",
+            "M30",
+            "H1",
+            "H4",
+            "D1",
+            "W1",
+            "MN1"
+          ],
+          "title": "Tf",
+          "type": "string"
+        }
+      },
+      "required": [
+        "tf",
+        "bar"
+      ],
+      "title": "BarCorrection",
+      "type": "object"
+    },
+    "BarUpdate": {
+      "additionalProperties": false,
+      "properties": {
+        "bar": {
+          "$ref": "#/$defs/Bar"
+        },
+        "symbol": {
+          "const": "XAUUSD",
+          "default": "XAUUSD",
+          "title": "Symbol",
+          "type": "string"
+        },
+        "tf": {
+          "enum": [
+            "M1",
+            "M5",
+            "M15",
+            "M30",
+            "H1",
+            "H4",
+            "D1",
+            "W1",
+            "MN1"
+          ],
+          "title": "Tf",
+          "type": "string"
+        }
+      },
+      "required": [
+        "tf",
+        "bar"
+      ],
+      "title": "BarUpdate",
+      "type": "object"
+    },
+    "BarsSnapshot": {
+      "additionalProperties": false,
+      "properties": {
+        "bars": {
+          "items": {
+            "$ref": "#/$defs/Bar"
+          },
+          "title": "Bars",
+          "type": "array"
+        },
+        "clockVersion": {
+          "title": "Clockversion",
+          "type": "integer"
+        },
+        "symbol": {
+          "const": "XAUUSD",
+          "default": "XAUUSD",
+          "title": "Symbol",
+          "type": "string"
+        },
+        "tf": {
+          "enum": [
+            "M1",
+            "M5",
+            "M15",
+            "M30",
+            "H1",
+            "H4",
+            "D1",
+            "W1",
+            "MN1"
+          ],
+          "title": "Tf",
+          "type": "string"
+        }
+      },
+      "required": [
+        "tf",
+        "bars",
+        "clockVersion"
+      ],
+      "title": "BarsSnapshot",
+      "type": "object"
+    },
+    "ChartDebug": {
+      "additionalProperties": false,
+      "properties": {
+        "bars": {
+          "items": {
+            "$ref": "#/$defs/DebugBar"
+          },
+          "title": "Bars",
+          "type": "array"
+        },
+        "checked": {
+          "title": "Checked",
+          "type": "integer"
+        },
+        "corrections": {
+          "title": "Corrections",
+          "type": "integer"
+        },
+        "detail": {
+          "title": "Detail",
+          "type": "string"
+        },
+        "error": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/EngineFault"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "gateway": {
+          "additionalProperties": true,
+          "default": {},
+          "title": "Gateway",
+          "type": "object"
+        },
+        "indicator": {
+          "additionalProperties": true,
+          "default": {},
+          "title": "Indicator",
+          "type": "object"
+        },
+        "last_tick_ms": {
+          "minimum": 0,
+          "title": "Last Tick Ms",
+          "type": "integer"
+        },
+        "missing_ranges": {
+          "default": [],
+          "items": {
+            "additionalProperties": {
+              "type": "integer"
+            },
+            "type": "object"
+          },
+          "title": "Missing Ranges",
+          "type": "array"
+        },
+        "resolved_symbol": {
+          "title": "Resolved Symbol",
+          "type": "string"
+        },
+        "spread_points": {
+          "title": "Spread Points",
+          "type": "number"
+        },
+        "switch_ms": {
+          "default": 0,
+          "title": "Switch Ms",
+          "type": "number"
+        }
+      },
+      "required": [
+        "resolved_symbol",
+        "bars",
+        "corrections",
+        "checked",
+        "last_tick_ms",
+        "spread_points",
+        "detail"
+      ],
+      "title": "ChartDebug",
+      "type": "object"
+    },
+    "ChartFrame": {
+      "additionalProperties": false,
+      "properties": {
+        "bar_colors": {
+          "default": [],
+          "items": {
+            "$ref": "#/$defs/BarColor"
+          },
+          "title": "Bar Colors",
+          "type": "array"
+        },
+        "bar_duration_ms": {
+          "minimum": 0,
+          "title": "Bar Duration Ms",
+          "type": "integer"
+        },
+        "book": {
+          "additionalProperties": true,
+          "default": {},
+          "title": "Book",
+          "type": "object"
+        },
+        "calendar_detail": {
+          "default": "Calendar unavailable",
+          "title": "Calendar Detail",
+          "type": "string"
+        },
+        "candidate_decisions": {
+          "default": [],
+          "items": {
+            "$ref": "#/$defs/Decision"
+          },
+          "title": "Candidate Decisions",
+          "type": "array"
+        },
+        "candidate_status": {
+          "additionalProperties": true,
+          "default": {},
+          "title": "Candidate Status",
+          "type": "object"
+        },
+        "candidate_worklog": {
+          "default": [],
+          "items": {
+            "$ref": "#/$defs/Decision"
+          },
+          "title": "Candidate Worklog",
+          "type": "array"
+        },
+        "chart_density": {
+          "default": "clean",
+          "enum": [
+            "clean",
+            "analyst",
+            "notebook"
+          ],
+          "title": "Chart Density",
+          "type": "string"
+        },
+        "closures": {
+          "default": [],
+          "items": {
+            "$ref": "#/$defs/SessionClosure"
+          },
+          "title": "Closures",
+          "type": "array"
+        },
+        "indicator_enabled": {
+          "default": false,
+          "title": "Indicator Enabled",
+          "type": "boolean"
+        },
+        "kind": {
+          "enum": [
+            "snapshot",
+            "update",
+            "correction",
+            "status",
+            "clock_refined"
+          ],
+          "title": "Kind",
+          "type": "string"
+        },
+        "language": {
+          "default": "en",
+          "title": "Language",
+          "type": "string"
+        },
+        "liquidity_pools": {
+          "default": [],
+          "items": {
+            "$ref": "#/$defs/Pool"
+          },
+          "title": "Liquidity Pools",
+          "type": "array"
+        },
+        "liquidity_weekly_open": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Liquidity Weekly Open"
+        },
+        "next_close_ms": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Next Close Ms"
+        },
+        "now_ms": {
+          "minimum": 0,
+          "title": "Now Ms",
+          "type": "integer"
+        },
+        "objects": {
+          "default": [],
+          "items": {
+            "anyOf": [
+              {
+                "$ref": "#/$defs/DrawObject"
+              },
+              {
+                "$ref": "#/$defs/UTBotDrawObject"
+              }
+            ]
+          },
+          "title": "Objects",
+          "type": "array"
+        },
+        "quality": {
+          "$ref": "#/$defs/DataQuality"
+        },
+        "quote": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Quote"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "refinement_pending": {
+          "default": "Clock transition derivation pending: 30 days of M1 required",
+          "title": "Refinement Pending",
+          "type": "string"
+        },
+        "resolved_symbol": {
+          "default": "",
+          "title": "Resolved Symbol",
+          "type": "string"
+        },
+        "snapshot": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/BarsSnapshot"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "structure_state": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/StructureState"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "switch_ms": {
+          "default": 0,
+          "title": "Switch Ms",
+          "type": "number"
+        },
+        "thesis": {
+          "additionalProperties": true,
+          "default": {},
+          "title": "Thesis",
+          "type": "object"
+        },
+        "update": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/BarUpdate"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "worklog": {
+          "default": [],
+          "items": {
+            "$ref": "#/$defs/WorkDecision"
+          },
+          "title": "Worklog",
+          "type": "array"
+        }
+      },
+      "required": [
+        "kind",
+        "quality",
+        "now_ms",
+        "bar_duration_ms"
+      ],
+      "title": "ChartFrame",
+      "type": "object"
+    },
+    "DataQuality": {
+      "additionalProperties": false,
+      "properties": {
+        "detail": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "title": "Detail",
+          "type": "string"
+        },
+        "spread_points": {
+          "minimum": 0,
+          "title": "Spread Points",
+          "type": "number"
+        },
+        "staleness_ms": {
+          "minimum": 0,
+          "title": "Staleness Ms",
+          "type": "integer"
+        },
+        "state": {
+          "enum": [
+            "OK",
+            "STALE",
+            "GAPPED",
+            "WIDE_SPREAD",
+            "HALTED",
+            "NO_DATA",
+            "CALENDAR_PENDING"
+          ],
+          "title": "State",
+          "type": "string"
+        }
+      },
+      "required": [
+        "state",
+        "staleness_ms",
+        "spread_points",
+        "detail"
+      ],
+      "title": "DataQuality",
+      "type": "object"
+    },
+    "DebugBar": {
+      "additionalProperties": false,
+      "properties": {
+        "clock_confidence": {
+          "default": "ASSUMED",
+          "title": "Clock Confidence",
+          "type": "string"
+        },
+        "clock_version": {
+          "title": "Clock Version",
+          "type": "integer"
+        },
+        "offset_s": {
+          "title": "Offset S",
+          "type": "integer"
+        },
+        "t_broker_ms": {
+          "minimum": 0,
+          "title": "T Broker Ms",
+          "type": "integer"
+        },
+        "t_open_ms": {
+          "minimum": 0,
+          "title": "T Open Ms",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "t_open_ms",
+        "t_broker_ms",
+        "offset_s",
+        "clock_version"
+      ],
+      "title": "DebugBar",
+      "type": "object"
+    },
+    "Decision": {
+      "additionalProperties": false,
+      "properties": {
+        "action": {
+          "enum": [
+            "CREATE",
+            "UPDATE",
+            "PROMOTE",
+            "DISCARD"
+          ],
+          "title": "Action",
+          "type": "string"
+        },
+        "confirmed_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Confirmed Id"
+        },
+        "criterion": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Criterion"
+        },
+        "fidelity": {
+          "enum": [
+            "TICK",
+            "M1",
+            "BAR"
+          ],
+          "title": "Fidelity",
+          "type": "string"
+        },
+        "geometry": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/FVGGeometry"
+            },
+            {
+              "$ref": "#/$defs/OBGeometry"
+            },
+            {
+              "$ref": "#/$defs/LiquidityGeometry"
+            }
+          ],
+          "title": "Geometry"
+        },
+        "kind": {
+          "enum": [
+            "FVG",
+            "OB",
+            "POOL",
+            "SWEEP"
+          ],
+          "title": "Kind",
+          "type": "string"
+        },
+        "measurement": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Measurement"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "object_id": {
+          "title": "Object Id",
+          "type": "string"
+        },
+        "reason": {
+          "anyOf": [
+            {
+              "enum": [
+                "INVALIDATED",
+                "SUPERSEDED",
+                "MERGED",
+                "FAILED_CRITERIA",
+                "STALE",
+                "DATA_GAP"
+              ],
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Reason"
+        },
+        "seq": {
+          "minimum": 0,
+          "title": "Seq",
+          "type": "integer"
+        },
+        "source_bars": {
+          "items": {
+            "type": "integer"
+          },
+          "title": "Source Bars",
+          "type": "array"
+        },
+        "source_object_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Source Object Ids",
+          "type": "array"
+        },
+        "t_broker_ms": {
+          "minimum": 0,
+          "title": "T Broker Ms",
+          "type": "integer"
+        },
+        "t_utc_ms": {
+          "minimum": 0,
+          "title": "T Utc Ms",
+          "type": "integer"
+        },
+        "tf": {
+          "enum": [
+            "M1",
+            "M5",
+            "M15",
+            "M30",
+            "H1",
+            "H4",
+            "D1",
+            "W1",
+            "MN1"
+          ],
+          "title": "Tf",
+          "type": "string"
+        },
+        "union_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Union Id"
+        }
+      },
+      "required": [
+        "seq",
+        "t_broker_ms",
+        "object_id",
+        "kind",
+        "action",
+        "fidelity",
+        "tf",
+        "t_utc_ms",
+        "geometry",
+        "source_bars",
+        "source_object_ids"
+      ],
+      "title": "Decision",
+      "type": "object"
+    },
+    "DrawObject": {
+      "additionalProperties": false,
+      "properties": {
+        "anim": {
+          "$ref": "#/$defs/Animation"
+        },
+        "confidence": {
+          "maximum": 1,
+          "minimum": 0,
+          "title": "Confidence",
+          "type": "number"
+        },
+        "digits": {
+          "default": 2,
+          "enum": [
+            2,
+            3
+          ],
+          "title": "Digits",
+          "type": "integer"
+        },
+        "id": {
+          "default": "",
+          "title": "Id",
+          "type": "string"
+        },
+        "layer": {
+          "enum": [
+            "L2",
+            "L3"
+          ],
+          "title": "Layer",
+          "type": "string"
+        },
+        "object_hash": {
+          "default": "",
+          "title": "Object Hash",
+          "type": "string"
+        },
+        "points": {
+          "items": {
+            "$ref": "#/$defs/Point"
+          },
+          "minItems": 1,
+          "title": "Points",
+          "type": "array"
+        },
+        "priority": {
+          "minimum": 0,
+          "title": "Priority",
+          "type": "integer"
+        },
+        "reason": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "title": "Reason",
+          "type": "string"
+        },
+        "shape": {
+          "enum": [
+            "ZONE",
+            "LINE",
+            "RAY",
+            "LABEL",
+            "ARROW",
+            "FIB",
+            "PATH",
+            "LADDER",
+            "GLYPH"
+          ],
+          "title": "Shape",
+          "type": "string"
+        },
+        "source_bars": {
+          "items": {
+            "minimum": 0,
+            "type": "integer"
+          },
+          "minItems": 1,
+          "title": "Source Bars",
+          "type": "array"
+        },
+        "state": {
+          "enum": [
+            "FRESH",
+            "TOUCHED",
+            "MITIGATED",
+            "BREAKER",
+            "INVALID"
+          ],
+          "title": "State",
+          "type": "string"
+        },
+        "style": {
+          "$ref": "#/$defs/Style"
+        },
+        "text_args": {
+          "additionalProperties": {
+            "$ref": "#/$defs/JsonValue"
+          },
+          "title": "Text Args",
+          "type": "object"
+        },
+        "text_key": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "title": "Text Key",
+          "type": "string"
+        },
+        "ttl_ms": {
+          "minimum": 0,
+          "title": "Ttl Ms",
+          "type": "integer"
+        },
+        "z": {
+          "title": "Z",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "layer",
+        "shape",
+        "points",
+        "style",
+        "text_key",
+        "text_args",
+        "state",
+        "ttl_ms",
+        "priority",
+        "z",
+        "anim",
+        "reason",
+        "source_bars",
+        "confidence"
+      ],
+      "title": "DrawObject",
+      "type": "object"
+    },
+    "EngineFault": {
+      "additionalProperties": false,
+      "properties": {
+        "code": {
+          "title": "Code",
+          "type": "string"
+        },
+        "detail": {
+          "additionalProperties": {
+            "$ref": "#/$defs/JsonValue"
+          },
+          "title": "Detail",
+          "type": "object"
+        },
+        "message": {
+          "title": "Message",
+          "type": "string"
+        },
+        "recoverable": {
+          "title": "Recoverable",
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "code",
+        "message",
+        "detail",
+        "recoverable"
+      ],
+      "title": "EngineFault",
+      "type": "object"
+    },
+    "FVGGeometry": {
+      "additionalProperties": false,
+      "properties": {
+        "atr_at_creation": {
+          "exclusiveMinimum": 0,
+          "title": "Atr At Creation",
+          "type": "number"
+        },
+        "ce": {
+          "exclusiveMinimum": 0,
+          "title": "Ce",
+          "type": "number"
+        },
+        "constituent_ids": {
+          "default": [],
+          "items": {
+            "minLength": 1,
+            "pattern": "\\S",
+            "type": "string"
+          },
+          "title": "Constituent Ids",
+          "type": "array"
+        },
+        "created_idx": {
+          "minimum": 2,
+          "title": "Created Idx",
+          "type": "integer"
+        },
+        "created_ms": {
+          "minimum": 0,
+          "title": "Created Ms",
+          "type": "integer"
+        },
+        "direction": {
+          "enum": [
+            "BULLISH",
+            "BEARISH"
+          ],
+          "title": "Direction",
+          "type": "string"
+        },
+        "fvg_min_atr": {
+          "minimum": 0,
+          "title": "Fvg Min Atr",
+          "type": "number"
+        },
+        "gap_adjacent": {
+          "title": "Gap Adjacent",
+          "type": "boolean"
+        },
+        "price_hi": {
+          "exclusiveMinimum": 0,
+          "title": "Price Hi",
+          "type": "number"
+        },
+        "price_lo": {
+          "exclusiveMinimum": 0,
+          "title": "Price Lo",
+          "type": "number"
+        },
+        "schema_version": {
+          "const": 3,
+          "default": 3,
+          "title": "Schema Version",
+          "type": "integer"
+        },
+        "size": {
+          "exclusiveMinimum": 0,
+          "title": "Size",
+          "type": "number"
+        },
+        "source_bars": {
+          "items": {
+            "type": "integer"
+          },
+          "title": "Source Bars",
+          "type": "array"
+        },
+        "source_object_ids": {
+          "items": {
+            "minLength": 1,
+            "pattern": "\\S",
+            "type": "string"
+          },
+          "title": "Source Object Ids",
+          "type": "array"
+        },
+        "symbol": {
+          "const": "XAUUSD",
+          "title": "Symbol",
+          "type": "string"
+        },
+        "t_start_ms": {
+          "minimum": 0,
+          "title": "T Start Ms",
+          "type": "integer"
+        },
+        "tf": {
+          "enum": [
+            "M1",
+            "M5",
+            "M15",
+            "M30",
+            "H1",
+            "H4",
+            "D1",
+            "W1",
+            "MN1"
+          ],
+          "title": "Tf",
+          "type": "string"
+        }
+      },
+      "required": [
+        "symbol",
+        "tf",
+        "direction",
+        "price_lo",
+        "price_hi",
+        "ce",
+        "size",
+        "atr_at_creation",
+        "fvg_min_atr",
+        "created_ms",
+        "t_start_ms",
+        "created_idx",
+        "source_bars",
+        "source_object_ids",
+        "gap_adjacent"
+      ],
+      "title": "FVGGeometry",
+      "type": "object"
+    },
+    "JsonValue": {},
+    "LiquidityGeometry": {
+      "additionalProperties": false,
+      "properties": {
+        "atr_at_creation": {
+          "title": "Atr At Creation",
+          "type": "number"
+        },
+        "ce": {
+          "title": "Ce",
+          "type": "number"
+        },
+        "created_ms": {
+          "title": "Created Ms",
+          "type": "integer"
+        },
+        "direction": {
+          "enum": [
+            "BULLISH",
+            "BEARISH"
+          ],
+          "title": "Direction",
+          "type": "string"
+        },
+        "level": {
+          "title": "Level",
+          "type": "number"
+        },
+        "name": {
+          "title": "Name",
+          "type": "string"
+        },
+        "price_hi": {
+          "title": "Price Hi",
+          "type": "number"
+        },
+        "price_lo": {
+          "title": "Price Lo",
+          "type": "number"
+        },
+        "schema_version": {
+          "const": 1,
+          "default": 1,
+          "title": "Schema Version",
+          "type": "integer"
+        },
+        "side": {
+          "enum": [
+            "HIGH",
+            "LOW"
+          ],
+          "title": "Side",
+          "type": "string"
+        },
+        "size": {
+          "const": 0,
+          "default": 0,
+          "title": "Size",
+          "type": "integer"
+        },
+        "source_bars": {
+          "items": {
+            "type": "integer"
+          },
+          "title": "Source Bars",
+          "type": "array"
+        },
+        "source_object_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Source Object Ids",
+          "type": "array"
+        },
+        "t_start_ms": {
+          "title": "T Start Ms",
+          "type": "integer"
+        },
+        "tf": {
+          "enum": [
+            "M1",
+            "M5",
+            "M15",
+            "M30",
+            "H1",
+            "H4",
+            "D1",
+            "W1",
+            "MN1"
+          ],
+          "title": "Tf",
+          "type": "string"
+        }
+      },
+      "required": [
+        "tf",
+        "direction",
+        "side",
+        "name",
+        "level",
+        "price_lo",
+        "price_hi",
+        "ce",
+        "atr_at_creation",
+        "created_ms",
+        "t_start_ms",
+        "source_bars",
+        "source_object_ids"
+      ],
+      "title": "LiquidityGeometry",
+      "type": "object"
+    },
+    "Measurement": {
+      "additionalProperties": false,
+      "properties": {
+        "criterion": {
+          "title": "Criterion",
+          "type": "string"
+        },
+        "passed": {
+          "title": "Passed",
+          "type": "boolean"
+        },
+        "price_a": {
+          "exclusiveMinimum": 0,
+          "title": "Price A",
+          "type": "number"
+        },
+        "price_b": {
+          "exclusiveMinimum": 0,
+          "title": "Price B",
+          "type": "number"
+        },
+        "threshold": {
+          "title": "Threshold",
+          "type": "number"
+        },
+        "unit": {
+          "enum": [
+            "pts",
+            "ATR",
+            "R"
+          ],
+          "title": "Unit",
+          "type": "string"
+        },
+        "value": {
+          "title": "Value",
+          "type": "number"
+        }
+      },
+      "required": [
+        "price_a",
+        "price_b",
+        "value",
+        "unit",
+        "criterion",
+        "threshold",
+        "passed"
+      ],
+      "title": "Measurement",
+      "type": "object"
+    },
+    "OBGeometry": {
+      "additionalProperties": false,
+      "properties": {
+        "atr_at_creation": {
+          "title": "Atr At Creation",
+          "type": "number"
+        },
+        "boundary": {
+          "enum": [
+            "body_to_wick",
+            "full_range",
+            "body_only"
+          ],
+          "title": "Boundary",
+          "type": "string"
+        },
+        "ce": {
+          "title": "Ce",
+          "type": "number"
+        },
+        "constituent_ids": {
+          "default": [],
+          "items": {
+            "type": "string"
+          },
+          "title": "Constituent Ids",
+          "type": "array"
+        },
+        "created_idx": {
+          "title": "Created Idx",
+          "type": "integer"
+        },
+        "created_ms": {
+          "title": "Created Ms",
+          "type": "integer"
+        },
+        "direction": {
+          "enum": [
+            "BULLISH",
+            "BEARISH"
+          ],
+          "title": "Direction",
+          "type": "string"
+        },
+        "displacement_atr": {
+          "title": "Displacement Atr",
+          "type": "number"
+        },
+        "fvg_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Fvg Ids",
+          "type": "array"
+        },
+        "leg_start_idx": {
+          "title": "Leg Start Idx",
+          "type": "integer"
+        },
+        "origin_idx": {
+          "title": "Origin Idx",
+          "type": "integer"
+        },
+        "price_hi": {
+          "title": "Price Hi",
+          "type": "number"
+        },
+        "price_lo": {
+          "title": "Price Lo",
+          "type": "number"
+        },
+        "schema_version": {
+          "const": 1,
+          "default": 1,
+          "title": "Schema Version",
+          "type": "integer"
+        },
+        "size": {
+          "title": "Size",
+          "type": "number"
+        },
+        "source_bars": {
+          "items": {
+            "type": "integer"
+          },
+          "title": "Source Bars",
+          "type": "array"
+        },
+        "source_object_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Source Object Ids",
+          "type": "array"
+        },
+        "symbol": {
+          "default": "XAUUSD",
+          "title": "Symbol",
+          "type": "string"
+        },
+        "t_start_ms": {
+          "title": "T Start Ms",
+          "type": "integer"
+        },
+        "tf": {
+          "enum": [
+            "M1",
+            "M5",
+            "M15",
+            "M30",
+            "H1",
+            "H4",
+            "D1",
+            "W1",
+            "MN1"
+          ],
+          "title": "Tf",
+          "type": "string"
+        }
+      },
+      "required": [
+        "tf",
+        "direction",
+        "price_lo",
+        "price_hi",
+        "ce",
+        "size",
+        "atr_at_creation",
+        "created_ms",
+        "t_start_ms",
+        "created_idx",
+        "origin_idx",
+        "leg_start_idx",
+        "boundary",
+        "displacement_atr",
+        "source_bars",
+        "source_object_ids",
+        "fvg_ids"
+      ],
+      "title": "OBGeometry",
+      "type": "object"
+    },
+    "Point": {
+      "additionalProperties": false,
+      "properties": {
+        "price": {
+          "exclusiveMinimum": 0,
+          "title": "Price",
+          "type": "number"
+        },
+        "t_ms": {
+          "minimum": 0,
+          "title": "T Ms",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "t_ms",
+        "price"
+      ],
+      "title": "Point",
+      "type": "object"
+    },
+    "Pool": {
+      "additionalProperties": false,
+      "properties": {
+        "geometry": {
+          "$ref": "#/$defs/LiquidityGeometry"
+        },
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "named": {
+          "default": false,
+          "title": "Named",
+          "type": "boolean"
+        },
+        "scope_key": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Scope Key"
+        },
+        "state": {
+          "default": "FRESH",
+          "enum": [
+            "FRESH",
+            "TOUCHED",
+            "SWEPT",
+            "BROKEN"
+          ],
+          "title": "State",
+          "type": "string"
+        },
+        "strength": {
+          "title": "Strength",
+          "type": "integer"
+        },
+        "sweep_event_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Sweep Event Id"
+        },
+        "swept_ms": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Swept Ms"
+        },
+        "touch_bars": {
+          "default": [],
+          "items": {
+            "type": "integer"
+          },
+          "title": "Touch Bars",
+          "type": "array"
+        },
+        "touch_times": {
+          "default": [],
+          "items": {
+            "type": "integer"
+          },
+          "title": "Touch Times",
+          "type": "array"
+        }
+      },
+      "required": [
+        "id",
+        "geometry",
+        "strength"
+      ],
+      "title": "Pool",
+      "type": "object"
+    },
+    "Quote": {
+      "additionalProperties": false,
+      "properties": {
+        "ask": {
+          "exclusiveMinimum": 0,
+          "title": "Ask",
+          "type": "number"
+        },
+        "bid": {
+          "exclusiveMinimum": 0,
+          "title": "Bid",
+          "type": "number"
+        },
+        "source": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "title": "Source",
+          "type": "string"
+        },
+        "symbol": {
+          "const": "XAUUSD",
+          "title": "Symbol",
+          "type": "string"
+        },
+        "t_ms": {
+          "minimum": 0,
+          "title": "T Ms",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "symbol",
+        "bid",
+        "ask",
+        "t_ms",
+        "source"
+      ],
+      "title": "Quote",
+      "type": "object"
+    },
+    "SessionClosure": {
+      "additionalProperties": false,
+      "properties": {
+        "end_ms": {
+          "minimum": 0,
+          "title": "End Ms",
+          "type": "integer"
+        },
+        "recurring": {
+          "title": "Recurring",
+          "type": "boolean"
+        },
+        "start_ms": {
+          "minimum": 0,
+          "title": "Start Ms",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "start_ms",
+        "end_ms",
+        "recurring"
+      ],
+      "title": "SessionClosure",
+      "type": "object"
+    },
+    "StructureEvent": {
+      "additionalProperties": false,
+      "properties": {
+        "atr_at_break": {
+          "title": "Atr At Break",
+          "type": "number"
+        },
+        "break_bar_idx": {
+          "title": "Break Bar Idx",
+          "type": "integer"
+        },
+        "break_close": {
+          "title": "Break Close",
+          "type": "number"
+        },
+        "broken_swing_id": {
+          "title": "Broken Swing Id",
+          "type": "string"
+        },
+        "broken_swing_idx": {
+          "title": "Broken Swing Idx",
+          "type": "integer"
+        },
+        "direction": {
+          "enum": [
+            "UP",
+            "DOWN"
+          ],
+          "title": "Direction",
+          "type": "string"
+        },
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "is_mss": {
+          "default": false,
+          "title": "Is Mss",
+          "type": "boolean"
+        },
+        "kind": {
+          "enum": [
+            "BOS",
+            "CHoCH"
+          ],
+          "title": "Kind",
+          "type": "string"
+        },
+        "level": {
+          "title": "Level",
+          "type": "number"
+        },
+        "source_bars": {
+          "items": {
+            "type": "integer"
+          },
+          "title": "Source Bars",
+          "type": "array"
+        },
+        "source_object_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Source Object Ids",
+          "type": "array"
+        },
+        "sweep_event_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Sweep Event Id"
+        },
+        "t_ms": {
+          "title": "T Ms",
+          "type": "integer"
+        },
+        "timeframe": {
+          "title": "Timeframe",
+          "type": "string"
+        },
+        "trend_after": {
+          "enum": [
+            "BULLISH",
+            "BEARISH",
+            "UNDEFINED"
+          ],
+          "title": "Trend After",
+          "type": "string"
+        },
+        "trend_before": {
+          "enum": [
+            "BULLISH",
+            "BEARISH",
+            "UNDEFINED"
+          ],
+          "title": "Trend Before",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "kind",
+        "direction",
+        "level",
+        "broken_swing_id",
+        "broken_swing_idx",
+        "break_bar_idx",
+        "break_close",
+        "timeframe",
+        "trend_before",
+        "trend_after",
+        "atr_at_break",
+        "t_ms",
+        "source_bars",
+        "source_object_ids"
+      ],
+      "title": "StructureEvent",
+      "type": "object"
+    },
+    "StructureState": {
+      "additionalProperties": false,
+      "properties": {
+        "last_event": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/StructureEvent"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "major_high": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Major High"
+        },
+        "major_high_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Major High Id"
+        },
+        "major_high_idx": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Major High Idx"
+        },
+        "major_low": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Major Low"
+        },
+        "major_low_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Major Low Id"
+        },
+        "major_low_idx": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Major Low Idx"
+        },
+        "protected_high": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Protected High"
+        },
+        "protected_low": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Protected Low"
+        },
+        "schema_version": {
+          "const": 2,
+          "default": 2,
+          "title": "Schema Version",
+          "type": "integer"
+        },
+        "seen_pivots": {
+          "default": [],
+          "items": {
+            "type": "string"
+          },
+          "title": "Seen Pivots",
+          "type": "array"
+        },
+        "trend": {
+          "default": "UNDEFINED",
+          "enum": [
+            "BULLISH",
+            "BEARISH",
+            "UNDEFINED"
+          ],
+          "title": "Trend",
+          "type": "string"
+        },
+        "trend_since_ms": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Trend Since Ms"
+        }
+      },
+      "title": "StructureState",
+      "type": "object"
+    },
+    "Style": {
+      "additionalProperties": false,
+      "properties": {
+        "token": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "title": "Token",
+          "type": "string"
+        }
+      },
+      "required": [
+        "token"
+      ],
+      "title": "Style",
+      "type": "object"
+    },
+    "TickQuote": {
+      "additionalProperties": false,
+      "properties": {
+        "digits": {
+          "enum": [
+            2,
+            3
+          ],
+          "title": "Digits",
+          "type": "integer"
+        },
+        "now_ms": {
+          "minimum": 0,
+          "title": "Now Ms",
+          "type": "integer"
+        },
+        "quote": {
+          "$ref": "#/$defs/Quote"
+        },
+        "received_ms": {
+          "minimum": 0,
+          "title": "Received Ms",
+          "type": "integer"
+        },
+        "spread_points": {
+          "title": "Spread Points",
+          "type": "number"
+        }
+      },
+      "required": [
+        "quote",
+        "received_ms",
+        "now_ms",
+        "digits",
+        "spread_points"
+      ],
+      "title": "TickQuote",
+      "type": "object"
+    },
+    "UTBotDrawObject": {
+      "additionalProperties": false,
+      "properties": {
+        "anim": {
+          "$ref": "#/$defs/Animation"
+        },
+        "confidence": {
+          "maximum": 1,
+          "minimum": 0,
+          "title": "Confidence",
+          "type": "number"
+        },
+        "confirmed": {
+          "default": true,
+          "title": "Confirmed",
+          "type": "boolean"
+        },
+        "digits": {
+          "default": 2,
+          "enum": [
+            2,
+            3
+          ],
+          "title": "Digits",
+          "type": "integer"
+        },
+        "direction": {
+          "enum": [
+            "BULLISH",
+            "BEARISH",
+            "NEUTRAL"
+          ],
+          "title": "Direction",
+          "type": "string"
+        },
+        "id": {
+          "default": "",
+          "title": "Id",
+          "type": "string"
+        },
+        "indicator": {
+          "const": "utbot",
+          "default": "utbot",
+          "title": "Indicator",
+          "type": "string"
+        },
+        "layer": {
+          "enum": [
+            "L2",
+            "L3"
+          ],
+          "title": "Layer",
+          "type": "string"
+        },
+        "object_hash": {
+          "default": "",
+          "title": "Object Hash",
+          "type": "string"
+        },
+        "points": {
+          "items": {
+            "$ref": "#/$defs/Point"
+          },
+          "minItems": 1,
+          "title": "Points",
+          "type": "array"
+        },
+        "priority": {
+          "minimum": 0,
+          "title": "Priority",
+          "type": "integer"
+        },
+        "reason": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "title": "Reason",
+          "type": "string"
+        },
+        "shape": {
+          "enum": [
+            "ZONE",
+            "LINE",
+            "RAY",
+            "LABEL",
+            "ARROW",
+            "FIB",
+            "PATH",
+            "LADDER",
+            "GLYPH"
+          ],
+          "title": "Shape",
+          "type": "string"
+        },
+        "source_bars": {
+          "items": {
+            "minimum": 0,
+            "type": "integer"
+          },
+          "minItems": 1,
+          "title": "Source Bars",
+          "type": "array"
+        },
+        "state": {
+          "enum": [
+            "FRESH",
+            "TOUCHED",
+            "MITIGATED",
+            "BREAKER",
+            "INVALID"
+          ],
+          "title": "State",
+          "type": "string"
+        },
+        "style": {
+          "$ref": "#/$defs/Style"
+        },
+        "symbol": {
+          "const": "XAUUSD",
+          "default": "XAUUSD",
+          "title": "Symbol",
+          "type": "string"
+        },
+        "t_open_ms": {
+          "minimum": 0,
+          "title": "T Open Ms",
+          "type": "integer"
+        },
+        "text_args": {
+          "additionalProperties": {
+            "$ref": "#/$defs/JsonValue"
+          },
+          "title": "Text Args",
+          "type": "object"
+        },
+        "text_key": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "title": "Text Key",
+          "type": "string"
+        },
+        "tf": {
+          "enum": [
+            "M1",
+            "M5",
+            "M15",
+            "M30",
+            "H1",
+            "H4",
+            "D1",
+            "W1",
+            "MN1"
+          ],
+          "title": "Tf",
+          "type": "string"
+        },
+        "ttl_ms": {
+          "minimum": 0,
+          "title": "Ttl Ms",
+          "type": "integer"
+        },
+        "warmup": {
+          "default": false,
+          "title": "Warmup",
+          "type": "boolean"
+        },
+        "z": {
+          "title": "Z",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "layer",
+        "shape",
+        "points",
+        "style",
+        "text_key",
+        "text_args",
+        "state",
+        "ttl_ms",
+        "priority",
+        "z",
+        "anim",
+        "reason",
+        "source_bars",
+        "confidence",
+        "tf",
+        "t_open_ms",
+        "direction"
+      ],
+      "title": "UTBotDrawObject",
+      "type": "object"
+    },
+    "WorkDecision": {
+      "additionalProperties": false,
+      "properties": {
+        "action": {
+          "enum": [
+            "MARKED",
+            "CE_LOST",
+            "INVERTED",
+            "INVALID",
+            "MERGED",
+            "MERGE_REJECTED",
+            "REINVERSION_ATTEMPT"
+          ],
+          "title": "Action",
+          "type": "string"
+        },
+        "at_ms": {
+          "minimum": 0,
+          "title": "At Ms",
+          "type": "integer"
+        },
+        "id": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "title": "Id",
+          "type": "string"
+        },
+        "label": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "title": "Label",
+          "type": "string"
+        },
+        "object_id": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "title": "Object Id",
+          "type": "string"
+        },
+        "source_bars": {
+          "items": {
+            "type": "integer"
+          },
+          "title": "Source Bars",
+          "type": "array"
+        },
+        "source_object_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Source Object Ids",
+          "type": "array"
+        },
+        "tf": {
+          "enum": [
+            "M1",
+            "M5",
+            "M15",
+            "M30",
+            "H1",
+            "H4",
+            "D1",
+            "W1",
+            "MN1"
+          ],
+          "title": "Tf",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "at_ms",
+        "tf",
+        "object_id",
+        "action",
+        "label",
+        "source_bars",
+        "source_object_ids"
+      ],
+      "title": "WorkDecision",
+      "type": "object"
+    }
+  },
+  "anyOf": [
+    {
+      "$ref": "#/$defs/ChartFrame"
+    },
+    {
+      "$ref": "#/$defs/ChartDebug"
+    },
+    {
+      "$ref": "#/$defs/BarCorrection"
+    },
+    {
+      "$ref": "#/$defs/TickQuote"
+    }
+  ]
+}

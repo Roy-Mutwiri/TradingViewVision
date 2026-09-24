@@ -1,0 +1,41 @@
+{
+  "bars": 500,
+  "broker": "exness",
+  "candidate_ttl_bars": 3,
+  "clock_version": 1,
+  "decisions_hash": "8956f0485c473f18d2010267ffd658884ac2fab1b4222a34d5072862ed7bb62d",
+  "end_ms": 1789697700000,
+  "fvg_record_schema_version": 4,
+  "fvg_schema_version": 3,
+  "initial_partial_bar": false,
+  "offset_s": 0,
+  "schema_version": 2,
+  "server": "ExnessKE-MT5Trial10",
+  "source": "REAL_BROKER_M1",
+  "start_ms": 1789047000000,
+  "symbol": "XAUUSDz",
+  "tf": "M15",
+  "weights_hash": "feb1cdb48ff9dd15548c140fc97d3db5974b50c7a699f876abfaabc95f83e729",
+  "zones": {
+    "fvg_merge_overlap": 0.5,
+    "fvg_min_atr": 0.2,
+    "htf_overlay": [
+      "H4",
+      "H1"
+    ],
+    "max_inversion_depth": 1,
+    "max_merged_span_atr": 2.5,
+    "max_visible_per_tf": {
+      "fvg": 3,
+      "ob": 3
+    },
+    "ob_boundary": "body_to_wick",
+    "ob_displacement_atr": 1.5,
+    "ob_max_cluster": 3,
+    "ob_merge_overlap": 0.5,
+    "ob_mitigation": "wick_50",
+    "ob_require_fvg": true,
+    "ob_require_structure_break": true,
+    "zone_ttl_bars": 50
+  }
+}
