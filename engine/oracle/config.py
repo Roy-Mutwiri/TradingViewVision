@@ -181,6 +181,7 @@ class TradeConfig(Contract):
     min_entry_zone_atr: float = Field(default=0.10, gt=0)
     max_entry_distance_atr: float = Field(default=1.0, gt=0)
     max_live_pending_distance_points: float = Field(default=5.0, gt=0)
+    max_pending_age_ms: int = Field(default=600_000, gt=0)
     min_stop_points: float = Field(default=0.0, ge=0)
     stop_buffer_atr: float = Field(default=0.15, ge=0)
     max_stop_atr: float = Field(default=2.0, gt=0)

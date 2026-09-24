@@ -824,6 +824,24 @@ class CandidateService:
             "rejections_since_21utc": rejections_since,
         }
 
+    def _cancel_stale_pending_calls(self, evaluation_ms: int, price: float) -> None:
+        for row in self.call_ledger.rows:
+            current_call = row.call
+            if current_call.state != "PENDING":
+                continue
+            pending_age_ms = evaluation_ms - current_call.created_ms
+            too_old = pending_age_ms >= self.config.trade.max_pending_age_ms
+            too_far = (
+                abs(current_call.effective_entry_ref - price)
+                > self.config.trade.max_live_pending_distance_points
+            )
+            if too_old or too_far:
+                self.call_ledger.cancel(
+                    current_call.id,
+                    "SUPERSEDED_BY_NEW_ANALYSIS",
+                    at_ms=evaluation_ms,
+                )
+
     def _calls(
         self,
         run: CandidateRun,
@@ -833,29 +851,20 @@ class CandidateService:
         m15_state: StructureState | None = None,
     ) -> None:
         engine, ob, liq = run.engine, run.engine.ob, run.engine.liquidity
+        evaluation_ms = bar.t_open_ms + timeframe_ms(bar.tf)
         self.call_evaluated_by_tf[bar.tf] += 1
-        if bar.t_open_ms + timeframe_ms(bar.tf) >= self._last_21_utc_ms(now_ms):
+        if evaluation_ms >= self._last_21_utc_ms(now_ms):
             self.call_evaluated_since_21_by_tf[bar.tf] += 1
+        self._cancel_stale_pending_calls(evaluation_ms, bar.c)
         if not ob or not liq or not ob.structure or engine.atr.value is None:
             self.call_producer.reject("NO_STRUCTURE_EVENT", bar.tf)
-            if bar.t_open_ms + timeframe_ms(bar.tf) >= self._last_21_utc_ms(now_ms):
+            if evaluation_ms >= self._last_21_utc_ms(now_ms):
                 self.call_rejections_since_21_by_tf[(bar.tf, "NO_STRUCTURE_EVENT")] += 1
             self._grade_c_call(run, bar, minutes, now_ms, m15_state)
             return
         rows = self.call_ledger.rows
         for row in rows:
             current_call = row.call
-            if (
-                current_call.state == "PENDING"
-                and abs(current_call.effective_entry_ref - bar.c)
-                > self.config.trade.max_live_pending_distance_points
-            ):
-                self.call_ledger.cancel(
-                    current_call.id,
-                    "SUPERSEDED_BY_NEW_ANALYSIS",
-                    at_ms=bar.t_open_ms + timeframe_ms(bar.tf),
-                )
-                continue
             if current_call.state not in ("PENDING", "ACTIVE"):
                 self.call_producer.mark_resolution(current_call)
                 continue

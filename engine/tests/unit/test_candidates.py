@@ -7,6 +7,8 @@ from pathlib import Path
 
 import pytest
 
+from oracle.analysis.contracts import Call
+from oracle.analysis.ledger import CallLedger
 from oracle.candidates.contracts import EvalPoint, decisions_hash
 from oracle.candidates.lifecycle import CandidateEngine, confirmed_only
 from oracle.candidates.replay import recorded, synthetic
@@ -140,6 +142,40 @@ def test_worklog_preserves_update_then_promotion_at_one_evalpoint():
     original = [d.canonical_json() for d in state.decisions]
     assert service.snapshot("M15")[2] == state.decisions
     assert [d.canonical_json() for d in state.decisions] == original
+
+
+def live_call(created_ms: int, entry: float = 100) -> Call:
+    return Call(
+        created_ms=created_ms,
+        kind="STRUCTURE",
+        direction="LONG",
+        entry_lo=entry,
+        entry_hi=entry,
+        entry_ref=entry,
+        invalidation=entry - 2,
+        target=entry + 4,
+        expires_ms=created_ms + 3_600_000,
+        state_hash=f"state-{created_ms}",
+        reason="Test live setup",
+        reason_chain=("test",),
+        symbol="XAUUSD",
+        clock_version=1,
+        timeframe="M1",
+    )
+
+
+def test_live_pending_call_is_replaced_after_ten_minutes() -> None:
+    service = CandidateService.__new__(CandidateService)
+    service.config = OracleConfig()
+    service.call_ledger = CallLedger()
+    old = service.call_ledger.create(live_call(BASE))
+    fresh = service.call_ledger.create(live_call(BASE + 60_000, 101))
+
+    service._cancel_stale_pending_calls(BASE + 600_000, 100)
+
+    assert service.call_ledger.row(old.id).call.state == "CANCELLED"
+    assert service.call_ledger.row(old.id).cancellation_reason == "SUPERSEDED_BY_NEW_ANALYSIS"
+    assert service.call_ledger.row(fresh.id).call.state == "PENDING"
 
 
 @pytest.mark.parametrize("gap,reason", [(False,"INVALIDATED"),(True,"DATA_GAP")])
