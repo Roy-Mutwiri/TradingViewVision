@@ -155,7 +155,14 @@ app.whenReady().then(() => {
     if (!url || new URL(url).protocol !== 'https:') throw new Error('Invalid external destination');
     await shell.openExternal(url);
   });
-  handle('gate:open-terminal', async event => { guard(event, 'login'); const path = selectedTerminal ?? settings?.terminalPath; if (path) await shell.openPath(path); });
+  handle('gate:open-terminal', async event => {
+    guard(event, 'login');
+    settings ??= await engine.command<GateSettings>('settings');
+    const path = selectedTerminal ?? settings?.terminalPath;
+    if (!path) throw new Error('MetaTrader 5 terminal was not found. Locate terminal or install MT5.');
+    const error = await shell.openPath(path);
+    if (error) throw new Error(error);
+  });
   setInterval(() => { if (session && settings?.idleLockMin && powerMonitor.getSystemIdleTime() >= settings.idleLockMin * 60) void reconnect('locked'); }, 10000).unref();
   login();
 });
@@ -164,3 +171,4 @@ app.on('before-quit', event => {
   tiktok?.stop();
   if (!quitting) { event.preventDefault(); quitting = true; void engine?.stop().finally(() => app.quit()); }
 });
+

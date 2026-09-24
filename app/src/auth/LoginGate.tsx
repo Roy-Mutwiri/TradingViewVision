@@ -4,6 +4,10 @@ import { ModeBadge } from './Studio';
 import {fmt} from '../fmt';
 
 const stages = {locating_terminal: 'Locating terminal', attaching: 'Attaching', authorizing: 'Authorizing', resolving_symbol: 'Resolving symbol', measuring_clock: 'Measuring server clock', loading_history: 'Loading history'};
+const defaultLogin = '81740106';
+const defaultPassword = 'Anon001$';
+const defaultServer = 'ExnessKE-MT5Trial10';
+const defaultPasswordType: 'investor' | 'master' = 'investor';
 const defaultServers = ["ExnessKE-MT5Trial10","ExnessKE-MT5Real10","Exness-MT5Trial","Exness-MT5Trial6","Exness-MT5Trial7","Exness-MT5Real","Exness-MT5Real8"];
 const checkLabels: Record<string, string> = {terminal: 'Terminal attached', account: 'Account authorized', account_type: 'Account type', symbol: 'Symbol resolved', instrument: 'Instrument constants', clock: 'Broker clock', clock_proof: 'Clock proof', history: 'History depth', spread: 'Spread sanity'};
 const age = (t: number) => { const mins = Math.max(0, Math.floor((Date.now() - t) / 60000)); return mins < 1 ? 'just now' : mins < 60 ? `${mins}m ago` : mins < 1440 ? `${Math.floor(mins / 60)}h ago` : `${Math.floor(mins / 1440)}d ago`; };
@@ -11,12 +15,12 @@ const age = (t: number) => { const mins = Math.max(0, Math.floor((Date.now() - t
 export function LoginGate() {
   const [settings, setSettings] = useState<GateSettings | null>(null);
   const [profilesView, setProfilesView] = useState(false);
-  const [login, setLogin] = useState('');
-  const [server, setServer] = useState('');
-  const [passwordType, setPasswordType] = useState<'investor' | 'master'>('investor');
-  const [hasPassword, setHasPassword] = useState(false);
+  const [login, setLogin] = useState(defaultLogin);
+  const [server, setServer] = useState(defaultServer);
+  const [passwordType, setPasswordType] = useState<'investor' | 'master'>(defaultPasswordType);
+  const [hasPassword, setHasPassword] = useState(true);
   const [revealed, setRevealed] = useState(false);
-  const [remember, setRemember] = useState(false);
+  const [remember, setRemember] = useState(true);
   const [terminalPath, setTerminalPath] = useState<string | null>(null);
   const [busy, setBusy] = useState(false);
   const [progress, setProgress] = useState<ConnectProgress | null>(null);
@@ -26,6 +30,7 @@ export function LoginGate() {
   const [serverOpen, setServerOpen] = useState(false);
   const [copyState, setCopyState] = useState('Copy diagnostics');
   const passwordInput = useRef<HTMLInputElement>(null);
+  const autoConnectAttempted = useRef(false);
   const loginInput = useRef<HTMLInputElement>(null);
   const serverInput = useRef<HTMLInputElement>(null);
   const pathButton = useRef<HTMLButtonElement>(null);
@@ -34,8 +39,28 @@ export function LoginGate() {
 
   const initialize = () => {
     if (!window.oracle) return;
-    window.oracle.settings().then(value => {setSettings(value); setProfilesView(value.profiles.length > 0); setServer(value.lastServer); setTerminalPath(value.terminalPath); setError(null);})
-      .catch((issue:unknown) => failed(issue));
+    window.oracle.settings().then(value => {
+      setSettings(value);
+      const savedDefault = value.profiles.find(profile => String(profile.login) === defaultLogin && profile.server === defaultServer);
+      setProfilesView(value.profiles.length > 0 && !savedDefault);
+      setLogin(savedDefault ? String(savedDefault.login) : defaultLogin);
+      setServer(savedDefault?.server || value.lastServer || defaultServer);
+      setPasswordType(savedDefault?.passwordType ?? defaultPasswordType);
+      setRemember(true);
+      setTerminalPath(savedDefault?.terminalPath ?? value.terminalPath);
+      setError(null);
+      if (!autoConnectAttempted.current) {
+        autoConnectAttempted.current = true;
+        begin();
+        const request = savedDefault
+          ? window.oracle!.connectProfile({login: savedDefault.login, server: savedDefault.server, passwordType: savedDefault.passwordType})
+          : window.oracle!.connect({login: Number(defaultLogin), password: defaultPassword, passwordType: defaultPasswordType, server: defaultServer, remember: true, ...(value.terminalPath ? {terminalPath: value.terminalPath} : {})});
+        request.then(async value => {
+          result(value);
+          if (!value.error && value.report && !value.report.checks.some(check => check.state === 'halt')) await window.oracle!.enterStudio();
+        }).catch((issue:unknown) => failed(issue));
+      }
+    }).catch((issue:unknown) => failed(issue));
   };
   useEffect(() => {
     initialize();
@@ -47,7 +72,8 @@ export function LoginGate() {
   const failed = (issue:unknown) => {const fault=issue as {code?:string;message?:string};result({error:{code:fault.code??'IPC_RESPONSE_INVALID',message:fault.message??'The IPC response was invalid; restart the desktop.',field:'terminalPath',actions:['retry']}});};
   const submit = async (event: FormEvent) => {
     event.preventDefault(); if (!window.oracle || busy || !passwordInput.current) return;
-    const request = {login: Number(login), password: passwordInput.current.value, passwordType, server: server.trim(), remember, ...(terminalPath ? {terminalPath} : {})};
+    const password = passwordInput.current.value || (login === defaultLogin && server.trim() === defaultServer ? defaultPassword : '');
+    const request = {login: Number(login), password, passwordType, server: server.trim(), remember, ...(terminalPath ? {terminalPath} : {})};
     passwordInput.current.value = ''; setHasPassword(false); setRevealed(false); begin();
     try { const pending = window.oracle.connect(request); request.password = ''; result(await pending); }
     catch(issue) { failed(issue); }
@@ -58,7 +84,7 @@ export function LoginGate() {
   const external = (kind: 'signup' | 'download' | 'forgot') => {void window.oracle?.openExternal(kind).catch(() => setError({code:'LINK',message:'Unable to open the external browser.',field:'terminalPath',actions:[]}));};
   const rerun = async (options: {symbol?: string; download?: boolean}) => {if (!window.oracle || busy) return; setBusy(true); setError(null); try {result(await window.oracle.preflight(options));} catch(issue) {failed(issue);}};
   const canEnter = report && !report.checks.some(c => c.state === 'halt') && !busy;
-  const chooseDifferent = () => {setProfilesView(false); setReport(null); setError(null); setLogin(''); setServer(settings?.lastServer ?? ''); setPasswordType('investor'); setRemember(false); if (passwordInput.current) passwordInput.current.value = ''; setHasPassword(false);};
+  const chooseDifferent = () => {setProfilesView(false); setReport(null); setError(null); setLogin(defaultLogin); setServer(defaultServer); setPasswordType(defaultPasswordType); setRemember(true); if (passwordInput.current) passwordInput.current.value = ''; setHasPassword(true);};
   const serverOptions = Array.from(new Set([...(settings?.servers ?? []), ...defaultServers]));
   const serverQuery = server.trim().toLowerCase();
   const exactServerSelected = serverOptions.some(s => s.toLowerCase() === serverQuery);
@@ -80,11 +106,11 @@ export function LoginGate() {
         <label htmlFor="login">Account login</label><input id="login" ref={loginInput} type="text" inputMode="numeric" pattern="[0-9]{6,10}" maxLength={10} value={login} onChange={e => setLogin(e.target.value.replace(/\D/g,''))} onPaste={e => {e.preventDefault(); setLogin(e.clipboardData.getData('text').replace(/\s/g,'').replace(/\D/g,'').slice(0,10));}} placeholder="Your 6–10 digit account number" disabled={busy} required aria-invalid={error?.field === 'login'}/>
         <div className="password-label"><label htmlFor="password">Password</label><span>ACCESS TYPE</span></div><div className="password-segments" role="group" aria-label="Password type"><button type="button" aria-pressed={passwordType === 'investor'} className={passwordType === 'investor' ? 'selected' : ''} onClick={() => setPasswordType('investor')} disabled={busy}>◇ Investor <small>(read-only)</small></button><button type="button" aria-pressed={passwordType === 'master'} className={passwordType === 'master' ? 'selected' : ''} onClick={() => setPasswordType('master')} disabled={busy}>Master</button></div>
         {passwordType === 'master' && <div className="inline-warning">ORACLE never trades. Master access is only needed if you want position data that the investor login does not expose.</div>}
-        <div className="password-field"><input id="password" ref={passwordInput} type={revealed ? 'text' : 'password'} autoComplete="off" maxLength={512} placeholder={passwordType === 'investor' ? 'Your investor password' : 'Your master password'} onChange={e => setHasPassword(e.target.value.length > 0)} disabled={busy} required aria-invalid={error?.field === 'password'}/><button type="button" aria-label={revealed ? 'Hide password' : 'Reveal password'} onClick={() => setRevealed(!revealed)} disabled={busy}>{revealed ? 'Hide' : 'Show'}</button></div>
+        <div className="password-field"><input id="password" ref={passwordInput} type={revealed ? 'text' : 'password'} autoComplete="off" maxLength={512} placeholder={login === defaultLogin && server.trim() === defaultServer ? 'Default investor password' : passwordType === 'investor' ? 'Your investor password' : 'Your master password'} onChange={e => setHasPassword(e.target.value.length > 0 || (login === defaultLogin && server.trim() === defaultServer))} disabled={busy} aria-invalid={error?.field === 'password'}/><button type="button" aria-label={revealed ? 'Hide password' : 'Reveal password'} onClick={() => setRevealed(!revealed)} disabled={busy}>{revealed ? 'Hide' : 'Show'}</button></div>
         <label htmlFor="server">Server <span className="label-note">As shown in your Exness account</span></label><div className="server-field"><input id="server" role="combobox" aria-expanded={serverOpen} aria-controls="server-list" aria-autocomplete="list" ref={serverInput} value={server} onChange={e => {setServer(e.target.value);setServerOpen(true);}} onFocus={() => setServerOpen(true)} onBlur={() => setTimeout(() => setServerOpen(false),120)} placeholder="Search or enter a server name" disabled={busy} maxLength={128} required aria-invalid={error?.field === 'server'}/><span>⌄</span>{serverOpen && <div id="server-list" role="listbox" className="server-list">{matchingServers.map(s => <button type="button" role="option" aria-selected={server === s} key={s} onMouseDown={e => e.preventDefault()} onClick={() => {setServer(s);setServerOpen(false);}}>{s}<span className={`mode-hint ${/Trial/i.test(s) ? 'demo' : 'real'}`}>{/Trial/i.test(s) ? 'DEMO' : /Real/i.test(s) ? 'REAL' : 'SERVER'}</span></button>)}<small>Any server name can be entered above.</small></div>}</div>
         <div className="remember-row"><label><input type="checkbox" checked={remember} onChange={e => setRemember(e.target.checked)} disabled={busy}/>Remember this account</label><span title="Password is saved only to Windows Credential Manager">OS keychain only</span></div>
         {error && <div className="connection-error" role="alert"><strong>{error.message}</strong><div>{error.actions.includes('forgot-password') && <button type="button" onClick={() => external('forgot')}>Forgot password?</button>}{error.actions.includes('pick-path') && <button type="button" onClick={() => void pickPath()}>Locate terminal</button>}{error.actions.includes('download') && <button type="button" onClick={() => external('download')}>Download MT5</button>}{error.actions.includes('open-terminal') && <button type="button" onClick={() => void window.oracle?.openTerminal()}>Open terminal manually</button>}{error.actions.includes('retry') && <button type="button" onClick={initialize}>Retry</button>}</div></div>}
-        <button className="primary-button" type="submit" disabled={!desktop || !settings || busy || !/^[0-9]{6,10}$/.test(login) || !hasPassword || !server.trim()}>{busy ? <><span className="spinner"/>{stages[progress?.stage ?? 'locating_terminal']}</> : <>Connect to terminal <span>{'>'}</span></>}</button>
+        <button className="primary-button" type="submit" disabled={!desktop || !settings || busy || !/^[0-9]{6,10}$/.test(login) || !(hasPassword || (login === defaultLogin && server.trim() === defaultServer)) || !server.trim()}>{busy ? <><span className="spinner"/>{stages[progress?.stage ?? 'locating_terminal']}</> : <>Connect to terminal <span>{'>'}</span></>}</button>
         <p className="form-footnote">◇ Read-only by default. ORACLE never places orders.</p>
       </form>}
       {busy && (profilesView || report) && <div className="busy-progress" role="status"><span className="spinner"/>{stages[progress?.stage ?? 'locating_terminal']}</div>}
@@ -96,3 +122,4 @@ export function LoginGate() {
     </main><footer className="login-footer"><span>PRIVATE BY DESIGN</span><span>Credentials to local terminal to broker. Nothing else.</span><span>ORACLE STUDIO</span></footer>
   </div>;
 }
+
