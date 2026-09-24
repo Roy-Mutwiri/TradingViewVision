@@ -4,6 +4,7 @@ import { ModeBadge } from './Studio';
 import {fmt} from '../fmt';
 
 const stages = {locating_terminal: 'Locating terminal', attaching: 'Attaching', authorizing: 'Authorizing', resolving_symbol: 'Resolving symbol', measuring_clock: 'Measuring server clock', loading_history: 'Loading history'};
+const defaultServers = ["ExnessKE-MT5Trial10","ExnessKE-MT5Real10","Exness-MT5Trial","Exness-MT5Trial6","Exness-MT5Trial7","Exness-MT5Real","Exness-MT5Real8"];
 const checkLabels: Record<string, string> = {terminal: 'Terminal attached', account: 'Account authorized', account_type: 'Account type', symbol: 'Symbol resolved', instrument: 'Instrument constants', clock: 'Broker clock', clock_proof: 'Clock proof', history: 'History depth', spread: 'Spread sanity'};
 const age = (t: number) => { const mins = Math.max(0, Math.floor((Date.now() - t) / 60000)); return mins < 1 ? 'just now' : mins < 60 ? `${mins}m ago` : mins < 1440 ? `${Math.floor(mins / 60)}h ago` : `${Math.floor(mins / 1440)}d ago`; };
 
@@ -58,7 +59,10 @@ export function LoginGate() {
   const rerun = async (options: {symbol?: string; download?: boolean}) => {if (!window.oracle || busy) return; setBusy(true); setError(null); try {result(await window.oracle.preflight(options));} catch(issue) {failed(issue);}};
   const canEnter = report && !report.checks.some(c => c.state === 'halt') && !busy;
   const chooseDifferent = () => {setProfilesView(false); setReport(null); setError(null); setLogin(''); setServer(settings?.lastServer ?? ''); setPasswordType('investor'); setRemember(false); if (passwordInput.current) passwordInput.current.value = ''; setHasPassword(false);};
-  const matchingServers = (settings?.servers ?? []).filter(s => s.toLowerCase().includes(server.toLowerCase()));
+  const serverOptions = Array.from(new Set([...(settings?.servers ?? []), ...defaultServers]));
+  const serverQuery = server.trim().toLowerCase();
+  const exactServerSelected = serverOptions.some(s => s.toLowerCase() === serverQuery);
+  const matchingServers = !serverQuery || exactServerSelected ? serverOptions : serverOptions.filter(s => s.toLowerCase().includes(serverQuery));
 
   return <div className="login-shell"><header className="login-chrome"><div className="wordmark"><span className="oracle-mark">O</span> ORACLE <small>STUDIO</small></div><span className="local-label"><span>◇</span> LOCAL TERMINAL CONNECTION</span></header>
     <main className={`gate-layout ${report ? 'preflight-layout' : ''}`}><div className="gate-intro"><div className="eyebrow">YOUR EDGE. YOUR TERMINAL.</div><h1>{report ? 'Before you go live.' : profilesView ? 'Welcome back.' : 'Connect your account.'}</h1><p>{report ? 'A clear view of the session you’re about to use.' : 'A private connection to your local MetaTrader 5.\nYour credentials stay on this machine.'}</p></div>
