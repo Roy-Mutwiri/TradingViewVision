@@ -2,6 +2,10 @@
 
 [Download the Windows installer](https://github.com/Roy-Mutwiri/TradingViewVision/releases/latest/download/TradeFix-Studio-Setup-0.1.0.exe)
 
+![TradeFix Studio dashboard](docs/oracle-reference.png)
+
+![TradeFix Studio notebook](docs/oracle-notebook-reference.png)
+
 The installer includes the desktop app and bundled source resources. On first launch, TradeFix Studio uses the bundled engine and the local Python 3.12 runtime to prepare its private requirements environment.
 
 Read-only educational terminal for Trade Fix. Phase 0 contracts are approved with
