@@ -222,7 +222,7 @@ export function LiveChart({theme,active,mode,session,toggleTheme,comments=[],joi
   const marketClosed=retention?.session==='Market closed';
   const feedStale=(tickAge??0)>10&&active&&!marketClosed;
   const health=frame?.quality.state==='STALE'||frame?.quality.state==='GAPPED'||!active||!!error||feedStale?'fault':!session.clockProven||frame?.quality.state==='CALENDAR_PENDING'||frame?.quality.state==='WIDE_SPREAD'?'pending':'healthy';
-  const openCalls=(retention?.scoreboard?.rows??[]).map(row=>row.call).filter(call=>['PENDING','ACTIVE'].includes(call.state??'PENDING'));
+  const openCalls=(retention?.scoreboard?.rows??[]).map(row=>row.call).filter(call=>call.state==='ACTIVE'||((call.state??'PENDING')==='PENDING'&&now-(call.created_ms??now)<600000));
   const liveSignal=[...openCalls].sort((a,b)=>(b.created_ms??0)-(a.created_ms??0))[0];
   const liveSignalR=liveSignal?Math.abs(liveSignal.target-Number(liveSignal.entry_ref??(liveSignal.direction==='LONG'?liveSignal.entry_hi:liveSignal.entry_lo)))/Math.max(0.000001,Math.abs(Number(liveSignal.entry_ref??(liveSignal.direction==='LONG'?liveSignal.entry_hi:liveSignal.entry_lo))-liveSignal.invalidation)):0;
   const signalProcedure=buildSignalProcedure({price:quote?.bid??live?.c??null,tf,structure:frame?.structure_state,objects:frame?.objects??[],pools:frame?.liquidity_pools??[]});

@@ -11,7 +11,7 @@ from pathlib import Path
 from typing import Literal
 
 from oracle.analysis.call_drawing import call_objects
-from oracle.analysis.contracts import Call
+from oracle.analysis.contracts import Call, CallRow
 from oracle.analysis.ledger import CallLedger
 from oracle.analysis.producer import CallDryRun, CallProducer
 from oracle.analysis.resolver import CallResolver
@@ -101,8 +101,17 @@ class CandidateService:
             )
             price = float(tick.bid) if tick else None
             if price is not None and hasattr(self, "call_ledger"):
+                now_ms = None
+                if tick is not None and self.feed.clock is not None:
+                    tick_ms = int(getattr(tick, "time_msc", 0) or getattr(tick, "time", 0) * 1000)
+                    now_ms = self.feed.clock.utc_ms(tick_ms) if tick_ms else None
                 objects.extend(
-                    call_objects(self.call_ledger.rows, self.current_openings.get(tf, 0), price, self.config.calls.broadcast)
+                    call_objects(
+                        self._displayable_call_rows(now_ms),
+                        self.current_openings.get(tf, 0),
+                        price,
+                        self.config.calls.broadcast,
+                    )
                 )
             for overlay in self.config.zones.htf_overlay:
                 if timeframe_ms(overlay) <= timeframe_ms(tf):
@@ -842,6 +851,16 @@ class CandidateService:
                     "SUPERSEDED_BY_NEW_ANALYSIS",
                     at_ms=evaluation_ms,
                 )
+
+    def _displayable_call_rows(self, now_ms: int | None) -> list[CallRow]:
+        if now_ms is None:
+            return self.call_ledger.rows
+        return [
+            row
+            for row in self.call_ledger.rows
+            if row.call.state != "PENDING"
+            or now_ms - row.call.created_ms < self.config.trade.max_pending_age_ms
+        ]
 
     def _calls(
         self,

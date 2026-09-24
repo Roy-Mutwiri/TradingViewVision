@@ -32,7 +32,7 @@ export function RetentionRail({frame,now,digits,countdown,price=null,objects=[],
   const stats=board?.[window];
   const completed=(board?.rows??[]).filter(row=>!['PENDING','ACTIVE'].includes(row.call.state??'PENDING')).sort((a,b)=>(a.call.resolved_ms??0)-(b.call.resolved_ms??0)||(a.call.id??'').localeCompare(b.call.id??''));
   const visible=window==='all_time'?board?.rows??[]:window==='today'?completed.filter(row=>row.call.resolved_trading_day===board?.today_trading_day):completed.slice(-20);
-  const open=window==='all_time'?[]:(board?.rows??[]).filter(row=>['PENDING','ACTIVE'].includes(row.call.state??'PENDING'));
+  const open=window==='all_time'?[]:(board?.rows??[]).filter(row=>row.call.state==='ACTIVE'||((row.call.state??'PENDING')==='PENDING'&&now-(row.call.created_ms??now)<600000));
   const liveSignal=[...open].sort((a,b)=>(b.call.created_ms??0)-(a.call.created_ms??0))[0]?.call;
   const latestUt=[...objects].filter(o=>o.style.token.startsWith('utbot.')).sort((a,b)=>(Number(b.points?.[0]?.t_ms??0)-Number(a.points?.[0]?.t_ms??0)))[0];
   const utState=latestUt?(latestUt.style.token==='utbot.buy'||latestUt.text_args.direction==='BULLISH'?'BUY':'SELL'):null;

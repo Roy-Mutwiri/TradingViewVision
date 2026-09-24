@@ -60,6 +60,28 @@ def test_only_falsifiable_calls_score_and_results_never_disappear() -> None:
     assert len(frame.scoreboard.rows) == 110
 
 
+def test_pending_calls_disappear_from_live_view_after_ten_minutes() -> None:
+    director = Director(max_pending_age_ms=600000)
+    call = Call(
+        created_ms=0,
+        kind="SETUP",
+        direction="LONG",
+        entry_lo=100,
+        entry_hi=100,
+        invalidation=99,
+        target=105,
+        expires_ms=3600000,
+        state_hash="stale-pending",
+        reason="Synthetic pending call",
+        symbol="XAUUSD",
+        clock_version=1,
+    )
+    director.create_call(call)
+
+    assert director.view(599999).scoreboard.rows[0].call.state == "PENDING"
+    assert not director.view(600000).scoreboard.rows
+
+
 def test_closed_market_levels_command_and_unknown_open_do_not_invent_live_prices() -> None:
     director = Director()
     director.observe(candle(0, complete=False), [], 1)

@@ -30,6 +30,7 @@ class Director:
         ledger: CallLedger | None = None,
         day_boundary: str = "17:00 America/New_York",
         reason_strip_seconds: int = 20,
+        max_pending_age_ms: int = 600_000,
     ) -> None:
         self.lock = threading.RLock()
         self.timeline = timeline or Timeline()
@@ -51,6 +52,7 @@ class Director:
         self._ledger_mtime_ns = self.ledger.path.stat().st_mtime_ns if self.ledger.path and self.ledger.path.exists() else 0
         self.day_boundary = day_boundary
         self.reason_strip_seconds = reason_strip_seconds
+        self.max_pending_age_ms = max_pending_age_ms
         self.active_hook: tuple[str, str, int] | None = None
         self.segment: tuple[str, int] | None = None
         self.viewer_count: int | None = None
@@ -284,6 +286,14 @@ class Director:
             else []
         )
 
+    def _displayable_rows(self, now_ms: int):
+        return [
+            row
+            for row in self.ledger.rows
+            if row.call.state != "PENDING"
+            or now_ms - row.call.created_ms < self.max_pending_age_ms
+        ]
+
     def view(self, now_ms: int) -> RetentionFrame:
         # The live call producer is an independent owner. Refresh its append-only
         # file before projecting the scoreboard; no account data crosses here.
@@ -409,13 +419,14 @@ class Director:
                 if 7 <= utc.astimezone(ZoneInfo("Europe/London")).hour < 16
                 else "Asia / overnight"
             )
+            rows = self._displayable_rows(now_ms)
             return RetentionFrame(
                 now_ms=now_ms,
                 hook=hook,
                 card=self.card,
                 shout=self.shout,
                 supporters=list(self.supporters),
-                scoreboard=board(self.ledger.rows, now_ms, self.day_boundary),
+                scoreboard=board(rows, now_ms, self.day_boundary),
                 levels=self.levels() if not self.market_closed else [],
                 session=session if not self.market_closed else "Market closed",
                 language=self.language,
@@ -423,7 +434,7 @@ class Director:
                 zoom=self.zoom,
                 rehearsal=self.rehearsal,
                 comment=self.comment if self.comment and now_ms < self.comment.ends_ms else None,
-                marks=[mark for row in self.ledger.rows
+                marks=[mark for row in rows
                        if self.bar and (mark := reason_strip(
                            row.call, now_ms,
                            row.call.created_ms // timeframe_ms(self.bar.tf) * timeframe_ms(self.bar.tf),

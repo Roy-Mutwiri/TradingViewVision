@@ -63,6 +63,7 @@ def main() -> None:
                 ),
                 day_boundary=config.sessions.day_boundary,
                 reason_strip_seconds=config.narration.reason_strip_seconds,
+                max_pending_age_ms=config.trade.max_pending_age_ms,
             )
         return director
 

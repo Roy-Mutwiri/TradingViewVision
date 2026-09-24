@@ -468,7 +468,15 @@ class LiveChart:
         indicator_objects = self._indicator_objects()
         objects = [*indicator_objects, *fvg_objects, *candidate_objects, *structure_marks]
         open_calls = (
-            [r.call for r in self.candidate_service.call_ledger.rows if r.call.state in ("PENDING", "ACTIVE")]
+            [
+                r.call
+                for r in self.candidate_service.call_ledger.rows
+                if r.call.state == "ACTIVE"
+                or (
+                    r.call.state == "PENDING"
+                    and self.now() - r.call.created_ms < self.gate.config.trade.max_pending_age_ms
+                )
+            ]
             if self.candidate_service
             else []
         )
