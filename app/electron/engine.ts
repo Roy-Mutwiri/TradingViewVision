@@ -22,7 +22,7 @@ export class EngineClient {
     const runtimePython = resolve(bundledRuntime, process.platform === 'win32' ? 'python.exe' : 'bin/python');
     if (existsSync(bundledPython) && existsSync(runtimePython)) {
       try {
-        const cfg = ['home = '+bundledRuntime, 'include-system-site-packages = false', 'version = 3.12.14', 'executable = '+runtimePython, ''].join('\\n');
+        const cfg = ['home = '+bundledRuntime, 'include-system-site-packages = false', 'version = 3.12.14', 'executable = '+runtimePython, ''].join('\n');
         writeFileSync(resolve(bundledVenv, 'pyvenv.cfg'), cfg, 'utf8');
       } catch { /* Some install locations may be read-only after first launch. */ }
       return bundledPython;
