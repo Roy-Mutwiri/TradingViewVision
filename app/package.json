@@ -1,6 +1,6 @@
 {
   "name": "tradefix-studio",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": true,
   "type": "module",
   "scripts": {
@@ -48,7 +48,7 @@
   "build": {
     "appId": "studio.tradefix.desktop",
     "productName": "TradeFix Studio",
-    "artifactName": "TradeFix-Studio-Setup-${version}.${ext}",
+    "artifactName": "TradeFix-Studio-Setup.${ext}",
     "directories": {
       "output": "release"
     },
@@ -75,6 +75,19 @@
       {
         "from": "../config",
         "to": "config"
+      },
+      {
+        "from": "../.venv312",
+        "to": ".venv312",
+        "filter": [
+          "**/*",
+          "!**/__pycache__/**",
+          "!**/.pytest_cache/**"
+        ]
+      },
+      {
+        "from": "../runtime/python/cpython-3.12.14-windows-x86_64-none",
+        "to": "runtime/python/cpython-3.12.14-windows-x86_64-none"
       }
     ],
     "win": {

@@ -1,5 +1,5 @@
-import { spawn, spawnSync, type ChildProcessWithoutNullStreams } from 'node:child_process';
-import { existsSync } from 'node:fs';
+import { spawn, type ChildProcessWithoutNullStreams } from 'node:child_process';
+import { existsSync, writeFileSync } from 'node:fs';
 import { createInterface } from 'node:readline';
 import { resolve } from 'node:path';
 import type { ConnectProgress } from '../src/net/auth';
@@ -16,17 +16,20 @@ export class EngineClient {
               private retention:(data:import('../src/net/retention').RetentionFrame)=>void=()=>{}) {}
   private packagedPython() {
     if (process.env.ORACLE_PYTHON) return process.env.ORACLE_PYTHON;
+    const bundledVenv = resolve(this.root, '.venv312');
+    const bundledRuntime = resolve(this.root, 'runtime/python/cpython-3.12.14-windows-x86_64-none');
+    const bundledPython = resolve(bundledVenv, process.platform === 'win32' ? 'Scripts/python.exe' : 'bin/python');
+    const runtimePython = resolve(bundledRuntime, process.platform === 'win32' ? 'python.exe' : 'bin/python');
+    if (existsSync(bundledPython) && existsSync(runtimePython)) {
+      try {
+        const cfg = ['home = '+bundledRuntime, 'include-system-site-packages = false', 'version = 3.12.14', 'executable = '+runtimePython, ''].join('\\n');
+        writeFileSync(resolve(bundledVenv, 'pyvenv.cfg'), cfg, 'utf8');
+      } catch { /* Some install locations may be read-only after first launch. */ }
+      return bundledPython;
+    }
     const local = resolve(this.root, process.platform === 'win32' ? '.venv312/Scripts/python.exe' : '.venv312/bin/python');
     if (existsSync(local)) return local;
-    const dataRoot = process.env.APPDATA ? resolve(process.env.APPDATA, 'TradeFix Studio') : this.root;
-    const python = resolve(dataRoot, process.platform === 'win32' ? '.venv312/Scripts/python.exe' : '.venv312/bin/python');
-    if (existsSync(python)) return python;
-    const launcher = process.platform === 'win32' ? ['py', '-3.12'] : ['python3'];
-    const venv = spawnSync(launcher[0], [...launcher.slice(1), '-m', 'venv', resolve(dataRoot, '.venv312')], { windowsHide: true, stdio: 'ignore' });
-    if (venv.status !== 0 || !existsSync(python)) throw new EngineBoundaryError({code:'ENGINE_SETUP_FAILED',message:'Install Python 3.12, then reopen TradeFix Studio so it can install its requirements.',detail:{},recoverable:true});
-    const install = spawnSync(python, ['-m', 'pip', 'install', '--upgrade', 'pip', resolve(this.root, 'engine[mt5]')], { windowsHide: true, stdio: 'ignore' });
-    if (install.status !== 0) throw new EngineBoundaryError({code:'ENGINE_SETUP_FAILED',message:'TradeFix Studio could not install its Python requirements. Check your internet connection and reopen the app.',detail:{},recoverable:true});
-    return python;
+    throw new EngineBoundaryError({code:'ENGINE_SETUP_FAILED',message:'TradeFix Studio is missing its bundled runtime. Reinstall TradeFix Studio using the latest installer.',detail:{},recoverable:true});
   }
   start() {
     if (this.child) return;
