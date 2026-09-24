@@ -1,0 +1,846 @@
+{
+  "synthetic": true,
+  "scope": "Sampled renderer replay; not a real-time sixty-minute live capture",
+  "samples": [
+    {
+      "mode": "broadcast",
+      "minute": 0,
+      "badge": "DEMO",
+      "disclaimer": "Educational market analysis · Not financial advice · ORACLE never trades",
+      "scoreboard": "THE SCOREBOARDLOSSES STAYLAST 20TODAY · from 17:00 NYALL TIME0W · 0L · 0 scratch · 0 never triggered · 0 cancelled · 0 void dataNo wins or losses resolved0 ambiguous · 0 gaps skippedNo resolved engine analysis calls yet. Losses stay recorded."
+    },
+    {
+      "mode": "broadcast",
+      "minute": 1,
+      "badge": "DEMO",
+      "disclaimer": "Educational market analysis · Not financial advice · ORACLE never trades",
+      "scoreboard": "THE SCOREBOARDLOSSES STAYLAST 20TODAY · from 17:00 NYALL TIME0W · 0L · 0 scratch · 0 never triggered · 0 cancelled · 0 void dataNo wins or losses resolved0 ambiguous · 0 gaps skippedNo resolved engine analysis calls yet. Losses stay recorded."
+    },
+    {
+      "mode": "broadcast",
+      "minute": 2,
+      "badge": "DEMO",
+      "disclaimer": "Educational market analysis · Not financial advice · ORACLE never trades",
+      "scoreboard": "THE SCOREBOARDLOSSES STAYLAST 20TODAY · from 17:00 NYALL TIME0W · 0L · 0 scratch · 0 never triggered · 0 cancelled · 0 void dataNo wins or losses resolved0 ambiguous · 0 gaps skippedNo resolved engine analysis calls yet. Losses stay recorded."
+    },
+    {
+      "mode": "broadcast",
+      "minute": 3,
+      "badge": "DEMO",
+      "disclaimer": "Educational market analysis · Not financial advice · ORACLE never trades",
+      "scoreboard": "THE SCOREBOARDLOSSES STAYLAST 20TODAY · from 17:00 NYALL TIME0W · 0L · 0 scratch · 0 never triggered · 0 cancelled · 0 void dataNo wins or losses resolved0 ambiguous · 0 gaps skippedNo resolved engine analysis calls yet. Losses stay recorded."
+    },
+    {
+      "mode": "broadcast",
+      "minute": 4,
+      "badge": "DEMO",
+      "disclaimer": "Educational market analysis · Not financial advice · ORACLE never trades",
+      "scoreboard": "THE SCOREBOARDLOSSES STAYLAST 20TODAY · from 17:00 NYALL TIME0W · 0L · 0 scratch · 0 never triggered · 0 cancelled · 0 void dataNo wins or losses resolved0 ambiguous · 0 gaps skippedNo resolved engine analysis calls yet. Losses stay recorded."
+    },
+    {
+      "mode": "broadcast",
+      "minute": 5,
+      "badge": "DEMO",
+      "disclaimer": "Educational market analysis · Not financial advice · ORACLE never trades",
+      "scoreboard": "THE SCOREBOARDLOSSES STAYLAST 20TODAY · from 17:00 NYALL TIME0W · 0L · 0 scratch · 0 never triggered · 0 cancelled · 0 void dataNo wins or losses resolved0 ambiguous · 0 gaps skippedNo resolved engine analysis calls yet. Losses stay recorded."
+    },
+    {
+      "mode": "broadcast",
+      "minute": 6,
+      "badge": "DEMO",
+      "disclaimer": "Educational market analysis · Not financial advice · ORACLE never trades",
+      "scoreboard": "THE SCOREBOARDLOSSES STAYLAST 20TODAY · from 17:00 NYALL TIME0W · 0L · 0 scratch · 0 never triggered · 0 cancelled · 0 void dataNo wins or losses resolved0 ambiguous · 0 gaps skippedNo resolved engine analysis calls yet. Losses stay recorded."
+    },
+    {
+      "mode": "broadcast",
+      "minute": 7,
+      "badge": "DEMO",
+      "disclaimer": "Educational market analysis · Not financial advice · ORACLE never trades",
+      "scoreboard": "THE SCOREBOARDLOSSES STAYLAST 20TODAY · from 17:00 NYALL TIME0W · 0L · 0 scratch · 0 never triggered · 0 cancelled · 0 void dataNo wins or losses resolved0 ambiguous · 0 gaps skippedNo resolved engine analysis calls yet. Losses stay recorded."
+    },
+    {
+      "mode": "broadcast",
+      "minute": 8,
+      "badge": "DEMO",
+      "disclaimer": "Educational market analysis · Not financial advice · ORACLE never trades",
+      "scoreboard": "THE SCOREBOARDLOSSES STAYLAST 20TODAY · from 17:00 NYALL TIME0W · 0L · 0 scratch · 0 never triggered · 0 cancelled · 0 void dataNo wins or losses resolved0 ambiguous · 0 gaps skippedNo resolved engine analysis calls yet. Losses stay recorded."
+    },
+    {
+      "mode": "broadcast",
+      "minute": 9,
+      "badge": "DEMO",
+      "disclaimer": "Educational market analysis · Not financial advice · ORACLE never trades",
+      "scoreboard": "THE SCOREBOARDLOSSES STAYLAST 20TODAY · from 17:00 NYALL TIME0W · 0L · 0 scratch · 0 never triggered · 0 cancelled · 0 void dataNo wins or losses resolved0 ambiguous · 0 gaps skippedNo resolved engine analysis calls yet. Losses stay recorded."
+    },
+    {
+      "mode": "broadcast",
+      "minute": 10,
+      "badge": "DEMO",
+      "disclaimer": "Educational market analysis · Not financial advice · ORACLE never trades",
+      "scoreboard": "THE SCOREBOARDLOSSES STAYLAST 20TODAY · from 17:00 NYALL TIME0W · 0L · 0 scratch · 0 never triggered · 0 cancelled · 0 void dataNo wins or losses resolved0 ambiguous · 0 gaps skippedNo resolved engine analysis calls yet. Losses stay recorded."
+    },
+    {
+      "mode": "broadcast",
+      "minute": 11,
+      "badge": "DEMO",
+      "disclaimer": "Educational market analysis · Not financial advice · ORACLE never trades",
+      "scoreboard": "THE SCOREBOARDLOSSES STAYLAST 20TODAY · from 17:00 NYALL TIME0W · 0L · 0 scratch · 0 never triggered · 0 cancelled · 0 void dataNo wins or losses resolved0 ambiguous · 0 gaps skippedNo resolved engine analysis calls yet. Losses stay recorded."
+    },
+    {
+      "mode": "broadcast",
+      "minute": 12,
+      "badge": "DEMO",
+      "disclaimer": "Educational market analysis · Not financial advice · ORACLE never trades",
+      "scoreboard": "THE SCOREBOARDLOSSES STAYLAST 20TODAY · from 17:00 NYALL TIME0W · 0L · 0 scratch · 0 never triggered · 0 cancelled · 0 void dataNo wins or losses resolved0 ambiguous · 0 gaps skippedNo resolved engine analysis calls yet. Losses stay recorded."
+    },
+    {
+      "mode": "broadcast",
+      "minute": 13,
+      "badge": "DEMO",
+      "disclaimer": "Educational market analysis · Not financial advice · ORACLE never trades",
+      "scoreboard": "THE SCOREBOARDLOSSES STAYLAST 20TODAY · from 17:00 NYALL TIME0W · 0L · 0 scratch · 0 never triggered · 0 cancelled · 0 void dataNo wins or losses resolved0 ambiguous · 0 gaps skippedNo resolved engine analysis calls yet. Losses stay recorded."
+    },
+    {
+      "mode": "broadcast",
+      "minute": 14,
+      "badge": "DEMO",
+      "disclaimer": "Educational market analysis · Not financial advice · ORACLE never trades",
+      "scoreboard": "THE SCOREBOARDLOSSES STAYLAST 20TODAY · from 17:00 NYALL TIME0W · 0L · 0 scratch · 0 never triggered · 0 cancelled · 0 void dataNo wins or losses resolved0 ambiguous · 0 gaps skippedNo resolved engine analysis calls yet. Losses stay recorded."
+    },
+    {
+      "mode": "broadcast",
+      "minute": 15,
+      "badge": "DEMO",
+      "disclaimer": "Educational market analysis · Not financial advice · ORACLE never trades",
+      "scoreboard": "THE SCOREBOARDLOSSES STAYLAST 20TODAY · from 17:00 NYALL TIME0W · 0L · 0 scratch · 0 never triggered · 0 cancelled · 0 void dataNo wins or losses resolved0 ambiguous · 0 gaps skippedNo resolved engine analysis calls yet. Losses stay recorded."
+    },
+    {
+      "mode": "broadcast",
+      "minute": 16,
+      "badge": "DEMO",
+      "disclaimer": "Educational market analysis · Not financial advice · ORACLE never trades",
+      "scoreboard": "THE SCOREBOARDLOSSES STAYLAST 20TODAY · from 17:00 NYALL TIME0W · 0L · 0 scratch · 0 never triggered · 0 cancelled · 0 void dataNo wins or losses resolved0 ambiguous · 0 gaps skippedNo resolved engine analysis calls yet. Losses stay recorded."
+    },
+    {
+      "mode": "broadcast",
+      "minute": 17,
+      "badge": "DEMO",
+      "disclaimer": "Educational market analysis · Not financial advice · ORACLE never trades",
+      "scoreboard": "THE SCOREBOARDLOSSES STAYLAST 20TODAY · from 17:00 NYALL TIME0W · 0L · 0 scratch · 0 never triggered · 0 cancelled · 0 void dataNo wins or losses resolved0 ambiguous · 0 gaps skippedNo resolved engine analysis calls yet. Losses stay recorded."
+    },
+    {
+      "mode": "broadcast",
+      "minute": 18,
+      "badge": "DEMO",
+      "disclaimer": "Educational market analysis · Not financial advice · ORACLE never trades",
+      "scoreboard": "THE SCOREBOARDLOSSES STAYLAST 20TODAY · from 17:00 NYALL TIME0W · 0L · 0 scratch · 0 never triggered · 0 cancelled · 0 void dataNo wins or losses resolved0 ambiguous · 0 gaps skippedNo resolved engine analysis calls yet. Losses stay recorded."
+    },
+    {
+      "mode": "broadcast",
+      "minute": 19,
+      "badge": "DEMO",
+      "disclaimer": "Educational market analysis · Not financial advice · ORACLE never trades",
+      "scoreboard": "THE SCOREBOARDLOSSES STAYLAST 20TODAY · from 17:00 NYALL TIME0W · 0L · 0 scratch · 0 never triggered · 0 cancelled · 0 void dataNo wins or losses resolved0 ambiguous · 0 gaps skippedNo resolved engine analysis calls yet. Losses stay recorded."
+    },
+    {
+      "mode": "broadcast",
+      "minute": 20,
+      "badge": "DEMO",
+      "disclaimer": "Educational market analysis · Not financial advice · ORACLE never trades",
+      "scoreboard": "THE SCOREBOARDLOSSES STAYLAST 20TODAY · from 17:00 NYALL TIME0W · 0L · 0 scratch · 0 never triggered · 0 cancelled · 0 void dataNo wins or losses resolved0 ambiguous · 0 gaps skippedNo resolved engine analysis calls yet. Losses stay recorded."
+    },
+    {
+      "mode": "broadcast",
+      "minute": 21,
+      "badge": "DEMO",
+      "disclaimer": "Educational market analysis · Not financial advice · ORACLE never trades",
+      "scoreboard": "THE SCOREBOARDLOSSES STAYLAST 20TODAY · from 17:00 NYALL TIME0W · 0L · 0 scratch · 0 never triggered · 0 cancelled · 0 void dataNo wins or losses resolved0 ambiguous · 0 gaps skippedNo resolved engine analysis calls yet. Losses stay recorded."
+    },
+    {
+      "mode": "broadcast",
+      "minute": 22,
+      "badge": "DEMO",
+      "disclaimer": "Educational market analysis · Not financial advice · ORACLE never trades",
+      "scoreboard": "THE SCOREBOARDLOSSES STAYLAST 20TODAY · from 17:00 NYALL TIME0W · 0L · 0 scratch · 0 never triggered · 0 cancelled · 0 void dataNo wins or losses resolved0 ambiguous · 0 gaps skippedNo resolved engine analysis calls yet. Losses stay recorded."
+    },
+    {
+      "mode": "broadcast",
+      "minute": 23,
+      "badge": "DEMO",
+      "disclaimer": "Educational market analysis · Not financial advice · ORACLE never trades",
+      "scoreboard": "THE SCOREBOARDLOSSES STAYLAST 20TODAY · from 17:00 NYALL TIME0W · 0L · 0 scratch · 0 never triggered · 0 cancelled · 0 void dataNo wins or losses resolved0 ambiguous · 0 gaps skippedNo resolved engine analysis calls yet. Losses stay recorded."
+    },
+    {
+      "mode": "broadcast",
+      "minute": 24,
+      "badge": "DEMO",
+      "disclaimer": "Educational market analysis · Not financial advice · ORACLE never trades",
+      "scoreboard": "THE SCOREBOARDLOSSES STAYLAST 20TODAY · from 17:00 NYALL TIME0W · 0L · 0 scratch · 0 never triggered · 0 cancelled · 0 void dataNo wins or losses resolved0 ambiguous · 0 gaps skippedNo resolved engine analysis calls yet. Losses stay recorded."
+    },
+    {
+      "mode": "broadcast",
+      "minute": 25,
+      "badge": "DEMO",
+      "disclaimer": "Educational market analysis · Not financial advice · ORACLE never trades",
+      "scoreboard": "THE SCOREBOARDLOSSES STAYLAST 20TODAY · from 17:00 NYALL TIME0W · 0L · 0 scratch · 0 never triggered · 0 cancelled · 0 void dataNo wins or losses resolved0 ambiguous · 0 gaps skippedNo resolved engine analysis calls yet. Losses stay recorded."
+    },
+    {
+      "mode": "broadcast",
+      "minute": 26,
+      "badge": "DEMO",
+      "disclaimer": "Educational market analysis · Not financial advice · ORACLE never trades",
+      "scoreboard": "THE SCOREBOARDLOSSES STAYLAST 20TODAY · from 17:00 NYALL TIME0W · 0L · 0 scratch · 0 never triggered · 0 cancelled · 0 void dataNo wins or losses resolved0 ambiguous · 0 gaps skippedNo resolved engine analysis calls yet. Losses stay recorded."
+    },
+    {
+      "mode": "broadcast",
+      "minute": 27,
+      "badge": "DEMO",
+      "disclaimer": "Educational market analysis · Not financial advice · ORACLE never trades",
+      "scoreboard": "THE SCOREBOARDLOSSES STAYLAST 20TODAY · from 17:00 NYALL TIME0W · 0L · 0 scratch · 0 never triggered · 0 cancelled · 0 void dataNo wins or losses resolved0 ambiguous · 0 gaps skippedNo resolved engine analysis calls yet. Losses stay recorded."
+    },
+    {
+      "mode": "broadcast",
+      "minute": 28,
+      "badge": "DEMO",
+      "disclaimer": "Educational market analysis · Not financial advice · ORACLE never trades",
+      "scoreboard": "THE SCOREBOARDLOSSES STAYLAST 20TODAY · from 17:00 NYALL TIME0W · 0L · 0 scratch · 0 never triggered · 0 cancelled · 0 void dataNo wins or losses resolved0 ambiguous · 0 gaps skippedNo resolved engine analysis calls yet. Losses stay recorded."
+    },
+    {
+      "mode": "broadcast",
+      "minute": 29,
+      "badge": "DEMO",
+      "disclaimer": "Educational market analysis · Not financial advice · ORACLE never trades",
+      "scoreboard": "THE SCOREBOARDLOSSES STAYLAST 20TODAY · from 17:00 NYALL TIME0W · 0L · 0 scratch · 0 never triggered · 0 cancelled · 0 void dataNo wins or losses resolved0 ambiguous · 0 gaps skippedNo resolved engine analysis calls yet. Losses stay recorded."
+    },
+    {
+      "mode": "broadcast",
+      "minute": 30,
+      "badge": "DEMO",
+      "disclaimer": "Educational market analysis · Not financial advice · ORACLE never trades",
+      "scoreboard": "THE SCOREBOARDLOSSES STAYLAST 20TODAY · from 17:00 NYALL TIME0W · 0L · 0 scratch · 0 never triggered · 0 cancelled · 0 void dataNo wins or losses resolved0 ambiguous · 0 gaps skippedNo resolved engine analysis calls yet. Losses stay recorded."
+    },
+    {
+      "mode": "broadcast",
+      "minute": 31,
+      "badge": "DEMO",
+      "disclaimer": "Educational market analysis · Not financial advice · ORACLE never trades",
+      "scoreboard": "THE SCOREBOARDLOSSES STAYLAST 20TODAY · from 17:00 NYALL TIME0W · 0L · 0 scratch · 0 never triggered · 0 cancelled · 0 void dataNo wins or losses resolved0 ambiguous · 0 gaps skippedNo resolved engine analysis calls yet. Losses stay recorded."
+    },
+    {
+      "mode": "broadcast",
+      "minute": 32,
+      "badge": "DEMO",
+      "disclaimer": "Educational market analysis · Not financial advice · ORACLE never trades",
+      "scoreboard": "THE SCOREBOARDLOSSES STAYLAST 20TODAY · from 17:00 NYALL TIME0W · 0L · 0 scratch · 0 never triggered · 0 cancelled · 0 void dataNo wins or losses resolved0 ambiguous · 0 gaps skippedNo resolved engine analysis calls yet. Losses stay recorded."
+    },
+    {
+      "mode": "broadcast",
+      "minute": 33,
+      "badge": "DEMO",
+      "disclaimer": "Educational market analysis · Not financial advice · ORACLE never trades",
+      "scoreboard": "THE SCOREBOARDLOSSES STAYLAST 20TODAY · from 17:00 NYALL TIME0W · 0L · 0 scratch · 0 never triggered · 0 cancelled · 0 void dataNo wins or losses resolved0 ambiguous · 0 gaps skippedNo resolved engine analysis calls yet. Losses stay recorded."
+    },
+    {
+      "mode": "broadcast",
+      "minute": 34,
+      "badge": "DEMO",
+      "disclaimer": "Educational market analysis · Not financial advice · ORACLE never trades",
+      "scoreboard": "THE SCOREBOARDLOSSES STAYLAST 20TODAY · from 17:00 NYALL TIME0W · 0L · 0 scratch · 0 never triggered · 0 cancelled · 0 void dataNo wins or losses resolved0 ambiguous · 0 gaps skippedNo resolved engine analysis calls yet. Losses stay recorded."
+    },
+    {
+      "mode": "broadcast",
+      "minute": 35,
+      "badge": "DEMO",
+      "disclaimer": "Educational market analysis · Not financial advice · ORACLE never trades",
+      "scoreboard": "THE SCOREBOARDLOSSES STAYLAST 20TODAY · from 17:00 NYALL TIME0W · 0L · 0 scratch · 0 never triggered · 0 cancelled · 0 void dataNo wins or losses resolved0 ambiguous · 0 gaps skippedNo resolved engine analysis calls yet. Losses stay recorded."
+    },
+    {
+      "mode": "broadcast",
+      "minute": 36,
+      "badge": "DEMO",
+      "disclaimer": "Educational market analysis · Not financial advice · ORACLE never trades",
+      "scoreboard": "THE SCOREBOARDLOSSES STAYLAST 20TODAY · from 17:00 NYALL TIME0W · 0L · 0 scratch · 0 never triggered · 0 cancelled · 0 void dataNo wins or losses resolved0 ambiguous · 0 gaps skippedNo resolved engine analysis calls yet. Losses stay recorded."
+    },
+    {
+      "mode": "broadcast",
+      "minute": 37,
+      "badge": "DEMO",
+      "disclaimer": "Educational market analysis · Not financial advice · ORACLE never trades",
+      "scoreboard": "THE SCOREBOARDLOSSES STAYLAST 20TODAY · from 17:00 NYALL TIME0W · 0L · 0 scratch · 0 never triggered · 0 cancelled · 0 void dataNo wins or losses resolved0 ambiguous · 0 gaps skippedNo resolved engine analysis calls yet. Losses stay recorded."
+    },
+    {
+      "mode": "broadcast",
+      "minute": 38,
+      "badge": "DEMO",
+      "disclaimer": "Educational market analysis · Not financial advice · ORACLE never trades",
+      "scoreboard": "THE SCOREBOARDLOSSES STAYLAST 20TODAY · from 17:00 NYALL TIME0W · 0L · 0 scratch · 0 never triggered · 0 cancelled · 0 void dataNo wins or losses resolved0 ambiguous · 0 gaps skippedNo resolved engine analysis calls yet. Losses stay recorded."
+    },
+    {
+      "mode": "broadcast",
+      "minute": 39,
+      "badge": "DEMO",
+      "disclaimer": "Educational market analysis · Not financial advice · ORACLE never trades",
+      "scoreboard": "THE SCOREBOARDLOSSES STAYLAST 20TODAY · from 17:00 NYALL TIME0W · 0L · 0 scratch · 0 never triggered · 0 cancelled · 0 void dataNo wins or losses resolved0 ambiguous · 0 gaps skippedNo resolved engine analysis calls yet. Losses stay recorded."
+    },
+    {
+      "mode": "broadcast",
+      "minute": 40,
+      "badge": "DEMO",
+      "disclaimer": "Educational market analysis · Not financial advice · ORACLE never trades",
+      "scoreboard": "THE SCOREBOARDLOSSES STAYLAST 20TODAY · from 17:00 NYALL TIME0W · 0L · 0 scratch · 0 never triggered · 0 cancelled · 0 void dataNo wins or losses resolved0 ambiguous · 0 gaps skippedNo resolved engine analysis calls yet. Losses stay recorded."
+    },
+    {
+      "mode": "broadcast",
+      "minute": 41,
+      "badge": "DEMO",
+      "disclaimer": "Educational market analysis · Not financial advice · ORACLE never trades",
+      "scoreboard": "THE SCOREBOARDLOSSES STAYLAST 20TODAY · from 17:00 NYALL TIME0W · 0L · 0 scratch · 0 never triggered · 0 cancelled · 0 void dataNo wins or losses resolved0 ambiguous · 0 gaps skippedNo resolved engine analysis calls yet. Losses stay recorded."
+    },
+    {
+      "mode": "broadcast",
+      "minute": 42,
+      "badge": "DEMO",
+      "disclaimer": "Educational market analysis · Not financial advice · ORACLE never trades",
+      "scoreboard": "THE SCOREBOARDLOSSES STAYLAST 20TODAY · from 17:00 NYALL TIME0W · 0L · 0 scratch · 0 never triggered · 0 cancelled · 0 void dataNo wins or losses resolved0 ambiguous · 0 gaps skippedNo resolved engine analysis calls yet. Losses stay recorded."
+    },
+    {
+      "mode": "broadcast",
+      "minute": 43,
+      "badge": "DEMO",
+      "disclaimer": "Educational market analysis · Not financial advice · ORACLE never trades",
+      "scoreboard": "THE SCOREBOARDLOSSES STAYLAST 20TODAY · from 17:00 NYALL TIME0W · 0L · 0 scratch · 0 never triggered · 0 cancelled · 0 void dataNo wins or losses resolved0 ambiguous · 0 gaps skippedNo resolved engine analysis calls yet. Losses stay recorded."
+    },
+    {
+      "mode": "broadcast",
+      "minute": 44,
+      "badge": "DEMO",
+      "disclaimer": "Educational market analysis · Not financial advice · ORACLE never trades",
+      "scoreboard": "THE SCOREBOARDLOSSES STAYLAST 20TODAY · from 17:00 NYALL TIME0W · 0L · 0 scratch · 0 never triggered · 0 cancelled · 0 void dataNo wins or losses resolved0 ambiguous · 0 gaps skippedNo resolved engine analysis calls yet. Losses stay recorded."
+    },
+    {
+      "mode": "broadcast",
+      "minute": 45,
+      "badge": "DEMO",
+      "disclaimer": "Educational market analysis · Not financial advice · ORACLE never trades",
+      "scoreboard": "THE SCOREBOARDLOSSES STAYLAST 20TODAY · from 17:00 NYALL TIME0W · 0L · 0 scratch · 0 never triggered · 0 cancelled · 0 void dataNo wins or losses resolved0 ambiguous · 0 gaps skippedNo resolved engine analysis calls yet. Losses stay recorded."
+    },
+    {
+      "mode": "broadcast",
+      "minute": 46,
+      "badge": "DEMO",
+      "disclaimer": "Educational market analysis · Not financial advice · ORACLE never trades",
+      "scoreboard": "THE SCOREBOARDLOSSES STAYLAST 20TODAY · from 17:00 NYALL TIME0W · 0L · 0 scratch · 0 never triggered · 0 cancelled · 0 void dataNo wins or losses resolved0 ambiguous · 0 gaps skippedNo resolved engine analysis calls yet. Losses stay recorded."
+    },
+    {
+      "mode": "broadcast",
+      "minute": 47,
+      "badge": "DEMO",
+      "disclaimer": "Educational market analysis · Not financial advice · ORACLE never trades",
+      "scoreboard": "THE SCOREBOARDLOSSES STAYLAST 20TODAY · from 17:00 NYALL TIME0W · 0L · 0 scratch · 0 never triggered · 0 cancelled · 0 void dataNo wins or losses resolved0 ambiguous · 0 gaps skippedNo resolved engine analysis calls yet. Losses stay recorded."
+    },
+    {
+      "mode": "broadcast",
+      "minute": 48,
+      "badge": "DEMO",
+      "disclaimer": "Educational market analysis · Not financial advice · ORACLE never trades",
+      "scoreboard": "THE SCOREBOARDLOSSES STAYLAST 20TODAY · from 17:00 NYALL TIME0W · 0L · 0 scratch · 0 never triggered · 0 cancelled · 0 void dataNo wins or losses resolved0 ambiguous · 0 gaps skippedNo resolved engine analysis calls yet. Losses stay recorded."
+    },
+    {
+      "mode": "broadcast",
+      "minute": 49,
+      "badge": "DEMO",
+      "disclaimer": "Educational market analysis · Not financial advice · ORACLE never trades",
+      "scoreboard": "THE SCOREBOARDLOSSES STAYLAST 20TODAY · from 17:00 NYALL TIME0W · 0L · 0 scratch · 0 never triggered · 0 cancelled · 0 void dataNo wins or losses resolved0 ambiguous · 0 gaps skippedNo resolved engine analysis calls yet. Losses stay recorded."
+    },
+    {
+      "mode": "broadcast",
+      "minute": 50,
+      "badge": "DEMO",
+      "disclaimer": "Educational market analysis · Not financial advice · ORACLE never trades",
+      "scoreboard": "THE SCOREBOARDLOSSES STAYLAST 20TODAY · from 17:00 NYALL TIME0W · 0L · 0 scratch · 0 never triggered · 0 cancelled · 0 void dataNo wins or losses resolved0 ambiguous · 0 gaps skippedNo resolved engine analysis calls yet. Losses stay recorded."
+    },
+    {
+      "mode": "broadcast",
+      "minute": 51,
+      "badge": "DEMO",
+      "disclaimer": "Educational market analysis · Not financial advice · ORACLE never trades",
+      "scoreboard": "THE SCOREBOARDLOSSES STAYLAST 20TODAY · from 17:00 NYALL TIME0W · 0L · 0 scratch · 0 never triggered · 0 cancelled · 0 void dataNo wins or losses resolved0 ambiguous · 0 gaps skippedNo resolved engine analysis calls yet. Losses stay recorded."
+    },
+    {
+      "mode": "broadcast",
+      "minute": 52,
+      "badge": "DEMO",
+      "disclaimer": "Educational market analysis · Not financial advice · ORACLE never trades",
+      "scoreboard": "THE SCOREBOARDLOSSES STAYLAST 20TODAY · from 17:00 NYALL TIME0W · 0L · 0 scratch · 0 never triggered · 0 cancelled · 0 void dataNo wins or losses resolved0 ambiguous · 0 gaps skippedNo resolved engine analysis calls yet. Losses stay recorded."
+    },
+    {
+      "mode": "broadcast",
+      "minute": 53,
+      "badge": "DEMO",
+      "disclaimer": "Educational market analysis · Not financial advice · ORACLE never trades",
+      "scoreboard": "THE SCOREBOARDLOSSES STAYLAST 20TODAY · from 17:00 NYALL TIME0W · 0L · 0 scratch · 0 never triggered · 0 cancelled · 0 void dataNo wins or losses resolved0 ambiguous · 0 gaps skippedNo resolved engine analysis calls yet. Losses stay recorded."
+    },
+    {
+      "mode": "broadcast",
+      "minute": 54,
+      "badge": "DEMO",
+      "disclaimer": "Educational market analysis · Not financial advice · ORACLE never trades",
+      "scoreboard": "THE SCOREBOARDLOSSES STAYLAST 20TODAY · from 17:00 NYALL TIME0W · 0L · 0 scratch · 0 never triggered · 0 cancelled · 0 void dataNo wins or losses resolved0 ambiguous · 0 gaps skippedNo resolved engine analysis calls yet. Losses stay recorded."
+    },
+    {
+      "mode": "broadcast",
+      "minute": 55,
+      "badge": "DEMO",
+      "disclaimer": "Educational market analysis · Not financial advice · ORACLE never trades",
+      "scoreboard": "THE SCOREBOARDLOSSES STAYLAST 20TODAY · from 17:00 NYALL TIME0W · 0L · 0 scratch · 0 never triggered · 0 cancelled · 0 void dataNo wins or losses resolved0 ambiguous · 0 gaps skippedNo resolved engine analysis calls yet. Losses stay recorded."
+    },
+    {
+      "mode": "broadcast",
+      "minute": 56,
+      "badge": "DEMO",
+      "disclaimer": "Educational market analysis · Not financial advice · ORACLE never trades",
+      "scoreboard": "THE SCOREBOARDLOSSES STAYLAST 20TODAY · from 17:00 NYALL TIME0W · 0L · 0 scratch · 0 never triggered · 0 cancelled · 0 void dataNo wins or losses resolved0 ambiguous · 0 gaps skippedNo resolved engine analysis calls yet. Losses stay recorded."
+    },
+    {
+      "mode": "broadcast",
+      "minute": 57,
+      "badge": "DEMO",
+      "disclaimer": "Educational market analysis · Not financial advice · ORACLE never trades",
+      "scoreboard": "THE SCOREBOARDLOSSES STAYLAST 20TODAY · from 17:00 NYALL TIME0W · 0L · 0 scratch · 0 never triggered · 0 cancelled · 0 void dataNo wins or losses resolved0 ambiguous · 0 gaps skippedNo resolved engine analysis calls yet. Losses stay recorded."
+    },
+    {
+      "mode": "broadcast",
+      "minute": 58,
+      "badge": "DEMO",
+      "disclaimer": "Educational market analysis · Not financial advice · ORACLE never trades",
+      "scoreboard": "THE SCOREBOARDLOSSES STAYLAST 20TODAY · from 17:00 NYALL TIME0W · 0L · 0 scratch · 0 never triggered · 0 cancelled · 0 void dataNo wins or losses resolved0 ambiguous · 0 gaps skippedNo resolved engine analysis calls yet. Losses stay recorded."
+    },
+    {
+      "mode": "broadcast",
+      "minute": 59,
+      "badge": "DEMO",
+      "disclaimer": "Educational market analysis · Not financial advice · ORACLE never trades",
+      "scoreboard": "THE SCOREBOARDLOSSES STAYLAST 20TODAY · from 17:00 NYALL TIME0W · 0L · 0 scratch · 0 never triggered · 0 cancelled · 0 void dataNo wins or losses resolved0 ambiguous · 0 gaps skippedNo resolved engine analysis calls yet. Losses stay recorded."
+    },
+    {
+      "mode": "operator",
+      "minute": 0,
+      "badge": "DEMO",
+      "disclaimer": "Educational market analysis · Not financial advice · ORACLE never trades",
+      "scoreboard": "THE SCOREBOARDLOSSES STAYLAST 20TODAY · from 17:00 NYALL TIME0W · 0L · 0 scratch · 0 never triggered · 0 cancelled · 0 void dataNo wins or losses resolved0 ambiguous · 0 gaps skippedNo resolved engine analysis calls yet. Losses stay recorded."
+    },
+    {
+      "mode": "operator",
+      "minute": 1,
+      "badge": "DEMO",
+      "disclaimer": "Educational market analysis · Not financial advice · ORACLE never trades",
+      "scoreboard": "THE SCOREBOARDLOSSES STAYLAST 20TODAY · from 17:00 NYALL TIME0W · 0L · 0 scratch · 0 never triggered · 0 cancelled · 0 void dataNo wins or losses resolved0 ambiguous · 0 gaps skippedNo resolved engine analysis calls yet. Losses stay recorded."
+    },
+    {
+      "mode": "operator",
+      "minute": 2,
+      "badge": "DEMO",
+      "disclaimer": "Educational market analysis · Not financial advice · ORACLE never trades",
+      "scoreboard": "THE SCOREBOARDLOSSES STAYLAST 20TODAY · from 17:00 NYALL TIME0W · 0L · 0 scratch · 0 never triggered · 0 cancelled · 0 void dataNo wins or losses resolved0 ambiguous · 0 gaps skippedNo resolved engine analysis calls yet. Losses stay recorded."
+    },
+    {
+      "mode": "operator",
+      "minute": 3,
+      "badge": "DEMO",
+      "disclaimer": "Educational market analysis · Not financial advice · ORACLE never trades",
+      "scoreboard": "THE SCOREBOARDLOSSES STAYLAST 20TODAY · from 17:00 NYALL TIME0W · 0L · 0 scratch · 0 never triggered · 0 cancelled · 0 void dataNo wins or losses resolved0 ambiguous · 0 gaps skippedNo resolved engine analysis calls yet. Losses stay recorded."
+    },
+    {
+      "mode": "operator",
+      "minute": 4,
+      "badge": "DEMO",
+      "disclaimer": "Educational market analysis · Not financial advice · ORACLE never trades",
+      "scoreboard": "THE SCOREBOARDLOSSES STAYLAST 20TODAY · from 17:00 NYALL TIME0W · 0L · 0 scratch · 0 never triggered · 0 cancelled · 0 void dataNo wins or losses resolved0 ambiguous · 0 gaps skippedNo resolved engine analysis calls yet. Losses stay recorded."
+    },
+    {
+      "mode": "operator",
+      "minute": 5,
+      "badge": "DEMO",
+      "disclaimer": "Educational market analysis · Not financial advice · ORACLE never trades",
+      "scoreboard": "THE SCOREBOARDLOSSES STAYLAST 20TODAY · from 17:00 NYALL TIME0W · 0L · 0 scratch · 0 never triggered · 0 cancelled · 0 void dataNo wins or losses resolved0 ambiguous · 0 gaps skippedNo resolved engine analysis calls yet. Losses stay recorded."
+    },
+    {
+      "mode": "operator",
+      "minute": 6,
+      "badge": "DEMO",
+      "disclaimer": "Educational market analysis · Not financial advice · ORACLE never trades",
+      "scoreboard": "THE SCOREBOARDLOSSES STAYLAST 20TODAY · from 17:00 NYALL TIME0W · 0L · 0 scratch · 0 never triggered · 0 cancelled · 0 void dataNo wins or losses resolved0 ambiguous · 0 gaps skippedNo resolved engine analysis calls yet. Losses stay recorded."
+    },
+    {
+      "mode": "operator",
+      "minute": 7,
+      "badge": "DEMO",
+      "disclaimer": "Educational market analysis · Not financial advice · ORACLE never trades",
+      "scoreboard": "THE SCOREBOARDLOSSES STAYLAST 20TODAY · from 17:00 NYALL TIME0W · 0L · 0 scratch · 0 never triggered · 0 cancelled · 0 void dataNo wins or losses resolved0 ambiguous · 0 gaps skippedNo resolved engine analysis calls yet. Losses stay recorded."
+    },
+    {
+      "mode": "operator",
+      "minute": 8,
+      "badge": "DEMO",
+      "disclaimer": "Educational market analysis · Not financial advice · ORACLE never trades",
+      "scoreboard": "THE SCOREBOARDLOSSES STAYLAST 20TODAY · from 17:00 NYALL TIME0W · 0L · 0 scratch · 0 never triggered · 0 cancelled · 0 void dataNo wins or losses resolved0 ambiguous · 0 gaps skippedNo resolved engine analysis calls yet. Losses stay recorded."
+    },
+    {
+      "mode": "operator",
+      "minute": 9,
+      "badge": "DEMO",
+      "disclaimer": "Educational market analysis · Not financial advice · ORACLE never trades",
+      "scoreboard": "THE SCOREBOARDLOSSES STAYLAST 20TODAY · from 17:00 NYALL TIME0W · 0L · 0 scratch · 0 never triggered · 0 cancelled · 0 void dataNo wins or losses resolved0 ambiguous · 0 gaps skippedNo resolved engine analysis calls yet. Losses stay recorded."
+    },
+    {
+      "mode": "operator",
+      "minute": 10,
+      "badge": "DEMO",
+      "disclaimer": "Educational market analysis · Not financial advice · ORACLE never trades",
+      "scoreboard": "THE SCOREBOARDLOSSES STAYLAST 20TODAY · from 17:00 NYALL TIME0W · 0L · 0 scratch · 0 never triggered · 0 cancelled · 0 void dataNo wins or losses resolved0 ambiguous · 0 gaps skippedNo resolved engine analysis calls yet. Losses stay recorded."
+    },
+    {
+      "mode": "operator",
+      "minute": 11,
+      "badge": "DEMO",
+      "disclaimer": "Educational market analysis · Not financial advice · ORACLE never trades",
+      "scoreboard": "THE SCOREBOARDLOSSES STAYLAST 20TODAY · from 17:00 NYALL TIME0W · 0L · 0 scratch · 0 never triggered · 0 cancelled · 0 void dataNo wins or losses resolved0 ambiguous · 0 gaps skippedNo resolved engine analysis calls yet. Losses stay recorded."
+    },
+    {
+      "mode": "operator",
+      "minute": 12,
+      "badge": "DEMO",
+      "disclaimer": "Educational market analysis · Not financial advice · ORACLE never trades",
+      "scoreboard": "THE SCOREBOARDLOSSES STAYLAST 20TODAY · from 17:00 NYALL TIME0W · 0L · 0 scratch · 0 never triggered · 0 cancelled · 0 void dataNo wins or losses resolved0 ambiguous · 0 gaps skippedNo resolved engine analysis calls yet. Losses stay recorded."
+    },
+    {
+      "mode": "operator",
+      "minute": 13,
+      "badge": "DEMO",
+      "disclaimer": "Educational market analysis · Not financial advice · ORACLE never trades",
+      "scoreboard": "THE SCOREBOARDLOSSES STAYLAST 20TODAY · from 17:00 NYALL TIME0W · 0L · 0 scratch · 0 never triggered · 0 cancelled · 0 void dataNo wins or losses resolved0 ambiguous · 0 gaps skippedNo resolved engine analysis calls yet. Losses stay recorded."
+    },
+    {
+      "mode": "operator",
+      "minute": 14,
+      "badge": "DEMO",
+      "disclaimer": "Educational market analysis · Not financial advice · ORACLE never trades",
+      "scoreboard": "THE SCOREBOARDLOSSES STAYLAST 20TODAY · from 17:00 NYALL TIME0W · 0L · 0 scratch · 0 never triggered · 0 cancelled · 0 void dataNo wins or losses resolved0 ambiguous · 0 gaps skippedNo resolved engine analysis calls yet. Losses stay recorded."
+    },
+    {
+      "mode": "operator",
+      "minute": 15,
+      "badge": "DEMO",
+      "disclaimer": "Educational market analysis · Not financial advice · ORACLE never trades",
+      "scoreboard": "THE SCOREBOARDLOSSES STAYLAST 20TODAY · from 17:00 NYALL TIME0W · 0L · 0 scratch · 0 never triggered · 0 cancelled · 0 void dataNo wins or losses resolved0 ambiguous · 0 gaps skippedNo resolved engine analysis calls yet. Losses stay recorded."
+    },
+    {
+      "mode": "operator",
+      "minute": 16,
+      "badge": "DEMO",
+      "disclaimer": "Educational market analysis · Not financial advice · ORACLE never trades",
+      "scoreboard": "THE SCOREBOARDLOSSES STAYLAST 20TODAY · from 17:00 NYALL TIME0W · 0L · 0 scratch · 0 never triggered · 0 cancelled · 0 void dataNo wins or losses resolved0 ambiguous · 0 gaps skippedNo resolved engine analysis calls yet. Losses stay recorded."
+    },
+    {
+      "mode": "operator",
+      "minute": 17,
+      "badge": "DEMO",
+      "disclaimer": "Educational market analysis · Not financial advice · ORACLE never trades",
+      "scoreboard": "THE SCOREBOARDLOSSES STAYLAST 20TODAY · from 17:00 NYALL TIME0W · 0L · 0 scratch · 0 never triggered · 0 cancelled · 0 void dataNo wins or losses resolved0 ambiguous · 0 gaps skippedNo resolved engine analysis calls yet. Losses stay recorded."
+    },
+    {
+      "mode": "operator",
+      "minute": 18,
+      "badge": "DEMO",
+      "disclaimer": "Educational market analysis · Not financial advice · ORACLE never trades",
+      "scoreboard": "THE SCOREBOARDLOSSES STAYLAST 20TODAY · from 17:00 NYALL TIME0W · 0L · 0 scratch · 0 never triggered · 0 cancelled · 0 void dataNo wins or losses resolved0 ambiguous · 0 gaps skippedNo resolved engine analysis calls yet. Losses stay recorded."
+    },
+    {
+      "mode": "operator",
+      "minute": 19,
+      "badge": "DEMO",
+      "disclaimer": "Educational market analysis · Not financial advice · ORACLE never trades",
+      "scoreboard": "THE SCOREBOARDLOSSES STAYLAST 20TODAY · from 17:00 NYALL TIME0W · 0L · 0 scratch · 0 never triggered · 0 cancelled · 0 void dataNo wins or losses resolved0 ambiguous · 0 gaps skippedNo resolved engine analysis calls yet. Losses stay recorded."
+    },
+    {
+      "mode": "operator",
+      "minute": 20,
+      "badge": "DEMO",
+      "disclaimer": "Educational market analysis · Not financial advice · ORACLE never trades",
+      "scoreboard": "THE SCOREBOARDLOSSES STAYLAST 20TODAY · from 17:00 NYALL TIME0W · 0L · 0 scratch · 0 never triggered · 0 cancelled · 0 void dataNo wins or losses resolved0 ambiguous · 0 gaps skippedNo resolved engine analysis calls yet. Losses stay recorded."
+    },
+    {
+      "mode": "operator",
+      "minute": 21,
+      "badge": "DEMO",
+      "disclaimer": "Educational market analysis · Not financial advice · ORACLE never trades",
+      "scoreboard": "THE SCOREBOARDLOSSES STAYLAST 20TODAY · from 17:00 NYALL TIME0W · 0L · 0 scratch · 0 never triggered · 0 cancelled · 0 void dataNo wins or losses resolved0 ambiguous · 0 gaps skippedNo resolved engine analysis calls yet. Losses stay recorded."
+    },
+    {
+      "mode": "operator",
+      "minute": 22,
+      "badge": "DEMO",
+      "disclaimer": "Educational market analysis · Not financial advice · ORACLE never trades",
+      "scoreboard": "THE SCOREBOARDLOSSES STAYLAST 20TODAY · from 17:00 NYALL TIME0W · 0L · 0 scratch · 0 never triggered · 0 cancelled · 0 void dataNo wins or losses resolved0 ambiguous · 0 gaps skippedNo resolved engine analysis calls yet. Losses stay recorded."
+    },
+    {
+      "mode": "operator",
+      "minute": 23,
+      "badge": "DEMO",
+      "disclaimer": "Educational market analysis · Not financial advice · ORACLE never trades",
+      "scoreboard": "THE SCOREBOARDLOSSES STAYLAST 20TODAY · from 17:00 NYALL TIME0W · 0L · 0 scratch · 0 never triggered · 0 cancelled · 0 void dataNo wins or losses resolved0 ambiguous · 0 gaps skippedNo resolved engine analysis calls yet. Losses stay recorded."
+    },
+    {
+      "mode": "operator",
+      "minute": 24,
+      "badge": "DEMO",
+      "disclaimer": "Educational market analysis · Not financial advice · ORACLE never trades",
+      "scoreboard": "THE SCOREBOARDLOSSES STAYLAST 20TODAY · from 17:00 NYALL TIME0W · 0L · 0 scratch · 0 never triggered · 0 cancelled · 0 void dataNo wins or losses resolved0 ambiguous · 0 gaps skippedNo resolved engine analysis calls yet. Losses stay recorded."
+    },
+    {
+      "mode": "operator",
+      "minute": 25,
+      "badge": "DEMO",
+      "disclaimer": "Educational market analysis · Not financial advice · ORACLE never trades",
+      "scoreboard": "THE SCOREBOARDLOSSES STAYLAST 20TODAY · from 17:00 NYALL TIME0W · 0L · 0 scratch · 0 never triggered · 0 cancelled · 0 void dataNo wins or losses resolved0 ambiguous · 0 gaps skippedNo resolved engine analysis calls yet. Losses stay recorded."
+    },
+    {
+      "mode": "operator",
+      "minute": 26,
+      "badge": "DEMO",
+      "disclaimer": "Educational market analysis · Not financial advice · ORACLE never trades",
+      "scoreboard": "THE SCOREBOARDLOSSES STAYLAST 20TODAY · from 17:00 NYALL TIME0W · 0L · 0 scratch · 0 never triggered · 0 cancelled · 0 void dataNo wins or losses resolved0 ambiguous · 0 gaps skippedNo resolved engine analysis calls yet. Losses stay recorded."
+    },
+    {
+      "mode": "operator",
+      "minute": 27,
+      "badge": "DEMO",
+      "disclaimer": "Educational market analysis · Not financial advice · ORACLE never trades",
+      "scoreboard": "THE SCOREBOARDLOSSES STAYLAST 20TODAY · from 17:00 NYALL TIME0W · 0L · 0 scratch · 0 never triggered · 0 cancelled · 0 void dataNo wins or losses resolved0 ambiguous · 0 gaps skippedNo resolved engine analysis calls yet. Losses stay recorded."
+    },
+    {
+      "mode": "operator",
+      "minute": 28,
+      "badge": "DEMO",
+      "disclaimer": "Educational market analysis · Not financial advice · ORACLE never trades",
+      "scoreboard": "THE SCOREBOARDLOSSES STAYLAST 20TODAY · from 17:00 NYALL TIME0W · 0L · 0 scratch · 0 never triggered · 0 cancelled · 0 void dataNo wins or losses resolved0 ambiguous · 0 gaps skippedNo resolved engine analysis calls yet. Losses stay recorded."
+    },
+    {
+      "mode": "operator",
+      "minute": 29,
+      "badge": "DEMO",
+      "disclaimer": "Educational market analysis · Not financial advice · ORACLE never trades",
+      "scoreboard": "THE SCOREBOARDLOSSES STAYLAST 20TODAY · from 17:00 NYALL TIME0W · 0L · 0 scratch · 0 never triggered · 0 cancelled · 0 void dataNo wins or losses resolved0 ambiguous · 0 gaps skippedNo resolved engine analysis calls yet. Losses stay recorded."
+    },
+    {
+      "mode": "operator",
+      "minute": 30,
+      "badge": "DEMO",
+      "disclaimer": "Educational market analysis · Not financial advice · ORACLE never trades",
+      "scoreboard": "THE SCOREBOARDLOSSES STAYLAST 20TODAY · from 17:00 NYALL TIME0W · 0L · 0 scratch · 0 never triggered · 0 cancelled · 0 void dataNo wins or losses resolved0 ambiguous · 0 gaps skippedNo resolved engine analysis calls yet. Losses stay recorded."
+    },
+    {
+      "mode": "operator",
+      "minute": 31,
+      "badge": "DEMO",
+      "disclaimer": "Educational market analysis · Not financial advice · ORACLE never trades",
+      "scoreboard": "THE SCOREBOARDLOSSES STAYLAST 20TODAY · from 17:00 NYALL TIME0W · 0L · 0 scratch · 0 never triggered · 0 cancelled · 0 void dataNo wins or losses resolved0 ambiguous · 0 gaps skippedNo resolved engine analysis calls yet. Losses stay recorded."
+    },
+    {
+      "mode": "operator",
+      "minute": 32,
+      "badge": "DEMO",
+      "disclaimer": "Educational market analysis · Not financial advice · ORACLE never trades",
+      "scoreboard": "THE SCOREBOARDLOSSES STAYLAST 20TODAY · from 17:00 NYALL TIME0W · 0L · 0 scratch · 0 never triggered · 0 cancelled · 0 void dataNo wins or losses resolved0 ambiguous · 0 gaps skippedNo resolved engine analysis calls yet. Losses stay recorded."
+    },
+    {
+      "mode": "operator",
+      "minute": 33,
+      "badge": "DEMO",
+      "disclaimer": "Educational market analysis · Not financial advice · ORACLE never trades",
+      "scoreboard": "THE SCOREBOARDLOSSES STAYLAST 20TODAY · from 17:00 NYALL TIME0W · 0L · 0 scratch · 0 never triggered · 0 cancelled · 0 void dataNo wins or losses resolved0 ambiguous · 0 gaps skippedNo resolved engine analysis calls yet. Losses stay recorded."
+    },
+    {
+      "mode": "operator",
+      "minute": 34,
+      "badge": "DEMO",
+      "disclaimer": "Educational market analysis · Not financial advice · ORACLE never trades",
+      "scoreboard": "THE SCOREBOARDLOSSES STAYLAST 20TODAY · from 17:00 NYALL TIME0W · 0L · 0 scratch · 0 never triggered · 0 cancelled · 0 void dataNo wins or losses resolved0 ambiguous · 0 gaps skippedNo resolved engine analysis calls yet. Losses stay recorded."
+    },
+    {
+      "mode": "operator",
+      "minute": 35,
+      "badge": "DEMO",
+      "disclaimer": "Educational market analysis · Not financial advice · ORACLE never trades",
+      "scoreboard": "THE SCOREBOARDLOSSES STAYLAST 20TODAY · from 17:00 NYALL TIME0W · 0L · 0 scratch · 0 never triggered · 0 cancelled · 0 void dataNo wins or losses resolved0 ambiguous · 0 gaps skippedNo resolved engine analysis calls yet. Losses stay recorded."
+    },
+    {
+      "mode": "operator",
+      "minute": 36,
+      "badge": "DEMO",
+      "disclaimer": "Educational market analysis · Not financial advice · ORACLE never trades",
+      "scoreboard": "THE SCOREBOARDLOSSES STAYLAST 20TODAY · from 17:00 NYALL TIME0W · 0L · 0 scratch · 0 never triggered · 0 cancelled · 0 void dataNo wins or losses resolved0 ambiguous · 0 gaps skippedNo resolved engine analysis calls yet. Losses stay recorded."
+    },
+    {
+      "mode": "operator",
+      "minute": 37,
+      "badge": "DEMO",
+      "disclaimer": "Educational market analysis · Not financial advice · ORACLE never trades",
+      "scoreboard": "THE SCOREBOARDLOSSES STAYLAST 20TODAY · from 17:00 NYALL TIME0W · 0L · 0 scratch · 0 never triggered · 0 cancelled · 0 void dataNo wins or losses resolved0 ambiguous · 0 gaps skippedNo resolved engine analysis calls yet. Losses stay recorded."
+    },
+    {
+      "mode": "operator",
+      "minute": 38,
+      "badge": "DEMO",
+      "disclaimer": "Educational market analysis · Not financial advice · ORACLE never trades",
+      "scoreboard": "THE SCOREBOARDLOSSES STAYLAST 20TODAY · from 17:00 NYALL TIME0W · 0L · 0 scratch · 0 never triggered · 0 cancelled · 0 void dataNo wins or losses resolved0 ambiguous · 0 gaps skippedNo resolved engine analysis calls yet. Losses stay recorded."
+    },
+    {
+      "mode": "operator",
+      "minute": 39,
+      "badge": "DEMO",
+      "disclaimer": "Educational market analysis · Not financial advice · ORACLE never trades",
+      "scoreboard": "THE SCOREBOARDLOSSES STAYLAST 20TODAY · from 17:00 NYALL TIME0W · 0L · 0 scratch · 0 never triggered · 0 cancelled · 0 void dataNo wins or losses resolved0 ambiguous · 0 gaps skippedNo resolved engine analysis calls yet. Losses stay recorded."
+    },
+    {
+      "mode": "operator",
+      "minute": 40,
+      "badge": "DEMO",
+      "disclaimer": "Educational market analysis · Not financial advice · ORACLE never trades",
+      "scoreboard": "THE SCOREBOARDLOSSES STAYLAST 20TODAY · from 17:00 NYALL TIME0W · 0L · 0 scratch · 0 never triggered · 0 cancelled · 0 void dataNo wins or losses resolved0 ambiguous · 0 gaps skippedNo resolved engine analysis calls yet. Losses stay recorded."
+    },
+    {
+      "mode": "operator",
+      "minute": 41,
+      "badge": "DEMO",
+      "disclaimer": "Educational market analysis · Not financial advice · ORACLE never trades",
+      "scoreboard": "THE SCOREBOARDLOSSES STAYLAST 20TODAY · from 17:00 NYALL TIME0W · 0L · 0 scratch · 0 never triggered · 0 cancelled · 0 void dataNo wins or losses resolved0 ambiguous · 0 gaps skippedNo resolved engine analysis calls yet. Losses stay recorded."
+    },
+    {
+      "mode": "operator",
+      "minute": 42,
+      "badge": "DEMO",
+      "disclaimer": "Educational market analysis · Not financial advice · ORACLE never trades",
+      "scoreboard": "THE SCOREBOARDLOSSES STAYLAST 20TODAY · from 17:00 NYALL TIME0W · 0L · 0 scratch · 0 never triggered · 0 cancelled · 0 void dataNo wins or losses resolved0 ambiguous · 0 gaps skippedNo resolved engine analysis calls yet. Losses stay recorded."
+    },
+    {
+      "mode": "operator",
+      "minute": 43,
+      "badge": "DEMO",
+      "disclaimer": "Educational market analysis · Not financial advice · ORACLE never trades",
+      "scoreboard": "THE SCOREBOARDLOSSES STAYLAST 20TODAY · from 17:00 NYALL TIME0W · 0L · 0 scratch · 0 never triggered · 0 cancelled · 0 void dataNo wins or losses resolved0 ambiguous · 0 gaps skippedNo resolved engine analysis calls yet. Losses stay recorded."
+    },
+    {
+      "mode": "operator",
+      "minute": 44,
+      "badge": "DEMO",
+      "disclaimer": "Educational market analysis · Not financial advice · ORACLE never trades",
+      "scoreboard": "THE SCOREBOARDLOSSES STAYLAST 20TODAY · from 17:00 NYALL TIME0W · 0L · 0 scratch · 0 never triggered · 0 cancelled · 0 void dataNo wins or losses resolved0 ambiguous · 0 gaps skippedNo resolved engine analysis calls yet. Losses stay recorded."
+    },
+    {
+      "mode": "operator",
+      "minute": 45,
+      "badge": "DEMO",
+      "disclaimer": "Educational market analysis · Not financial advice · ORACLE never trades",
+      "scoreboard": "THE SCOREBOARDLOSSES STAYLAST 20TODAY · from 17:00 NYALL TIME0W · 0L · 0 scratch · 0 never triggered · 0 cancelled · 0 void dataNo wins or losses resolved0 ambiguous · 0 gaps skippedNo resolved engine analysis calls yet. Losses stay recorded."
+    },
+    {
+      "mode": "operator",
+      "minute": 46,
+      "badge": "DEMO",
+      "disclaimer": "Educational market analysis · Not financial advice · ORACLE never trades",
+      "scoreboard": "THE SCOREBOARDLOSSES STAYLAST 20TODAY · from 17:00 NYALL TIME0W · 0L · 0 scratch · 0 never triggered · 0 cancelled · 0 void dataNo wins or losses resolved0 ambiguous · 0 gaps skippedNo resolved engine analysis calls yet. Losses stay recorded."
+    },
+    {
+      "mode": "operator",
+      "minute": 47,
+      "badge": "DEMO",
+      "disclaimer": "Educational market analysis · Not financial advice · ORACLE never trades",
+      "scoreboard": "THE SCOREBOARDLOSSES STAYLAST 20TODAY · from 17:00 NYALL TIME0W · 0L · 0 scratch · 0 never triggered · 0 cancelled · 0 void dataNo wins or losses resolved0 ambiguous · 0 gaps skippedNo resolved engine analysis calls yet. Losses stay recorded."
+    },
+    {
+      "mode": "operator",
+      "minute": 48,
+      "badge": "DEMO",
+      "disclaimer": "Educational market analysis · Not financial advice · ORACLE never trades",
+      "scoreboard": "THE SCOREBOARDLOSSES STAYLAST 20TODAY · from 17:00 NYALL TIME0W · 0L · 0 scratch · 0 never triggered · 0 cancelled · 0 void dataNo wins or losses resolved0 ambiguous · 0 gaps skippedNo resolved engine analysis calls yet. Losses stay recorded."
+    },
+    {
+      "mode": "operator",
+      "minute": 49,
+      "badge": "DEMO",
+      "disclaimer": "Educational market analysis · Not financial advice · ORACLE never trades",
+      "scoreboard": "THE SCOREBOARDLOSSES STAYLAST 20TODAY · from 17:00 NYALL TIME0W · 0L · 0 scratch · 0 never triggered · 0 cancelled · 0 void dataNo wins or losses resolved0 ambiguous · 0 gaps skippedNo resolved engine analysis calls yet. Losses stay recorded."
+    },
+    {
+      "mode": "operator",
+      "minute": 50,
+      "badge": "DEMO",
+      "disclaimer": "Educational market analysis · Not financial advice · ORACLE never trades",
+      "scoreboard": "THE SCOREBOARDLOSSES STAYLAST 20TODAY · from 17:00 NYALL TIME0W · 0L · 0 scratch · 0 never triggered · 0 cancelled · 0 void dataNo wins or losses resolved0 ambiguous · 0 gaps skippedNo resolved engine analysis calls yet. Losses stay recorded."
+    },
+    {
+      "mode": "operator",
+      "minute": 51,
+      "badge": "DEMO",
+      "disclaimer": "Educational market analysis · Not financial advice · ORACLE never trades",
+      "scoreboard": "THE SCOREBOARDLOSSES STAYLAST 20TODAY · from 17:00 NYALL TIME0W · 0L · 0 scratch · 0 never triggered · 0 cancelled · 0 void dataNo wins or losses resolved0 ambiguous · 0 gaps skippedNo resolved engine analysis calls yet. Losses stay recorded."
+    },
+    {
+      "mode": "operator",
+      "minute": 52,
+      "badge": "DEMO",
+      "disclaimer": "Educational market analysis · Not financial advice · ORACLE never trades",
+      "scoreboard": "THE SCOREBOARDLOSSES STAYLAST 20TODAY · from 17:00 NYALL TIME0W · 0L · 0 scratch · 0 never triggered · 0 cancelled · 0 void dataNo wins or losses resolved0 ambiguous · 0 gaps skippedNo resolved engine analysis calls yet. Losses stay recorded."
+    },
+    {
+      "mode": "operator",
+      "minute": 53,
+      "badge": "DEMO",
+      "disclaimer": "Educational market analysis · Not financial advice · ORACLE never trades",
+      "scoreboard": "THE SCOREBOARDLOSSES STAYLAST 20TODAY · from 17:00 NYALL TIME0W · 0L · 0 scratch · 0 never triggered · 0 cancelled · 0 void dataNo wins or losses resolved0 ambiguous · 0 gaps skippedNo resolved engine analysis calls yet. Losses stay recorded."
+    },
+    {
+      "mode": "operator",
+      "minute": 54,
+      "badge": "DEMO",
+      "disclaimer": "Educational market analysis · Not financial advice · ORACLE never trades",
+      "scoreboard": "THE SCOREBOARDLOSSES STAYLAST 20TODAY · from 17:00 NYALL TIME0W · 0L · 0 scratch · 0 never triggered · 0 cancelled · 0 void dataNo wins or losses resolved0 ambiguous · 0 gaps skippedNo resolved engine analysis calls yet. Losses stay recorded."
+    },
+    {
+      "mode": "operator",
+      "minute": 55,
+      "badge": "DEMO",
+      "disclaimer": "Educational market analysis · Not financial advice · ORACLE never trades",
+      "scoreboard": "THE SCOREBOARDLOSSES STAYLAST 20TODAY · from 17:00 NYALL TIME0W · 0L · 0 scratch · 0 never triggered · 0 cancelled · 0 void dataNo wins or losses resolved0 ambiguous · 0 gaps skippedNo resolved engine analysis calls yet. Losses stay recorded."
+    },
+    {
+      "mode": "operator",
+      "minute": 56,
+      "badge": "DEMO",
+      "disclaimer": "Educational market analysis · Not financial advice · ORACLE never trades",
+      "scoreboard": "THE SCOREBOARDLOSSES STAYLAST 20TODAY · from 17:00 NYALL TIME0W · 0L · 0 scratch · 0 never triggered · 0 cancelled · 0 void dataNo wins or losses resolved0 ambiguous · 0 gaps skippedNo resolved engine analysis calls yet. Losses stay recorded."
+    },
+    {
+      "mode": "operator",
+      "minute": 57,
+      "badge": "DEMO",
+      "disclaimer": "Educational market analysis · Not financial advice · ORACLE never trades",
+      "scoreboard": "THE SCOREBOARDLOSSES STAYLAST 20TODAY · from 17:00 NYALL TIME0W · 0L · 0 scratch · 0 never triggered · 0 cancelled · 0 void dataNo wins or losses resolved0 ambiguous · 0 gaps skippedNo resolved engine analysis calls yet. Losses stay recorded."
+    },
+    {
+      "mode": "operator",
+      "minute": 58,
+      "badge": "DEMO",
+      "disclaimer": "Educational market analysis · Not financial advice · ORACLE never trades",
+      "scoreboard": "THE SCOREBOARDLOSSES STAYLAST 20TODAY · from 17:00 NYALL TIME0W · 0L · 0 scratch · 0 never triggered · 0 cancelled · 0 void dataNo wins or losses resolved0 ambiguous · 0 gaps skippedNo resolved engine analysis calls yet. Losses stay recorded."
+    },
+    {
+      "mode": "operator",
+      "minute": 59,
+      "badge": "DEMO",
+      "disclaimer": "Educational market analysis · Not financial advice · ORACLE never trades",
+      "scoreboard": "THE SCOREBOARDLOSSES STAYLAST 20TODAY · from 17:00 NYALL TIME0W · 0L · 0 scratch · 0 never triggered · 0 cancelled · 0 void dataNo wins or losses resolved0 ambiguous · 0 gaps skippedNo resolved engine analysis calls yet. Losses stay recorded."
+    }
+  ]
+}

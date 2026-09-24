@@ -1,0 +1,8 @@
+{
+  "source": "synthetic hand-built unit cases, not a broker-history golden",
+  "atr": 10.0,
+  "bullish": [[100,101,99,100],[101,106,100,105],[105,108,104,106]],
+  "bearish": [[100,101,99,100],[99,100,94,95],[95,96,92,94]],
+  "bullish_gap": [101,104],
+  "bearish_gap": [96,99]
+}

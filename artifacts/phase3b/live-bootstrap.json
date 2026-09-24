@@ -1,0 +1,16 @@
+{
+  "live": true,
+  "login": 81740106,
+  "server": "ExnessKE-MT5Trial10",
+  "passwordType": "master",
+  "tradeMode": "DEMO",
+  "symbol": "XAUUSDz",
+  "bars": 2000,
+  "clockVersion": 1,
+  "historicalConfidence": "ASSUMED",
+  "clockProven": false,
+  "countdownBefore": "03:29",
+  "countdownAfter": "03:26",
+  "rendererExceptions": [],
+  "timestamp": "2026-09-17T23:21:34.431Z"
+}

@@ -1,0 +1,106 @@
+{
+  "name": "tradefix-studio",
+  "version": "0.1.2",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "protocol:generate": "node scripts/codegen.mjs",
+    "protocol:check": "node scripts/codegen.mjs --check",
+    "typecheck": "tsc --noEmit",
+    "build": "npm run protocol:check && npm run format:check && npm run test:text-integrity && npm run test:analysis-objects && npm run test:analysis-slides && npm run typecheck && vite build --base=./ && npm run desktop:build",
+    "desktop:build": "node scripts/build-electron.mjs",
+    "desktop": "npm run build && electron .",
+    "test:visual": "playwright test",
+    "test:chart": "node scripts/test-chart.mjs",
+    "test:labels": "node scripts/test-labels.mjs",
+    "test:living": "node scripts/test-living.mjs",
+    "test:candidate-render": "node scripts/test-candidate-render.mjs",
+    "test:desktop": "npm run build && node scripts/smoke-desktop.mjs",
+    "format:check": "node scripts/check-formatting.mjs",
+    "test:honesty": "node scripts/honesty-harness.mjs",
+    "test:honesty:fixture": "node scripts/honesty-harness.mjs --records app/test-fixtures/honesty-records.jsonl",
+    "test:text-integrity": "node scripts/test-text-integrity.mjs",
+    "test:analysis-objects": "node scripts/test-analysis-objects.mjs",
+    "test:analysis-slides": "node scripts/test-analysis-slides.mjs",
+    "dist:win": "npm run build && electron-builder --win nsis --x64"
+  },
+  "dependencies": {
+    "lightweight-charts": "^5.2.1",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "yaml": "^2.8.0"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.63.0",
+    "@types/node": "^22.0.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "electron": "^44.4.1",
+    "esbuild": "^0.28.2",
+    "json-schema-to-typescript": "^15.0.0",
+    "playwright": "^1.63.0",
+    "typescript": "^5.7.0",
+    "vite": "^6.1.0",
+    "electron-builder": "^26.0.12"
+  },
+  "main": "electron-dist/main.cjs",
+  "productName": "TradeFix Studio",
+  "build": {
+    "appId": "studio.tradefix.desktop",
+    "productName": "TradeFix Studio",
+    "artifactName": "TradeFix-Studio-Setup.${ext}",
+    "directories": {
+      "output": "release"
+    },
+    "files": [
+      "dist/**/*",
+      "electron-dist/**/*",
+      "package.json"
+    ],
+    "extraResources": [
+      {
+        "from": "../engine",
+        "to": "engine",
+        "filter": [
+          "oracle/**/*",
+          "pyproject.toml",
+          "requirements-lock.txt",
+          "!**/__pycache__/**",
+          "!**/.pytest_cache/**",
+          "!**/.mypy_cache/**",
+          "!**/.ruff_cache/**",
+          "!runtime/**"
+        ]
+      },
+      {
+        "from": "../config",
+        "to": "config"
+      },
+      {
+        "from": "../.venv312",
+        "to": ".venv312",
+        "filter": [
+          "**/*",
+          "!**/__pycache__/**",
+          "!**/.pytest_cache/**"
+        ]
+      },
+      {
+        "from": "../runtime/python/cpython-3.12.14-windows-x86_64-none",
+        "to": "runtime/python/cpython-3.12.14-windows-x86_64-none"
+      }
+    ],
+    "win": {
+      "icon": "build/icon.ico",
+      "target": "nsis"
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "TradeFix Studio"
+    }
+  }
+}

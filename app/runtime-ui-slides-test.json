@@ -1,0 +1,29 @@
+{
+  "eligible": 9,
+  "types": [
+    "THESIS",
+    "WHY",
+    "PLAN",
+    "LIQUIDITY",
+    "TIMEFRAMES",
+    "MOMENTUM",
+    "INVALIDATION",
+    "SCENARIOS",
+    "SCORE"
+  ],
+  "rotated": [
+    "THESIS",
+    "PLAN",
+    "LIQUIDITY",
+    "THESIS",
+    "INVALIDATION",
+    "SCENARIOS",
+    "THESIS",
+    "SCORE",
+    "MOMENTUM",
+    "THESIS",
+    "WHY",
+    "TIMEFRAMES"
+  ],
+  "callAnchor": "CALL"
+}

@@ -1,0 +1,50 @@
+{
+  "viewer_samples": 0,
+  "beats": {
+    "answer": {
+      "measured": 0,
+      "unmeasured": 2,
+      "average_viewer_delta": null
+    },
+    "gift": {
+      "measured": 0,
+      "unmeasured": 1,
+      "average_viewer_delta": null
+    },
+    "hook.CANDLE_CLOSE": {
+      "measured": 0,
+      "unmeasured": 2,
+      "average_viewer_delta": null
+    },
+    "hook.POLL_RESOLVE": {
+      "measured": 0,
+      "unmeasured": 2,
+      "average_viewer_delta": null
+    },
+    "poll": {
+      "measured": 0,
+      "unmeasured": 1,
+      "average_viewer_delta": null
+    },
+    "segment.LIVE_CHART": {
+      "measured": 0,
+      "unmeasured": 5,
+      "average_viewer_delta": null
+    },
+    "segment.POLL_RESULT": {
+      "measured": 0,
+      "unmeasured": 1,
+      "average_viewer_delta": null
+    },
+    "segment.VIEWER_ANSWER": {
+      "measured": 0,
+      "unmeasured": 3,
+      "average_viewer_delta": null
+    },
+    "shout": {
+      "measured": 0,
+      "unmeasured": 4,
+      "average_viewer_delta": null
+    }
+  }
+}
