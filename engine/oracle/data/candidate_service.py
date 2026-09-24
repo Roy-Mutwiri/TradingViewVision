@@ -442,6 +442,7 @@ class CandidateService:
                 broker_ms, bid = tick
                 utc_ms = self.feed.clock.utc_ms(broker_ms)
                 offset_s = (broker_ms - utc_ms) // 1000
+                self._cancel_stale_pending_calls(utc_ms, bid)
                 if utc_ms // 60000 != minute_bucket:
                     recent_minutes = [
                         b for b in store.latest("M1", 300) if b.complete and b.source == "mt5"
