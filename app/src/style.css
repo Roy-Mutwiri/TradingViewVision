@@ -324,3 +324,51 @@
 .signal-procedure b{flex:0 0 16px!important;width:16px!important;height:16px!important;font-size:8px!important}
 .key-levels.rail-grow{min-height:58px!important;height:auto!important}.structure-ticker{height:58px!important}.worklog{height:44px!important}.indicator-section{height:30px!important}.retention-rail>.score-card{height:84px!important}
 .studio.light .signal-panel.live-signal-card{background:linear-gradient(135deg,color-mix(in srgb,var(--accent) 18%,#fff),var(--bg-1) 45%,var(--bg-2))!important}
+
+/* TikTok broadcast clarity pass: deep blue surfaces and compression-resistant text. */
+:root{
+  text-rendering:geometricPrecision;
+  -webkit-font-smoothing:antialiased;
+  font-smooth:always;
+}
+.studio:not(.light){
+  --bg:#07172a!important;
+  --bg-1:#0b2037!important;
+  --bg-2:#102a45!important;
+  --bg-3:#163856!important;
+  --text:#f7fbff!important;
+  --text-0:#ffffff!important;
+  --text-1:#dce9f8!important;
+  --text-2:#adc2d8!important;
+  --muted:#b8c9dc!important;
+  --line:#8fb8e626!important;
+  --accent:#f5c96d!important;
+  --gold:#f5c96d!important;
+  background:#07172a!important;
+  color:#f7fbff!important;
+}
+.studio:not(.light),.studio:not(.light) *{text-shadow:0 1px 1px rgba(0,0,0,.65)}
+.studio:not(.light) .studio-chrome,.studio:not(.light) .studio-footer,.studio:not(.light) .chart-toolbar,.studio:not(.light) .session-ribbon{background:#07172a!important;border-color:#284a6c!important}
+.studio:not(.light) .live-workspace,.studio:not(.light) .content-planes,.studio:not(.light) .chart-stage,.studio:not(.light) .chart-canvas{background:#07172a!important}
+.studio:not(.light) .retention-rail{background:#091b30!important;border-color:#284a6c!important}
+.studio:not(.light) .rail-card,.studio:not(.light) .scenario-card,.studio:not(.light) .score-card,.studio:not(.light) .answer-card{background:linear-gradient(180deg,#102a45,#0b2037)!important;border-color:#40698f!important;color:#f7fbff!important;box-shadow:inset 0 0 0 1px rgba(255,255,255,.035)!important}
+.studio:not(.light) .chart-symbol strong{font-size:31px!important;font-weight:900!important;letter-spacing:.08em!important;color:#fff!important}
+.studio:not(.light) .chart-symbol span,.studio:not(.light) .session-name,.studio:not(.light) .ask-spread,.studio:not(.light) .bias-pending,.studio:not(.light) .context-note{color:#c3d5e8!important;font-weight:800!important}
+.studio:not(.light) .identity-zone nav button,.studio:not(.light) .score-windows button{color:#dce9f8!important;font-weight:900!important;font-size:12px!important}
+.studio:not(.light) .identity-zone nav button[aria-pressed=true],.studio:not(.light) .score-windows button[aria-pressed=true]{color:#fff!important;border-bottom-color:#f5c96d!important}
+.studio:not(.light) .price-focal>small{color:#c3d5e8!important;font-size:10px!important;font-weight:900!important}
+.studio:not(.light) .price-focal>strong{color:#fff!important;font-size:clamp(54px,5.25vw,78px)!important;font-weight:950!important;letter-spacing:0!important;line-height:1!important;text-shadow:0 3px 0 rgba(0,0,0,.45),0 0 18px rgba(134,184,232,.18)!important}
+.studio:not(.light) .price-focal>strong sup{color:#dce9f8!important;font-weight:950!important}
+.studio:not(.light) .price-delta,.studio:not(.light) .close-clock,.studio:not(.light) .rail-countdown{font-weight:950!important;color:#f5c96d!important}
+.studio:not(.light) .analysis-slides.signal-state-banner{min-height:42px!important;height:42px!important;background:linear-gradient(90deg,#102a45,#0b2037)!important;border-color:#f5c96d99!important;border-left:5px solid #f5c96d!important;box-shadow:inset 0 0 0 1px rgba(255,255,255,.04)!important}
+.studio:not(.light) .slide-type{font-size:10px!important;font-weight:950!important;color:#f5c96d!important}
+.studio:not(.light) .slide-content{font-size:14px!important;font-weight:950!important;color:#fff!important}
+.studio:not(.light) .signal-panel.live-signal-card{background:linear-gradient(135deg,#14314f,#0b2037 48%,#102a45)!important;border-color:#f5c96daa!important;border-left-color:#f5c96d!important}
+.studio:not(.light) .signal-panel .signal-levels strong{font-size:14px!important;font-weight:950!important;color:#fff!important}
+.studio:not(.light) .signal-panel .signal-levels span,.studio:not(.light) .key-level-row,.studio:not(.light) .structure-ticker>div:not(.rail-heading),.studio:not(.light) .rail-comment,.studio:not(.light) .score-results>div{background:#0b2037!important;border-color:#315a80!important;color:#dce9f8!important}
+.studio:not(.light) .signal-panel .signal-levels b,.studio:not(.light) .key-level-row b,.studio:not(.light) .reference-level strong,.studio:not(.light) .score-matrix strong{color:#fff!important;font-weight:950!important}
+.studio:not(.light) .signal-process-line,.studio:not(.light) .worklog li,.studio:not(.light) .rail-comment span,.studio:not(.light) .score-results p,.studio:not(.light) .structure-ticker span{color:#dce9f8!important;font-weight:850!important}
+.studio:not(.light) .rail-heading{color:#e8f2ff!important;font-size:10px!important;font-weight:950!important}
+.studio:not(.light) .rail-heading small,.studio:not(.light) .score-matrix b,.studio:not(.light) .stage-tracker span{color:#c3d5e8!important;font-weight:900!important}
+.studio:not(.light) .analyst-notes,.studio:not(.light) .book-story-card,.studio:not(.light) .comment-echo,.studio:not(.light) .shout-strip{background:rgba(8,28,49,.94)!important;border-color:#f5c96d99!important;color:#f7fbff!important}
+.studio:not(.light) .welcome-toast{background:linear-gradient(115deg,#102a45,#0b2037 55%,#1f4163)!important;border-color:#f5c96dcc!important}
